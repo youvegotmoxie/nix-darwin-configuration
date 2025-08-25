@@ -22,6 +22,7 @@ in {
       kubectl
       kubectx
       kubecolor
+      kubent
       kubernetes-helm
       krew
       viddy
@@ -40,11 +41,6 @@ in {
       ripgrep
       ffmpeg
       fzf
-      krew
-      kubecolor
-      kubectl
-      kubectx
-      kubent
       pulumi
       steampipe
       # Shell scripts

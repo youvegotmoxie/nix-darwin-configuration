@@ -7,6 +7,7 @@ pkgs.mkShell {
     azure-cli
     cilium-cli
     cmctl
+    helix
     k9s
     kops
     kubeseal
@@ -20,6 +21,5 @@ pkgs.mkShell {
     packer
     vault
     terraform
-    neovim
   ];
 }
