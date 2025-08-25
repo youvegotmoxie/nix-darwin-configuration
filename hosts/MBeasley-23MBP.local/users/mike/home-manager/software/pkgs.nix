@@ -38,6 +38,7 @@ in {
       yq
       jq
       ripgrep
+      ffmpeg
       fzf
       krew
       kubecolor
