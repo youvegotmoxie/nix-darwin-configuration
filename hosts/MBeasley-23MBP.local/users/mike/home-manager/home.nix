@@ -10,8 +10,10 @@
   resticRemoteUser = "mike";
 in {
   imports = [
+    # shared modules in root of hosts dir
     ../../../../shared/software/default.nix
     ../../../../shared/conf/sops/default.nix
+    # Per host modules
     ./software/zsh.nix
     ./software/pkgs.nix
   ];

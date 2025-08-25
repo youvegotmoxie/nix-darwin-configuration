@@ -6,8 +6,6 @@ in {
   home = {
     packages = with pkgs; [
       awscli2
-      google-cloud-sdk
-      azure-cli
       ansible
       restic
       bat
@@ -48,8 +46,6 @@ in {
       kubent
       pulumi
       steampipe
-      terraform
-      packer
       # Shell scripts
       ssh-proxy
       tilt-connect
