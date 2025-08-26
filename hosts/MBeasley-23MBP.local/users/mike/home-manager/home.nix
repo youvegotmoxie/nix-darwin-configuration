@@ -48,10 +48,6 @@ in {
       ".tmux.conf".source = ../../../../shared/dots/dot_tmux.conf;
       "shell.nix".source = ../../../../shared/dots/shell.nix;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
-      "scripts/blame-line-pretty.sh" = {
-        source = ../../../../shared/scripts/blame-line-pretty.sh;
-        executable = true;
-      };
       ".zsh.d/func.zsh".source = ./dots/func.zsh;
       ".restic/exclude.lst".source = ./conf/exclude.lst;
 

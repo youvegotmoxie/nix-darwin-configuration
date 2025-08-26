@@ -2,6 +2,8 @@
   # Package shell scripts
   ssh-proxy = pkgs.writeShellScriptBin "ssh-proxy" (builtins.readFile ../../../../../shared/scripts/sshproxy.sh);
   tilt-connect = pkgs.writeShellScriptBin "tilt-connect" (builtins.readFile ../../../../../shared/scripts/tilt-connect.sh);
+  blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (builtins.readFile ../../../../../shared/scripts/blame-line-pretty.sh);
+  git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../../../../../shared/scripts/git-hunk.sh);
 in {
   home = {
     packages = with pkgs; [
@@ -46,6 +48,8 @@ in {
       # Shell scripts
       ssh-proxy
       tilt-connect
+      git-hunk
+      blame-line-pretty
     ];
   };
 }
