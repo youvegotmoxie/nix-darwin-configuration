@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   # Set EDITOR to helix
   programs.helix = {
     enable = true;
@@ -32,6 +36,9 @@
         };
       };
       keys.normal = {
+        space = {
+          B = ":run-shell-command ${config.home.homeDirectory}/scripts/blame-line-pretty.sh %{buffer_name} %{cursor_line}";
+        };
         C-x = [
           ":buffer-close!"
         ];
