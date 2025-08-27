@@ -3,7 +3,7 @@
   config,
   ...
 }: let
-  backupRepo = "MBeasley-23MBP.local";
+  backupRepo = "snafu-mbp";
   backupBasePath = "/opt/storage/backups/remote/${backupRepo}";
   backupPath = "${backupBasePath}";
   backupServer = "192.168.148.112";
@@ -25,7 +25,7 @@ in {
         enable = true;
       };
       work = {
-        enable = true;
+        enable = false;
       };
     };
   };
@@ -71,13 +71,13 @@ in {
 
       ".sops.yaml".text = ''
         keys:
-          - &michaelbeasley age1w2szqkpqpurah7sc88xx0z3j2m068w6gryh6qh2vvpd5s9rd8uusppwsjr
+          - &mike age1w2szqkpqpurah7sc88xx0z3j2m068w6gryh6qh2vvpd5s9rd8uusppwsjr
         creation_rules:
           - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
             key_groups:
               - pgp:
                 age:
-                - *michaelbeasley
+                - *mike
       '';
     };
   };
