@@ -31,10 +31,6 @@ in {
         path = "${config.home.homeDirectory}/${cfg.path}/BB_PASSWD";
         mode = "0600";
       };
-      BW_PASSWD = {
-        path = "${config.home.homeDirectory}/${cfg.path}/BW_PASSWD";
-        mode = "0600";
-      };
     };
   };
 }
