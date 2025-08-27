@@ -30,6 +30,12 @@ in {
     };
   };
 
+  # Configure git persona
+  gitConfig.person = {
+    name = "MikeB";
+    email = "youvegotmoxie@gmail.com";
+  };
+
   sops = {
     age = {
       keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
