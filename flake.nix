@@ -26,7 +26,7 @@
     ...
   }: {
     darwinConfigurations = {
-      "MBeasley-23MBP.local" = nix-darwin.lib.darwinSystem {
+      "MBeasley-23MBP" = nix-darwin.lib.darwinSystem {
         system = systems;
         # System level
         modules = [
