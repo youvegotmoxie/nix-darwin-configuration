@@ -135,37 +135,6 @@ in {
             {
               Hour = 07;
               Minute = 30;
-              Day = 0;
-            }
-            {
-              Hour = 07;
-              Minute = 30;
-              Day = 1;
-            }
-            {
-              Hour = 07;
-              Minute = 30;
-              Day = 2;
-            }
-            {
-              Hour = 07;
-              Minute = 30;
-              Day = 3;
-            }
-            {
-              Hour = 07;
-              Minute = 30;
-              Day = 4;
-            }
-            {
-              Hour = 07;
-              Minute = 30;
-              Day = 5;
-            }
-            {
-              Hour = 07;
-              Minute = 30;
-              Day = 6;
             }
           ];
         };
@@ -200,38 +169,6 @@ in {
             {
               Hour = 09;
               Minute = 30;
-              Day = 0;
-            }
-
-            {
-              Hour = 09;
-              Minute = 30;
-              Day = 1;
-            }
-            {
-              Hour = 09;
-              Minute = 30;
-              Day = 2;
-            }
-            {
-              Hour = 09;
-              Minute = 30;
-              Day = 3;
-            }
-            {
-              Hour = 09;
-              Minute = 30;
-              Day = 4;
-            }
-            {
-              Hour = 09;
-              Minute = 30;
-              Day = 5;
-            }
-            {
-              Hour = 09;
-              Minute = 30;
-              Day = 6;
             }
           ];
         };
