@@ -21,6 +21,10 @@ in {
       default = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
     };
   };
+  options.zshConfig.workAliases = {
+    enable = lib.mkEnableOption "zshConfig.workAliases";
+    default = false;
+  };
   config = {
     programs.zsh = {
       enable = true;
@@ -45,35 +49,56 @@ in {
         ];
       };
       enableCompletion = true;
-      shellAliases = {
-        "lg" = "lazygit";
-        "ls" = "eza";
-        "rm" = "rm -v";
-        "mv" = "mv -v";
-        "cp" = "cp -v";
-        "ln" = "ln -v";
-        "history" = "history -E";
-        "mkdir" = "mkdir -v";
-        "sudo" = "nocorrect sudo";
-        "tldr" = "nocorrect tldr";
+      # TODO: Move this into its own file and import here
+      shellAliases =
+        if cfg.workAliases.enable
+        then {
+          "lg" = "lazygit";
+          "ls" = "eza";
+          "rm" = "rm -v";
+          "mv" = "mv -v";
+          "cp" = "cp -v";
+          "ln" = "ln -v";
+          "history" = "history -E";
+          "mkdir" = "mkdir -v";
+          "sudo" = "nocorrect sudo";
+          "tldr" = "nocorrect tldr";
 
-        # Legacy network stuff (kept for reference)
-        # "switch0-top" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.248 -p22 -c aes256-cbc";
-        # "switch0-bottom" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.249 -p22 -c aes256-cbc";
-        # "router1-bottom" = "ssh 192.168.1.250 -lmike -p22 -c aes256-cbc";
+          # Legacy network stuff (kept for reference)
+          # "switch0-top" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.248 -p22 -c aes256-cbc";
+          # "switch0-bottom" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.249 -p22 -c aes256-cbc";
+          # "router1-bottom" = "ssh 192.168.1.250 -lmike -p22 -c aes256-cbc";
+          "properties-converter" = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
+          "kubectl" = "kubecolor";
+          "k" = "kubectl";
+          "kgp" = "kubectl get pods";
+          "dive" = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
 
-        "gpm" = "git pull origin master";
-        "ll" = "eza -lahg --git-repos-no-status --git";
-        "grep" = "ugrep --color=auto";
-        "properties-converter" = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
-        "cat" = "bat --paging=never --style=plain";
-        "kubectl" = "kubecolor";
-        "k" = "kubectl";
-        "kgp" = "kubectl get pods";
-        "dive" = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-        "btcm" = "better-commits";
-        "sed" = "gsed";
-      };
+          "gpm" = "git pull origin master";
+          "ll" = "eza -lahg --git-repos-no-status --git";
+          "grep" = "ugrep --color=auto";
+          "cat" = "bat --paging=never --style=plain";
+          "btcm" = "better-commits";
+          "sed" = "gsed";
+        }
+        else {
+          "lg" = "lazygit";
+          "ls" = "eza";
+          "rm" = "rm -v";
+          "mv" = "mv -v";
+          "cp" = "cp -v";
+          "ln" = "ln -v";
+          "history" = "history -E";
+          "mkdir" = "mkdir -v";
+          "sudo" = "nocorrect sudo";
+          "tldr" = "nocorrect tldr";
+          "gpm" = "git pull origin master";
+          "ll" = "eza -lahg --git-repos-no-status --git";
+          "grep" = "ugrep --color=auto";
+          "cat" = "bat --paging=never --style=plain";
+          "btcm" = "better-commits";
+          "sed" = "gsed";
+        };
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         # eval "$(ssh-agent -s)"
