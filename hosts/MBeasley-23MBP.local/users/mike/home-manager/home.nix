@@ -29,12 +29,18 @@ in {
     };
   };
 
+  # Configure SSH agent socket and add work shell aliases
+  zshConfig = {
+    bw.socketPath = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
+    workAliases.enable = true;
+  };
+
   sops = {
     age = {
       keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
       sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
     };
-    # Relative to home.nix config file: homemanager/secrets/secrets.yaml
+    # Relative to home.nix config file
     defaultSopsFile = ./secrets/secrets.yaml;
   };
   home = {

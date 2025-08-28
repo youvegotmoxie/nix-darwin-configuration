@@ -43,7 +43,7 @@ in {
       keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
       sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
     };
-    # Relative to home.nix config file: homemanager/secrets/secrets.yaml
+    # Relative to home.nix config file
     defaultSopsFile = ./secrets/secrets.yaml;
   };
   home = {
