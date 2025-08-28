@@ -14,7 +14,6 @@ in {
     ../../../../shared/software
     ../../../../shared/conf/sops
     # Per host modules
-    ./software/zsh.nix
     ./software/pkgs.nix
   ];
 

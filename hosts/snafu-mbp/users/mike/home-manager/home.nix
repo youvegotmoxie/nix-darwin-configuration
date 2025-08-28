@@ -14,7 +14,6 @@ in {
     ../../../../shared/software
     ../../../../shared/conf/sops
     # Per host modules
-    ./software/zsh.nix
     ./software/pkgs.nix
   ];
 
@@ -35,6 +34,9 @@ in {
     name = "MikeB";
     email = "youvegotmoxie@gmail.com";
   };
+
+  # Configure SSH agent socket
+  zshConfig.bw.socketPath = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
 
   sops = {
     age = {
