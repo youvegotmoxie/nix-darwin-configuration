@@ -14,7 +14,7 @@ in {
     ../../../../shared/software
     ../../../../shared/conf/sops
     # Per host modules
-    ./software/pkgs.nix
+    ./software
   ];
 
   # Populate ~/.creds.d
