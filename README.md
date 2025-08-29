@@ -1,4 +1,3 @@
-```
 .
 ├── flake.lock
 ├── flake.nix
@@ -16,6 +15,7 @@
 │   │               ├── secrets
 │   │               │   └── secrets.yaml
 │   │               └── software
+│   │                   ├── default.nix
 │   │                   └── pkgs.nix
 │   ├── shared
 │   │   ├── conf
@@ -56,6 +56,6 @@
 │                   ├── secrets
 │                   │   └── secrets.yaml
 │                   └── software
+│                       ├── default.nix
 │                       └── pkgs.nix
 └── README.md
-```
