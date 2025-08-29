@@ -1,3 +1,4 @@
+```
 .
 ├── flake.lock
 ├── flake.nix
@@ -59,3 +60,4 @@
 │                       ├── default.nix
 │                       └── pkgs.nix
 └── README.md
+```
