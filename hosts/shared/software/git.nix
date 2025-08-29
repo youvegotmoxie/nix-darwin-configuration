@@ -43,6 +43,7 @@ in {
           editor = "hx";
         };
         gpg.format = "ssh";
+        commit.gpgsign = true;
         init = {
           defaultBranch = "master";
         };
