@@ -15,6 +15,7 @@ in {
       bfs
       cargo
       delta
+      discord
       eza
       fd
       gh
@@ -31,9 +32,7 @@ in {
       nodejs_22
       jdk24_headless
       lazydocker
-      obsidian
       p7zip
-      ssm-session-manager-plugin
       stern
       tldr
       yt-dlp
@@ -43,8 +42,6 @@ in {
       ripgrep
       ffmpeg
       fzf
-      pulumi
-      steampipe
       # Shell scripts
       ssh-proxy
       tilt-connect
