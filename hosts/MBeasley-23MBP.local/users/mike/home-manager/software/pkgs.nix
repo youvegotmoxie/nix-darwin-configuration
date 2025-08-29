@@ -6,46 +6,45 @@
   git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../../../../../shared/scripts/git-hunk.sh);
 in {
   home = {
-    packages = with pkgs; [
-      awscli2
-      ansible
-      restic
-      bat
-      go
-      bfs
-      cargo
-      delta
-      eza
-      fd
-      gh
-      ugrep
-      pre-commit
-      tree-sitter
-      kubectl
-      kubectx
-      kubecolor
-      kubent
-      kubernetes-helm
-      krew
-      viddy
-      nodejs_22
-      jdk24_headless
-      lazydocker
-      obsidian
-      p7zip
-      ssm-session-manager-plugin
-      stern
-      tldr
-      yt-dlp
-      wget
-      yq
-      jq
-      ripgrep
-      ffmpeg
-      fzf
-      pulumi
-      steampipe
-      # Shell scripts
+    packages = [
+      pkgs.awscli2
+      pkgs.ansible
+      pkgs.restic
+      pkgs.bat
+      pkgs.go
+      pkgs.bfs
+      pkgs.cargo
+      pkgs.delta
+      pkgs.eza
+      pkgs.fd
+      pkgs.gh
+      pkgs.ugrep
+      pkgs.pre-commit
+      pkgs.tree-sitter
+      pkgs.kubectl
+      pkgs.kubectx
+      pkgs.kubecolor
+      pkgs.kubent
+      pkgs.kubernetes-helm
+      pkgs.krew
+      pkgs.viddy
+      pkgs.nodejs_22
+      pkgs.jdk24_headless
+      pkgs.lazydocker
+      pkgs.obsidian
+      pkgs.p7zip
+      pkgs.ssm-session-manager-plugin
+      pkgs.stern
+      pkgs.tldr
+      pkgs.yt-dlp
+      pkgs.wget
+      pkgs.yq
+      pkgs.jq
+      pkgs.ripgrep
+      pkgs.ffmpeg
+      pkgs.fzf
+      pkgs.pulumi
+      pkgs.steampipe
       ssh-proxy
       tilt-connect
       git-hunk
