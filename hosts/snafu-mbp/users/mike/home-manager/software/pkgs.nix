@@ -15,7 +15,6 @@ in {
       bfs
       cargo
       delta
-      discord
       eza
       fd
       gh
