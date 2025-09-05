@@ -20,6 +20,8 @@ in {
     python313Packages.pip
     sops
     vim
+    gnutar
+    gnused
   ];
 
   environment.pathsToLink = ["/share/zsh"];
@@ -71,10 +73,7 @@ in {
       upgrade = false;
       cleanup = "zap";
     };
-    brews = [
-      "gnu-sed"
-      "gnu-tar"
-    ];
+    brews = [];
     casks = [
       "ghostty"
       "orbstack"

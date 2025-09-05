@@ -79,7 +79,6 @@ in {
           "grep" = "ugrep --color=auto";
           "cat" = "bat --paging=never --style=plain";
           "btcm" = "better-commits";
-          "sed" = "gsed";
         }
         else {
           "lg" = "lazygit";
@@ -97,7 +96,6 @@ in {
           "grep" = "ugrep --color=auto";
           "cat" = "bat --paging=never --style=plain";
           "btcm" = "better-commits";
-          "sed" = "gsed";
         };
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
