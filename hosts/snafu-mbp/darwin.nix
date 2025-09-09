@@ -78,6 +78,7 @@ in {
       "ghostty"
       "tailscale-app"
       "raycast"
+      "soduto"
     ];
     masApps = {
       "Bitwarden" = 1352778147;

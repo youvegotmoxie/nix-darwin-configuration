@@ -79,6 +79,7 @@ in {
       "orbstack"
       "tailscale-app"
       "raycast"
+      "soduto"
     ];
     masApps = {
       "Bitwarden" = 1352778147;
