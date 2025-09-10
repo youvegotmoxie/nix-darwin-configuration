@@ -1,0 +1,52 @@
+{
+    "folders": [
+        {
+            "path": "bitbucket"
+        },
+        {
+            "path": "sync/git"
+        },
+        {
+            "path": "scripts"
+        },
+        {
+           "path": ".config/nix-darwin"
+        }
+    ],
+    "settings": {
+        "files.enableTrash": false,
+        "files.autoSave": "onWindowChange",
+        "terminal.integrated.fontFamily": "MesloLGS NF",
+        "window.title": "${dirty}${separator}${rootName}",
+        "terminal.integrated.shell.*": "/run/current-system/sw/bin/zsh",
+        "terminal.integrated.defaultProfile.*": "zsh",
+        "terminal.integrated.profiles.*": {
+          "zsh": {
+            "path": "/run/current-system/sw/bin/zsh"
+          }
+        },
+        "files.associations": {
+            "*.hujson": "jsonc"
+        },
+        "json.schemas": [{
+            "fileMatch": ["*.hujson"],
+            "schema": {
+                "allowTrailingCommas": true
+            }
+        }]
+        "editor.tabSize": 2,
+        "editor.accessibilitySupport": "off",
+        "editor.inlineSuggest.enabled": true,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.foldingImportsByDefault": true,
+        "editor.tabCompletion": "on",
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "git.autofetch": true,
+        "git.pruneOnFetch": true,
+        "redhat.telemetry.enabled": false,
+        "terminal.integrated.shellIntegration.enabled": true,
+        "terminal.integrated.allowChords": false,
+        "editor.linkedEditing": true
+    }
+}

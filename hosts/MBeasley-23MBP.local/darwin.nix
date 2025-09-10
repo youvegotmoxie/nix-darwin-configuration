@@ -79,10 +79,12 @@ in {
       "orbstack"
       "tailscale-app"
       "raycast"
+      "soduto"
     ];
     masApps = {
       "Bitwarden" = 1352778147;
       "Todoist" = 585829637;
+      "Texty for Google Messages" = 1538996043;
     };
   };
   environment.variables.XDG_DATA_DIRS = [
