@@ -79,6 +79,8 @@ in {
       "tailscale-app"
       "raycast"
       "soduto"
+      "google-drive"
+      "omnidisksweeper"
     ];
     masApps = {
       "Bitwarden" = 1352778147;
