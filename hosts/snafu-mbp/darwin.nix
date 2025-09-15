@@ -85,7 +85,6 @@ in {
     masApps = {
       "Bitwarden" = 1352778147;
       "Texty for Google Messages" = 1538996043;
-      "Lightroom Photo & Video Editor" = 878783582;
     };
   };
   environment.variables.XDG_DATA_DIRS = [
