@@ -8,7 +8,7 @@ in {
   home = {
     packages = with pkgs; [
       awscli2
-      # ansible
+      ansible
       restic
       bat
       go
