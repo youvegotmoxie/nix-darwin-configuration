@@ -66,6 +66,7 @@ in {
   # Sudo auth with Touch ID
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  # TODO: merge the two macs and make work vs personal a config option
   homebrew = {
     enable = true;
     onActivation = {
