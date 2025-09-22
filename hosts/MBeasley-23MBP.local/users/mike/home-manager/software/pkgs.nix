@@ -11,6 +11,7 @@ in {
       ansible
       restic
       bat
+      bat-extras.batman
       go
       bfs
       cargo
@@ -18,6 +19,8 @@ in {
       eza
       fd
       gh
+      nh
+      nix-output-monitor
       ugrep
       pre-commit
       tree-sitter

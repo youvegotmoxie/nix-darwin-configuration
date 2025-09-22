@@ -53,49 +53,54 @@ in {
       shellAliases =
         if cfg.workAliases.enable
         then {
-          "lg" = "lazygit";
-          "ls" = "eza";
-          "rm" = "rm -v";
-          "mv" = "mv -v";
-          "cp" = "cp -v";
-          "ln" = "ln -v";
-          "history" = "history -E";
-          "mkdir" = "mkdir -v";
-          "sudo" = "nocorrect sudo";
-          "tldr" = "nocorrect tldr";
+          lg = "lazygit";
+          ls = "eza";
+          rm = "rm -v";
+          mv = "mv -v";
+          cp = "cp -v";
+          ln = "ln -v";
+          history = "history -E";
+          mkdir = "mkdir -v";
+          sudo = "nocorrect sudo";
+          tldr = "nocorrect tldr";
 
           # Legacy network stuff (kept for reference)
           # "switch0-top" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.248 -p22 -c aes256-cbc";
           # "switch0-bottom" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.249 -p22 -c aes256-cbc";
           # "router1-bottom" = "ssh 192.168.1.250 -lmike -p22 -c aes256-cbc";
-          "properties-converter" = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
-          "kubectl" = "kubecolor";
-          "k" = "kubectl";
-          "kgp" = "kubectl get pods";
-          "dive" = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-
-          "gpm" = "git pull origin master";
-          "ll" = "eza -lahg --git-repos-no-status --git";
-          "grep" = "ugrep --color=auto";
-          "cat" = "bat --paging=never --style=plain";
-          "btcm" = "better-commits";
+          properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
+          kubectl = "kubecolor";
+          k = "kubectl";
+          kgp = "kubectl get pods";
+          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
+          gpm = "git pull origin master";
+          ll = "eza -lahg --git-repos-no-status --git";
+          grep = "ugrep --color=auto";
+          cat = "bat --paging=never --style=plain";
+          btcm = "better-commits";
+          tree = "eza --icons --tree --group-directories-first";
+          man = "batman";
+          nomsh = "nom-shell";
         }
         else {
-          "lg" = "lazygit";
-          "ls" = "eza";
-          "rm" = "rm -v";
-          "mv" = "mv -v";
-          "cp" = "cp -v";
-          "ln" = "ln -v";
-          "history" = "history -E";
-          "mkdir" = "mkdir -v";
-          "sudo" = "nocorrect sudo";
-          "tldr" = "nocorrect tldr";
-          "gpm" = "git pull origin master";
-          "ll" = "eza -lahg --git-repos-no-status --git";
-          "grep" = "ugrep --color=auto";
-          "cat" = "bat --paging=never --style=plain";
-          "btcm" = "better-commits";
+          lg = "lazygit";
+          ls = "eza";
+          rm = "rm -v";
+          mv = "mv -v";
+          cp = "cp -v";
+          ln = "ln -v";
+          history = "history -E";
+          mkdir = "mkdir -v";
+          sudo = "nocorrect sudo";
+          tldr = "nocorrect tldr";
+          gpm = "git pull origin master";
+          ll = "eza -lahg --git-repos-no-status --git";
+          grep = "ugrep --color=auto";
+          cat = "bat --paging=never --style=plain";
+          btcm = "better-commits";
+          tree = "eza --icons --tree --group-directories-first";
+          man = "batman";
+          nomsh = "nom-shell";
         };
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh

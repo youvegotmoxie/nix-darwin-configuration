@@ -14,7 +14,6 @@ in {
     inputs.nil.packages.${system}.nil
     uutils-coreutils-noprefix
     reattach-to-user-namespace
-    nh
     home-manager
     python313
     python313Packages.pip
