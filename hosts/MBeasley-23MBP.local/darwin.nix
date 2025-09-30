@@ -76,7 +76,6 @@ in {
     casks = [
       "ghostty"
       "orbstack"
-      "tailscale-app"
       "raycast"
     ];
     masApps = {
