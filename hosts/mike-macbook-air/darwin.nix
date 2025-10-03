@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   mainUser = "mike";
 in {
   nixpkgs.hostPlatform = "x86_64-darwin";
@@ -61,22 +57,6 @@ in {
   # Sudo auth with Touch ID
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  # TODO: merge the two macs and make work vs personal a config option
-  homebrew = {
-    enable = false;
-    onActivation = {
-      autoUpdate = false;
-      upgrade = false;
-      cleanup = "zap";
-    };
-    brews = [];
-    casks = [
-      "ghostty"
-    ];
-    masApps = {
-      "Bitwarden" = 1352778147;
-    };
-  };
   environment.variables.XDG_DATA_DIRS = [
     "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
   ];
