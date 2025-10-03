@@ -55,10 +55,17 @@
       #   args = ["start"];
       # };
       language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter = {command = "${pkgs.alejandra}/bin/alejandra";};
+        }
       ];
     };
   };
 
   home.packages = with pkgs; [
+    nil
+    alejandra
   ];
 }
