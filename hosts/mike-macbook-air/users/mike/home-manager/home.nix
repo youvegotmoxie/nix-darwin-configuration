@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
-in {
+{config, ...}: {
   imports = [
     # Per host modules
     ./software
