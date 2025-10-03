@@ -105,7 +105,7 @@ in {
   launchd = {
     agents = {
       restic-backup = {
-        enable = true;
+        enable = false;
         config = {
           ProgramArguments = [
             "${pkgs.restic}/bin/restic"
@@ -140,7 +140,7 @@ in {
         };
       };
       restic-cleanup = {
-        enable = true;
+        enable = false;
         config = {
           ProgramArguments = [
             "${pkgs.restic}/bin/restic"
