@@ -36,30 +36,31 @@ in {
           "git"
           "git-extras"
           "macos"
+          "brew"
         ];
       };
       enableCompletion = true;
       # TODO: Move this into its own file and import here
       shellAliases = {
-          lg = "lazygit";
-          ls = "eza";
-          rm = "rm -v";
-          mv = "mv -v";
-          cp = "cp -v";
-          ln = "ln -v";
-          history = "history -E";
-          mkdir = "mkdir -v";
-          sudo = "nocorrect sudo";
-          tldr = "nocorrect tldr";
-          gpm = "git pull origin master";
-          ll = "eza -lahg --git-repos-no-status --git";
-          grep = "ugrep --color=auto";
-          cat = "bat --paging=never --style=plain";
-          btcm = "better-commits";
-          tree = "eza --icons --tree --group-directories-first";
-          man = "batman";
-          nomsh = "nom-shell";
-        };
+        lg = "lazygit";
+        ls = "eza";
+        rm = "rm -v";
+        mv = "mv -v";
+        cp = "cp -v";
+        ln = "ln -v";
+        history = "history -E";
+        mkdir = "mkdir -v";
+        sudo = "nocorrect sudo";
+        tldr = "nocorrect tldr";
+        gpm = "git pull origin master";
+        ll = "eza -lahg --git-repos-no-status --git";
+        grep = "ugrep --color=auto";
+        cat = "bat --paging=never --style=plain";
+        btcm = "better-commits";
+        tree = "eza --icons --tree --group-directories-first";
+        man = "batman";
+        nomsh = "nom-shell";
+      };
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         # eval "$(ssh-agent -s)"
