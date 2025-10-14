@@ -10,7 +10,6 @@ in {
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
-    ghostty-bin
     vim
     gnused
     gnutar
