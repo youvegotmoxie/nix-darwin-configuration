@@ -32,7 +32,7 @@ in {
       krew
       viddy
       nodejs_22
-      jdk24_headless
+      jdk21_headless
       lazydocker
       obsidian
       p7zip

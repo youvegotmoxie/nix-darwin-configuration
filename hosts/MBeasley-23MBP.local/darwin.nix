@@ -77,6 +77,7 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
+      "alcove"
     ];
     masApps = {
       "Bitwarden" = 1352778147;
