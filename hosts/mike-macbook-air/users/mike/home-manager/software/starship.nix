@@ -4,6 +4,7 @@
     enable = true;
     settings = {
       format = "$nix_shell$python$hostname$directory$git_branch$git_state$git_status$kubernetes$cmd_duration$line_break$character";
+      command_timeout = 3600;
       directory = {
         style = "blue";
       };
