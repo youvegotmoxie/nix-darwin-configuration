@@ -57,7 +57,7 @@
       language = [
         {
           name = "yaml";
-          auto-format = true;
+          auto-format = false;
           formatter = {
             command = "${pkgs.yamlfmt}/bin/yamlfmt";
             args = ["-"];
