@@ -1,7 +1,7 @@
 {pkgs, ...}: let
   mainUser = "mike";
 in {
-  nixpkgs.hostPlatform = "x86_64-darwin";
+  nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
 
@@ -56,6 +56,24 @@ in {
 
   # Sudo auth with Touch ID
   security.pam.services.sudo_local.touchIdAuth = true;
+
+  homebrew = {
+    enable = true;
+    onActivation = {
+      autoUpdate = false;
+      upgrade = false;
+      cleanup = "zap";
+    };
+    brews = [];
+    casks = [
+      "ghostty"
+      "raycast"
+      "alcove"
+    ];
+    masApps = {
+      "Bitwarden" = 1352778147;
+    };
+  };
 
   environment.variables.XDG_DATA_DIRS = [
     "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
