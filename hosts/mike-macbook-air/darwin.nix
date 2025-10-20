@@ -69,7 +69,6 @@ in {
       "ghostty"
       "raycast"
       "alcove"
-      "betterdisplay"
     ];
     masApps = {
       "Bitwarden" = 1352778147;
