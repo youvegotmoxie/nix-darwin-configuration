@@ -34,10 +34,10 @@ in {
     };
     programs.git = {
       enable = true;
-      userName = "${cfg.name}";
-      userEmail = "${cfg.email}";
       signing.key = "${config.home.homeDirectory}/.ssh/git-signing_ed25519.pub";
-      extraConfig = {
+      settings = {
+        user.name = "${cfg.name}";
+        user.email = "${cfg.email}";
         core = {
           pager = "delta --pager=never --max-line-length=0";
           editor = "hx";
