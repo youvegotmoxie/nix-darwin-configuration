@@ -104,13 +104,12 @@
         modules = [
           ./hosts/mike-macbook-air/darwin.nix
           home-manager.darwinModules.home-manager
-	  {
+          {
             # User level
             home-manager = {
               users."mike" = {
                 imports = [
                   ./hosts/mike-macbook-air/users/mike/home-manager/home.nix
-                  sops-nix.homeManagerModules.sops
                 ];
               };
               useGlobalPkgs = true;
@@ -118,10 +117,7 @@
               backupFileExtension = "hmback";
               extraSpecialArgs.flake-inputs = inputs;
             };
-            users.users."mike" = {
-              home = "/Users/mike";
-            };
-	   }
+          }
         ];
         specialArgs = {inherit inputs;};
       };

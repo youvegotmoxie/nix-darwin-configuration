@@ -5,14 +5,17 @@ in {
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
 
+  users.users.${mainUser} = {
+    home = "/Users/mike";
+    shell = pkgs.zsh;
+    packages = [pkgs.vim pkgs.gnused pkgs.gnutar];
+  };
+
   # System packages
   environment.systemPackages = with pkgs; [
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
-    vim
-    gnused
-    gnutar
   ];
 
   environment.pathsToLink = ["/share/zsh"];
