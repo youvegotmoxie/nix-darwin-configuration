@@ -60,6 +60,19 @@ in {
   # Sudo auth with Touch ID
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  # Autohide the dock
+  system.defaults = {
+    finder = {
+      FXRemoveOldTrashItems = true;
+      ShowStatusBar = true;
+    };
+    dock = {
+      magnification = true;
+      minimize-to-application = true;
+      show-process-indicators = true;
+    };
+  };
+
   homebrew = {
     enable = true;
     onActivation = {
