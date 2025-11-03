@@ -69,6 +69,14 @@
           formatter = {command = "${pkgs.alejandra}/bin/alejandra";};
         }
         {
+          name = "hcl";
+          auto-format = true;
+          formatter = {
+            command = "${pkgs.opentofu}/bin/tofu";
+            args = ["fmt" "-"];
+          };
+        }
+        {
           name = "bash";
           auto-format = true;
           formatter = {
