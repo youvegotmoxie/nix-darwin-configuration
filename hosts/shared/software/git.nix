@@ -26,10 +26,14 @@ in {
           showNumstatInFilesView = true;
           nerdFontsVersion = "3";
         };
-        git.paging = {
-          pager = "delta --dark --paging=never --max-line-length=0";
-          useConfig = false;
-        };
+
+        # Moved git.paging object to git.pagers array
+        git.pagers = [
+          {
+            pager = "delta --dark --paging=never --max-line-length=0";
+            useConfig = false;
+          }
+        ];
       };
     };
     programs.git = {
