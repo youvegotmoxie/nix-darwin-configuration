@@ -12,11 +12,12 @@ in {
       restic
       bat
       bat-extras.batman
-      go
       bfs
+      bitwarden-cli
       cargo
       delta
       eza
+      go
       fd
       gh
       nh
