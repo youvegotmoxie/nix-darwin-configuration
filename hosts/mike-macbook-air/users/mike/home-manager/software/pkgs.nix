@@ -7,7 +7,6 @@ in {
       bat
       bat-extras.batman
       bfs
-      bitwarden-cli
       delta
       eza
       fd
