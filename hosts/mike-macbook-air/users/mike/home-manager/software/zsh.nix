@@ -33,10 +33,10 @@ in {
       oh-my-zsh = {
         enable = true;
         plugins = [
+          "brew"
           "git"
           "git-extras"
           "macos"
-          "brew"
         ];
       };
       enableCompletion = true;

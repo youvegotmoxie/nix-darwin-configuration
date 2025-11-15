@@ -41,7 +41,7 @@
 
   programs.git = {
     enable = true;
-    lfs.enable = true;
+    lfs.enable = false;
   };
   programs.direnv = {
     enable = true;
