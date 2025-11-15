@@ -8,7 +8,7 @@ in {
   users.users.${mainUser} = {
     home = "/Users/mike";
     shell = pkgs.zsh;
-    packages = [pkgs.vim pkgs.gnused pkgs.gnutar];
+    packages = [pkgs.gnused pkgs.gnutar];
   };
 
   # System packages
@@ -26,7 +26,7 @@ in {
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 15d";
+      options = "--delete-older-than 30d";
       interval = {
         Weekday = 0;
         Hour = 2;
@@ -77,7 +77,7 @@ in {
     enable = true;
     onActivation = {
       autoUpdate = true;
-      upgrade = false;
+      upgrade = true;
       cleanup = "zap";
     };
     brews = [];
