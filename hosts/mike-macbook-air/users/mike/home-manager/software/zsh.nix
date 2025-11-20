@@ -71,7 +71,7 @@ in {
       '';
       sessionVariables = {
         "TERM" = "xterm-256color";
-        "SSH_AUTH_SOCK" = "${cfg.bw.socketPath}";
+        # "SSH_AUTH_SOCK" = "${cfg.bw.socketPath}";
       };
     };
   };
