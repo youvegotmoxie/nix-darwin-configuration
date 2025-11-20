@@ -16,6 +16,7 @@ in {
       bitwarden-cli
       cargo
       delta
+      eks-node-viewer
       eza
       go
       fd
@@ -49,6 +50,7 @@ in {
       fzf
       pulumi
       steampipe
+      # scripts
       ssh-proxy
       tilt-connect
       git-hunk

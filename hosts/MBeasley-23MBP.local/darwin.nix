@@ -82,7 +82,7 @@ in {
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
       upgrade = false;
       cleanup = "zap";
     };
