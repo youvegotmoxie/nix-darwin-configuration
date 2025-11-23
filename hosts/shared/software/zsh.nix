@@ -71,7 +71,7 @@ in {
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           kubectl = "kubecolor";
           k = "kubectl";
-          terraform = "tofu";
+          # terraform = "tofu";
           kgp = "kubectl get pods";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           gpm = "git pull origin master";

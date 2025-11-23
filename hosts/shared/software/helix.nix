@@ -72,7 +72,7 @@
           name = "hcl";
           auto-format = true;
           formatter = {
-            command = "${pkgs.opentofu}/bin/tofu";
+            command = "terraform";
             args = ["fmt" "-"];
           };
         }
@@ -103,6 +103,7 @@
   home.packages = with pkgs; [
     yaml-language-server
     bash-language-server
+    helm-ls
     shfmt
     alejandra
     yamlfmt

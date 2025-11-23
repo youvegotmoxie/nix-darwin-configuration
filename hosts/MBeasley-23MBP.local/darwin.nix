@@ -86,7 +86,11 @@ in {
       upgrade = false;
       cleanup = "zap";
     };
-    brews = [];
+    taps = [
+      "hashicorp/tap"
+    ];
+    brews = [
+    ];
     casks = [
       "ghostty"
       "orbstack"
@@ -94,7 +98,7 @@ in {
       "alcove"
     ];
     masApps = {
-      "Bitwarden" = 1352778147;
+      # "Bitwarden" = 1352778147;
     };
   };
   environment.variables.XDG_DATA_DIRS = [
