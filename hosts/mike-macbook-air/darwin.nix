@@ -76,8 +76,8 @@ in {
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
-      upgrade = false;
+      autoUpdate = true;
+      upgrade = true;
       cleanup = "zap";
     };
     brews = [];
@@ -87,7 +87,7 @@ in {
       "alcove"
     ];
     masApps = {
-      "Bitwarden" = 1352778147;
+      # "Bitwarden" = 1352778147;
     };
   };
 
