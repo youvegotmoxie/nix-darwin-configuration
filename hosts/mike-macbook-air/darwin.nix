@@ -85,9 +85,9 @@ in {
       "ghostty"
       "raycast"
       "alcove"
+      "raspberry-pi-imager"
     ];
     masApps = {
-      # "Bitwarden" = 1352778147;
     };
   };
 

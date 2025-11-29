@@ -19,6 +19,8 @@ in {
       tldr
       ripgrep
       fzf
+      talosctl
+      # scripts
       git-hunk
       blame-line-pretty
     ];
