@@ -85,7 +85,6 @@ in {
       "ghostty"
       "raycast"
       "alcove"
-      "raspberry-pi-imager"
     ];
     masApps = {
     };
