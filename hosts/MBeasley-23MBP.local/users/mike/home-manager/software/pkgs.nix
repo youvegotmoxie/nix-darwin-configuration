@@ -9,11 +9,9 @@ in {
     packages = with pkgs; [
       awscli2
       ansible
-      restic
       bat
       bat-extras.batman
       bfs
-      bitwarden-cli
       cargo
       delta
       eks-node-viewer

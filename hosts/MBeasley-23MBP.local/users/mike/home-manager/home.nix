@@ -62,11 +62,12 @@ in {
         font-family = "MesloLGS NF"
         cursor-style-blink = false
         cursor-style =
+        link-url = true
         scrollback-limit = 100_000_000
         shell-integration = detect
         clipboard-read = allow
         clipboard-write = allow
-        clipboard-paste-protection = false
+        clipboard-paste-protection = true
         mouse-hide-while-typing = true
         confirm-close-surface = false
         quit-after-last-window-closed = true
