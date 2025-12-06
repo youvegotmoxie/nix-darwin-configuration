@@ -11,6 +11,7 @@ in {
       delta
       eza
       fd
+      go
       nh
       nix-output-monitor
       ugrep
