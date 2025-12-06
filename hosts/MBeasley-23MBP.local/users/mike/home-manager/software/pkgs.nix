@@ -7,6 +7,7 @@
 in {
   home = {
     packages = with pkgs; [
+      act
       awscli2
       ansible
       bat
