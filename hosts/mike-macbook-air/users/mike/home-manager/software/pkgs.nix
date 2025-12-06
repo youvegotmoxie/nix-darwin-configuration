@@ -21,6 +21,7 @@ in {
       tldr
       ripgrep
       nodejs_22
+      jdk21_headless
       fzf
       # scripts
       git-hunk
