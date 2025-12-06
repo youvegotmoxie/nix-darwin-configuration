@@ -7,6 +7,7 @@ in {
       bat
       bat-extras.batman
       bfs
+      cargo
       delta
       eza
       fd
@@ -18,6 +19,7 @@ in {
       p7zip
       tldr
       ripgrep
+      nodejs_22
       fzf
       # scripts
       git-hunk
