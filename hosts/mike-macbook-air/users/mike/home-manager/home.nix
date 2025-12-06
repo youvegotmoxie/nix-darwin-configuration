@@ -40,10 +40,17 @@
     };
   };
 
+  # Using Helix as the default $EDITOR
+  programs.neovim = {
+    enable = true;
+    defaultEditor = false;
+  };
+
   programs.git = {
     enable = true;
     lfs.enable = false;
   };
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
