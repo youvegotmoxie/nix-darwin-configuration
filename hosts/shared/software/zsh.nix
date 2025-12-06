@@ -46,6 +46,7 @@ in {
           "helm"
           "gcloud"
           "aws"
+          "vi-mode"
         ];
       };
       enableCompletion = true;
@@ -105,11 +106,11 @@ in {
         };
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
-        # eval "$(ssh-agent -s)"
-        # Workaround for Atuin
-        source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
-        bindkey -M hxins '^r' atuin-up-search-vicmd
-        bindkey -M hxnor '^r' atuin-up-search-vicmd
+        # # eval "$(ssh-agent -s)"
+        # # Workaround for Atuin
+        # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
+        # bindkey -M hxins '^r' atuin-up-search-vicmd
+        # bindkey -M hxnor '^r' atuin-up-search-vicmd
       '';
       sessionVariables = {
         "TERM" = "xterm-256color";
