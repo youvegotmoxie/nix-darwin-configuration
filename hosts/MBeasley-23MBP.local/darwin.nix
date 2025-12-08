@@ -96,6 +96,7 @@ in {
       "orbstack"
       "raycast"
       "alcove"
+      "github"
     ];
     masApps = {
       # "Bitwarden" = 1352778147;
