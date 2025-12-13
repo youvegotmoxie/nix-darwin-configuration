@@ -4,6 +4,24 @@
   tilt-connect = pkgs.writeShellScriptBin "tilt-connect" (builtins.readFile ../../../../../shared/scripts/tilt-connect.sh);
   blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (builtins.readFile ../../../../../shared/scripts/blame-line-pretty.sh);
   git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../../../../../shared/scripts/git-hunk.sh);
+  helmVersion = "4.0.4";
+  helmSHA = "sha256-LCRBUeRnCs0WK3pCmBCBmCSFpfD7mglHciOjaWqx59c=";
+  helm4 = pkgs.stdenv.mkDerivation rec {
+    pname = "helm";
+    version = helmVersion;
+    sourceRoot = ".";
+    src = pkgs.fetchzip {
+      name = pname;
+      url = "https://get.${pname}.sh/${pname}-v${helmVersion}-darwin-arm64.tar.gz";
+      sha256 = helmSHA;
+      stripRoot = false;
+    };
+    installPhase = ''
+      runHook preInstall
+      install -m 0755 -D helm/darwin-arm64/helm $out/bin/helm
+      runHook postInstall
+    '';
+  };
 in {
   home = {
     packages = with pkgs; [
@@ -29,7 +47,7 @@ in {
       kubectx
       kubecolor
       kubent
-      kubernetes-helm
+      # kubernetes-helm
       krew
       viddy
       nodejs_22
@@ -54,6 +72,7 @@ in {
       tilt-connect
       git-hunk
       blame-line-pretty
+      helm4
     ];
   };
 }
