@@ -64,7 +64,7 @@
       # Auto-renumber all windows when one closed
       set -g renumber-windows on
 
-      # Use 24 clock
+      # Use 24 hour clock
       set -g @tokyo-night-tmux_time_format 24H
 
       # Reduce padding between icons and text
@@ -73,18 +73,6 @@
       # Show pwd in status bar and use relative paths
       set -g @tokyo-night-tmux_show_path 1
       set -g @tokyo-night-tmux_path_format relative
-
-      # Placeholder so I remember these are options
-      set -g @tokyo-night-tmux_show_netspeed 0
-      set -g @tokyo-night-tmux_netspeed_showip 0
-      set -g @tokyo-night-tmux_show_battery_widget 0
-
-      # Title bar delimiter and tab styling
-      set -g @tokyo-night-tmux_window_id_style digital
-      set -g @tokyo-night-tmux_pane_id_style hsquare
-      set -g @tokyo-night-tmux_zoom_id_style dsquare
-      set -g @tokyo-night-tmux_terminal_icon 
-      set -g @tokyo-night-tmux_active_terminal_icon 
     '';
   };
 }

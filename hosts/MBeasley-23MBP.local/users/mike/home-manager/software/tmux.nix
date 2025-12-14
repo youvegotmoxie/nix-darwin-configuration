@@ -26,7 +26,8 @@
       set -g set-titles on
       set -g set-titles-string "#(whoami)@#h"
 
-      # Copy to system clipboard
+      # Copy to system clipboard and prefix-Y to enter copy mode
+      bind-key -r Y copy-mode
       bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
 
       # Split panes using | and -
@@ -34,6 +35,9 @@
       bind - split-window -v
       unbind '"'
       unbind %
+
+      # Toogle maximize pane
+      bind -r Z resize-pane -Z
 
       # Resize panes using HJKL -/+10%
       bind -r K resize-pane -U 10
@@ -60,7 +64,7 @@
       # Auto-renumber all windows when one closed
       set -g renumber-windows on
 
-      # Use 24 clock
+      # Use 24 hour clock
       set -g @tokyo-night-tmux_time_format 24H
 
       # Reduce padding between icons and text
@@ -69,12 +73,6 @@
       # Show pwd in status bar and use relative paths
       set -g @tokyo-night-tmux_show_path 1
       set -g @tokyo-night-tmux_path_format relative
-
-      # Placeholder so I remember these are options
-      set -g @tokyo-night-tmux_show_netspeed 0
-      set -g @tokyo-night-tmux_netspeed_showip 0
-      set -g @tokyo-night-tmux_show_battery_widget 0
-      set -g @tokyo-night-tmux_show_hostname 1
     '';
   };
 }
