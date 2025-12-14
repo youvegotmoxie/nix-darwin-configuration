@@ -107,6 +107,7 @@ in {
           nomsh = "nom-shell";
         };
       initContent = lib.mkOrder 1500 ''
+        export GIT_AUTO_FETCH_INTERVAL=300
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         # # eval "$(ssh-agent -s)"
         # # Workaround for Atuin
