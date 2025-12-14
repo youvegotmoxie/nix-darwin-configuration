@@ -35,6 +35,7 @@ in {
         plugins = [
           "brew"
           "git"
+          "git-auto-fetch"
           "git-extras"
           "macos"
           "vi-mode"

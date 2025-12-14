@@ -39,6 +39,8 @@ in {
         plugins = [
           "git"
           "docker"
+          "git"
+          "git-auto-fetch"
           "git-extras"
           "macos"
           "terraform"
