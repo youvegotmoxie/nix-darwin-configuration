@@ -47,7 +47,6 @@ in {
       kubectx
       kubecolor
       kubent
-      # kubernetes-helm
       krew
       viddy
       nodejs_22
@@ -67,6 +66,11 @@ in {
       fzf
       pulumi
       steampipe
+      # Tmux stuff
+      pam-reattach
+      jq
+      gh
+      gawk
       # scripts
       ssh-proxy
       tilt-connect

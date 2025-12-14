@@ -66,6 +66,13 @@ in {
   # Sudo auth with Touch ID
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  # Setup sudo auth with TouchID for Tmux
+  environment.etc."pam.d/sudo_local".text = ''
+    # Written by nix-darwin
+    auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+    auth       sufficient     pam_tid.so
+  '';
+
   # Configure the dock and Finder
   system.defaults = {
     finder = {
