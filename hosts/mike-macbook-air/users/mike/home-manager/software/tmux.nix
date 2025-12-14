@@ -22,6 +22,9 @@
         source-file ${config.home.homeDirectory}/.config/tmux/tmux.conf\; \
         display-message "Configuration reloaded..."
 
+      # Remove ESC key delay
+      set -g escape-time 0
+
       # Enable $TERM title setting
       set -g set-titles on
       set -g set-titles-string "#(whoami)@#h"
