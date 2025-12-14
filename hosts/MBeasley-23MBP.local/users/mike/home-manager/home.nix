@@ -50,7 +50,8 @@ in {
     ];
 
     file = {
-      ".tmux.conf".source = ../../../../shared/dots/dot_tmux.conf;
+      # Disabled since I'm using tmux from nixpkgs
+      # ".tmux.conf".source = ../../../../shared/dots/dot_tmux.conf;
       "shell.nix".source = ../../../../shared/dots/shell.nix;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
       ".zsh.d/func.zsh".source = ./dots/func.zsh;
