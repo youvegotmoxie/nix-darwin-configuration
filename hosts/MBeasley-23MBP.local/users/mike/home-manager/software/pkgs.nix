@@ -47,13 +47,13 @@ in {
       kubectx
       kubecolor
       kubent
-      # kubernetes-helm
       krew
       viddy
       nodejs_22
       jdk21_headless
       lazydocker
       obsidian
+      pam-reattach
       p7zip
       ssm-session-manager-plugin
       stern

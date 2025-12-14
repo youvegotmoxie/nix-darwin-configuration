@@ -22,6 +22,10 @@ in {
       nodejs_22
       jdk21_headless
       fzf
+      # Tmux stuff
+      pam-reattach
+      jq
+      gh
       # scripts
       git-hunk
       blame-line-pretty
