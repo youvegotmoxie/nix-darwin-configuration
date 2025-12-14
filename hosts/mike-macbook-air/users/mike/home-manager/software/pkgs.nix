@@ -26,6 +26,7 @@ in {
       pam-reattach
       jq
       gh
+      gawk
       # scripts
       git-hunk
       blame-line-pretty

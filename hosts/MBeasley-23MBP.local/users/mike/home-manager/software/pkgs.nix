@@ -53,7 +53,6 @@ in {
       jdk21_headless
       lazydocker
       obsidian
-      pam-reattach
       p7zip
       ssm-session-manager-plugin
       stern
@@ -67,6 +66,11 @@ in {
       fzf
       pulumi
       steampipe
+      # Tmux stuff
+      pam-reattach
+      jq
+      gh
+      gawk
       # scripts
       ssh-proxy
       tilt-connect
