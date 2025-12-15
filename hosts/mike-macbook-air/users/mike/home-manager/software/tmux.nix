@@ -21,7 +21,6 @@ in {
     terminal = "xterm-256color";
     historyLimit = 50000;
     keyMode = "vi";
-    baseIndex = 1;
     clock24 = true;
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
