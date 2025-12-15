@@ -92,6 +92,8 @@ in {
       "ghostty"
       "raycast"
       "alcove"
+      "font-monaspace-nerd-font"
+      "font-noto-sans-symbols-2"
     ];
     masApps = {
     };

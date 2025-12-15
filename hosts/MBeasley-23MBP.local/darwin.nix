@@ -103,6 +103,8 @@ in {
       "orbstack"
       "raycast"
       "alcove"
+      "font-monaspace-nerd-font"
+      "font-noto-sans-symbols-2"
     ];
     masApps = {
       # "Bitwarden" = 1352778147;

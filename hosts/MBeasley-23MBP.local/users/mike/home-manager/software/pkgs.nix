@@ -71,6 +71,8 @@ in {
       jq
       gh
       gawk
+      nerd-fonts.monaspace
+      noto-fonts
       # scripts
       ssh-proxy
       tilt-connect

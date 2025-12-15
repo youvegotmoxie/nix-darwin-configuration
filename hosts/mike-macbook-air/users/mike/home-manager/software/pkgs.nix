@@ -27,6 +27,9 @@ in {
       jq
       gh
       gawk
+      nerd-fonts.monaspace
+      noto-fonts
+
       # scripts
       git-hunk
       blame-line-pretty
