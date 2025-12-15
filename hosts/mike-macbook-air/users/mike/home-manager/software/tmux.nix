@@ -32,7 +32,7 @@ in {
     mouse = true;
     extraConfig = ''
       # Reload Tmux config
-      bind r \
+      bind R \
         source-file ${config.home.homeDirectory}/.config/tmux/tmux.conf\; \
         display-message "Configuration reloaded..."
 
