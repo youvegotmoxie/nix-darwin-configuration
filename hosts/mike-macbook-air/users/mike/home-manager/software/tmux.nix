@@ -6,7 +6,7 @@
   programs.tmux = {
     enable = true;
     terminal = "xterm-256color";
-    historyLimit = 10000;
+    historyLimit = 50000;
     keyMode = "vi";
     baseIndex = 1;
     clock24 = true;
@@ -24,6 +24,15 @@
 
       # Remove ESC key delay
       set -g escape-time 0
+
+      # Increase tmux messages display duration from 750ms to 4s
+      set -g display-time 2000
+
+      # Refresh 'status-left' and 'status-right' more often, from every 15s to 5s
+      set -g status-interval 5
+
+      # Focus events enabled for terminals that support them
+      set -g focus-events on
 
       # Enable $TERM title setting
       set -g set-titles on
