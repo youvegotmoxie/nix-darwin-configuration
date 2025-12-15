@@ -32,6 +32,7 @@ in {
     keyMode = "vi";
     clock24 = true;
     baseIndex = 1;
+    shell = "${pkgs.zsh}/bin/zsh";
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux
