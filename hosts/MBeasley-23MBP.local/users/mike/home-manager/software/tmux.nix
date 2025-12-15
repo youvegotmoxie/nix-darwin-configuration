@@ -31,6 +31,7 @@ in {
     historyLimit = 50000;
     keyMode = "vi";
     clock24 = true;
+    baseIndex = 1;
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux

@@ -4,16 +4,24 @@
   ...
 }: let
   tmux-lazy-restore =
-    pkgs.tmuxPlugins.mkTmuxPlugin
+    pkgs.stdenv.mkDerivation rec
     {
-      pluginName = "tmux-lazy-restore";
+      pname = "tmux-lazy-restore";
       version = "v0.1.2";
       src = pkgs.fetchFromGitHub {
         owner = "bcampolo";
-        repo = "tmux-lazy-restore";
+        repo = pname;
         rev = "d578fddb3bd9f9aca07f1053670e48ec8c6ea2bf";
         sha256 = "sha256-LLXGXJzIB2I0NMbWTh2DtLTAyC+JMzNM//SbKtFd9nM=";
       };
+      installPhase = ''
+        runHook preInstall
+        install -d 0755 scripts $out/bin/scripts
+        install -m 0755 scripts/tmux-session-manager.sh $out/bin/scripts
+        install -m 0755 scripts/spinner.sh $out/bin/scripts
+        install -m 0755 tmux-lazy-restore.tmux $out/bin/tmux-lazy-restore.tmux
+        runHook postInstall
+      '';
     };
 in {
   programs.tmux = {
@@ -22,10 +30,10 @@ in {
     historyLimit = 50000;
     keyMode = "vi";
     clock24 = true;
+    baseIndex = 1;
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux
-      tmux-lazy-restore
     ];
     shortcut = "a";
     mouse = true;
@@ -34,6 +42,9 @@ in {
       bind R \
         source-file ${config.home.homeDirectory}/.config/tmux/tmux.conf\; \
         display-message "Configuration reloaded..."
+
+      # Set path to tmux-lazy-restore in nix store
+      run-shell ${tmux-lazy-restore}/bin/tmux-lazy-restore.tmux
 
       # Remove ESC key delay
       set -g escape-time 0
