@@ -19,7 +19,7 @@
     extraConfig = ''
       # Reload Tmux config
       bind r \
-        source-file ${config.home.RomeDirectory}/.config/tmux/tmux.conf\; \
+        source-file ${config.home.homeDirectory}/.config/tmux/tmux.conf\; \
         display-message "Configuration reloaded..."
 
       # Remove ESC key delay
