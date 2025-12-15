@@ -2,7 +2,20 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  tmux-lazy-restore =
+    pkgs.tmuxPlugins.mkTmuxPlugin
+    {
+      pluginName = "tmux-lazy-restore";
+      version = "v0.1.2";
+      src = pkgs.fetchFromGitHub {
+        owner = "bcampolo";
+        repo = "tmux-lazy-restore";
+        rev = "d578fddb3bd9f9aca07f1053670e48ec8c6ea2bf";
+        sha256 = "sha256-LLXGXJzIB2I0NMbWTh2DtLTAyC+JMzNM//SbKtFd9nM=";
+      };
+    };
+in {
   programs.tmux = {
     enable = true;
     terminal = "xterm-256color";
@@ -13,6 +26,7 @@
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux
+      tmux-lazy-restore
     ];
     shortcut = "a";
     mouse = true;
