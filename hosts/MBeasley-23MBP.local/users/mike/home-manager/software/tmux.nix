@@ -26,7 +26,8 @@ in {
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux
-      tmux-lazy-restore
+      # TODO: Why is this broken only on this computer?
+      # tmux-lazy-restore
     ];
     shortcut = "a";
     mouse = true;
