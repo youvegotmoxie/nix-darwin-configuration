@@ -40,9 +40,7 @@ function docker-clean-images() {
     done
 }
 
-
-# Add mark all mail as read script alias
-
+# Unlock Bitwarden CLI
 function bwlunlock () {
   export BW_PASSWD=$(cat ~/.creds.d/BW_PASSWD)
   export BW_SESSION=$(bw unlock --passwordenv BW_PASSWD --raw)

@@ -36,7 +36,6 @@ in {
     plugins = [
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux
-      pkgs.tmuxPlugins.vim-tmux-navigator
     ];
     shortcut = "a";
     mouse = true;
