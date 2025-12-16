@@ -46,7 +46,7 @@ in {
         display-message "Configuration reloaded..."
 
       # Set path to tmux-lazy-restore in nix store
-      run-shell ${tmux-lazy-restore}/bin/tmux-lazy-restore.tmux
+      # run-shell ${tmux-lazy-restore}/bin/tmux-lazy-restore.tmux
 
       # Remove ESC key delay
       set -g escape-time 0
