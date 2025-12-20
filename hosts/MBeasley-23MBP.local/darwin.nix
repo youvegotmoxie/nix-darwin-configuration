@@ -103,7 +103,7 @@ in {
       "orbstack"
       "raycast"
       "alcove"
-      "font-monaspace-nerd-font"
+      "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
     ];
     masApps = {
