@@ -86,6 +86,7 @@ in {
     };
   };
 
+  # Use Homebrew for things not working with nixpkgs on macOS
   homebrew = {
     enable = true;
     onActivation = {
@@ -94,21 +95,18 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "hashicorp/tap"
+      "tw93/tap"
     ];
-    brews = [
-    ];
+    brews = ["mole"];
     casks = [
-      "ghostty"
-      "orbstack"
-      "raycast"
       "alcove"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
+      "ghostty"
+      "orbstack"
+      "raycast"
     ];
-    masApps = {
-      # "Bitwarden" = 1352778147;
-    };
+    masApps = {};
   };
   environment.variables.XDG_DATA_DIRS = [
     "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"

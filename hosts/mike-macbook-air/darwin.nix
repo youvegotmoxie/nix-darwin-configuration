@@ -80,6 +80,7 @@ in {
     };
   };
 
+  # Use Homebrew for things not working with nixpkgs on macOS
   homebrew = {
     enable = true;
     onActivation = {
@@ -87,16 +88,18 @@ in {
       upgrade = true;
       cleanup = "zap";
     };
-    brews = [];
+    taps = [
+      "tw93/tap"
+    ];
+    brews = ["mole"];
     casks = [
-      "ghostty"
-      "raycast"
       "alcove"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
+      "ghostty"
+      "raycast"
     ];
-    masApps = {
-    };
+    masApps = {};
   };
 
   environment.variables.XDG_DATA_DIRS = [
