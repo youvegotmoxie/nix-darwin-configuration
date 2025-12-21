@@ -22,6 +22,7 @@ in {
       nodejs_22
       jdk21_headless
       fzf
+      git-lfs
       # Tmux stuff
       pam-reattach
       jq

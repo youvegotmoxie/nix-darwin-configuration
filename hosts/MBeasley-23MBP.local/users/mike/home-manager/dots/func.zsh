@@ -25,12 +25,12 @@ function git-sendit() {
 
     if [ ! -z "$1" ]; then
         local msg="trivial"
-        git commit -m ${msg}
+        git commit -m ${msg} -S
     else
-        git commit
+        git commit -S
     fi
 
-    git push origin "${branch}"
+    git push "${origin}" "${branch}"
 }
 
 # Clean all unused Docker images
@@ -40,8 +40,6 @@ function docker-clean-images() {
     done
 }
 
-
-# Add mark all mail as read script alias
 
 function bwlunlock () {
   export BW_PASSWD=$(cat ~/.creds.d/BW_PASSWD)

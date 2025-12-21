@@ -36,12 +36,19 @@ in {
     };
     programs.git = {
       enable = true;
+      signing.key = "${config.home.homeDirectory}/.ssh/git-signing_ed25519.pub";
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";
         core = {
           pager = "delta --pager=never --max-line-length=0";
           editor = "hx";
+        };
+        alias = {
+          tagrelease = "tag -as";
+          com = "checkout master";
+          pom = "pull origin master";
+          sendit = "!f() { git add . && git commit -S && git push -u $(git remote) $(git branch);};f";
         };
         gpg.format = "ssh";
         commit.gpgsign = true;
@@ -67,17 +74,17 @@ in {
         };
         push = {
           autoSetupRemove = true;
+          followTags = true;
         };
         filter = {
-          # lfs = {
-          #   clean = "git-lfs clean -- %f";
-          #   smudge = "git-lfs smudge -- %f";
-          #   process = "git-lfs filter-process";
-          #   required = true;
-          # };
+          lfs = {
+            clean = "git-lfs clean -- %f";
+            smudge = "git-lfs smudge -- %f";
+            process = "git-lfs filter-process";
+            required = true;
+          };
         };
       };
-      signing.key = "${config.home.homeDirectory}/.ssh/git-signing_ed25519.pub";
     };
   };
 }

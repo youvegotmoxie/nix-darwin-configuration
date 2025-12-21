@@ -46,6 +46,12 @@ in {
           pager = "delta --pager=never --max-line-length=0";
           editor = "hx";
         };
+        alias = {
+          tagrelease = "tag -as";
+          com = "checkout master";
+          pom = "pull origin master";
+          sendit = "!f() { git add . && git commit -S && git push -u $(git remote) $(git branch);};f";
+        };
         gpg.format = "ssh";
         commit.gpgsign = true;
         init = {
@@ -70,6 +76,7 @@ in {
         };
         push = {
           autoSetupRemove = true;
+          followTags = true;
         };
         filter = {
           lfs = {

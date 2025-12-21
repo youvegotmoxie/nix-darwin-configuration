@@ -9,17 +9,18 @@ zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
 
 # Commit and push changes
 function git-sendit() {
+    local origin="$(git remote)"
     local branch="$(git branch --show-current)"
     git add .
 
     if [ ! -z "$1" ]; then
         local msg="trivial"
-        git commit -m ${msg}
+        git commit -m ${msg} -S
     else
-        git commit
+        git commit -S
     fi
 
-    git push origin "${branch}"
+    git push "${origin}" "${branch}"
 }
 
 # Color pager

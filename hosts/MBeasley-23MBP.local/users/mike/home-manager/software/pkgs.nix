@@ -38,6 +38,7 @@ in {
       go
       fd
       gh
+      git-lfs
       nh
       nix-output-monitor
       ugrep
@@ -66,6 +67,7 @@ in {
       fzf
       pulumi
       steampipe
+      git-lfs
       # Tmux stuff
       pam-reattach
       jq
