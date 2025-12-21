@@ -46,9 +46,9 @@ in {
         };
         alias = {
           tagrelease = "tag -as";
+          ptags = "push --tags";
           com = "checkout master";
           pom = "pull origin master";
-          # sendit = "!f() { git add . && git commit -S && git push;};f";
           sendit = "!f() { git add . && git commit -S && git push \$(git remote\) \$(git branch --show-current\);};f";
           fall = "fetch --all --verbose";
           pfall = "fetch --all --verbose --prune";
