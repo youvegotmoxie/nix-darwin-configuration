@@ -50,7 +50,13 @@ in {
           tagrelease = "tag -as";
           com = "checkout master";
           pom = "pull origin master";
-          sendit = "!f() { git add . && git commit -S && git push -u $(git remote) $(git branch);};f";
+          sendit = "!f() { git add . && git commit -S && git push $(git remote) $(git branch --show-current);};f";
+          fall = "fetch --all --verbose";
+          pfall = "fetch --all --verbose --prune";
+          logs = "log --stat --reverse";
+          patchlog = "log --stat --patch --reverse";
+          sts = "status --short --show-stash --branch --renames";
+          alist = "config --global --get-regexp ^alias\.";
         };
         gpg.format = "ssh";
         commit.gpgsign = true;

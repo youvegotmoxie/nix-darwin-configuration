@@ -18,21 +18,6 @@ function git-staged() {
     echo $?
 }
 
-# Commit and push changes
-function git-sendit() {
-    local branch="$(git branch --show-current)"
-    git add .
-
-    if [ ! -z "$1" ]; then
-        local msg="trivial"
-        git commit -m ${msg} -S
-    else
-        git commit -S
-    fi
-
-    git push "${origin}" "${branch}"
-}
-
 # Clean all unused Docker images
 function docker-clean-images() {
     for i in $(docker image list | awk '{ print $3 }' | grep -v  IMAGE | sed -e '/^\s*$/g'); do

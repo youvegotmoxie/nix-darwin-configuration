@@ -7,22 +7,6 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
 
-# Commit and push changes
-function git-sendit() {
-    local origin="$(git remote)"
-    local branch="$(git branch --show-current)"
-    git add .
-
-    if [ ! -z "$1" ]; then
-        local msg="trivial"
-        git commit -m ${msg} -S
-    else
-        git commit -S
-    fi
-
-    git push "${origin}" "${branch}"
-}
-
 # Color pager
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
