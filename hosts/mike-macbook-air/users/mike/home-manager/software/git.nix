@@ -58,6 +58,8 @@ in {
           alist = "config --global --get-regexp ^alias\.";
           co = "checkout";
           cb = "checkout -b";
+          db = "branch -D";
+          dbp = "push origin -d";
         };
         gpg.format = "ssh";
         commit.gpgsign = true;
