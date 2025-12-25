@@ -56,6 +56,8 @@ in {
           patchlog = "log --stat --patch --reverse";
           sts = "status --short --show-stash --branch --renames";
           alist = "config --global --get-regexp ^alias\.";
+          co = "checkout";
+          cb = "checkout -b";
         };
         gpg.format = "ssh";
         commit.gpgsign = true;
