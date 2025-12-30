@@ -105,6 +105,7 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
+      "github@beta"
     ];
     masApps = {};
   };
