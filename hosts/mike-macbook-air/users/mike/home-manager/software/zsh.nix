@@ -54,7 +54,6 @@ in {
         mkdir = "mkdir -v";
         sudo = "nocorrect sudo";
         tldr = "nocorrect tldr";
-        gpm = "git pull origin master";
         ll = "eza -lahg --git-repos-no-status --git";
         grep = "ugrep --color=auto";
         cat = "bat --paging=never --style=plain";

@@ -2,7 +2,7 @@
   programs.atuin = {
     enable = true;
     daemon = {
-      enable = false;
+      enable = true;
     };
     enableZshIntegration = true;
     flags = [
