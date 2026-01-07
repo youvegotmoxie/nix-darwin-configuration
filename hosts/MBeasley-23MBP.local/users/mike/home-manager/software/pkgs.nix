@@ -28,6 +28,7 @@ in {
       act
       awscli2
       ansible
+      argocd
       bat
       bat-extras.batman
       bfs

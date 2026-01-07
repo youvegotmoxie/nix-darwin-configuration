@@ -13,6 +13,7 @@ in {
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
+    inputs.argonaut.packages.${system}.default
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
