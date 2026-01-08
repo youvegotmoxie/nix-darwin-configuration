@@ -13,7 +13,7 @@ in {
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
-    inputs.argonaut.packages.${system}.default
+    # inputs.argonaut.packages.${system}.default
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
@@ -97,6 +97,7 @@ in {
     };
     taps = [
       "tw93/tap"
+      "darksworm/homebrew-tap"
     ];
     brews = ["mole"];
     casks = [
@@ -107,6 +108,7 @@ in {
       "orbstack"
       "raycast"
       "github@beta"
+      "darksworm/tap/argonaut"
     ];
     masApps = {};
   };
