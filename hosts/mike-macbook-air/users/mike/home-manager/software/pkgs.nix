@@ -23,6 +23,7 @@ in {
       jdk21_headless
       fzf
       git-lfs
+      talosctl
       # Tmux stuff
       pam-reattach
       jq
@@ -30,7 +31,6 @@ in {
       gawk
       nerd-fonts.monaspace
       noto-fonts
-
       # scripts
       git-hunk
       blame-line-pretty
