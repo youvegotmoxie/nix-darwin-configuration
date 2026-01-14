@@ -99,6 +99,7 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
+      "betterdisplay"
     ];
     masApps = {};
   };
