@@ -109,6 +109,8 @@ in {
       "raycast"
       "github@beta"
       "darksworm/tap/argonaut"
+      "betterdisplay"
+      "yubico-authenticator"
     ];
     masApps = {};
   };
