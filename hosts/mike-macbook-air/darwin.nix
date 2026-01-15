@@ -100,6 +100,7 @@ in {
       "orbstack"
       "raycast"
       "betterdisplay"
+      "yubico-authenticator"
     ];
     masApps = {};
   };
