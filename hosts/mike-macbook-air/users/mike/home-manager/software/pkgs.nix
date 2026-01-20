@@ -31,6 +31,10 @@ in {
       gawk
       nerd-fonts.monaspace
       noto-fonts
+      yubikey-manager
+      pinentry_mac
+      gnupg-pkcs11-scd
+      gnupg
       # scripts
       git-hunk
       blame-line-pretty

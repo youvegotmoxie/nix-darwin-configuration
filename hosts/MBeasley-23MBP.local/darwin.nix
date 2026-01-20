@@ -99,7 +99,10 @@ in {
       "tw93/tap"
       "darksworm/homebrew-tap"
     ];
-    brews = ["mole"];
+    brews = [
+      "mole"
+      "yubico-piv-tool"
+    ];
     casks = [
       "alcove"
       "font-monaspice-nerd-font"

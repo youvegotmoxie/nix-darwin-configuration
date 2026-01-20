@@ -91,7 +91,10 @@ in {
     taps = [
       "tw93/tap"
     ];
-    brews = ["mole"];
+    brews = [
+      "mole"
+      "yubico-piv-tool"
+    ];
     casks = [
       "alcove"
       "font-monaspice-nerd-font"

@@ -54,7 +54,6 @@ in {
       nodejs_22
       jdk21_headless
       lazydocker
-      obsidian
       p7zip
       ssm-session-manager-plugin
       stern
@@ -76,6 +75,10 @@ in {
       gawk
       nerd-fonts.monaspace
       noto-fonts
+      yubikey-manager
+      pinentry_mac
+      gnupg-pkcs11-scd
+      gnupg
       # scripts
       ssh-proxy
       tilt-connect
