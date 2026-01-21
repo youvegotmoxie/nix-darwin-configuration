@@ -2,7 +2,7 @@
   # Set EDITOR to helix
   programs.helix = {
     enable = true;
-    defaultEditor = true;
+    defaultEditor = false;
     settings = {
       theme = "tokyonight";
       editor = {

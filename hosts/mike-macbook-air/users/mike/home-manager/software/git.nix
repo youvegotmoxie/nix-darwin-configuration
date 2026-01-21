@@ -42,7 +42,7 @@ in {
         user.email = "${cfg.email}";
         core = {
           pager = "delta --pager=never --max-line-length=0";
-          editor = "hx";
+          editor = "nvim";
         };
         alias = {
           tagrelease = "tag -as";

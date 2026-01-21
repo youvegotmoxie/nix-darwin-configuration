@@ -89,10 +89,9 @@ in {
     };
   };
 
-  # Using Helix
   programs.neovim = {
     enable = true;
-    defaultEditor = false;
+    defaultEditor = true;
   };
 
   programs.git = {

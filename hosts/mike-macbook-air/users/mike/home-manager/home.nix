@@ -43,7 +43,7 @@
   # Using Helix as the default $EDITOR
   programs.neovim = {
     enable = true;
-    defaultEditor = false;
+    defaultEditor = true;
   };
 
   programs.git = {
