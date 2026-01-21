@@ -76,9 +76,6 @@ in {
       nerd-fonts.monaspace
       noto-fonts
       yubikey-manager
-      pinentry_mac
-      gnupg-pkcs11-scd
-      gnupg
       # scripts
       ssh-proxy
       tilt-connect

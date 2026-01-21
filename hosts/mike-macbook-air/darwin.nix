@@ -94,6 +94,7 @@ in {
     brews = [
       "mole"
       "yubico-piv-tool"
+      "libfido2"
     ];
     casks = [
       "alcove"
