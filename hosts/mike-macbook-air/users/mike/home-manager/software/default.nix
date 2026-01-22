@@ -3,6 +3,7 @@
     ./atuin.nix
     ./btop.nix
     ./git.nix
+    ./gnupg.nix
     ./helix.nix
     ./pkgs.nix
     ./starship.nix

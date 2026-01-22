@@ -95,6 +95,7 @@ in {
       "mole"
       "yubico-piv-tool"
       "libfido2"
+      "openssh"
     ];
     casks = [
       "alcove"
