@@ -38,7 +38,7 @@ in {
     };
     programs.git = {
       enable = true;
-      signing.key = "${config.home.homeDirectory}/.ssh/git-signing_ed25519.pub";
+      signing.key = "0799D2A68981EEE3";
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";
@@ -63,7 +63,6 @@ in {
           db = "branch -D";
           dbp = "push origin -d";
         };
-        gpg.format = "ssh";
         commit.gpgsign = true;
         init = {
           defaultBranch = "master";
