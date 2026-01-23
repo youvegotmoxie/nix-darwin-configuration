@@ -105,6 +105,8 @@ in {
       # Use 24 hour clock
       set -g @tokyo-night-tmux_time_format 24H
 
+      set -g @tokyo-night-tmux_show_wbg 1
+
       # Reduce padding between icons and text
       set -g @tokyo-night-tmux_window_tidy_icons 0
 
