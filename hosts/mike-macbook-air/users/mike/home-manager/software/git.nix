@@ -62,6 +62,7 @@ in {
           dbp = "push origin -d";
         };
         commit.gpgsign = true;
+        tag.gpgSign = true;
         init = {
           defaultBranch = "master";
         };
