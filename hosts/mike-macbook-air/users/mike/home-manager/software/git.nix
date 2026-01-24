@@ -36,7 +36,7 @@ in {
     };
     programs.git = {
       enable = true;
-      signing.key = "224F8BD5FD67C344";
+      signing.key = "A6B4C8E1BAEA348F";
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";
@@ -62,7 +62,10 @@ in {
           dbp = "push origin -d";
         };
         commit.gpgsign = true;
-        tag.gpgSign = true;
+        tag = {
+          gpgSign = true;
+          forceSignAnnotated = true;
+        };
         init = {
           defaultBranch = "master";
         };
