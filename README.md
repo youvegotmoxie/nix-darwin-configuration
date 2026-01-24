@@ -1,3 +1,4 @@
-nix-darwin configs for
+# nix-darwin configs for
+
 * work laptop
 * personal laptop
