@@ -3,6 +3,19 @@
     enable = true;
     settings = {
       # default-key = "224F8BD5FD67C344";
+      keyserver = "hkps://keys.openpgp.org";
+      keyserver-options = "auto-key-retrieve";
+      personal-cipher-preferences = "AES256 AES192 AES";
+      personal-digest-preferences = "SHA512 SHA384 SHA256";
+      personal-compress-preferences = "ZLIB BZIP2 ZIP Uncompressed";
+      default-preference-list = "SHA512 SHA384 SHA256 AES256 AES192 AES ZLIB BZIP2 ZIP Uncompressed";
+      cert-digest-algo = "SHA512";
+      s2k-digest-algo = "SHA512";
+      s2k-cipher-algo = "AES256";
+      require-cross-certification = true;
+      list-options = "show-uid-validity";
+      verify-options = "show-uid-validity";
+      charset = "utf-8";
       default-recipient-self = true;
       keyid-format = "long";
       with-fingerprint = true;
@@ -11,12 +24,18 @@
       armor = true;
       throw-keyids = true;
     };
+    scdaemonSettings = {
+      disable-ccid = true;
+    };
   };
   services.gpg-agent = {
     enable = true;
     enableExtraSocket = true;
     enableSshSupport = true;
-    pinentry.package = pkgs.pinentry-tty;
+    pinentry.package = pkgs.pinentry_mac;
+    defaultCacheTtl = 60;
+    maxCacheTtl = 120;
+    enableScDaemon = true;
   };
   services.ssh-agent = {
     enable = true;
