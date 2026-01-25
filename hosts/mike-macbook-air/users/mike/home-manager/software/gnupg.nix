@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.gpg = {
     enable = true;
     settings = {
@@ -8,12 +8,15 @@
       with-fingerprint = true;
       use-agent = true;
       require-secmem = true;
+      armor = true;
+      throw-keyids = true;
     };
   };
   services.gpg-agent = {
     enable = true;
     enableExtraSocket = true;
     enableSshSupport = true;
+    pinentry.package = pkgs.pinentry-tty;
   };
   services.ssh-agent = {
     enable = true;

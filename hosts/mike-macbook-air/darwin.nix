@@ -96,6 +96,7 @@ in {
       "yubico-piv-tool"
       "libfido2"
       "openssh"
+      "pinentry"
     ];
     casks = [
       "alcove"
