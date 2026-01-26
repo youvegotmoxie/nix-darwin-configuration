@@ -11,13 +11,14 @@
   };
 
   # Configure SSH agent socket
-  zshConfig.bw.socketPath = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
+  zshConfig.ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
 
   home = {
     stateVersion = "25.05";
 
     file = {
       ".zsh.d/func.zsh".source = ./dots/func.zsh;
+      ".vimrc".source = ../../../../shared/dots/dot_vimrc;
 
       "${config.home.homeDirectory}/Library/Application Support/com.mitchellh.ghostty/config".text = ''
         macos-titlebar-style = tabs

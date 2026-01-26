@@ -37,8 +37,4 @@
     maxCacheTtl = 120;
     enableScDaemon = true;
   };
-  services.ssh-agent = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }

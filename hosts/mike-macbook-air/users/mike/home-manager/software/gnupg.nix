@@ -40,8 +40,4 @@
       "FA2DB0DD531C864082BD10F5C936E7BFD93BA80A"
     ];
   };
-  services.ssh-agent = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }

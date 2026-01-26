@@ -31,7 +31,7 @@ in {
 
   # Configure SSH agent socket and add work shell aliases
   zshConfig = {
-    bw.socketPath = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
+    ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
     workAliases.enable = true;
   };
 

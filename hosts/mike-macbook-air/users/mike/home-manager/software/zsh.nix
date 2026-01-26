@@ -14,10 +14,10 @@
   };
   cfg = config.zshConfig;
 in {
-  options.zshConfig.bw = {
+  options.zshConfig.ssh = {
     socketPath = lib.mkOption {
       type = lib.types.str;
-      description = "Path to Bitwarden SSH agent socket";
+      description = "Path to SSH agent socket";
       default = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
     };
   };
@@ -65,7 +65,6 @@ in {
       initContent = lib.mkOrder 1500 ''
         export GIT_AUTO_FETCH_INTERVAL=300
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
-        # # eval "$(ssh-agent -s)"
         # # Workaround for Atuin
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
         # bindkey -M hxins '^r' atuin-up-search-vicmd
@@ -73,7 +72,7 @@ in {
       '';
       sessionVariables = {
         "TERM" = "xterm-256color";
-        # "SSH_AUTH_SOCK" = "${cfg.bw.socketPath}";
+        "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
       };
     };
   };
