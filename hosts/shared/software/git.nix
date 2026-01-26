@@ -38,7 +38,7 @@ in {
     };
     programs.git = {
       enable = true;
-      signing.key = "0799D2A68981EEE3";
+      signing.key = "BB91DF43EC4CAE86";
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";

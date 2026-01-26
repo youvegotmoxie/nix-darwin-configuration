@@ -2,7 +2,7 @@
   programs.gpg = {
     enable = true;
     settings = {
-      # default-key = "224F8BD5FD67C344";
+      default-key = "18B0D3665C0599CF";
       keyserver = "hkps://keys.openpgp.org";
       keyserver-options = "auto-key-retrieve";
       personal-cipher-preferences = "AES256 AES192 AES";
@@ -37,7 +37,7 @@
     maxCacheTtl = 120;
     enableScDaemon = true;
     sshKeys = [
-      # "FA2DB0DD531C864082BD10F5C936E7BFD93BA80A"
+      "CCD38BCA13B9648549D6BE9AB189D1FC261433D2"
     ];
   };
 }
