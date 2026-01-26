@@ -36,6 +36,7 @@ in {
     };
     programs.git = {
       enable = true;
+      # youvegotmoxie@gmail.com
       signing.key = "A6B4C8E1BAEA348F";
       settings = {
         user.name = "${cfg.name}";

@@ -41,7 +41,7 @@
     };
   };
 
-  # Using Helix as the default $EDITOR
+  # TODO: move these into their own files
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -55,5 +55,14 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
+  };
+
+  programs.password-store = {
+    enable = true;
+    settings = {
+      PASSWORD_STORE_CLIP_TIME = "60";
+      PASSWORD_STORE_ENABLE_EXTENSIONS = "true";
+      PASSWORD_STORE_GENERATED_LENGTH = "14";
+    };
   };
 }

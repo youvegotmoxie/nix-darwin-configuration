@@ -2,6 +2,7 @@
   programs.gpg = {
     enable = true;
     settings = {
+      # youvegotmoxie@gmail.com
       default-key = "A6B4C8E1BAEA348F";
       keyserver = "hkps://keys.openpgp.org";
       keyserver-options = "auto-key-retrieve";
