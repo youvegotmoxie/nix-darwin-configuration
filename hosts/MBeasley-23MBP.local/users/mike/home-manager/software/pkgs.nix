@@ -43,7 +43,7 @@ in {
       nh
       nix-output-monitor
       ugrep
-      pre-commit
+      prek
       tree-sitter
       kubectl
       kubectx

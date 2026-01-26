@@ -36,5 +36,8 @@
     defaultCacheTtl = 60;
     maxCacheTtl = 120;
     enableScDaemon = true;
+    sshKeys = [
+      # "FA2DB0DD531C864082BD10F5C936E7BFD93BA80A"
+    ];
   };
 }
