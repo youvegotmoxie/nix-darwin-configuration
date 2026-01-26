@@ -66,6 +66,7 @@ in {
           mkdir = "mkdir -v";
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
+          passtui = "passepartui";
 
           # Legacy network stuff (kept for reference)
           # "switch0-top" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.248 -p22 -c aes256-cbc";
@@ -105,6 +106,7 @@ in {
           tree = "eza --icons --tree --group-directories-first";
           man = "batman";
           nomsh = "nom-shell";
+          passtui = "passepartui";
         };
       initContent = lib.mkOrder 1500 ''
         export GIT_AUTO_FETCH_INTERVAL=300

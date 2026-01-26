@@ -61,6 +61,7 @@ in {
         tree = "eza --icons --tree --group-directories-first";
         man = "batman";
         nomsh = "nom-shell";
+        passtui = "passepartui";
       };
       initContent = lib.mkOrder 1500 ''
         export GIT_AUTO_FETCH_INTERVAL=300

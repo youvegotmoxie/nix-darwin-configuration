@@ -1,4 +1,3 @@
-# Aliases
 # Very good completion system
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' completer _expand _complete _ignored _approximate

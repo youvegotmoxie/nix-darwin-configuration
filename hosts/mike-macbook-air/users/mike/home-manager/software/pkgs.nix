@@ -22,8 +22,10 @@ in {
       nodejs_22
       jdk21_headless
       fzf
-      git-lfs
       talosctl
+      yubikey-manager
+      prek
+      passepartui
       # Tmux stuff
       pam-reattach
       jq
@@ -31,7 +33,6 @@ in {
       gawk
       nerd-fonts.monaspace
       noto-fonts
-      yubikey-manager
       # scripts
       git-hunk
       blame-line-pretty

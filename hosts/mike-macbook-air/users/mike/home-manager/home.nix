@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     # Per host modules
     ./software
@@ -6,7 +10,7 @@
 
   # Configure git persona
   gitConfig.person = {
-    name = "MikeB";
+    name = "Michael Beasley";
     email = "youvegotmoxie@gmail.com";
   };
 
@@ -49,7 +53,7 @@
 
   programs.git = {
     enable = true;
-    lfs.enable = false;
+    lfs.enable = true;
   };
 
   programs.direnv = {
@@ -59,6 +63,7 @@
 
   programs.password-store = {
     enable = true;
+    package = pkgs.pass.withExtensions (extension: [extension.pass-otp]);
     settings = {
       PASSWORD_STORE_CLIP_TIME = "60";
       PASSWORD_STORE_ENABLE_EXTENSIONS = "true";

@@ -58,16 +58,15 @@ in {
       ssm-session-manager-plugin
       stern
       tldr
-      yt-dlp
       wget
       yq
       jq
       ripgrep
-      ffmpeg
       fzf
       pulumi
       steampipe
-      git-lfs
+      yubikey-manager
+      passepartui
       # Tmux stuff
       pam-reattach
       jq
@@ -75,7 +74,6 @@ in {
       gawk
       nerd-fonts.monaspace
       noto-fonts
-      yubikey-manager
       # scripts
       ssh-proxy
       tilt-connect
