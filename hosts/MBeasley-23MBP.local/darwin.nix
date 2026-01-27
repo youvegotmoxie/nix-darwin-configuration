@@ -99,6 +99,8 @@ in {
       "tw93/tap"
       "darksworm/homebrew-tap"
     ];
+    # TODO: Nixify this
+    # Need to manage ~/.ssh/config with nix equiv for /opt/homebrew/lib/libykcs11.dylib
     brews = [
       "mole"
       "yubico-piv-tool"
