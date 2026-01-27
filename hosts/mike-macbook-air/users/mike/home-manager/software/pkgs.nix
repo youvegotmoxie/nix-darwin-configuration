@@ -1,6 +1,7 @@
 {pkgs, ...}: let
   blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (builtins.readFile ../../../../../shared/scripts/blame-line-pretty.sh);
   git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../../../../../shared/scripts/git-hunk.sh);
+  gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (builtins.readFile ../../../../../shared/scripts/gpg-push-pull-keys.sh);
 in {
   home = {
     packages = with pkgs; [
@@ -36,6 +37,7 @@ in {
       # scripts
       git-hunk
       blame-line-pretty
+      gpg-push-pull-keys
     ];
   };
 }
