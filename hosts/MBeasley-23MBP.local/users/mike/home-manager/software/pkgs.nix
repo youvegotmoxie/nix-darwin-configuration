@@ -4,6 +4,7 @@
   tilt-connect = pkgs.writeShellScriptBin "tilt-connect" (builtins.readFile ../../../../../shared/scripts/tilt-connect.sh);
   blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (builtins.readFile ../../../../../shared/scripts/blame-line-pretty.sh);
   git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../../../../../shared/scripts/git-hunk.sh);
+  gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (builtins.readFile ../../../../../shared/scripts/gpg-push-pull-keys.sh);
   helmVersion = "4.0.4";
   helmSHA = "sha256-LCRBUeRnCs0WK3pCmBCBmCSFpfD7mglHciOjaWqx59c=";
   helm4 = pkgs.stdenv.mkDerivation rec {
@@ -80,6 +81,7 @@ in {
       git-hunk
       blame-line-pretty
       helm4
+      gpg-push-pull-keys
     ];
   };
 }
