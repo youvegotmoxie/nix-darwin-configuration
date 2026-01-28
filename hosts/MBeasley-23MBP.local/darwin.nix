@@ -33,10 +33,10 @@ in {
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 15d";
+      options = "--delete-older-than 30d";
       interval = {
         Weekday = 0;
-        Hour = 2;
+        Hour = 8;
         Minute = 0;
       };
     };

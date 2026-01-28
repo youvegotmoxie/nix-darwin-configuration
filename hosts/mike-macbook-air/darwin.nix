@@ -29,7 +29,7 @@ in {
       options = "--delete-older-than 30d";
       interval = {
         Weekday = 0;
-        Hour = 2;
+        Hour = 8;
         Minute = 0;
       };
     };
