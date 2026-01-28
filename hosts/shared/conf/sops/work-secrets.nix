@@ -15,6 +15,10 @@ in {
   };
   config = lib.mkIf cfg.enable {
     sops.secrets = {
+      gh_token = {
+        path = "${config.home.homeDirectory}/${cfg.path}/gh_token";
+        mode = "0600";
+      };
       SRC_ACCESS_TOKEN = {
         path = "${config.home.homeDirectory}/${cfg.path}/SRC_ACCESS_TOKEN";
         mode = "0600";

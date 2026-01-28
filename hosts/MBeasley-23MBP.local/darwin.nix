@@ -119,6 +119,7 @@ in {
       "darksworm/tap/argonaut"
       "betterdisplay"
       "yubico-authenticator"
+      "lens"
     ];
     masApps = {};
   };
