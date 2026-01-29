@@ -115,7 +115,7 @@ in {
       "raycast"
       "betterdisplay"
       "yubico-authenticator"
-      "lens"
+      "aptakube"
     ];
     masApps = {};
   };
