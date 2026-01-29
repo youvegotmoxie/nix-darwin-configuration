@@ -2,13 +2,7 @@
   pkgs,
   config,
   ...
-}: let
-  backupRepo = "MBeasley-23MBP.local";
-  backupBasePath = "/opt/storage/backups/remote/${backupRepo}";
-  backupPath = "${backupBasePath}";
-  backupServer = "192.168.148.112";
-  resticRemoteUser = "mike";
-in {
+}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -61,7 +55,7 @@ in {
         macos-titlebar-style = tabs
         theme = tokyonight
         font-family = "MesloLGS NF"
-        font-size = 11
+        font-size = 12
         cursor-style-blink = false
         cursor-style =
         link-url = true
@@ -111,80 +105,6 @@ in {
       PASSWORD_STORE_CLIP_TIME = "60";
       PASSWORD_STORE_ENABLE_EXTENSIONS = "true";
       PASSWORD_STORE_GENERATED_LENGTH = "14";
-    };
-  };
-
-  launchd = {
-    agents = {
-      restic-backup = {
-        enable = false;
-        config = {
-          ProgramArguments = [
-            "${pkgs.restic}/bin/restic"
-            "backup"
-            "-p"
-            "${config.home.homeDirectory}/.creds.d/restic"
-            "-r"
-            "sftp:${resticRemoteUser}@${backupServer}:${backupPath}"
-            "--exclude-file"
-            "${config.home.homeDirectory}/.restic/exclude.lst"
-            "--cleanup-cache"
-            "--read-concurrency"
-            "6"
-            "--tag"
-            "automated"
-            "${config.home.homeDirectory}"
-          ];
-          serviceConfig.RunAtLoad = false;
-          serviceConfig.KeepAlive = false;
-          persistent = true;
-          EnvironmentVariables = {
-            "SSH_AUTH_SOCK" = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
-          };
-          StandardOutPath = "${config.home.homeDirectory}/.restic.log";
-          StandardErrorPath = "${config.home.homeDirectory}/.restic.log";
-          serviceConfig.StartCalendarInterval = [
-            {
-              Hour = 07;
-              Minute = 30;
-            }
-          ];
-        };
-      };
-      restic-cleanup = {
-        enable = false;
-        config = {
-          ProgramArguments = [
-            "${pkgs.restic}/bin/restic"
-            "forget"
-            "-p"
-            "${config.home.homeDirectory}/.creds.d/restic"
-            "-r"
-            "sftp:${resticRemoteUser}@${backupServer}:${backupPath}"
-            "--keep-daily"
-            "2"
-            "--keep-weekly"
-            "1"
-            "--keep-monthly"
-            "1"
-            "--prune"
-          ];
-          serviceConfig.RunAtLoad = false;
-          serviceConfig.KeepAlive = false;
-          persistent = true;
-          EnvironmentVariables = {
-            "SSH_AUTH_SOCK" = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
-          };
-          StandardOutPath = "${config.home.homeDirectory}/.restic.log";
-          StandardErrorPath = "${config.home.homeDirectory}/.restic.log";
-          serviceConfig.StartCalendarInterval = [
-            {
-              Hour = 09;
-              Minute = 30;
-            }
-          ];
-        };
-      };
     };
   };
 }

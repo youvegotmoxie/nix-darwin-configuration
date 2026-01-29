@@ -13,10 +13,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    argonaut = {
-      url = "github:darksworm/argonaut";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ {
@@ -27,7 +23,6 @@
     systems,
     sops-nix,
     nil,
-    argonaut,
     ...
   }: {
     darwinConfigurations = {

@@ -13,7 +13,6 @@ in {
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
-    # inputs.argonaut.packages.${system}.default
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
@@ -97,7 +96,6 @@ in {
     };
     taps = [
       "tw93/tap"
-      "darksworm/homebrew-tap"
     ];
     # TODO: Nixify this
     # Need to manage ~/.ssh/config with nix equiv for /opt/homebrew/lib/libykcs11.dylib
@@ -115,8 +113,6 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
-      "github@beta"
-      "darksworm/tap/argonaut"
       "betterdisplay"
       "yubico-authenticator"
       "lens"
