@@ -26,6 +26,8 @@
     };
     scdaemonSettings = {
       disable-ccid = true;
+      # Idle the Smartcard after 5 seconds
+      card-timeout = "5";
     };
   };
   services.gpg-agent = {

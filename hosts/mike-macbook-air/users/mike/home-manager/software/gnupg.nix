@@ -2,7 +2,6 @@
   programs.gpg = {
     enable = true;
     settings = {
-      # youvegotmoxie@gmail.com
       default-key = "A6B4C8E1BAEA348F";
       keyserver = "hkps://keys.openpgp.org";
       keyserver-options = "auto-key-retrieve";
@@ -27,6 +26,8 @@
     };
     scdaemonSettings = {
       disable-ccid = true;
+      # Idle the Smartcard after 5 seconds
+      card-timeout = "5";
     };
   };
   services.gpg-agent = {
