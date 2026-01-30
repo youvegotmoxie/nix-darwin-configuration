@@ -6,7 +6,7 @@ in {
   system.primaryUser = "${mainUser}";
 
   users.users.${mainUser} = {
-    home = "/Users/mike";
+    home = "/Users/${mainUser}";
     shell = pkgs.zsh;
     packages = [pkgs.gnused pkgs.gnutar];
   };
