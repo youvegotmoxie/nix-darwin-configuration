@@ -29,6 +29,7 @@
         theme = tokyonight
         font-family = "MesloLGS NF"
         cursor-style-blink = false
+        font-size = 13
         cursor-style =
         link-url = true
         scrollback-limit = 100_000_000

@@ -55,7 +55,7 @@
         macos-titlebar-style = tabs
         theme = tokyonight
         font-family = "MesloLGS NF"
-        font-size = 12
+        font-size = 13
         cursor-style-blink = false
         cursor-style =
         link-url = true
