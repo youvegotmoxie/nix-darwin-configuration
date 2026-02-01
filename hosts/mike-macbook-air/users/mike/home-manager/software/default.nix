@@ -5,6 +5,7 @@
     ./git.nix
     ./gnupg.nix
     ./helix.nix
+    ./pass.nix
     ./pkgs.nix
     ./starship.nix
     ./tmux.nix
