@@ -16,6 +16,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export KUBECOLOR_OBJ_FRESH="10h"
 
 # Unset terminal bell
 unsetopt beep
