@@ -99,13 +99,13 @@ in {
       "libfido2"
       "openssh"
       "pinentry"
+      "container"
     ];
     casks = [
       "alcove"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "orbstack"
       "raycast"
       "betterdisplay"
       "yubico-authenticator"
