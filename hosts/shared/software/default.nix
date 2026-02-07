@@ -3,7 +3,7 @@
     ./atuin.nix
     ./btop.nix
     ./git.nix
-    ./helix.nix
+    # ./helix.nix
     ./starship.nix
     ./pass.nix
     ./yazi.nix
