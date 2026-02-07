@@ -27,6 +27,7 @@ in {
       yubikey-manager
       prek
       passepartui
+      pinentry-tty
       # Tmux stuff
       pam-reattach
       jq
