@@ -49,15 +49,7 @@ in {
       enable = true;
       signing.key = "${cfg.gpgKey}";
       lfs.enable = true;
-      ignores = [
-        ".terraform/"
-        ".terraform.lock.hcl"
-        "plan"
-        ".direnv"
-        "__pycache__"
-        ".DS_Store"
-        ".awscreds"
-      ];
+      ignores = import ../conf/gitignore.nix;
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";
