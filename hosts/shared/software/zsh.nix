@@ -64,7 +64,7 @@ in {
             "vi-mode"
           ];
       };
-      # TODO: Move this into its own file and import here
+      # TODO: Move this into its own file in ../conf
       shellAliases =
         if cfg.workAliases.enable
         then {
