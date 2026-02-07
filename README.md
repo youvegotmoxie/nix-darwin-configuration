@@ -1,4 +1,6 @@
-## nix-darwin configs for
+# nix-darwin configuration
 
-* work laptop
-* personal laptop
+## Machines
+
+[work laptop](./hosts/MBeasley-23MBP.local/)
+[personal laptop](./hosts/mike-macbook-air/)
