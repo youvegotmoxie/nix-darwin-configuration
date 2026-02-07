@@ -1,17 +1,18 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{config, ...}: {
   imports = [
+    # shared modules in root of hosts dir
+    ../../../../shared/software
     # Per host modules
     ./software
   ];
 
   # Configure git persona
-  gitConfig.person = {
-    name = "Michael Beasley";
-    email = "youvegotmoxie@gmail.com";
+  gitConfig = {
+    person = {
+      name = "Michael Beasley";
+      email = "youvegotmoxie@gmail.com";
+      gpgKey = "A6B4C8E1BAEA348F";
+    };
   };
 
   # Configure SSH agent socket

@@ -16,6 +16,10 @@ in {
       description = "Git email";
       default = "michael.beasley@alvaria.com";
     };
+    gpgKey = lib.mkOption {
+      type = lib.types.str;
+      description = "Signing Key";
+    };
   };
   # Configure Git for the user
   config = {
@@ -38,7 +42,7 @@ in {
     };
     programs.git = {
       enable = true;
-      signing.key = "BB91DF43EC4CAE86";
+      signing.key = "${cfg.gpgKey}";
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{config, ...}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -10,6 +6,13 @@
     # Per host modules
     ./software
   ];
+
+  # Configure git persona
+  gitConfig = {
+    person = {
+      gpgKey = "BB91DF43EC4CAE86";
+    };
+  };
 
   # Populate ~/.creds.d
   sopsSecrets = {

@@ -111,7 +111,7 @@ in {
       initContent = lib.mkOrder 1500 ''
         export GIT_AUTO_FETCH_INTERVAL=300
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
-        # # Workaround for Atuin
+        ## Workaround for Atuin
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
         # bindkey -M hxins '^r' atuin-up-search-vicmd
         # bindkey -M hxnor '^r' atuin-up-search-vicmd
@@ -119,7 +119,6 @@ in {
       sessionVariables = {
         "TERM" = "xterm-256color";
         "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
-        "PATH" = "$\{KREW_ROOT:-$HOME/.krew\}/bin:$PATH";
       };
     };
   };
