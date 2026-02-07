@@ -37,7 +37,6 @@ in {
       cargo
       delta
       eks-node-viewer
-      eza
       go
       fd
       gh

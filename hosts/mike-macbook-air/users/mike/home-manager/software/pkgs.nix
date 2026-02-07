@@ -29,7 +29,6 @@ in {
       bfs
       cargo
       delta
-      eza
       fd
       nh
       nix-output-monitor

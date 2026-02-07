@@ -46,20 +46,4 @@
       '';
     };
   };
-
-  # TODO: move these into their own files
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
-  programs.git = {
-    enable = true;
-    lfs.enable = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 }

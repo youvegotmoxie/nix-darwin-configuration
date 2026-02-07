@@ -28,8 +28,10 @@ in {
   config = {
     programs.zsh = {
       enable = true;
+      enableCompletion = true;
       history = {
         expireDuplicatesFirst = true;
+        saveNoDups = true;
         findNoDups = true;
         ignoreAllDups = true;
         size = 100000;
@@ -51,13 +53,11 @@ in {
           "vi-mode"
         ];
       };
-      enableCompletion = true;
       # TODO: Move this into its own file and import here
       shellAliases =
         if cfg.workAliases.enable
         then {
           lg = "lazygit";
-          ls = "eza";
           rm = "rm -v";
           mv = "mv -v";
           cp = "cp -v";
@@ -75,10 +75,8 @@ in {
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           kubectl = "kubecolor";
           k = "kubectl";
-          # terraform = "tofu";
           kgp = "kubectl get pods";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-          ll = "eza -lahg --git-repos-no-status --git";
           grep = "ugrep --color=auto";
           cat = "bat --paging=never --style=plain";
           btcm = "better-commits";
@@ -88,7 +86,6 @@ in {
         }
         else {
           lg = "lazygit";
-          ls = "eza";
           rm = "rm -v";
           mv = "mv -v";
           cp = "cp -v";
@@ -97,8 +94,6 @@ in {
           mkdir = "mkdir -v";
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
-          gpm = "git pull origin master";
-          ll = "eza -lahg --git-repos-no-status --git";
           grep = "ugrep --color=auto";
           cat = "bat --paging=never --style=plain";
           tree = "eza --icons --tree --group-directories-first";

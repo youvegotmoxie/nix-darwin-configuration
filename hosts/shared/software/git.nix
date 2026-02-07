@@ -18,7 +18,8 @@ in {
     };
     gpgKey = lib.mkOption {
       type = lib.types.str;
-      description = "Signing Key";
+      description = "GPG signing key";
+      default = "BB91DF43EC4CAE86";
     };
   };
   # Configure Git for the user
@@ -30,19 +31,31 @@ in {
           showNumstatInFilesView = true;
           nerdFontsVersion = "3";
         };
-
-        # Moved git.paging object to git.pagers array
-        git.pagers = [
-          {
-            pager = "delta --dark --paging=never --max-line-length=0";
-            useConfig = false;
-          }
-        ];
+        git = {
+          pagers = [
+            {
+              pager = "delta --dark --paging=never --max-line-length=0";
+              useConfig = false;
+            }
+          ];
+          commit.signOff = true;
+          parseEmoji = true;
+        };
+        update.method = "never";
       };
     };
+
     programs.git = {
       enable = true;
       signing.key = "${cfg.gpgKey}";
+      lfs.enable = true;
+      ignores = [
+        ".terraform/"
+        ".terraform.lock.hcl"
+        "plan"
+        ".direnv"
+        "__pycache__"
+      ];
       settings = {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";
