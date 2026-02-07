@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 file="$1"
 line="$2"
 context="${3:-3}"

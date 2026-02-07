@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 file="$1"
 line="$2"
 out="$(git blame -L "$line",+1 --porcelain -- "$file")" || return 1

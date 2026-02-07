@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 declare host
 host="${1:-ubuntu-dev-pod-0}"
 
