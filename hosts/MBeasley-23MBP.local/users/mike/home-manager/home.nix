@@ -2,7 +2,6 @@
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
-    ../../../../shared/conf/sops
     # Per host modules
     ./software
   ];
@@ -14,32 +13,12 @@
     };
   };
 
-  # Populate ~/.creds.d
-  sopsSecrets = {
-    zsh = {
-      home = {
-        enable = true;
-      };
-      work = {
-        enable = true;
-      };
-    };
-  };
-
   # Configure SSH agent socket and add work shell aliases
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
     workAliases.enable = true;
   };
 
-  sops = {
-    age = {
-      keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
-      sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
-    };
-    # Relative to home.nix config file
-    defaultSopsFile = ./secrets/secrets.yaml;
-  };
   home = {
     stateVersion = "25.05";
     sessionPath = [
@@ -72,17 +51,6 @@
         quit-after-last-window-closed = true
         window-colorspace = display-p3
         keybind = global:cmd+grave_accent=toggle_quick_terminal
-      '';
-
-      ".sops.yaml".text = ''
-        keys:
-          - &michaelbeasley age1w2szqkpqpurah7sc88xx0z3j2m068w6gryh6qh2vvpd5s9rd8uusppwsjr
-        creation_rules:
-          - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
-            key_groups:
-              - pgp:
-                age:
-                - *michaelbeasley
       '';
     };
   };

@@ -18,7 +18,6 @@ in {
     home-manager
     python313
     python313Packages.pip
-    sops
     vim
     gnutar
     gnused
