@@ -55,6 +55,8 @@ in {
         "plan"
         ".direnv"
         "__pycache__"
+        ".DS_Store"
+        ".awscreds"
       ];
       settings = {
         user.name = "${cfg.name}";

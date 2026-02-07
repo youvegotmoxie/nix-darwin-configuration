@@ -38,20 +38,31 @@ in {
       };
       oh-my-zsh = {
         enable = true;
-        plugins = [
-          "git"
-          "docker"
-          "git"
-          "git-auto-fetch"
-          "git-extras"
-          "macos"
-          "terraform"
-          "kubectl"
-          "helm"
-          "gcloud"
-          "aws"
-          "vi-mode"
-        ];
+        plugins =
+          if cfg.workAliases.enable
+          then [
+            "aws"
+            "docker"
+            "git"
+            "git-auto-fetch"
+            "git-extras"
+            "gcloud"
+            "kubectl"
+            "helm"
+            "macos"
+            "terraform"
+            "vi-mode"
+          ]
+          else [
+            "docker"
+            "git"
+            "git-auto-fetch"
+            "git-extras"
+            "kubectl"
+            "helm"
+            "macos"
+            "vi-mode"
+          ];
       };
       # TODO: Move this into its own file and import here
       shellAliases =
@@ -67,7 +78,6 @@ in {
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
           passtui = "passepartui";
-
           # Legacy network stuff (kept for reference)
           # "switch0-top" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.248 -p22 -c aes256-cbc";
           # "switch0-bottom" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.249 -p22 -c aes256-cbc";
@@ -106,7 +116,6 @@ in {
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
         };
       initContent = lib.mkOrder 1500 ''
-        export GIT_AUTO_FETCH_INTERVAL=300
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         ## Workaround for Atuin
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
@@ -114,6 +123,7 @@ in {
         # bindkey -M hxnor '^r' atuin-up-search-vicmd
       '';
       sessionVariables = {
+        "GIT_AUTO_FETCH_INTERVAL" = 300;
         "TERM" = "xterm-256color";
         "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
       };
