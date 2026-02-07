@@ -84,8 +84,6 @@ in {
           # "router1-bottom" = "ssh 192.168.1.250 -lmike -p22 -c aes256-cbc";
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           kubectl = "kubecolor";
-          k = "kubectl";
-          kgp = "kubectl get pods";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           grep = "ugrep --color=auto";
           cat = "bat --paging=never --style=plain";
@@ -111,8 +109,6 @@ in {
           nomsh = "nom-shell";
           passtui = "passepartui";
           kubectl = "kubecolor";
-          k = "kubectl";
-          kgp = "kubectl get pods";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
         };
       initContent = lib.mkOrder 1500 ''
