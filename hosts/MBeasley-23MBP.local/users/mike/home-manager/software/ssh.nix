@@ -28,6 +28,11 @@
         user = "ubuntu";
         port = 22;
       };
+      "mike-macbook-air" = {
+        hostname = "mike-macbook-air.local";
+        user = "mike";
+        port = 22;
+      };
       "iad-jump" = {
         hostname = "jump1.dev2.iad1.sre.aspect-cloud.net";
         user = "mbeasley";
