@@ -6,14 +6,16 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
+    includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
     matchBlocks = {
       "*" = {
         forwardAgent = true;
         controlMaster = "auto";
         controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
-        controlPersist = "6h";
+        controlPersist = "2h";
         extraOptions = {
           PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
+          StreamLocalBindUnlink = "yes";
         };
       };
       "rpi4-timemachine" = {

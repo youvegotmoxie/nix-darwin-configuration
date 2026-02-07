@@ -94,7 +94,6 @@ in {
     brews = [
       "mole"
       "libfido2"
-      "container"
     ];
     casks = [
       "alcove"
@@ -104,6 +103,7 @@ in {
       "raycast"
       "betterdisplay"
       "yubico-authenticator"
+      "orbstack"
     ];
     masApps = {};
   };

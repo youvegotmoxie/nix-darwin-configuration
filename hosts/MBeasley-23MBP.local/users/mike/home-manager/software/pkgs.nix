@@ -5,8 +5,8 @@
   blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (builtins.readFile ../../../../../shared/scripts/blame-line-pretty.sh);
   git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../../../../../shared/scripts/git-hunk.sh);
   gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (builtins.readFile ../../../../../shared/scripts/gpg-push-pull-keys.sh);
-  helmVersion = "4.0.4";
-  helmSHA = "sha256-LCRBUeRnCs0WK3pCmBCBmCSFpfD7mglHciOjaWqx59c=";
+  helmVersion = "4.1.0";
+  helmSHA = "sha256-fIhbwc6KcJP5wGjQR1Nt987g1suU3vv2nGkIsJVbqVk=";
   helm4 = pkgs.stdenv.mkDerivation rec {
     pname = "helm";
     version = helmVersion;

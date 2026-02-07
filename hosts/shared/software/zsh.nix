@@ -78,7 +78,6 @@ in {
           # terraform = "tofu";
           kgp = "kubectl get pods";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-          gpm = "git pull origin master";
           ll = "eza -lahg --git-repos-no-status --git";
           grep = "ugrep --color=auto";
           cat = "bat --paging=never --style=plain";
@@ -102,11 +101,14 @@ in {
           ll = "eza -lahg --git-repos-no-status --git";
           grep = "ugrep --color=auto";
           cat = "bat --paging=never --style=plain";
-          btcm = "better-commits";
           tree = "eza --icons --tree --group-directories-first";
           man = "batman";
           nomsh = "nom-shell";
           passtui = "passepartui";
+          kubectl = "kubecolor";
+          k = "kubectl";
+          kgp = "kubectl get pods";
+          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
         };
       initContent = lib.mkOrder 1500 ''
         export GIT_AUTO_FETCH_INTERVAL=300
