@@ -67,6 +67,7 @@ in {
       fzf
       pulumi
       yubikey-manager
+      pinentry-tty
       passepartui
       # Tmux stuff
       pam-reattach

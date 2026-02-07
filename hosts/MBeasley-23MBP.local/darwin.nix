@@ -100,10 +100,7 @@ in {
     # Need to manage ~/.ssh/config with nix equiv for /opt/homebrew/lib/libykcs11.dylib
     brews = [
       "mole"
-      "yubico-piv-tool"
       "libfido2"
-      "openssh"
-      "pinentry"
     ];
     casks = [
       "alcove"
