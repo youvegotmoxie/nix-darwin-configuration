@@ -21,7 +21,7 @@
     stateVersion = "25.05";
 
     file = {
-      ".zsh.d/func.zsh".source = ./dots/func.zsh;
+      ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
 
       "${config.home.homeDirectory}/Library/Application Support/com.mitchellh.ghostty/config".text = ''

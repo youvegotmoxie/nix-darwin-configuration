@@ -48,7 +48,7 @@
       # ".tmux.conf".source = ../../../../shared/dots/dot_tmux.conf;
       "shell.nix".source = ../../../../shared/dots/shell.nix;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
-      ".zsh.d/func.zsh".source = ./dots/func.zsh;
+      ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;
       ".restic/exclude.lst".source = ./conf/exclude.lst;
 
       "${config.home.homeDirectory}/Library/Application Support/com.mitchellh.ghostty/config".text = ''
