@@ -14,7 +14,6 @@
   ".Spotlight-V100"
   ".TemporaryItems"
   ".terraform/"
-  ".terraform.lock.hcl"
   "plan"
   ".direnv/"
   ".awscreds"
