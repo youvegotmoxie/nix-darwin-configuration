@@ -23,7 +23,6 @@
 in {
   home = {
     packages = with pkgs; [
-      argocd
       bat
       bat-extras.batman
       bfs
@@ -41,7 +40,6 @@ in {
       nodejs_22
       jdk21_headless
       fzf
-      talosctl
       yubikey-manager
       prek
       lazydocker

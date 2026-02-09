@@ -10,17 +10,20 @@ in {
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
 
+  users.users.${mainUser} = {
+    home = "/Users/${mainUser}";
+    shell = pkgs.zsh;
+    packages = [pkgs.gnused pkgs.gnutar];
+  };
+
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
-    python313
-    python313Packages.pip
-    vim
-    gnutar
-    gnused
+    python314
+    python314Packages.pip
   ];
 
   environment.pathsToLink = ["/share/zsh"];
