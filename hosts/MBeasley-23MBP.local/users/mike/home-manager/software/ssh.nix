@@ -14,7 +14,6 @@
         controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
         controlPersist = "2h";
         extraOptions = {
-          PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
           StreamLocalBindUnlink = "yes";
         };
       };
@@ -22,11 +21,17 @@
         hostname = "192.168.148.217";
         user = "mike";
         port = 22;
+        extraOptions = {
+          PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
+        };
       };
       "rpi4-standalone" = {
         hostname = "192.168.148.244";
         user = "ubuntu";
         port = 22;
+        extraOptions = {
+          PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
+        };
       };
       "mike-macbook-air" = {
         hostname = "mike-macbook-air.local";

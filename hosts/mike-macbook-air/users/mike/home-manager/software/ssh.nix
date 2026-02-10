@@ -1,12 +1,9 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
     includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
+    # TODO: Merge this with work-laptop ssh.nix
     matchBlocks = {
       "*" = {
         forwardAgent = true;
@@ -14,7 +11,6 @@
         controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
         controlPersist = "2h";
         extraOptions = {
-          PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
           StreamLocalBindUnlink = "yes";
         };
       };
