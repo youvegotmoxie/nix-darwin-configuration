@@ -6,7 +6,7 @@
 }: let
   # Package shell scripts
   ssh-proxy = pkgs.writeShellScriptBin "ssh-proxy" (builtins.readFile ../scripts/sshproxy.sh);
-  tilt-connect = pkgs.writeShellScriptBin "tilt-connect" (builtins.readFile ../shared/scripts/tilt-connect.sh);
+  tilt-connect = pkgs.writeShellScriptBin "tilt-connect" (builtins.readFile ../scripts/tilt-connect.sh);
   blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (builtins.readFile ../scripts/blame-line-pretty.sh);
   git-hunk = pkgs.writeShellScriptBin "git-hunk" (builtins.readFile ../scripts/git-hunk.sh);
   gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (builtins.readFile ../scripts/gpg-push-pull-keys.sh);
