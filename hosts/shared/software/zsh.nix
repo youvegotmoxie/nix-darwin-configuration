@@ -64,7 +64,6 @@ in {
             "vi-mode"
           ];
       };
-      # TODO: Move this into its own file in ../conf
       shellAliases =
         if cfg.workAliases.enable
         then {
@@ -77,20 +76,18 @@ in {
           mkdir = "mkdir -v";
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
-          passtui = "passepartui";
-          # Legacy network stuff (kept for reference)
-          # "switch0-top" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.248 -p22 -c aes256-cbc";
-          # "switch0-bottom" = "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -l mike 192.168.10.249 -p22 -c aes256-cbc";
-          # "router1-bottom" = "ssh 192.168.1.250 -lmike -p22 -c aes256-cbc";
-          properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
-          kubectl = "kubecolor";
-          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           grep = "ugrep --color=auto";
           cat = "bat --paging=never --style=plain";
-          btcm = "better-commits";
           tree = "eza --icons --tree --group-directories-first";
           man = "batman";
           nomsh = "nom-shell";
+          passtui = "passepartui";
+          kubectl = "kubecolor";
+          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
+          # work only aliases
+          # TODO: merge this with the conditional logic so the aliases aren't repeated
+          btcm = "better-commits";
+          properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
         }
         else {
           lg = "lazygit";
@@ -113,7 +110,7 @@ in {
         };
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
-        ## Workaround for Atuin
+        ## Workaround for Atuin and ZSH Helix mode plugin
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
         # bindkey -M hxins '^r' atuin-up-search-vicmd
         # bindkey -M hxnor '^r' atuin-up-search-vicmd
