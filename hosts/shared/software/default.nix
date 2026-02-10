@@ -5,6 +5,7 @@
     ./git.nix
     ./starship.nix
     ./pass.nix
+    ./pkgs.nix
     ./tmux.nix
     ./yazi.nix
     ./zoxide.nix

@@ -16,7 +16,10 @@
   };
 
   # Configure SSH agent socket
-  zshConfig.ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
+  zshConfig = {
+    ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
+    workAliases.enable = false;
+  };
 
   home = {
     stateVersion = "25.05";
