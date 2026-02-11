@@ -16,6 +16,7 @@ in {
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
+    libfido2
   ];
 
   environment.pathsToLink = ["/share/zsh"];
@@ -93,7 +94,6 @@ in {
     ];
     brews = [
       "mole"
-      "libfido2"
     ];
     casks = [
       "alcove"

@@ -22,6 +22,7 @@ in {
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
+    libfido2
     python314
     python314Packages.pip
   ];
@@ -101,7 +102,6 @@ in {
     ];
     brews = [
       "mole"
-      "libfido2"
     ];
     casks = [
       "alcove"
