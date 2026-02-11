@@ -39,30 +39,22 @@ in {
       oh-my-zsh = {
         enable = true;
         plugins =
-          if cfg.workAliases.enable
-          then [
-            "aws"
+          [
             "docker"
             "git"
             "git-auto-fetch"
             "git-extras"
-            "gcloud"
             "kubectl"
-            "helm"
             "macos"
-            "terraform"
             "vi-mode"
           ]
-          else [
-            "docker"
-            "git"
-            "git-auto-fetch"
-            "git-extras"
-            "kubectl"
-            "helm"
-            "macos"
-            "vi-mode"
-          ];
+          ++ (lib.optionals cfg.workAliases.enable
+            [
+              "aws"
+              "gcloud"
+              "helm"
+              "terraform"
+            ]);
       };
       shellAliases =
         if cfg.workAliases.enable

@@ -6,13 +6,6 @@
     ./software
   ];
 
-  # Configure git persona
-  gitConfig = {
-    person = {
-      gpgKey = "BB91DF43EC4CAE86";
-    };
-  };
-
   # Configure SSH agent socket and add work shell aliases
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
