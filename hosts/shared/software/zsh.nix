@@ -57,8 +57,7 @@ in {
             ]);
       };
       shellAliases =
-        if cfg.workAliases.enable
-        then {
+        {
           lg = "lazygit";
           rm = "rm -v";
           mv = "mv -v";
@@ -76,30 +75,12 @@ in {
           passtui = "passepartui";
           kubectl = "kubecolor";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-          # work only aliases
-          # TODO: merge this with the conditional logic so the aliases aren't repeated
+        }
+        // (lib.optionalAttrs cfg.workAliases.enable {
+          # Work only aliases
           btcm = "better-commits";
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
-        }
-        else {
-          lg = "lazygit";
-          rm = "rm -v";
-          mv = "mv -v";
-          cp = "cp -v";
-          ln = "ln -v";
-          history = "history -E";
-          mkdir = "mkdir -v";
-          sudo = "nocorrect sudo";
-          tldr = "nocorrect tldr";
-          grep = "ugrep --color=auto";
-          cat = "bat --paging=never --style=plain";
-          tree = "eza --icons --tree --group-directories-first";
-          man = "batman";
-          nomsh = "nom-shell";
-          passtui = "passepartui";
-          kubectl = "kubecolor";
-          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-        };
+        });
       initContent = lib.mkOrder 1500 ''
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         ## Workaround for Atuin and ZSH Helix mode plugin
