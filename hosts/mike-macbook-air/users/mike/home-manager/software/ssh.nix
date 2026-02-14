@@ -3,7 +3,6 @@
     enable = true;
     enableDefaultConfig = false;
     includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
-    # TODO: Merge this with work-laptop ssh.nix
     matchBlocks = {
       "*" = {
         forwardAgent = true;
