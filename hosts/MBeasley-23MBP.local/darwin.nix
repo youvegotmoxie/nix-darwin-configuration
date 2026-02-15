@@ -105,16 +105,19 @@ in {
     ];
     casks = [
       "alcove"
+      "aptakube"
+      "betterdisplay"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
       "orbstack"
       "raycast"
-      "betterdisplay"
+      "rectangle-pro"
       "yubico-authenticator"
-      "aptakube"
     ];
-    masApps = {};
+    masApps = {
+      "Bitwarden" = 1352778147;
+    };
   };
   environment.variables.XDG_DATA_DIRS = [
     "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"

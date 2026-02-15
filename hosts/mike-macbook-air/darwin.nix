@@ -97,15 +97,18 @@ in {
     ];
     casks = [
       "alcove"
+      "betterdisplay"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "raycast"
-      "betterdisplay"
-      "yubico-authenticator"
       "orbstack"
+      "raycast"
+      "rectangle-pro"
+      "yubico-authenticator"
     ];
-    masApps = {};
+    masApps = {
+      "Bitwarden" = 1352778147;
+    };
   };
 
   environment.variables.XDG_DATA_DIRS = [
