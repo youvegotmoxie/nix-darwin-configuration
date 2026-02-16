@@ -106,9 +106,7 @@ in {
       "rectangle-pro"
       "yubico-authenticator"
     ];
-    masApps = {
-      "Bitwarden" = 1352778147;
-    };
+    masApps = {};
   };
 
   environment.variables.XDG_DATA_DIRS = [
