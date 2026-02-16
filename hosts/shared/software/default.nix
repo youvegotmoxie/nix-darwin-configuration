@@ -2,6 +2,7 @@
   imports = [
     ./atuin.nix
     ./btop.nix
+    ./fzf.nix
     ./git.nix
     ./gnupg.nix
     ./starship.nix

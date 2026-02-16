@@ -60,7 +60,6 @@ in {
           tldr
           jq
           ripgrep
-          fzf
           yubikey-manager
           pinentry-tty
           passepartui
