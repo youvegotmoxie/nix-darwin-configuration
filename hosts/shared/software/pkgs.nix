@@ -88,6 +88,7 @@ in {
           pkgs.ssm-session-manager-plugin
           pkgs.stern
           pkgs.pulumi
+          pkgs.vcluster
           pkgs.wget
           pkgs.yq
           # scripts only needed for work
