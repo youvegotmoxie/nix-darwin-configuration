@@ -106,6 +106,7 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
+      "hcavarsan/kftray/kftray"
       "orbstack"
       "raycast"
       "rectangle-pro"
