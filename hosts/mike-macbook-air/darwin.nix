@@ -91,9 +91,12 @@ in {
     };
     taps = [
       "tw93/tap"
+      "steipete/tap"
+      "sozercan/repo"
     ];
     brews = [
       "mole"
+      "remindctl"
     ];
     casks = [
       "alcove"
@@ -101,6 +104,7 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
+      "sozercan/repo/kaset"
       "orbstack"
       "raycast"
       "rectangle-pro"

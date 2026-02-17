@@ -99,9 +99,11 @@ in {
     };
     taps = [
       "tw93/tap"
+      "steipete/tap"
     ];
     brews = [
       "mole"
+      "remindctl"
     ];
     casks = [
       "alcove"
