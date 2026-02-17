@@ -52,6 +52,11 @@ in {
           kubecolor
           kubent
           krew
+          helm4
+          vcluster
+          argocd
+          stern
+          yq
           viddy
           nodejs_22
           jdk21_headless
@@ -81,18 +86,13 @@ in {
           pkgs.awscli2
           pkgs.ansible
           pkgs.ansible-lint
-          pkgs.argocd
           pkgs.eks-node-viewer
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
           pkgs.ssm-session-manager-plugin
-          pkgs.stern
           pkgs.pulumi
-          pkgs.vcluster
           pkgs.wget
-          pkgs.yq
           # scripts only needed for work
-          helm4
           ssh-proxy
           tilt-connect
         ]);

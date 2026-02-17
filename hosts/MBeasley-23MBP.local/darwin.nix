@@ -98,12 +98,13 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "tw93/tap"
-      "steipete/tap"
       "hcavarsan/kftray"
+      "steipete/tap"
+      "tw93/tap"
     ];
     brews = [
       "mole"
+      "hcavarsan/kftray/kftui"
       "steipete/tap/remindctl"
     ];
     casks = [
@@ -113,10 +114,10 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "hcavarsan/kftray/kftray"
       "orbstack"
       "raycast"
       "rectangle-pro"
+      "timemachinestatus"
       "yubico-authenticator"
     ];
     masApps = {};

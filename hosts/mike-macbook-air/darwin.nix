@@ -90,13 +90,15 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "tw93/tap"
-      "steipete/tap"
+      "hcavarsan/kftray"
       "sozercan/repo"
+      "steipete/tap"
+      "tw93/tap"
     ];
     brews = [
       "mole"
-      "remindctl"
+      "hcavarsan/kftray/kftui"
+      "steipete/tap/remindctl"
     ];
     casks = [
       "alcove"
@@ -104,10 +106,11 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "sozercan/repo/kaset"
       "orbstack"
       "raycast"
       "rectangle-pro"
+      "sozercan/repo/kaset"
+      "timemachinestatus"
       "yubico-authenticator"
     ];
     masApps = {};
