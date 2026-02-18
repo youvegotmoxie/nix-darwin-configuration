@@ -54,7 +54,6 @@ in {
           krew
           helm4
           vcluster
-          argocd
           stern
           yq
           viddy
@@ -83,9 +82,10 @@ in {
         ++ (lib.optionals cfg.workAliases.enable [
           # packages only needed for work
           pkgs.act
-          pkgs.awscli2
+          pkgs.argocd
           pkgs.ansible
           pkgs.ansible-lint
+          pkgs.awscli2
           pkgs.eks-node-viewer
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
