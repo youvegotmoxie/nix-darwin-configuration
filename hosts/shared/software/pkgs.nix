@@ -52,9 +52,6 @@ in {
           kubecolor
           kubent
           krew
-          helm4
-          vcluster
-          stern
           yq
           viddy
           nodejs_22
@@ -89,9 +86,12 @@ in {
           pkgs.eks-node-viewer
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+          pkgs.vcluster
+          pkgs.stern
           pkgs.ssm-session-manager-plugin
           pkgs.pulumi
           pkgs.wget
+          helm4
           # scripts only needed for work
           ssh-proxy
           tilt-connect
