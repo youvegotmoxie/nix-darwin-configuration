@@ -79,7 +79,6 @@ in {
         ++ (lib.optionals cfg.workAliases.enable [
           # packages only needed for work
           pkgs.act
-          pkgs.argocd
           pkgs.ansible
           pkgs.ansible-lint
           pkgs.awscli2

@@ -103,6 +103,7 @@ in {
       "tw93/tap"
     ];
     brews = [
+      "argocd"
       "mole"
       "steipete/tap/remindctl"
     ];
