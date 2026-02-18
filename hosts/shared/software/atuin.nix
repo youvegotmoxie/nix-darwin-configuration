@@ -48,6 +48,7 @@
           "docker"
           "brew"
           "k"
+          "ssh"
           "helm"
           "helm2"
           "nix"
