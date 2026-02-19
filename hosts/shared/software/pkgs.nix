@@ -40,6 +40,7 @@ in {
           cargo
           delta
           fd
+          ffmpeg
           gh
           git-lfs
           nh
@@ -50,9 +51,9 @@ in {
           kubectl
           kubectx
           kubecolor
-          kubent
           krew
           yq
+          yt-dlp
           viddy
           nodejs_22
           jdk21_headless
@@ -85,7 +86,7 @@ in {
           pkgs.eks-node-viewer
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
-          pkgs.vcluster
+          pkgs.kubent
           pkgs.stern
           pkgs.ssm-session-manager-plugin
           pkgs.pulumi

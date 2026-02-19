@@ -114,7 +114,7 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "neovide"
+      "neovide-app"
       "orbstack"
       "raycast"
       "rectangle-pro"
