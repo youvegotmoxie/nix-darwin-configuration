@@ -105,9 +105,9 @@ in {
       "font-noto-sans-symbols-2"
       "ghostty"
       "orbstack"
+      "neovide-app"
       "raycast"
       "rectangle-pro"
-      "sozercan/repo/kaset"
       "timemachinestatus"
       "yubico-authenticator"
     ];
