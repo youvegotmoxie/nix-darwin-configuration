@@ -98,13 +98,12 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "hcavarsan/kftray"
       "steipete/tap"
       "tw93/tap"
     ];
     brews = [
       "argocd"
-      "mole"
+      "tw93/tap/mole"
       "steipete/tap/remindctl"
     ];
     casks = [
@@ -117,7 +116,6 @@ in {
       "neovide-app"
       "orbstack"
       "raycast"
-      "rectangle-pro"
       "timemachinestatus"
       "yubico-authenticator"
     ];
