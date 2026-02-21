@@ -67,8 +67,6 @@ in {
           passepartui
           # Tmux stuff
           pam-reattach
-          jq
-          gh
           gawk
           nerd-fonts.monaspace
           noto-fonts
