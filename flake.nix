@@ -23,12 +23,10 @@
     darwinConfigurations = {
       "MBeasley-23MBP" = nix-darwin.lib.darwinSystem {
         system = systems;
-        # System level
         modules = [
           ./hosts/MBeasley-23MBP.local/darwin.nix
           home-manager.darwinModules.home-manager
           {
-            # User level
             home-manager = {
               users."michaelbeasley" = {
                 imports = [
@@ -40,21 +38,16 @@
               backupFileExtension = "hmback";
               extraSpecialArgs.flake-inputs = inputs;
             };
-            users.users."michaelbeasley" = {
-              home = "/Users/michaelbeasley";
-            };
           }
         ];
         specialArgs = {inherit inputs;};
       };
       "mike-macbook-air" = nix-darwin.lib.darwinSystem {
         system = systems;
-        # System level
         modules = [
           ./hosts/mike-macbook-air/darwin.nix
           home-manager.darwinModules.home-manager
           {
-            # User level
             home-manager = {
               users."mike" = {
                 imports = [
