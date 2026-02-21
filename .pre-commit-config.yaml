@@ -31,11 +31,11 @@ repos:
     hooks:
       - id: terraform-validate
   - repo: https://github.com/trufflesecurity/trufflehog
-    rev: v3.93.3
+    rev: v3.93.4
     hooks:
       - id: trufflehog
         entry: bash -c 'git diff --cached --name-only | xargs -I {} trufflehog filesystem {} --fail --only-verified --log-level=-1'
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.10
+    rev: v1.7.11
     hooks:
       - id: actionlint
