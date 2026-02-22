@@ -98,7 +98,6 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "sane-apps/tap"
       "steipete/tap"
       "tw93/tap"
     ];
@@ -117,7 +116,7 @@ in {
       "neovide-app"
       "orbstack"
       "raycast"
-      "sane-apps/tap/sanebar"
+      "thaw"
       "timemachinestatus"
       "yubico-authenticator"
     ];
