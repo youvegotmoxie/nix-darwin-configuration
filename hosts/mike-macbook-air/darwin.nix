@@ -1,5 +1,10 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   mainUser = "mike";
+  system = pkgs.stdenv.hostPlatform.system;
 in {
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 5;
@@ -13,6 +18,7 @@ in {
 
   # System packages
   environment.systemPackages = with pkgs; [
+    inputs.nil.packages.${system}.nil
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
