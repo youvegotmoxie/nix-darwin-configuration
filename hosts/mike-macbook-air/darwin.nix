@@ -23,6 +23,7 @@ in {
     reattach-to-user-namespace
     home-manager
     libfido2
+    yt-dlp
   ];
 
   environment.pathsToLink = ["/share/zsh"];
