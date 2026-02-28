@@ -53,7 +53,6 @@ in {
           kubecolor
           krew
           yq
-          yt-dlp
           viddy
           nodejs_22
           jdk21_headless
