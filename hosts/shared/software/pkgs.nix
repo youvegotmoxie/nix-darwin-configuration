@@ -41,7 +41,6 @@ in {
           delta
           fd
           gh
-          git-lfs
           nh
           nix-output-monitor
           ugrep
@@ -80,6 +79,7 @@ in {
           pkgs.ansible-lint
           pkgs.awscli2
           pkgs.eks-node-viewer
+          pkgs.git-lfs
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
           pkgs.lazydocker

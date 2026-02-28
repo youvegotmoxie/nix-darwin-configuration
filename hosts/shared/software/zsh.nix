@@ -25,6 +25,10 @@ in {
     enable = lib.mkEnableOption "zshConfig.workAliases";
     default = false;
   };
+  options.zshConfig.homeAliases = {
+    enable = lib.mkEnableOption "zshConfig.homeAliases";
+    default = true;
+  };
   config = {
     programs.zsh = {
       enable = true;
