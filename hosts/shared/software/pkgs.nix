@@ -40,7 +40,6 @@ in {
           cargo
           delta
           fd
-          ffmpeg
           gh
           git-lfs
           nh
