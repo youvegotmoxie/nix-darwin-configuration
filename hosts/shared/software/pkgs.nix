@@ -78,7 +78,7 @@ in {
           pkgs.ansible-lint
           pkgs.awscli2
           pkgs.eks-node-viewer
-          git-lfs
+          pkgs.git-lfs
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
           pkgs.lazydocker
