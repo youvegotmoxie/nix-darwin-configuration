@@ -41,7 +41,6 @@ in {
           delta
           fd
           gh
-          git-lfs
           nh
           nix-output-monitor
           ugrep
@@ -55,7 +54,6 @@ in {
           viddy
           nodejs_22
           jdk21_headless
-          lazydocker
           p7zip
           tldr
           jq
@@ -80,8 +78,10 @@ in {
           pkgs.ansible-lint
           pkgs.awscli2
           pkgs.eks-node-viewer
+          git-lfs
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+          pkgs.lazydocker
           pkgs.kubent
           pkgs.stern
           pkgs.ssm-session-manager-plugin
