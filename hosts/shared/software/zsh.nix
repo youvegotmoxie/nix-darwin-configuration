@@ -82,6 +82,7 @@ in {
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
         });
       initContent = lib.mkOrder 1500 ''
+        source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         ## Workaround for Atuin and ZSH Helix mode plugin
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"

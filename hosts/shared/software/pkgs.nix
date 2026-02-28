@@ -51,11 +51,11 @@ in {
           kubectx
           kubecolor
           krew
+          nix-index
           yq
           viddy
           nodejs_22
           jdk21_headless
-          lazydocker
           p7zip
           tldr
           jq
@@ -82,6 +82,7 @@ in {
           pkgs.eks-node-viewer
           pkgs.go
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+          pkgs.lazydocker
           pkgs.kubent
           pkgs.stern
           pkgs.ssm-session-manager-plugin
