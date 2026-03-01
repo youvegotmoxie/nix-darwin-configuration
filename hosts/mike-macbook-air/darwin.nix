@@ -2,10 +2,12 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   mainUser = "mike";
   system = pkgs.stdenv.hostPlatform.system;
-in {
+in
+{
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
@@ -13,19 +15,23 @@ in {
   users.users.${mainUser} = {
     home = "/Users/${mainUser}";
     shell = pkgs.zsh;
-    packages = [pkgs.gnused pkgs.gnutar];
+    packages = [
+      pkgs.gnused
+      pkgs.gnutar
+    ];
   };
 
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
+    nixd
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
     libfido2
   ];
 
-  environment.pathsToLink = ["/share/zsh"];
+  environment.pathsToLink = [ "/share/zsh" ];
 
   # Auto upgrade nix package and the daemon service.
   nix = {
@@ -42,7 +48,10 @@ in {
     };
     package = pkgs.nix;
     settings = {
-      "extra-experimental-features" = ["nix-command" "flakes"];
+      "extra-experimental-features" = [
+        "nix-command"
+        "flakes"
+      ];
     };
     extraOptions = ''
       extra-platforms = x86_64-darwin aarch64-darwin
@@ -115,8 +124,9 @@ in {
       "thaw"
       "timemachinestatus"
       "yubico-authenticator"
+      "zed"
     ];
-    masApps = {};
+    masApps = { };
   };
 
   environment.variables.XDG_DATA_DIRS = [

@@ -13,12 +13,16 @@ in {
   users.users.${mainUser} = {
     home = "/Users/${mainUser}";
     shell = pkgs.zsh;
-    packages = [pkgs.gnused pkgs.gnutar];
+    packages = [
+      pkgs.gnused
+      pkgs.gnutar
+    ];
   };
 
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
+    nixd
     uutils-coreutils-noprefix
     reattach-to-user-namespace
     home-manager
@@ -44,7 +48,10 @@ in {
     };
     package = pkgs.nix;
     settings = {
-      "extra-experimental-features" = ["nix-command" "flakes"];
+      "extra-experimental-features" = [
+        "nix-command"
+        "flakes"
+      ];
     };
     extraOptions = ''
       extra-platforms = x86_64-darwin aarch64-darwin
