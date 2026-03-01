@@ -2,12 +2,10 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   mainUser = "mike";
   system = pkgs.stdenv.hostPlatform.system;
-in
-{
+in {
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
@@ -31,7 +29,7 @@ in
     libfido2
   ];
 
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = ["/share/zsh"];
 
   # Auto upgrade nix package and the daemon service.
   nix = {
@@ -126,7 +124,7 @@ in
       "yubico-authenticator"
       "zed"
     ];
-    masApps = { };
+    masApps = {};
   };
 
   environment.variables.XDG_DATA_DIRS = [
