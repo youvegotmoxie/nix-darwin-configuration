@@ -1,0 +1,99 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "proxy": "socks5://localhost:2080",
+  "use_system_path_prompts": false,
+  "colorize_brackets": true,
+  "inlay_hints": {
+    "show_background": false,
+    "enabled": false
+  },
+  "toolbar": {
+    "code_actions": false,
+    "agent_review": true,
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "scrollbar": {
+    "show": "never",
+    "axes": {
+      "vertical": true,
+      "horizontal": true
+    }
+  },
+  "search": {
+    "include_ignored": false
+  },
+  "middle_click_paste": false,
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "vim": {
+    "gdefault": true,
+    "toggle_relative_line_numbers": true
+  },
+  "relative_line_numbers": "enabled",
+  "which_key": {
+    "enabled": true
+  },
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "buffer_line_height": "standard",
+  "buffer_font_family": ".ZedMono",
+  "restore_on_startup": "launchpad",
+  "on_last_window_closed": "quit_app",
+  "when_closing_with_no_tabs": "close_window",
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
+  "session": {
+    "restore_unsaved_buffers": false,
+    "trust_all_worktrees": true
+  },
+  "file_types": {
+    "GitHub Actions": ["*.gthub/workflows/*.yml", "*.github/workflows/*.yaml"],
+    "Helm": [
+      "*helm/**/templates/*.yaml",
+      "*helm/**/templates/*.tpl",
+      "*helm/templates/*.yaml",
+      "*helm/templates/*.tpl"
+    ]
+  },
+  "languages": {
+    "Nix": {
+      "formatter": {
+        "external": {
+          "command": "alejandra"
+        }
+      }
+    },
+    "Shell Script": {
+      "language_servers": ["bash-language-server"],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"]
+        }
+      }
+    }
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Tokyo Night Storm"
+  }
+}
