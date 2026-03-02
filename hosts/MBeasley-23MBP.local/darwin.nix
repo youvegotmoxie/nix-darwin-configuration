@@ -115,6 +115,8 @@ in {
       "steipete/tap/remindctl"
       # Zed
       "helm-ls"
+      "shellcheck"
+      "shfmt"
     ];
     casks = [
       "alcove"
