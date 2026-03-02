@@ -107,7 +107,7 @@
     shfmt
     alejandra
     yamlfmt
-    python313Packages.autopep8
-    python313Packages.python-lsp-server
+    python314Packages.autopep8
+    python314Packages.python-lsp-server
   ];
 }

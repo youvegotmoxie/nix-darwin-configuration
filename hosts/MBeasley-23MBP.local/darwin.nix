@@ -22,6 +22,7 @@ in {
   # System packages
   environment.systemPackages = with pkgs; [
     inputs.nil.packages.${system}.nil
+    # Zed
     nixd
     uutils-coreutils-noprefix
     reattach-to-user-namespace
@@ -112,6 +113,8 @@ in {
       "argocd"
       "tw93/tap/mole"
       "steipete/tap/remindctl"
+      # Zed
+      "helm-ls"
     ];
     casks = [
       "alcove"
@@ -126,6 +129,8 @@ in {
       "thaw"
       "timemachinestatus"
       "yubico-authenticator"
+      # Zed
+      "zed"
     ];
     masApps = {};
   };
