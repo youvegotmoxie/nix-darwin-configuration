@@ -21,9 +21,7 @@
         hostname = "192.168.148.217";
         user = "mike";
         port = 22;
-        extraOptions = {
-          PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
-        };
+        identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519-lab_sk";
       };
       "rpi4-standalone" = {
         hostname = "192.168.148.244";
