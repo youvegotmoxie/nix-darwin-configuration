@@ -40,7 +40,10 @@
             };
           }
         ];
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+          mainUser = "michaelbeasley";
+        };
       };
       "mike-macbook-air" = nix-darwin.lib.darwinSystem {
         system = systems;
@@ -61,7 +64,10 @@
             };
           }
         ];
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+          mainUser = "mike";
+        };
       };
     };
   };
