@@ -120,7 +120,6 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "neovide-app"
       "orbstack"
       "raycast"
       "thaw"
