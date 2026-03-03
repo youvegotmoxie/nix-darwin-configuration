@@ -3,6 +3,7 @@
     ./atuin.nix
     ./btop.nix
     ./fzf.nix
+    ./ghostty.nix
     ./git.nix
     ./gnupg.nix
     ./starship.nix
