@@ -28,6 +28,8 @@ in {
     reattach-to-user-namespace
     home-manager
     libfido2
+    python314
+    python314Packages.pip
   ];
 
   environment.pathsToLink = ["/share/zsh"];
