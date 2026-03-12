@@ -9,12 +9,14 @@
     includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
     matchBlocks = {
       "*" = {
-        forwardAgent = true;
+        forwardAgent = false;
         controlMaster = "auto";
         controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
         controlPersist = "2h";
         extraOptions = {
           StreamLocalBindUnlink = "yes";
+          HashKnownHosts = "yes";
+          IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
         };
       };
       "rpi4-timemachine" = {
