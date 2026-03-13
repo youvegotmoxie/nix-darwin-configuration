@@ -97,6 +97,7 @@ in {
         "GIT_AUTO_FETCH_INTERVAL" = 300;
         "TERM" = "xterm-256color";
         "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
+        "RUST_SRC_PATH" = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
       };
     };
   };

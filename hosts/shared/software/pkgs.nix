@@ -68,6 +68,7 @@ in {
           nodejs_22
           jdk21_headless
           p7zip
+          rustc
           tldr
           jq
           ripgrep
