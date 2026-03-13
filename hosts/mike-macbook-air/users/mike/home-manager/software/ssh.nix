@@ -5,7 +5,7 @@
     includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
     matchBlocks = {
       "*" = {
-        forwardAgent = false;
+        forwardAgent = true;
         controlMaster = "auto";
         controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
         controlPersist = "2h";
