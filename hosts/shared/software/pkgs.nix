@@ -69,6 +69,7 @@ in {
           jdk21_headless
           p7zip
           rustc
+          rustfmt
           tldr
           jq
           ripgrep
