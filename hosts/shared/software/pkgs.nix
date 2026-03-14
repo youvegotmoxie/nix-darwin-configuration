@@ -20,6 +20,9 @@
   gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (
     builtins.readFile ../scripts/gpg-push-pull-keys.sh
   );
+  zed-config-sync = pkgs.writeShellScriptBin "zed-config-sync" (
+    builtins.readFile ../scripts/zed-config-sync.sh
+  );
 
   helmVersion = "4.1.1";
   helmSHA = "sha256-v678Bfxf/0ugEd/OUrGnm1eFxj60t0mA8hqMS3qczrA=";
@@ -85,6 +88,7 @@ in {
           blame-line-pretty
           git-hunk
           gpg-push-pull-keys
+          zed-config-sync
         ]
         ++ (lib.optionals cfg.workAliases.enable [
           # packages only needed for work

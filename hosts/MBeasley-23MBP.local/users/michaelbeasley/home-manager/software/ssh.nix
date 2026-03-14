@@ -15,7 +15,6 @@
         controlPersist = "2h";
         extraOptions = {
           StreamLocalBindUnlink = "yes";
-          HashKnownHosts = "yes";
           IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
         };
       };
