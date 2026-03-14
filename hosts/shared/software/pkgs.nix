@@ -52,46 +52,46 @@ in {
           bat
           bat-extras.batman
           bfs
+          blame-line-pretty
           cargo
           delta
           fd
+          gawk
           gh
-          nh
-          nix-output-monitor
-          ugrep
-          prek
-          tree-sitter
+          git-hunk
+          gpg-push-pull-keys
+          jdk21_headless
+          jq
+          krew
+          kubecolor
           kubectl
           kubectx
-          kubecolor
-          krew
+          lazydocker
+          nerd-fonts.monaspace
+          nh
           nix-index
-          yq
-          viddy
+          nix-output-monitor
           nodejs_22
-          jdk21_headless
+          noto-fonts
           p7zip
+          pam-reattach
+          passepartui
+          pinentry-tty
+          prek
+          ripgrep
           rustc
           rustfmt
           tldr
-          jq
-          ripgrep
+          tree-sitter
+          ugrep
+          viddy
+          yq
           yubikey-manager
-          pinentry-tty
-          passepartui
-          # Tmux stuff
-          pam-reattach
-          gawk
-          nerd-fonts.monaspace
-          noto-fonts
-          # scripts
-          blame-line-pretty
-          git-hunk
-          gpg-push-pull-keys
           zed-config-sync
         ]
         ++ (lib.optionals cfg.workAliases.enable [
-          # packages only needed for work
+          (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+          helm4
           pkgs.act
           pkgs.ansible
           pkgs.ansible-lint
@@ -99,15 +99,11 @@ in {
           pkgs.eks-node-viewer
           pkgs.git-lfs
           pkgs.go
-          (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
-          pkgs.lazydocker
           pkgs.kubent
-          pkgs.stern
-          pkgs.ssm-session-manager-plugin
           pkgs.pulumi
+          pkgs.ssm-session-manager-plugin
+          pkgs.stern
           pkgs.wget
-          helm4
-          # scripts only needed for work
           ssh-proxy
           tilt-connect
         ]);
