@@ -19,20 +19,30 @@ in {
     ];
   };
 
-  # System packages
-  environment.systemPackages = with pkgs; [
-    inputs.nil.packages.${system}.nil
-    # Zed
-    nixd
-    uutils-coreutils-noprefix
-    reattach-to-user-namespace
-    home-manager
-    libfido2
-    python314
-    python314Packages.pip
-  ];
-
-  environment.pathsToLink = ["/share/zsh"];
+  # System environment and packages
+  environment = {
+    systemPackages = with pkgs; [
+      inputs.nil.packages.${system}.nil
+      # Zed
+      nixd
+      uutils-coreutils-noprefix
+      reattach-to-user-namespace
+      home-manager
+      libfido2
+      python314
+      python314Packages.pip
+    ];
+    pathsToLink = ["/share/zsh"];
+    # Setup sudo auth with TouchID for Tmux
+    etc."pam.d/sudo_local".text = ''
+      # Written by nix-darwin
+      auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+      auth       sufficient     pam_tid.so
+    '';
+    variables.XDG_DATA_DIRS = [
+      "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
+    ];
+  };
 
   # Auto upgrade nix package and the daemon service.
   nix = {
@@ -40,7 +50,7 @@ in {
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 15d";
       interval = {
         Weekday = 0;
         Hour = 8;
@@ -76,13 +86,6 @@ in {
 
   # Sudo auth with Touch ID
   security.pam.services.sudo_local.touchIdAuth = true;
-
-  # Setup sudo auth with TouchID for Tmux
-  environment.etc."pam.d/sudo_local".text = ''
-    # Written by nix-darwin
-    auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
-    auth       sufficient     pam_tid.so
-  '';
 
   # Configure the dock and Finder
   system.defaults = {
@@ -132,8 +135,4 @@ in {
     ];
     masApps = {};
   };
-
-  environment.variables.XDG_DATA_DIRS = [
-    "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
-  ];
 }
