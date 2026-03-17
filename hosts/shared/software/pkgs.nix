@@ -66,6 +66,7 @@ in {
           kubecolor
           kubectl
           kubectx
+          lazydocker
           nerd-fonts.monaspace
           nh
           nix-index
@@ -99,7 +100,6 @@ in {
           pkgs.git-lfs
           pkgs.go
           pkgs.kubent
-          pkgs.lazydocker
           pkgs.pulumi
           pkgs.ssm-session-manager-plugin
           pkgs.stern
