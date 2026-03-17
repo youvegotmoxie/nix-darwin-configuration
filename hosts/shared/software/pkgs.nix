@@ -39,7 +39,7 @@
     installPhase = ''
       runHook preInstall
       install -m 0755 -D helm/darwin-arm64/helm $out/bin/helm
-      runHook postInstal
+      runHook postInstall
     '';
   };
   cfg = config.zshConfig;
