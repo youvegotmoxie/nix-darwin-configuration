@@ -20,11 +20,11 @@
   gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (
     builtins.readFile ../scripts/gpg-push-pull-keys.sh
   );
-  zed-config-sync = pkgs.writeShellScriptBin "zed-config-sync" (
-    builtins.readFile ../scripts/zed-config-sync.sh
+  zed-config-push = pkgs.writeShellScriptBin "zed-config-push" (
+    builtins.readFile ../scripts/zed-config-push.sh
   );
-  zed-config-restore = pkgs.writeShellScriptBin "zed-config-restore" (
-    builtins.readFile ../scripts/zed-config-restore.sh
+  zed-config-pull = pkgs.writeShellScriptBin "zed-config-pull" (
+    builtins.readFile ../scripts/zed-config-pull.sh
   );
 
   helmVersion = "4.1.1";
@@ -90,8 +90,8 @@ in {
           viddy
           yq
           yubikey-manager
-          zed-config-sync
-          zed-config-restore
+          zed-config-pull
+          zed-config-push
         ]
         ++ (lib.optionals cfg.workAliases.enable [
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
