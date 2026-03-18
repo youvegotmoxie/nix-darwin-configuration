@@ -23,6 +23,9 @@
   zed-config-sync = pkgs.writeShellScriptBin "zed-config-sync" (
     builtins.readFile ../scripts/zed-config-sync.sh
   );
+  zed-config-restore = pkgs.writeShellScriptBin "zed-config-restore" (
+    builtins.readFile ../scripts/zed-config-restore.sh
+  );
 
   helmVersion = "4.1.1";
   helmSHA = "sha256-v678Bfxf/0ugEd/OUrGnm1eFxj60t0mA8hqMS3qczrA=";
@@ -88,6 +91,7 @@ in {
           yq
           yubikey-manager
           zed-config-sync
+          zed-config-restore
         ]
         ++ (lib.optionals cfg.workAliases.enable [
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
