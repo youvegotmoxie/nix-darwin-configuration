@@ -81,6 +81,7 @@ in {
           ripgrep
           rustc
           rustfmt
+          shfmt
           tldr
           tree-sitter
           ugrep
