@@ -49,7 +49,7 @@
       };
   in {
     darwinConfigurations = {
-      "MBeasley-23MBP" = mkDarwinHost {
+      "MBeasley-23MBPlocal" = mkDarwinHost {
         mainUser = "michaelbeasley";
         hostDir = "MBeasley-23MBP.local";
       };
