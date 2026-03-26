@@ -72,6 +72,7 @@ in {
           co = "checkout";
           cb = "checkout -b";
           db = "branch -D";
+          bv = "branch -v";
           dbp = "push origin -d";
         };
         commit.gpgsign = true;
