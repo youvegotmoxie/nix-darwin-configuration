@@ -22,8 +22,8 @@ in {
   # System environment and packages
   environment = {
     systemPackages = with pkgs; [
-      inputs.nil.packages.${system}.nil
       # Zed
+      inputs.nil.packages.${system}.nil
       nixd
       uutils-coreutils-noprefix
       reattach-to-user-namespace
@@ -132,6 +132,8 @@ in {
       # Zed
       "zed"
     ];
-    masApps = {};
+    masApps = {
+      "Strongbox Password Manager" = 897283731;
+    };
   };
 }
