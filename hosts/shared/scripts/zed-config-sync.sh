@@ -4,23 +4,21 @@
 # because I don't have it in me to SOPS round 2
 
 # Diff the configs in the password store against the local Zed configs
-
 function diff_change() {
 
   for i in settings keymap tasks; do
-    output=$(diff -u ~/.config/zed/${i}.json <(pass show "Zed/config-sync/${i}.json"))
+    OUTPUT=$(diff -u ~/.config/zed/${i}.json <(pass show "Zed/config-sync/${i}.json"))
 
-    if [ -z "${output}" ]; then
+    if [ -z "${OUTPUT}" ]; then
       echo "No changes to ${i}.json"
     else
-      echo "${output}"
+      echo "${OUTPUT}"
     fi
   done
 
 }
 
 # Replace local Zed configs with the ones from the password store
-
 function pull_changes() {
 
   for i in settings keymap tasks; do
@@ -39,7 +37,16 @@ function push_changes() {
 
 }
 
-case "$@" in
+# Only need to care about the GitHub API keys
+# Default to my personal key since I'd rather break the editor at work
+# than allow my personal laptop access to work GitHub
+function swap_secret() {
+  INPUT="${1:-personal}"
+  SECRET=$(pass show "Zed/api-keys/github-${INPUT}-key")
+  sed -i "s|ghp_.*|$SECRET\",|" ~/.config/zed/settings.json
+}
+
+case "$1" in
 --dry-run)
   diff_change
   ;;
@@ -49,10 +56,15 @@ case "$@" in
 --push)
   push_changes
   ;;
+--swap-secret)
+  swap_secret "${2}"
+  shift
+  ;;
 --help)
   echo "Use --dry-run to preview changes"
   echo "Use --apply to apply changes"
   echo "Use --push to push changes to the password store"
+  echo "Use --swap-secret to replace a secret in Zed's config from the password store"
   exit 0
   ;;
 *)
