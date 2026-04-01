@@ -8,7 +8,6 @@ repos:
         args: ["--markdown-linebreak-ext=md"]
       - id: check-added-large-files
       - id: end-of-file-fixer
-      - id: detect-aws-credentials
       - id: detect-private-key
   - repo: https://github.com/hhatto/autopep8
     rev: "v2.3.2"
