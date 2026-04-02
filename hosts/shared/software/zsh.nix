@@ -79,12 +79,12 @@ in {
           passtui = "passepartui";
           kubectl = "kubecolor";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
-          renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
           btcm = "better-commits";
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
+          renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         });
       initContent = lib.mkOrder 1500 ''
         source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
