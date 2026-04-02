@@ -79,6 +79,7 @@ in {
           passtui = "passepartui";
           kubectl = "kubecolor";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
+          renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
