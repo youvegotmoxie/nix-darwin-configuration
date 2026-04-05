@@ -52,7 +52,6 @@
         format = "[( \($name\))]($style) ";
       };
       terraform = {
-        # format = "[(\($workspace\))]($style)";
         format = "[$workspace]($style)";
       };
     };

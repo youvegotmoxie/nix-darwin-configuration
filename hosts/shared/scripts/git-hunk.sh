@@ -7,7 +7,7 @@ base_command='git --no-pager diff --no-color HEAD'
 
 # Print only the hunk whose +start,len covers $line
 eval "$base_command" -U"$context" -- "$file" |
-    awk -v ln="$line" '
+  awk -v ln="$line" '
   BEGIN { have=0; buf=""; out="" }
   /^@@ /{
 # stash the first matching hunk

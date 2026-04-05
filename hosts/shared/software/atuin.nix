@@ -2,7 +2,7 @@
   programs.atuin = {
     enable = true;
     daemon = {
-      enable = false;
+      enable = true;
     };
     enableZshIntegration = true;
     flags = [
@@ -30,29 +30,29 @@
         ];
         ignored_commands = [
           "cd"
-          "ls"
+          "hx"
           "ll"
+          "ls"
+          "nvim"
           "vi"
           "vim"
-          "hx"
-          "nvim"
         ];
         common_subcommands = [
-          "cargo"
-          "go"
-          "git"
-          "npm"
-          "yarn"
-          "pnpm"
-          "kubectl"
-          "docker"
           "brew"
-          "k"
-          "ssh"
+          "cargo"
+          "docker"
+          "git"
+          "go"
           "helm"
           "helm2"
-          "nix"
+          "k"
+          "kubectl"
           "nh"
+          "nix"
+          "npm"
+          "pnpm"
+          "ssh"
+          "yarn"
         ];
       };
     };

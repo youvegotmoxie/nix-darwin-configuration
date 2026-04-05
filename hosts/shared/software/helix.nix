@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   # Set EDITOR to helix
   programs.helix = {
-    enable = true;
+    enable = false;
     defaultEditor = false;
     settings = {
       theme = "tokyonight";

@@ -9,19 +9,19 @@ zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
 
 # Clean all unused Docker images
 function docker-clean-images() {
-    for i in $(docker image list | awk '{ print $3 }' | grep -v  IMAGE | sed -e '/^\s*$/g'); do
-        # shellcheck disable=SC2069
-        docker image rm -f "${i}" 2>&1 > /dev/null
-    done
+  for i in $(docker image list | awk '{ print $3 }' | grep -v IMAGE | sed -e '/^\s*$/g'); do
+    # shellcheck disable=SC2069
+    docker image rm -f "${i}" 2>&1 >/dev/null
+  done
 }
 
 # Auto decode Kubernetes secrets
-function kxsec(){
+function kxsec() {
   tmpl='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
   if [ -n "$2" ]; then
     tmpl="{{ index .data \"$2\"| base64decode }}"
   fi
-  kubectl get secret $1  -o go-template="$tmpl"
+  kubectl get secret $1 -o go-template="$tmpl"
 }
 
 _kxsec() {

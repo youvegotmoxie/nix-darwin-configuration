@@ -6,9 +6,9 @@
     ./ghostty.nix
     ./git.nix
     ./gnupg.nix
-    ./starship.nix
     ./pass.nix
     ./pkgs.nix
+    ./starship.nix
     ./tmux.nix
     ./yazi.nix
     ./zoxide.nix
