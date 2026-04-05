@@ -1,0 +1,76 @@
+## Nix Packages
+- alejandra
+- atuin
+- bat
+- bat-extras.batman
+- bfs
+- btop
+- cargo
+- delta
+- direnv
+- eza
+- fd
+- fzf
+- gawk
+- gh
+- git
+- gnupg
+- home-manager
+- jdk21_headless
+- jq
+- lazydocker
+- lazygit
+- libfido2
+- neovim
+- nerd-fonts.monaspace
+- nh
+- nil
+- nix-index
+- nix-output-monitor
+- nixd
+- nodejs_22
+- noto-fonts
+- p7zip
+- pam-reattach
+- password-store
+- passepartui
+- pinentry-tty
+- python3.14
+- ripgrep
+- rustc
+- rustfmt
+- shellcheck
+- shfmt
+- starship
+- tldr
+- tmux
+- tree-sitter
+- ugrep
+- uutils-coreutils-noprefix
+- viddy
+- yq
+- yubikey-manager
+- zoxide
+- zsh
+
+## Homebrew
+### Formulae
+- ffmpeg
+- mole
+- yt-dlp
+
+### Casks
+- alcove
+- betterdisplay
+- font-monaspice-nerd-font
+- font-noto-sans-symbols-2
+- ghostty
+- orbstack
+- raycast
+- thaw
+- timemachinestatus
+- yubico-authenticator
+- zed
+
+### App Store
+- Strongbox Password Manager
