@@ -9,8 +9,8 @@
   zsh-helix-mode = pkgs.fetchFromGitHub {
     owner = "Multirious";
     repo = "zsh-helix-mode";
-    rev = "2b4a40aa8956d345d8554f0c3ebbdc2fee619b9a";
-    sha256 = "sha256-0/5B4SRHNo06ya0qNGy15yyOE6iZv7t4CLlO2Aody7g=";
+    rev = "e8d4940588f9809ab5658aa7c9c664921d547879";
+    sha256 = "sha256-YggmEZ5hRySwXR+VZFKKZ+HzH5Cvz0661QeiAjlE30E=";
   };
   cfg = config.zshConfig;
 in {

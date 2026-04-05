@@ -22,15 +22,15 @@ in {
   # System environment and packages
   environment = {
     systemPackages = with pkgs; [
-      # Zed
-      inputs.nil.packages.${system}.nil
-      nixd
-      uutils-coreutils-noprefix
-      reattach-to-user-namespace
       home-manager
+      inputs.nil.packages.${system}.nil
       libfido2
+      nixd
       python314
       python314Packages.pip
+      reattach-to-user-namespace
+      shellcheck
+      uutils-coreutils-noprefix
     ];
     pathsToLink = ["/share/zsh"];
     # Setup sudo auth with TouchID for Tmux
@@ -109,14 +109,10 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "steipete/tap"
       "tw93/tap"
     ];
     brews = [
       "tw93/tap/mole"
-      "steipete/tap/remindctl"
-      # Zed
-      "shellcheck"
     ];
     casks = [
       "alcove"
@@ -129,7 +125,6 @@ in {
       "thaw"
       "timemachinestatus"
       "yubico-authenticator"
-      # Zed
       "zed"
     ];
     masApps = {

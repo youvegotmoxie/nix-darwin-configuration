@@ -24,8 +24,8 @@
     builtins.readFile ../scripts/zed-config-sync.sh
   );
 
-  helmVersion = "4.1.1";
-  helmSHA = "sha256-v678Bfxf/0ugEd/OUrGnm1eFxj60t0mA8hqMS3qczrA=";
+  helmVersion = "4.1.3";
+  helmSHA = "sha256-5DE3hF9rRqCrHWhyWf73ki56C2lqMzn1wkS8CiL37k0=";
   helm4 = pkgs.stdenv.mkDerivation rec {
     pname = "helm";
     version = helmVersion;
@@ -62,10 +62,6 @@ in {
           gpg-push-pull-keys
           jdk21_headless
           jq
-          krew
-          kubecolor
-          kubectl
-          kubectx
           lazydocker
           nerd-fonts.monaspace
           nh
@@ -88,11 +84,11 @@ in {
           viddy
           yq
           yubikey-manager
+          # Scripts
           zed-config-sync
         ]
         ++ (lib.optionals cfg.workAliases.enable [
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
-          helm4
           pkgs.act
           pkgs.ansible
           pkgs.ansible-lint
@@ -100,11 +96,16 @@ in {
           pkgs.eks-node-viewer
           pkgs.git-lfs
           pkgs.go
+          pkgs.krew
+          pkgs.kubecolor
+          pkgs.kubectl
+          pkgs.kubectx
           pkgs.kubent
-          pkgs.pulumi
           pkgs.ssm-session-manager-plugin
           pkgs.stern
           pkgs.wget
+          # Scripts
+          helm4
           ssh-proxy
           tilt-connect
         ]);
