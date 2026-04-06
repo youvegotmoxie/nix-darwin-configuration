@@ -43,6 +43,7 @@ function push_changes() {
 function swap_secret() {
   INPUT="${1:-personal}"
   SECRET=$(pass show "Zed/api-keys/github-${INPUT}-key")
+  echo "Replacing secret with ${INPUT} key"
   sed -i "s|ghp_.*|$SECRET\",|" ~/.config/zed/settings.json
 }
 
