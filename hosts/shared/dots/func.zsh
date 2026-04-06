@@ -7,6 +7,9 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
 
+# Enable Atuin Hex UI
+eval "$(atuin hex init)"
+
 # Clean all unused Docker images
 function docker-clean-images() {
   for i in $(docker image list | awk '{ print $3 }' | grep -v IMAGE | sed -e '/^\s*$/g'); do
