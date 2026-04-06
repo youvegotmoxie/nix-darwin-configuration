@@ -58,6 +58,7 @@ in {
           fd
           gawk
           gh
+          gh-dash
           git-hunk
           gpg-push-pull-keys
           jdk21_headless
