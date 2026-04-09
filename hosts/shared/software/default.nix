@@ -19,6 +19,9 @@
     enable = true;
     defaultEditor = true;
     vimAlias = true;
+    # Disable the embedded ruby and python3 interpreters
+    withRuby = false;
+    withPython3 = false;
   };
 
   programs.direnv = {
