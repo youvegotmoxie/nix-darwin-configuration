@@ -5,7 +5,6 @@
     font-family = "MesloLGS NF"
     font-size = 13
     cursor-style-blink = false
-    cursor-style =
     link-url = true
     scrollback-limit = 100_000_000
     shell-integration = detect
@@ -17,5 +16,22 @@
     quit-after-last-window-closed = true
     window-colorspace = display-p3
     keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+    # Mimic Tmux keybinds for Ghostty's native multiplexing
+    keybind = ctrl+h=goto_split:left
+    keybind = ctrl+j=goto_split:bottom
+    keybind = ctrl+k=goto_split:top
+    keybind = ctrl+l=goto_split:right
+    keybind = ctrl+a>-=new_split:down
+    keybind = ctrl+a>shift+\=new_split:right
+    keybind = ctrl+a>shift+z=toggle_split_zoom
+    keybind = ctrl+a>n=next_tab
+    keybind = ctrl+a>p=previous_tab
+    keybind = ctrl+shift+k=resize_split:up,30
+    keybind = ctrl+shift+j=resize_split:down,30
+    keybind = ctrl+shift+h=resize_split:left,30
+    keybind = ctrl+shift+l=resize_split:right,30
+    keybind = ctrl+a>e=equalize_splits
+    window-save-state = always
   '';
 }
