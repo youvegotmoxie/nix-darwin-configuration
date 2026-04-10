@@ -7,9 +7,11 @@
     font-family = "MesloLGS NF"
     font-size = 13
     cursor-style-blink = false
+    cursor-style = block
     link-url = true
     scrollback-limit = 100_000_000
     shell-integration = detect
+    shell-integration-features = no-cursor
     clipboard-read = allow
     clipboard-write = allow
     clipboard-paste-protection = true
