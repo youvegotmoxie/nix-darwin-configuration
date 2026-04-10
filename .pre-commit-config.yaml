@@ -8,11 +8,8 @@ repos:
         args: ["--markdown-linebreak-ext=md"]
       - id: check-added-large-files
       - id: end-of-file-fixer
+      - id: detect-aws-credentials
       - id: detect-private-key
-  - repo: https://github.com/hhatto/autopep8
-    rev: "v2.3.2"
-    hooks:
-      - id: autopep8
   - repo: https://github.com/koalaman/shellcheck-precommit
     rev: v0.11.0
     hooks:
@@ -39,3 +36,7 @@ repos:
     rev: v1.7.12
     hooks:
       - id: actionlint
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.10
+    hooks:
+      - id: ruff-format

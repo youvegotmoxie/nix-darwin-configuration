@@ -109,6 +109,7 @@ in {
       cleanup = "zap";
     };
     taps = [
+      "kitknox/rootshell"
       "tw93/tap"
     ];
     brews = [
@@ -122,6 +123,7 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
+      "rootshell"
       "thaw"
       "timemachinestatus"
       "yubico-authenticator"
