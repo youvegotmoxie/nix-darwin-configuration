@@ -1,5 +1,7 @@
 {config, ...}: {
   home.file."${config.home.homeDirectory}/Library/Application Support/com.mitchellh.ghostty/config".text = ''
+    # https://ghostty.org/docs/config/reference
+    # ghostty +show-config
     macos-titlebar-style = tabs
     theme = tokyonight
     font-family = "MesloLGS NF"
@@ -15,9 +17,10 @@
     confirm-close-surface = false
     quit-after-last-window-closed = true
     window-colorspace = display-p3
-    keybind = global:cmd+grave_accent=toggle_quick_terminal
 
     # Mimic Tmux keybinds for Ghostty's native multiplexing
+    # https://ghostty.org/docs/config/keybind
+    # ghostty +list-keybinds
     keybind = ctrl+h=goto_split:left
     keybind = ctrl+j=goto_split:bottom
     keybind = ctrl+k=goto_split:top
@@ -32,6 +35,7 @@
     keybind = ctrl+shift+h=resize_split:left,30
     keybind = ctrl+shift+l=resize_split:right,30
     keybind = ctrl+a>e=equalize_splits
+    keybind = global:cmd+grave_accent=toggle_quick_terminal
     window-save-state = always
   '';
 }
