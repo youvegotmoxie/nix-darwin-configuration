@@ -123,7 +123,6 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
-      "rootshell"
       "thaw"
       "timemachinestatus"
       "yubico-authenticator"
