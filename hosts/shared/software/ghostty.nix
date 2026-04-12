@@ -23,10 +23,10 @@
     # Mimic Tmux keybinds for Ghostty's native multiplexing
     # https://ghostty.org/docs/config/keybind
     # ghostty +list-keybinds
-    keybind = ctrl+h=goto_split:left
-    keybind = ctrl+j=goto_split:bottom
-    keybind = ctrl+k=goto_split:top
-    keybind = ctrl+l=goto_split:right
+    keybind = ctrl+a>h=goto_split:left
+    keybind = ctrl+a>j=goto_split:bottom
+    keybind = ctrl+a>k=goto_split:top
+    keybind = ctrl+a>l=goto_split:right
     keybind = ctrl+a>-=new_split:down
     keybind = ctrl+a>shift+\=new_split:right
     keybind = ctrl+a>shift+z=toggle_split_zoom
