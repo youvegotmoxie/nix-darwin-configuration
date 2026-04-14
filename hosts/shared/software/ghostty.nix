@@ -2,23 +2,25 @@
   home.file."${config.home.homeDirectory}/Library/Application Support/com.mitchellh.ghostty/config".text = ''
     # https://ghostty.org/docs/config/reference
     # ghostty +show-config
-    macos-titlebar-style = tabs
-    theme = tokyonight
+    clipboard-paste-protection = true
+    clipboard-read = allow
+    clipboard-write = allow
+    confirm-close-surface = false
+    cursor-style = block
+    cursor-style-blink = false
     font-family = "MesloLGS NF"
     font-size = 12
-    cursor-style-blink = false
-    cursor-style = block
     link-url = true
+    macos-icon = retro
+    macos-titlebar-style = tabs
+    mouse-hide-while-typing = true
+    quit-after-last-window-closed = true
     scrollback-limit = 100_000_000
     shell-integration = detect
     shell-integration-features = no-cursor
-    clipboard-read = allow
-    clipboard-write = allow
-    clipboard-paste-protection = true
-    mouse-hide-while-typing = true
-    confirm-close-surface = false
-    quit-after-last-window-closed = true
+    theme = tokyonight
     window-colorspace = display-p3
+    window-save-state = always
 
     # Mimic Tmux keybinds for Ghostty's native multiplexing
     # https://ghostty.org/docs/config/keybind
@@ -38,6 +40,5 @@
     keybind = ctrl+shift+l=resize_split:right,30
     keybind = ctrl+a>e=equalize_splits
     keybind = global:cmd+grave_accent=toggle_quick_terminal
-    window-save-state = always
   '';
 }
