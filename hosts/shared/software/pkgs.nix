@@ -52,14 +52,12 @@ in {
           bat
           bat-extras.batman
           bfs
-          blame-line-pretty
           cargo
           delta
           fd
           gawk
           gh
           git-hunk
-          gpg-push-pull-keys
           jdk21_headless
           jq
           lazydocker
@@ -85,6 +83,8 @@ in {
           yq
           yubikey-manager
           # Scripts
+          blame-line-pretty
+          gpg-push-pull-keys
           zed-config-sync
         ]
         ++ (lib.optionals cfg.workAliases.enable [
