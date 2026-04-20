@@ -31,6 +31,7 @@ in {
       reattach-to-user-namespace
       shellcheck
       uutils-coreutils-noprefix
+      uv
     ];
     pathsToLink = ["/share/zsh"];
     # Setup sudo auth with TouchID for Tmux
