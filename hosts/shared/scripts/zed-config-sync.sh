@@ -10,7 +10,7 @@ function diff_change() {
     OUTPUT=$(diff -u ~/.config/zed/${i}.json <(pass show "Zed/config-sync/${i}.json"))
 
     if [ -z "${OUTPUT}" ]; then
-      echo "No changes to ${i}.json"
+      echo "No changes to config ${i}.json"
     else
       echo "${OUTPUT}"
     fi
@@ -34,13 +34,15 @@ function pull_changes() {
 
   for i in settings keymap tasks; do
     pass show "Zed/config-sync/${i}.json" >~/.config/zed/${i}.json
-    echo "Restored ${i}.json from the password store"
+    echo "Restored config ${i}.json from the password store"
   done
 
-  for i in "${HOME}"/.config/zed/snippets/*.json; do
-    [ -e "${i}" ] || continue
-    pass show "Zed/snippets/${i##*/}" >"${i}"
-    echo "Restored snippet ${i##*/} from the password store"
+  for i in $(pass ls Zed/snippets | awk '$NF ~ /\.json$/ { print $NF }'); do
+    if [ ! -d ~/.config/zed/snippets ]; then
+      mkdir -p ~/.config/zed/snippets
+    fi
+    pass show "Zed/snippets/${i}" >~/.config/zed/snippets/"${i}"
+    echo "Restored snippet ${i} from the password store"
   done
 
 }
@@ -49,7 +51,7 @@ function pull_changes() {
 function push_changes() {
 
   for i in settings keymap tasks; do
-    echo "Copied ${i}.json to the password store"
+    echo "Copied config ${i}.json to the password store"
     pass add -m -f "Zed/config-sync/${i}.json" <~/.config/zed/${i}.json 1>/dev/null
   done
 
