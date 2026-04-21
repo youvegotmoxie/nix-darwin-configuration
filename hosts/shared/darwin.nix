@@ -110,7 +110,6 @@ in {
       cleanup = "zap";
     };
     taps = [
-      "kitknox/rootshell"
       "tw93/tap"
     ];
     brews = [

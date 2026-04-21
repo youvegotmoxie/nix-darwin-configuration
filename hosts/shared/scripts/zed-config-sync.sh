@@ -16,6 +16,17 @@ function diff_change() {
     fi
   done
 
+  for i in "${HOME}"/.config/zed/snippets/*.json; do
+    [ -e "${i}" ] || continue
+    SNIPPETS_OUTPUT=$(diff -u "${i}" <(pass show "Zed/snippets/${i##*/}"))
+
+    if [ -z "${SNIPPETS_OUTPUT}" ]; then
+      echo "No changes to snippet ${i##*/}"
+    else
+      echo "${SNIPPETS_OUTPUT}"
+    fi
+  done
+
 }
 
 # Replace local Zed configs with the ones from the password store
@@ -26,13 +37,26 @@ function pull_changes() {
     echo "Restored ${i}.json from the password store"
   done
 
+  for i in "${HOME}"/.config/zed/snippets/*.json; do
+    [ -e "${i}" ] || continue
+    pass show "Zed/snippets/${i##*/}" >"${i}"
+    echo "Restored snippet ${i##*/} from the password store"
+  done
+
 }
 
+# Copy local Zed configs to the password store
 function push_changes() {
 
   for i in settings keymap tasks; do
     echo "Copied ${i}.json to the password store"
     pass add -m -f "Zed/config-sync/${i}.json" <~/.config/zed/${i}.json 1>/dev/null
+  done
+
+  for i in "${HOME}"/.config/zed/snippets/*.json; do
+    [ -e "${i}" ] || continue
+    echo "Copied snippet ${i##*/} to the password store"
+    pass add -m -f "Zed/snippets/${i##*/}" <"${i}" 1>/dev/null
   done
 
 }
@@ -41,13 +65,15 @@ function push_changes() {
 # Default to my personal key since I'd rather break the editor at work
 # than allow my personal laptop access to work GitHub
 function swap_secret() {
+
   INPUT="${1:-personal}"
   SECRET=$(pass show "Zed/api-keys/github-${INPUT}-key")
   echo "Replacing secret with ${INPUT} key"
   sed -i "s|ghp_.*|$SECRET\",|" ~/.config/zed/settings.json
+
 }
 
-case "$1" in
+case "${1}" in
 --dry-run)
   diff_change
   ;;
