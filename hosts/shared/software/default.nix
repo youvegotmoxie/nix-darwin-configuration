@@ -26,10 +26,8 @@
 
   programs.direnv = {
     enable = true;
-    config = {
-      # Account for large flake builds
-      warn_timeout = "10m";
-    };
+    # Account for large flake builds
+    config.warn_timeout = "10m";
     nix-direnv.enable = true;
     enableZshIntegration = true;
   };
