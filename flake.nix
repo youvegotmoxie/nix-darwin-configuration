@@ -3,6 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    # Used as a pkg overlays where nixpkgs-unstable remains broken for long periods
+    # hosts/shared/software/default.nix(direnv)
+    nixos-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
@@ -16,6 +19,7 @@
     nix-darwin,
     home-manager,
     nixpkgs,
+    nixos-unstable-small,
     systems,
     nil,
     ...

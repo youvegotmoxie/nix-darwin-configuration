@@ -4,7 +4,7 @@
   mainUser,
   ...
 }: let
-  system = pkgs.stdenv.hostPlatform.system;
+  inherit (pkgs.stdenv.hostPlatform) system;
 in {
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 5;
