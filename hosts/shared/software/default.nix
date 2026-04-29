@@ -28,6 +28,8 @@ in {
     # Disable the embedded ruby and python3 interpreters
     withRuby = false;
     withPython3 = false;
+    # Don't overwrite ~/.config/nvim/init.lua
+    sideloadInitLua = true;
   };
 
   # TODO: Remove this overlay configuration once direnv tests are passing in nixpkgs-unstable
