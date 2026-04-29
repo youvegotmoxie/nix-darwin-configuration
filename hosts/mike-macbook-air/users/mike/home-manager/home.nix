@@ -32,6 +32,14 @@
     file = {
       ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
+      ".config/yt-dlp/config".text = ''
+        --format best[height<=1080]
+        --format-sort +size
+        --merge-output-format mp4
+        --embed-thumbnail
+        --embed-metadata
+        --output "%(title)s.%(ext)s"
+      '';
     };
   };
 }
