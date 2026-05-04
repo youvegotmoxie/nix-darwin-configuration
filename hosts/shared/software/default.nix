@@ -19,7 +19,6 @@ in {
     ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
-    ./llama-cpp.nix
   ];
 
   programs.neovim = {

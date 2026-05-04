@@ -26,9 +26,6 @@
     workAliases.enable = false;
   };
 
-  # Enable llama-cpp service only on mike-macbook-air
-  llama-cpp.enable = true;
-
   home = {
     stateVersion = "25.05";
 
