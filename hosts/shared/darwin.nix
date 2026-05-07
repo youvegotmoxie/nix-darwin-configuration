@@ -114,9 +114,11 @@ in {
     ];
     brews = [
       "tw93/tap/mole"
+      "pi-coding-agent"
     ];
     casks = [
       "alcove"
+      "ollama-app"
       "betterdisplay"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
