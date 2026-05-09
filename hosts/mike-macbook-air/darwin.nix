@@ -6,7 +6,6 @@
     brews = [
       "ffmpeg"
       "yt-dlp"
-      "anomalyco/tap/opencode"
     ];
   };
 }

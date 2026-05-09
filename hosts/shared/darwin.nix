@@ -111,7 +111,6 @@ in {
     };
     taps = [
       "tw93/tap"
-      "anomalyco/tap"
     ];
     brews = [
       "tw93/tap/mole"
