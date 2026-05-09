@@ -115,7 +115,6 @@ in {
     ];
     brews = [
       "tw93/tap/mole"
-      "anomalyco/tap/opencode"
     ];
     casks = [
       "alcove"
