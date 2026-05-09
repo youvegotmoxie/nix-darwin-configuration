@@ -22,6 +22,7 @@ in {
   # System environment and packages
   environment = {
     systemPackages = with pkgs; [
+      bun
       home-manager
       inputs.nil.packages.${system}.nil
       libfido2
