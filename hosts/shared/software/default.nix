@@ -1,10 +1,4 @@
-{
-  pkgs,
-  flake-inputs,
-  ...
-}: let
-  inherit (pkgs.stdenv.hostPlatform) system;
-in {
+{...}: {
   imports = [
     ./atuin.nix
     ./btop.nix
@@ -32,16 +26,13 @@ in {
     sideloadInitLua = true;
   };
 
-  # TODO: Remove this overlay configuration once direnv tests are passing in nixpkgs-unstable
   programs.direnv = {
     enable = true;
     config = {
       warn_timeout = "10m";
     };
-    package = flake-inputs.nixos-unstable-small.legacyPackages.${system}.direnv;
     nix-direnv = {
       enable = true;
-      package = flake-inputs.nixos-unstable-small.legacyPackages.${system}.nix-direnv;
     };
     enableZshIntegration = true;
   };
