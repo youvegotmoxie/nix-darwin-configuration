@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   inputs,
   mainUser,
   ...
@@ -35,12 +36,6 @@ in {
       uv
     ];
     pathsToLink = ["/share/zsh"];
-    # Setup sudo auth with TouchID for Tmux
-    etc."pam.d/sudo_local".text = ''
-      # Written by nix-darwin
-      auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
-      auth       sufficient     pam_tid.so
-    '';
     variables.XDG_DATA_DIRS = [
       "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
     ];
@@ -86,8 +81,15 @@ in {
     remapCapsLockToEscape = true;
   };
 
-  # Sudo auth with Touch ID
-  security.pam.services.sudo_local.touchIdAuth = true;
+  # Sudo auth with TouchID
+  # The override for pam_reattach is to support Tmux sessions with TouchID over SSH
+  security.pam.services.sudo_local = {
+    enable = true;
+    text = lib.mkForce ''
+      auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+      auth       sufficient     pam_tid.so
+    '';
+  };
 
   # Configure the dock and Finder
   system.defaults = {
