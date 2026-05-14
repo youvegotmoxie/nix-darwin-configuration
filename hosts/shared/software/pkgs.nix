@@ -24,8 +24,8 @@
     builtins.readFile ../scripts/zed-config-sync.sh
   );
 
-  helmVersion = "4.1.3";
-  helmSHA = "sha256-5DE3hF9rRqCrHWhyWf73ki56C2lqMzn1wkS8CiL37k0=";
+  helmVersion = "4.2.0";
+  helmSHA = "sha256-sgU3NgZaeWjdZxxt8KpUBMg8RyQf1FzHT5Z0OmLgTfQ=";
   helm4 = pkgs.stdenv.mkDerivation rec {
     pname = "helm";
     version = helmVersion;
@@ -33,7 +33,7 @@
     src = pkgs.fetchzip {
       name = pname;
       url = "https://get.${pname}.sh/${pname}-v${helmVersion}-darwin-arm64.tar.gz";
-      sha256 = helmSHA;
+      hash = helmSHA;
       stripRoot = false;
     };
     installPhase = ''
