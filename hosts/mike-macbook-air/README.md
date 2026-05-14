@@ -14,14 +14,20 @@
 - gawk
 - gh
 - git
+- git-hunk
+- git-lfs
 - gnupg
+- gnused
+- gnutar
 - home-manager
 - jdk21_headless
 - jq
 - lazydocker
 - lazygit
 - libfido2
+- macmon
 - neovim
+- nix-direnv
 - nerd-fonts.monaspace
 - nh
 - nil
@@ -34,8 +40,12 @@
 - pam-reattach
 - password-store
 - passepartui
+- pinentry_mac
 - pinentry-tty
-- python3.14
+- prek
+- python314
+- python314Packages.pip
+- reattach-to-user-namespace
 - ripgrep
 - rustc
 - rustfmt
@@ -47,11 +57,17 @@
 - tree-sitter
 - ugrep
 - uutils-coreutils-noprefix
+- uv
 - viddy
 - yq
 - yubikey-manager
 - zoxide
 - zsh
+
+### Scripts
+- blame-line-pretty
+- gpg-push-pull-keys
+- zed-config-sync
 
 ## Homebrew
 ### Formulae
@@ -65,6 +81,7 @@
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
+- ollama-app
 - orbstack
 - raycast
 - thaw

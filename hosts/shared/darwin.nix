@@ -3,11 +3,11 @@
   lib,
   inputs,
   mainUser,
+  system,
   ...
-}: let
-  inherit (pkgs.stdenv.hostPlatform) system;
-in {
-  nixpkgs.hostPlatform = "aarch64-darwin";
+}: {
+  # Supplied by the mkDarwinHost factory
+  nixpkgs.hostPlatform = lib.mkDefault system;
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
 
@@ -23,7 +23,6 @@ in {
   # System environment and packages
   environment = {
     systemPackages = with pkgs; [
-      bun
       home-manager
       inputs.nil.packages.${system}.nil
       libfido2

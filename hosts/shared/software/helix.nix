@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   # Set EDITOR to helix
   programs.helix = {
     enable = false;
@@ -92,7 +97,7 @@
           name = "python";
           auto-format = true;
           formatter = {
-            command = "${pkgs.python313Packages.autopep8}/bin/autopep8";
+            command = "${pkgs.python314Packages.autopep8}/bin/autopep8";
             args = ["-"];
           };
         }
@@ -100,7 +105,8 @@
     };
   };
 
-  home.packages = with pkgs; [
+  # Only install these if Helix is enabled
+  home.packages = lib.mkIf config.programs.helix.enable (with pkgs; [
     yaml-language-server
     bash-language-server
     helm-ls
@@ -109,5 +115,5 @@
     yamlfmt
     python314Packages.autopep8
     python314Packages.python-lsp-server
-  ];
+  ]);
 }

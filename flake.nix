@@ -24,9 +24,10 @@
     mkDarwinHost = {
       mainUser,
       hostDir,
+      system ? "aarch64-darwin",
     }:
       nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
+        inherit system;
         modules = [
           ./hosts/${hostDir}/darwin.nix
           home-manager.darwinModules.home-manager
@@ -45,7 +46,7 @@
           }
         ];
         specialArgs = {
-          inherit inputs mainUser;
+          inherit inputs mainUser system;
         };
       };
   in {
