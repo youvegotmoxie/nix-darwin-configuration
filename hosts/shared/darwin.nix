@@ -113,17 +113,19 @@
     };
     taps = [
       "tw93/tap"
+      "auto-explore/gitcomet"
     ];
     brews = [
       "tw93/tap/mole"
     ];
     casks = [
       "alcove"
-      "ollama-app"
       "betterdisplay"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
+      "gitcomet"
+      "ollama-app"
       "orbstack"
       "raycast"
       "thaw"
