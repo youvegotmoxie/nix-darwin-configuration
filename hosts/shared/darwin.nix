@@ -133,6 +133,7 @@
     ];
     masApps = {
       "Strongbox Password Manager" = 897283731;
+      "Xcode" = 497799835;
     };
   };
 }

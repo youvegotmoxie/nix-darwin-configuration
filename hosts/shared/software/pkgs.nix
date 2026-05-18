@@ -53,6 +53,7 @@ in {
           bat-extras.batman
           bfs
           cargo
+          cmake
           delta
           fd
           gawk
