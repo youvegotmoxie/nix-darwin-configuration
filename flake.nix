@@ -10,6 +10,11 @@
     systems.url = "github:nix-systems/default";
     nil.url = "github:oxalica/nil";
     nil.inputs.nixpkgs.follows = "nixpkgs";
+    # nixpkgs Rust lags behind the upstream stable versions
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -18,6 +23,7 @@
     home-manager,
     nixpkgs,
     systems,
+    rust-overlay,
     nil,
     ...
   }: let
