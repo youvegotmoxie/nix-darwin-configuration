@@ -96,7 +96,6 @@ in {
           pkgs.ansible-lint
           pkgs.awscli2
           pkgs.eks-node-viewer
-          pkgs.git-lfs
           pkgs.go
           pkgs.krew
           pkgs.kubecolor
