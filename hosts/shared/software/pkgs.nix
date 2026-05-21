@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  flake-inputs,
   ...
 }: let
   # Package shell scripts
@@ -42,6 +43,7 @@
       runHook postInstall
     '';
   };
+  rust-overlay-pkgs = pkgs.extend flake-inputs.rust-overlay.overlays.default;
   cfg = config.zshConfig;
 in {
   config = {
@@ -52,7 +54,6 @@ in {
           bat
           bat-extras.batman
           bfs
-          cargo
           cmake
           delta
           fd
@@ -75,8 +76,7 @@ in {
           pinentry-tty
           prek
           ripgrep
-          rustc
-          rustfmt
+          rust-overlay-pkgs.rust-bin.stable.latest.default
           shfmt
           tldr
           tree-sitter
