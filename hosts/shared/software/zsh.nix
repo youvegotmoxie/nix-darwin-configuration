@@ -99,7 +99,10 @@ in {
         "GIT_AUTO_FETCH_INTERVAL" = 300;
         "TERM" = "xterm-256color";
         "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
+        # Needed for rustc
         "RUST_SRC_PATH" = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+        # Needed for Zed to prevent routing loops
+        "NO_PROXY" = "localhost,127.0.0.1";
       };
     };
   };
