@@ -7,43 +7,39 @@
     enable = true;
     enableDefaultConfig = false;
     includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
-    matchBlocks = {
+    settings = {
       "*" = {
-        forwardAgent = true;
-        controlMaster = "auto";
-        controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
-        controlPersist = "2h";
-        extraOptions = {
-          StreamLocalBindUnlink = "yes";
-          IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-        };
+        ForwardAgent = true;
+        ControlMaster = "auto";
+        ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
+        ControlPersist = "2h";
+        StreamLocalBindUnlink = "yes";
+        IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
       };
       "rpi4-timemachine" = {
-        hostname = "192.168.148.217";
-        user = "mike";
-        port = 22;
-        identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519-lab_sk";
+        Hostname = "192.168.148.217";
+        User = "mike";
+        Port = 22;
+        IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519-lab_sk";
       };
       "rpi4-standalone" = {
-        hostname = "192.168.148.244";
-        user = "ubuntu";
-        port = 22;
-        extraOptions = {
-          PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
-        };
+        Hostname = "192.168.148.244";
+        User = "ubuntu";
+        Port = 22;
+        PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
       };
       "mike-macbook-air" = {
-        hostname = "mike-macbook-air.local";
-        user = "mike";
-        port = 22;
+        Hostname = "mike-macbook-air.local";
+        User = "mike";
+        Port = 22;
       };
       "iad-jump" = {
-        hostname = "jump1.dev2.iad1.sre.aspect-cloud.net";
-        user = "mbeasley";
-        port = 22;
+        Hostname = "jump1.dev2.iad1.sre.aspect-cloud.net";
+        User = "mbeasley";
+        Port = 22;
       };
       "bitbucket.aws.alvaria.com" = {
-        identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
+        IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
       };
     };
   };
