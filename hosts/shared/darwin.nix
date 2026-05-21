@@ -124,7 +124,6 @@
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "gitcomet"
       "ollama-app"
       "orbstack"
       "raycast"

@@ -9,6 +9,7 @@
     ];
     casks = [
       "aptakube"
+      "gitcomet"
     ];
   };
 }
