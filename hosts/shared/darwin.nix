@@ -35,9 +35,11 @@
       uv
     ];
     pathsToLink = ["/share/zsh"];
-    variables.XDG_DATA_DIRS = [
-      "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
-    ];
+    variables = {
+      XDG_DATA_DIRS = [
+        "$GHOSTTY_SHELL_INTEGRATION_XDG_DIR"
+      ];
+    };
   };
 
   # Auto upgrade nix package and the daemon service.

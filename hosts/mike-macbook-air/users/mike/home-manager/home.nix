@@ -28,6 +28,11 @@
 
   home = {
     stateVersion = "25.05";
+    sessionVariables = rec {
+      # Needed for Zed to prevent routing loops
+      "NO_PROXY" = "localhost,127.0.0.1";
+      "no_proxy" = NO_PROXY;
+    };
 
     file = {
       ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;

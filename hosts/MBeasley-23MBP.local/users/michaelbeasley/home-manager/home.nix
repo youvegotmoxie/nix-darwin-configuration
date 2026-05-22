@@ -15,17 +15,18 @@
 
   home = {
     stateVersion = "25.05";
+    sessionVariables = rec {
+      # Needed for Zed to prevent routing loops
+      "NO_PROXY" = "localhost,127.0.0.1";
+      "no_proxy" = NO_PROXY;
+    };
     sessionPath = [
       "$HOME/.krew"
     ];
 
     file = {
-      # Disabled since I'm using tmux from nixpkgs
-      # ".tmux.conf".source = ../../../../shared/dots/dot_tmux.conf;
-      "shell.nix".source = ../../../../shared/dots/shell.nix;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
       ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;
-      ".restic/exclude.lst".source = ./conf/exclude.lst;
     };
   };
 }

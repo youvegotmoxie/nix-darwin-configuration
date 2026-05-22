@@ -94,7 +94,7 @@ in {
         # bindkey -M hxins '^r' atuin-up-search-vicmd
         # bindkey -M hxnor '^r' atuin-up-search-vicmd
       '';
-      sessionVariables = {
+      sessionVariables = rec {
         "GIT_AUTO_FETCH_INTERVAL" = 300;
         "TERM" = "xterm-256color";
         "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
@@ -102,6 +102,7 @@ in {
         "RUST_SRC_PATH" = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
         # Needed for Zed to prevent routing loops
         "NO_PROXY" = "localhost,127.0.0.1";
+        "no_proxy" = NO_PROXY;
       };
     };
   };
