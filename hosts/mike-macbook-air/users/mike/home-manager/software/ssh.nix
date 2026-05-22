@@ -3,32 +3,30 @@
     enable = true;
     enableDefaultConfig = false;
     includes = ["${config.home.homeDirectory}/.orbstack/ssh/config"];
-    matchBlocks = {
+    settings = {
       "*" = {
-        forwardAgent = true;
-        controlMaster = "auto";
-        controlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
-        controlPersist = "2h";
-        extraOptions = {
-          StreamLocalBindUnlink = "yes";
-          IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-        };
+        ForwardAgent = true;
+        ControlMaster = "auto";
+        ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
+        ControlPersist = "2h";
+        StreamLocalBindUnlink = "yes";
+        IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
       };
       "rpi4-timemachine" = {
-        hostname = "192.168.148.217";
-        user = "mike";
-        port = 22;
+        Hostname = "192.168.148.217";
+        User = "mike";
+        Port = 22;
       };
       "rpi4-standalone" = {
-        hostname = "192.168.148.244";
-        user = "ubuntu";
-        port = 22;
+        Hostname = "192.168.148.244";
+        User = "ubuntu";
+        Port = 22;
       };
       "work-laptop" = {
-        hostname = "192.168.148.132";
-        user = "michaelbeasley";
-        port = 22;
-        identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519_worklaptop_sk";
+        Hostname = "192.168.148.132";
+        User = "michaelbeasley";
+        Port = 22;
+        IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519_worklaptop_sk";
       };
     };
   };
