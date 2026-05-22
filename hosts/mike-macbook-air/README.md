@@ -81,7 +81,6 @@
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
-- ollama-app
 - orbstack
 - raycast
 - thaw
