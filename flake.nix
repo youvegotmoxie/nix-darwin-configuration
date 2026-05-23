@@ -15,16 +15,15 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    strace-macos = {
+      url = "github:Mic92/strace-macos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
-    self,
     nix-darwin,
     home-manager,
-    nixpkgs,
-    systems,
-    rust-overlay,
-    nil,
     ...
   }: let
     mkDarwinHost = {

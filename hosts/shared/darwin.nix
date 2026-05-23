@@ -25,6 +25,7 @@
     systemPackages = with pkgs; [
       home-manager
       inputs.nil.packages.${system}.nil
+      inputs.strace-macos.packages.${system}.default
       libfido2
       nixd
       python314
@@ -115,13 +116,9 @@
     };
     taps = [
       "tw93/tap"
-      "auto-explore/gitcomet"
-      "Arthur-Ficial/tap"
     ];
     brews = [
       "tw93/tap/mole"
-      "apfel"
-      "apfel-mcp"
     ];
     casks = [
       "alcove"
