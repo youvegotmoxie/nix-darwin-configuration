@@ -116,9 +116,12 @@
     taps = [
       "tw93/tap"
       "auto-explore/gitcomet"
+      "Arthur-Ficial/tap"
     ];
     brews = [
       "tw93/tap/mole"
+      "apfel"
+      "apfel-mcp"
     ];
     casks = [
       "alcove"
