@@ -79,6 +79,7 @@ in {
           passtui = "passepartui";
           kubectl = "kubecolor";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
+          ytdl = "yt-dlp";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
