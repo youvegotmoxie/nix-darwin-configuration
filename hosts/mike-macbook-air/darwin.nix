@@ -7,6 +7,5 @@
       "ffmpeg"
       "yt-dlp"
     ];
-    casks = ["halloy"];
   };
 }
