@@ -4,6 +4,7 @@
   inputs = {
     # Upstream HM is out of sync with the Nixpkgs unstable version
     # Pinning Nixpkgs to 26.05 until HM catches up
+    # https://github.com/nix-community/home-manager/pull/9391
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
