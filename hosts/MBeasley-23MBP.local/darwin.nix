@@ -10,5 +10,8 @@
     casks = [
       "aptakube"
     ];
+    masApps = {
+      "AWS Extend Switch Roles" = 1592710340;
+    };
   };
 }

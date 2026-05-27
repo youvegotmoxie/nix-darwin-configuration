@@ -141,7 +141,6 @@
       "Vimari" = 1480933944;
       "StopTheMadness Pro" = 6471380298;
       "Wipr 2" = 1662217862;
-      "AWS Extend Switch Roles" = 1592710340;
       "Dark Reader for Safari" = 1438243180;
       "Raycast Companion" = 6738274497;
       "SponsorBlock for Safari" = 1573461917;
