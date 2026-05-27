@@ -6,6 +6,7 @@
     ./ghostty.nix
     ./git.nix
     ./gnupg.nix
+    ./mcp.nix
     ./pass.nix
     ./pkgs.nix
     ./starship.nix
