@@ -130,7 +130,6 @@
       "raycast"
       "thaw"
       "timemachinestatus"
-      "yubico-authenticator"
       "zed"
     ];
     masApps = {
