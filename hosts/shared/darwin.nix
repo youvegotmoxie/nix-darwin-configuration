@@ -136,6 +136,14 @@
     masApps = {
       "Strongbox Password Manager" = 897283731;
       "Xcode" = 497799835;
+      "Amphetamine" = 937984704;
+      "Refined GitHub" = 1519867270;
+      "Vimari" = 1480933944;
+      "StopTheMadness Pro" = 6471380298;
+      "Wipr 2" = 1662217862;
+      "AWS Extend Switch Roles" = 1592710340;
+      "Dark Reader for Safari" = 1438243180;
+      "Raycast Companion" = 6738274497;
     };
   };
 }
