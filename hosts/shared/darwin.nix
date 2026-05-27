@@ -144,6 +144,7 @@
       "AWS Extend Switch Roles" = 1592710340;
       "Dark Reader for Safari" = 1438243180;
       "Raycast Companion" = 6738274497;
+      "SponsorBlock for Safari" = 1573461917;
     };
   };
 }
