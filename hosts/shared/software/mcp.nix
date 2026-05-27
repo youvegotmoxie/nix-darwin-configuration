@@ -1,6 +1,6 @@
 {...}: {
   programs.mcp = {
-    enable = true;
+    enable = false;
     servers = {
       context7 = {
         command = "npx";
