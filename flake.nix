@@ -21,11 +21,16 @@
       url = "github:Mic92/strace-macos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
     nix-darwin,
     home-manager,
+    sops-nix,
     ...
   }: let
     mkDarwinHost = {
@@ -38,11 +43,13 @@
         modules = [
           ./hosts/${hostDir}/darwin.nix
           home-manager.darwinModules.home-manager
+          sops-nix.darwinModules.sops
           {
             home-manager = {
               users.${mainUser} = {
                 imports = [
                   ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
+                  sops-nix.homeManagerModules.sops
                 ];
               };
               useGlobalPkgs = true;
