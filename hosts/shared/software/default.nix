@@ -13,6 +13,7 @@
     ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
+    ./syncthing.nix
   ];
 
   programs.neovim = {
