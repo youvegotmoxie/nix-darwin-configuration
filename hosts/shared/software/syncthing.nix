@@ -1,6 +1,6 @@
 {config, ...}: {
   services.syncthing = {
-    enable = true;
+    enable = false;
     overrideFolders = true;
     overrideDevices = false;
     settings = {

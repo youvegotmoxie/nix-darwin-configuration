@@ -10,6 +10,7 @@
 - bfs
 - btop
 - cargo
+- cmake
 - delta
 - direnv
 - eks-node-viewer
@@ -64,6 +65,7 @@
 - shfmt
 - ssm-session-manager-plugin
 - starship
+- strace-macos
 - stern
 - tldr
 - tmux
@@ -104,8 +106,17 @@
 - raycast
 - thaw
 - timemachinestatus
-- yubico-authenticator
 - zed
 
 ### App Store
+- Amphetamine
+- AWS Extend Switch Roles
+- Dark Reader for Safari
+- Raycast Companion
+- Refined GitHub
+- SponsorBlock for Safari
+- StopTheMadness Pro
 - Strongbox Password Manager
+- Vimari
+- Wipr 2
+- Xcode

@@ -6,6 +6,7 @@
 - bfs
 - btop
 - cargo
+- cmake
 - delta
 - direnv
 - eza
@@ -52,6 +53,7 @@
 - shellcheck
 - shfmt
 - starship
+- strace-macos
 - tldr
 - tmux
 - tree-sitter
@@ -85,8 +87,16 @@
 - raycast
 - thaw
 - timemachinestatus
-- yubico-authenticator
 - zed
 
 ### App Store
+- Amphetamine
+- Dark Reader for Safari
+- Raycast Companion
+- Refined GitHub
+- SponsorBlock for Safari
+- StopTheMadness Pro
 - Strongbox Password Manager
+- Vimari
+- Wipr 2
+- Xcode
