@@ -1,8 +1,8 @@
 {config, ...}: {
   services.syncthing = {
     enable = true;
-    overrideFolders = false;
-    overrideDevices = false;
+    overrideFolders = true;
+    overrideDevices = true;
     settings = {
       folders = {
         "${config.home.homeDirectory}/Documents/Zed" = {
