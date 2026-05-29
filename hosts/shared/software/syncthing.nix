@@ -15,6 +15,11 @@
           path = "${config.home.homeDirectory}/.agents/skills";
           label = "zed-skills-directory";
         };
+        "${config.home.homeDirectory}/.config/zed" = {
+          id = "zed-config";
+          path = "${config.home.homeDirectory}/.config/zed";
+          label = "zed-config-directory";
+        };
       };
     };
   };

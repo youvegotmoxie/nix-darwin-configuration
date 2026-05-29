@@ -13,6 +13,9 @@
         "${config.home.homeDirectory}/.agents/skills" = {
           devices = ["mike-macbook-air"];
         };
+        "${config.home.homeDirectory}/.config/zed" = {
+          devices = ["mike-macbook-air"];
+        };
       };
     };
   };
