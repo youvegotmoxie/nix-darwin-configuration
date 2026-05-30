@@ -26,7 +26,6 @@
     workAliases.enable = false;
   };
 
-  # Decrypts secrets to ~/.creds.d
   # See shared/software/sops.nix for Launchd configuration
   # if secrets are needed outside of the shell environment
   sops = {
