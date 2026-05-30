@@ -84,6 +84,8 @@ in {
       initContent = ''
         source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
+        # Do it this way because we can't guarantee sops-nix will have populated this
+        # secret symlink since these are added during login
         if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
           export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
         fi
