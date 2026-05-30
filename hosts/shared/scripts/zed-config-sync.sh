@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# There are API keys in the Zed settings file so these can't be stored in git
-# because I don't have it in me to SOPS round 2
+## There are API keys in the Zed settings file so these can't be stored in git
 
 # Diff the configs in the password store against the local Zed configs
 function diff_change() {

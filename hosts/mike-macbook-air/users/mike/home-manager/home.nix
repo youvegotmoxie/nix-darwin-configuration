@@ -26,7 +26,7 @@
     workAliases.enable = false;
   };
 
-  # Decrypt and symlink secrets to ~/.creds.d
+  # Decrypts secrets to ~/.creds.d
   sops = {
     defaultSopsFile = ./secrets/secrets.yaml;
     secrets.gh_token = {
