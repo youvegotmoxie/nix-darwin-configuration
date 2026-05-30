@@ -72,6 +72,7 @@ in {
           kubectl = "kubecolor";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           ytdl = "yt-dlp";
+          nix = "nix --option access-tokens github.com=$GH_TOKEN";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
@@ -79,12 +80,11 @@ in {
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         });
-      initContent = lib.mkOrder 2000 ''
+      initContent = ''
         source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
         if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
           export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
-          alias nix="nix --option access-tokens github.com=$GH_TOKEN"
         fi
       '';
       sessionVariables = rec {
