@@ -80,6 +80,7 @@ in {
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         });
+      # initContent is injected before shellAliases
       initContent = ''
         source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
