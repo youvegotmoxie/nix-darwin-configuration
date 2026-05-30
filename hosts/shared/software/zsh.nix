@@ -87,15 +87,12 @@ in {
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         });
-      initContent = lib.mkOrder 1500 ''
+      initContent = lib.mkOrder 2000 ''
         source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
         source ${config.home.homeDirectory}/.zsh.d/func.zsh
-        ## Workaround for Atuin and ZSH Helix mode plugin
-        # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
-        # bindkey -M hxins '^r' atuin-up-search-vicmd
-        # bindkey -M hxnor '^r' atuin-up-search-vicmd
         if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
           export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
+          alias nix="nix --option access-tokens github.com=$GH_TOKEN"
         fi
       '';
       sessionVariables = rec {
