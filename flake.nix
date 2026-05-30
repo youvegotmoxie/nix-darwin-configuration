@@ -43,7 +43,6 @@
         modules = [
           ./hosts/${hostDir}/darwin.nix
           home-manager.darwinModules.home-manager
-          sops-nix.darwinModules.sops
           {
             home-manager = {
               users.${mainUser} = {

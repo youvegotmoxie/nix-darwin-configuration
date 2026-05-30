@@ -2,6 +2,7 @@
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
+    ../../../../shared/conf/sops
     # Per host modules
     ./software
   ];
@@ -24,6 +25,15 @@
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
     workAliases.enable = false;
+  };
+
+  # Decrypt and symlink secrets to ~/.creds.d
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    secrets.gh_token = {
+      path = "${config.home.homeDirectory}/.creds.d/gh_token";
+      mode = "0600";
+    };
   };
 
   home = {
