@@ -88,7 +88,6 @@
 - helm4
 - ssh-proxy
 - tilt-connect
-- zed-config-sync
 
 ## Homebrew
 ### Formulae

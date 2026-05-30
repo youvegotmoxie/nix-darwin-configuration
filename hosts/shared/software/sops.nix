@@ -16,7 +16,10 @@
   #   sops hosts/$HOST/users/$USER/home-manager/secrets/secrets.yaml
   #
   sops = {
-    age.sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
+    age = {
+      sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
+      keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
+    };
   };
 
   launchd.agents.gh-token-env = {

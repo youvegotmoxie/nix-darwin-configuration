@@ -21,9 +21,6 @@
   gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (
     builtins.readFile ../scripts/gpg-push-pull-keys.sh
   );
-  zed-config-sync = pkgs.writeShellScriptBin "zed-config-sync" (
-    builtins.readFile ../scripts/zed-config-sync.sh
-  );
 
   helmVersion = "4.2.0";
   helmSHA = "sha256-sgU3NgZaeWjdZxxt8KpUBMg8RyQf1FzHT5Z0OmLgTfQ=";
@@ -88,7 +85,6 @@ in {
           # Scripts
           blame-line-pretty
           gpg-push-pull-keys
-          zed-config-sync
         ]
         ++ (lib.optionals cfg.workAliases.enable [
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])

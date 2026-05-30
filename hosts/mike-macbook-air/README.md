@@ -70,7 +70,6 @@
 ### Scripts
 - blame-line-pretty
 - gpg-push-pull-keys
-- zed-config-sync
 
 ## Homebrew
 ### Formulae
