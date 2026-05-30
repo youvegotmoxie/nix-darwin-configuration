@@ -26,6 +26,15 @@
     workAliases.enable = false;
   };
 
+  # Decrypt and symlink secrets to ~/.creds.d
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    secrets.gh_token = {
+      path = "${config.home.homeDirectory}/.creds.d/gh_token";
+      mode = "0600";
+    };
+  };
+
   home = {
     stateVersion = "25.05";
     sessionVariables = rec {

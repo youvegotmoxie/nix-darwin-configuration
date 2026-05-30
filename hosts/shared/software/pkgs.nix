@@ -78,6 +78,7 @@ in {
           ripgrep
           rust-overlay-pkgs.rust-bin.stable.latest.default
           shfmt
+          sops
           tldr
           tree-sitter
           ugrep

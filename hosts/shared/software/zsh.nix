@@ -94,6 +94,9 @@ in {
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
         # bindkey -M hxins '^r' atuin-up-search-vicmd
         # bindkey -M hxnor '^r' atuin-up-search-vicmd
+        if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
+          export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
+        fi
       '';
       sessionVariables = rec {
         "GIT_AUTO_FETCH_INTERVAL" = 300;
