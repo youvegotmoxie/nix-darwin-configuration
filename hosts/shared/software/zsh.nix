@@ -4,14 +4,6 @@
   config,
   ...
 }: let
-  # Add custom plugin for helix zsh bindings
-  # https://github.com/Multirious/zsh-helix-mode
-  zsh-helix-mode = pkgs.fetchFromGitHub {
-    owner = "Multirious";
-    repo = "zsh-helix-mode";
-    rev = "e8d4940588f9809ab5658aa7c9c664921d547879";
-    sha256 = "sha256-YggmEZ5hRySwXR+VZFKKZ+HzH5Cvz0661QeiAjlE30E=";
-  };
   cfg = config.zshConfig;
 in {
   options.zshConfig.ssh = {
