@@ -94,8 +94,6 @@ in {
         # source "${zsh-helix-mode}/zsh-helix-mode.plugin.zsh"
         # bindkey -M hxins '^r' atuin-up-search-vicmd
         # bindkey -M hxnor '^r' atuin-up-search-vicmd
-
-        # Export GH_TOKEN from sops-managed secret (fallback for non-launchd shells)
         if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
           export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
         fi
