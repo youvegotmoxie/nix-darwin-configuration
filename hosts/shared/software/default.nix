@@ -8,6 +8,7 @@
     ./gnupg.nix
     ./pass.nix
     ./pkgs.nix
+    ./sops.nix
     ./starship.nix
     ./tmux.nix
     ./yazi.nix

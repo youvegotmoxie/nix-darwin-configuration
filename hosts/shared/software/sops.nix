@@ -28,6 +28,7 @@
         "if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then /bin/launchctl setenv GH_TOKEN \"$(cat ${config.home.homeDirectory}/.creds.d/gh_token)\"; fi"
       ];
       RunAtLoad = true;
+      WatchPaths = ["${config.home.homeDirectory}/.creds.d/gh_token"];
       ProcessType = "Background";
     };
   };

@@ -2,7 +2,6 @@
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
-    ../../../../shared/conf/sops
     # Per host modules
     ./software
   ];
