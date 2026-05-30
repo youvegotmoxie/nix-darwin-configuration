@@ -52,6 +52,7 @@
 - rustfmt
 - shellcheck
 - shfmt
+- sops
 - starship
 - strace-macos
 - tldr

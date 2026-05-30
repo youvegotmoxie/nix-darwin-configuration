@@ -63,6 +63,7 @@
 - rustfmt
 - shellcheck
 - shfmt
+- sops
 - ssm-session-manager-plugin
 - starship
 - strace-macos
