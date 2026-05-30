@@ -123,7 +123,6 @@
     casks = [
       "alcove"
       "betterdisplay"
-      "elgato-stream-deck"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
