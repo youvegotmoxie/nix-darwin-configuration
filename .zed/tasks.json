@@ -2,7 +2,7 @@
 [
   {
     "label": "Update Nix Darwin",
-    "command": "nix flake update && nix flake archive",
+    "command": "nix flake update --option access-tokens github.com=$(gh auth token) && nix flake archive",
     "allow_concurrent_runs": false,
     "shell": "system",
     "show_command": true,
