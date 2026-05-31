@@ -63,7 +63,6 @@ in {
           macmon
           nerd-fonts.monaspace
           nh
-          nix-index
           nix-output-monitor
           nodejs_22
           noto-fonts
