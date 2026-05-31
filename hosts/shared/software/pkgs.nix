@@ -50,10 +50,10 @@ in {
           alejandra
           bat
           bat-extras.batman
-          bfs
           cmake
           delta
           fd
+          findutils
           gawk
           gh
           git-hunk
