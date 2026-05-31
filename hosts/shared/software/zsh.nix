@@ -102,5 +102,6 @@ in {
     };
     # Setup command-not-found shell integration with nix-locate
     programs.nix-index.enable = true;
+    programs.nix-index-database.comma.enable = true;
   };
 }
