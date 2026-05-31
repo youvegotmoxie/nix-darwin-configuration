@@ -1,15 +1,16 @@
 {config, ...}: {
   # Setup done outside of Nix
   #
+  #   ssh-keygen -f ~/.ssh/sops_ed25519 -N ''V
+  #
   #   mkdir -p ~/Library/Application\ Support/sops/age
-  #   nix shell nixpkgs#ssh-to-age --command \
-  #     ssh-to-age -private-key -i ~/.ssh/sops_ed25519 \
+  #
+  #   nix run nixpkgs#ssh-to-age -- --private-key -i ~/.ssh/sops_ed25519 \
   #     > ~/Library/Application\ Support/sops/age/keys.txt
   #
   # Make sure the output of this matches the keys.txt file
   #
-  #   nix shell nixpkgs#ssh-to-age --command \
-  #     ssh-to-age < ~/.ssh/sops_ed25519.pub
+  #   nix run nixpkgs#ssh-to-age < ~/.ssh/sops_ed25519.pub
   #
   # Create a secrets file
   #
