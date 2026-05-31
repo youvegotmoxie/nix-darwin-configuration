@@ -64,7 +64,7 @@ in {
           nerd-fonts.monaspace
           nh
           nix-output-monitor
-          nodejs_22
+          nodejs_24
           noto-fonts
           p7zip
           pam-reattach
