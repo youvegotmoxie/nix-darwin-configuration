@@ -71,7 +71,7 @@ in {
           pinentry-tty
           prek
           ripgrep
-          rust-overlay-pkgs.rust-bin.stable.latest.default
+          rust-overlay-pkgs.rust-bin.stable."1.95.0".default
           shfmt
           sops
           tldr
