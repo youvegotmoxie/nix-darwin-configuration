@@ -15,15 +15,6 @@ function docker-clean-images() {
   done
 }
 
-# Auto decode Kubernetes secrets
-function kxsec() {
-  tmpl='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
-  if [ -n "$2" ]; then
-    tmpl="{{ index .data \"$2\"| base64decode }}"
-  fi
-  kubectl get secret $1 -o go-template="$tmpl"
-}
-
 # Color pager
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
