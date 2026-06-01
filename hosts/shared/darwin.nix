@@ -118,7 +118,6 @@
       "tw93/tap"
     ];
     brews = [
-      "macmon"
       "tw93/tap/mole"
     ];
     casks = [

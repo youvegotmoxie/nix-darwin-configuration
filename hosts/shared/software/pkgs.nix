@@ -22,6 +22,24 @@
     builtins.readFile ../scripts/gpg-push-pull-keys.sh
   );
 
+  # Build this from source since nixpkgs is lagging and this software
+  # no longer builds on a recent version of Rust
+  macmon = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
+    pname = "macmon";
+    version = "v0.7.2";
+    src = pkgs.fetchFromGitHub {
+      owner = "vladkens";
+      repo = finalAttrs.pname;
+      tag = finalAttrs.version;
+      hash = "sha256-i6x4ZAh+gIG6aHEfoSifwFU/itOcPmBiQ0IrBkqz+L8=";
+    };
+    cargoHash = "sha256-faEuoroZ/d8FntZaxkTbgVQ0nSwddxZR7KOfNPrU4Eg=";
+    doInstallCheck = true;
+    meta = {
+      mainProgram = finalAttrs.pname;
+    };
+  });
+
   helmVersion = "4.2.0";
   helmSHA = "sha256-sgU3NgZaeWjdZxxt8KpUBMg8RyQf1FzHT5Z0OmLgTfQ=";
   helm4 = pkgs.stdenv.mkDerivation rec {
@@ -71,6 +89,7 @@ in {
           pinentry-tty
           prek
           ripgrep
+          macmon
           rust-overlay-pkgs.rust-bin.stable."1.95.0".default
           shfmt
           sops
