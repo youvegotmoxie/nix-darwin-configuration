@@ -19,6 +19,7 @@
   # A .sops.yaml in the repo root is needed for the initial bootstrapping
   # https://github.com/zendesk/helm-secrets/issues/121
   sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
     age = {
       sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
       keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
