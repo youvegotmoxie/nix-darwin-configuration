@@ -45,7 +45,7 @@
     };
 
     file = {
-      ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;
+      ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
       ".config/yt-dlp/config".text = ''
         --format best[height<=1080]

@@ -36,7 +36,7 @@
 
     file = {
       ".vimrc".source = ../../../../shared/dots/dot_vimrc;
-      ".zsh.d/func.zsh".source = ../../../../shared/dots/func.zsh;
+      ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
     };
   };
 }

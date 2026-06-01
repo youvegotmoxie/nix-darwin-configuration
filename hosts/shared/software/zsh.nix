@@ -82,7 +82,7 @@ in {
         });
       # initContent is injected before shellAliases
       initContent = ''
-        source ${config.home.homeDirectory}/.zsh.d/func.zsh
+        source ${config.home.homeDirectory}/.zsh.d/func.sh
         # Do it this way because we can't guarantee sops-nix will have populated this
         # secret symlink since these are added during login
         if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
