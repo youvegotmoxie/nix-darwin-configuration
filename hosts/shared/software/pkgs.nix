@@ -60,7 +60,6 @@ in {
           jdk21_headless
           jq
           lazydocker
-          macmon
           nerd-fonts.monaspace
           nh
           nix-output-monitor

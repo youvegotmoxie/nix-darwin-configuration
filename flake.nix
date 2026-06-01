@@ -80,6 +80,10 @@
         mainUser = "mike";
         hostDir = "mike-macbook-air";
       };
+      "mike-macbook-pro" = mkDarwinHost {
+        mainUser = "mike";
+        hostDir = "mike-macbook-pro";
+      };
     };
   };
 }

@@ -37,7 +37,6 @@
 - lazydocker
 - lazygit
 - libfido2
-- macmon
 - neovim
 - nix-direnv
 - nerd-fonts.monaspace
@@ -93,6 +92,7 @@
 ### Formulae
 - argocd
 - helm-ls
+- macmon
 - mole
 
 ### Casks
