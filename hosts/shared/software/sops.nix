@@ -1,7 +1,7 @@
 {config, ...}: {
   # Setup done outside of Nix
   #
-  #   ssh-keygen -f ~/.ssh/sops_ed25519 -N ''V
+  #   ssh-keygen -f ~/.ssh/sops_ed25519 -N ''
   #
   #   mkdir -p ~/Library/Application\ Support/sops/age
   #
@@ -16,6 +16,7 @@
   #
   #   sops hosts/$HOST/users/$USER/home-manager/secrets/secrets.yaml
   #
+  # https://github.com/zendesk/helm-secrets/issues/121
   sops = {
     age = {
       sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];

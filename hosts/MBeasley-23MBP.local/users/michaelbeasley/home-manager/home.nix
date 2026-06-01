@@ -13,6 +13,16 @@
     homeAliases.enable = false;
   };
 
+  # See shared/software/sops.nix for Launchd configuration
+  # if secrets are needed outside of the shell environment
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    secrets.gh_token = {
+      path = "${config.home.homeDirectory}/.creds.d/gh_token";
+      mode = "0600";
+    };
+  };
+
   home = {
     stateVersion = "25.05";
     sessionVariables = rec {
