@@ -28,6 +28,11 @@
         Port = 22;
         PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
       };
+      "mike-macbook-pro" = {
+        Hostname = "mike-macbook-pro.local";
+        User = "mike";
+        Port = 22;
+      };
       "mike-macbook-air" = {
         Hostname = "mike-macbook-air.local";
         User = "mike";
