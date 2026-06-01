@@ -16,6 +16,7 @@
   #
   #   sops hosts/$HOST/users/$USER/home-manager/secrets/secrets.yaml
   #
+  # A .sops.yaml in the repo root is needed for the initial bootstrapping
   # https://github.com/zendesk/helm-secrets/issues/121
   sops = {
     age = {
