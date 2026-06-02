@@ -58,6 +58,7 @@
     };
     package = pkgs.nix;
     settings = {
+      auto-optimise-store = true;
       "extra-experimental-features" = [
         "nix-command"
         "flakes"
@@ -104,6 +105,10 @@
       minimize-to-application = true;
       show-process-indicators = true;
     };
+  };
+
+  networking = {
+    applicationFirewall.enable = true;
   };
 
   # Use Homebrew for things not working with nixpkgs on macOS
