@@ -95,6 +95,7 @@
 
   # Configure the dock and Finder
   system.defaults = {
+    screencapture.location = "/Users/${mainUser}/Desktop/screenshots";
     menuExtraClock.Show24Hour = true;
     finder = {
       FXRemoveOldTrashItems = true;
