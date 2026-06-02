@@ -2,6 +2,6 @@
 
 ## Machines
 
-[work laptop](./hosts/MBeasley-23MBP.local/)
+[work laptop](./hosts/MBeasley-23MBPlocal/)
 
-[personal laptop](./hosts/mike-macbook-air/)
+[personal laptop](./hosts/mike-macbook-pro/)
