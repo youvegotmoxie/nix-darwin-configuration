@@ -58,7 +58,6 @@
     };
     package = pkgs.nix;
     settings = {
-      auto-optimise-store = true;
       "extra-experimental-features" = [
         "nix-command"
         "flakes"
