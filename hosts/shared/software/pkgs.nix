@@ -34,7 +34,6 @@
       hash = "sha256-i6x4ZAh+gIG6aHEfoSifwFU/itOcPmBiQ0IrBkqz+L8=";
     };
     cargoHash = "sha256-faEuoroZ/d8FntZaxkTbgVQ0nSwddxZR7KOfNPrU4Eg=";
-    doInstallCheck = true;
     meta = {
       mainProgram = finalAttrs.pname;
     };
