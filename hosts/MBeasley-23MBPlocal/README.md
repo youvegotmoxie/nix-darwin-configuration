@@ -7,7 +7,6 @@
 - awscli2
 - bat
 - bat-extras.batman
-- bfs
 - btop
 - cargo
 - cmake
@@ -16,6 +15,7 @@
 - eks-node-viewer
 - eza
 - fd
+- findutils
 - fzf
 - gawk
 - gh
@@ -26,6 +26,7 @@
 - gnused
 - gnutar
 - go
+- helm4
 - home-manager
 - jdk21_headless
 - jq
@@ -36,6 +37,7 @@
 - kubent
 - lazydocker
 - lazygit
+- macmon
 - libfido2
 - neovim
 - nix-direnv
@@ -45,7 +47,7 @@
 - nix-index
 - nix-output-monitor
 - nixd
-- nodejs_22
+- nodejs_24
 - noto-fonts
 - p7zip
 - pam-reattach
@@ -84,7 +86,7 @@
 ### Scripts
 - blame-line-pretty
 - gpg-push-pull-keys
-- helm4
+- git-hunk
 - ssh-proxy
 - tilt-connect
 
@@ -92,7 +94,6 @@
 ### Formulae
 - argocd
 - helm-ls
-- macmon
 - mole
 
 ### Casks

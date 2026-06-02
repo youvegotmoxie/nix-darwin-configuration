@@ -3,7 +3,6 @@
 - atuin
 - bat
 - bat-extras.batman
-- bfs
 - btop
 - cargo
 - cmake
@@ -11,6 +10,7 @@
 - direnv
 - eza
 - fd
+- findutils
 - fzf
 - gawk
 - gh
@@ -25,6 +25,7 @@
 - jq
 - lazydocker
 - lazygit
+- macmon
 - libfido2
 - neovim
 - nix-direnv
@@ -34,7 +35,7 @@
 - nix-index
 - nix-output-monitor
 - nixd
-- nodejs_22
+- nodejs_24
 - noto-fonts
 - p7zip
 - pam-reattach
@@ -68,12 +69,12 @@
 
 ### Scripts
 - blame-line-pretty
+- git-hunk
 - gpg-push-pull-keys
 
 ## Homebrew
 ### Formulae
 - ffmpeg
-- macmon
 - mole
 - yt-dlp
 
