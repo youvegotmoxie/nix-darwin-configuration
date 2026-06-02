@@ -33,11 +33,6 @@
         User = "mike";
         Port = 22;
       };
-      "mike-macbook-air" = {
-        Hostname = "mike-macbook-air.local";
-        User = "mike";
-        Port = 22;
-      };
       "iad-jump" = {
         Hostname = "jump1.dev2.iad1.sre.aspect-cloud.net";
         User = "mbeasley";
