@@ -73,10 +73,10 @@ in {
           findutils
           gawk
           gh
-          git-hunk
           jdk21_headless
           jq
           lazydocker
+          macmon
           nerd-fonts.monaspace
           nh
           nix-output-monitor
@@ -88,7 +88,6 @@ in {
           pinentry-tty
           prek
           ripgrep
-          macmon
           rust-overlay-pkgs.rust-bin.stable."1.95.0".default
           shfmt
           sops
@@ -100,6 +99,7 @@ in {
           yubikey-manager
           # Scripts
           blame-line-pretty
+          git-hunk
           gpg-push-pull-keys
         ]
         ++ (lib.optionals cfg.workAliases.enable [
@@ -110,6 +110,7 @@ in {
           pkgs.awscli2
           pkgs.eks-node-viewer
           pkgs.go
+          helm4
           pkgs.krew
           pkgs.kubecolor
           pkgs.kubectl
@@ -119,7 +120,6 @@ in {
           pkgs.stern
           pkgs.wget
           # Scripts
-          helm4
           ssh-proxy
           tilt-connect
         ]);
