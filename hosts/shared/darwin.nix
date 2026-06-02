@@ -95,6 +95,7 @@
 
   # Configure the dock and Finder
   system.defaults = {
+    menuExtraClock.Show24Hour = true;
     finder = {
       FXRemoveOldTrashItems = true;
       ShowStatusBar = true;
@@ -103,6 +104,9 @@
       magnification = true;
       minimize-to-application = true;
       show-process-indicators = true;
+      show-recents = false;
+      # Show only open applications in the dock
+      static-only = true;
     };
   };
 
