@@ -12,12 +12,6 @@
   tilt-connect = pkgs.writeShellScriptBin "tilt-connect" (
     builtins.readFile ../scripts/tilt-connect.sh
   );
-  blame-line-pretty = pkgs.writeShellScriptBin "blame-line-pretty" (
-    builtins.readFile ../scripts/blame-line-pretty.sh
-  );
-  git-hunk = pkgs.writeShellScriptBin "git-hunk" (
-    builtins.readFile ../scripts/git-hunk.sh
-  );
   gpg-push-pull-keys = pkgs.writeShellScriptBin "gpg-push-pull-keys" (
     builtins.readFile ../scripts/gpg-push-pull-keys.sh
   );
@@ -73,7 +67,6 @@ in {
           findutils
           gawk
           gh
-          git-hunk
           jdk21_headless
           jq
           lazydocker
@@ -99,7 +92,6 @@ in {
           yq
           yubikey-manager
           # Scripts
-          blame-line-pretty
           gpg-push-pull-keys
         ]
         ++ (lib.optionals cfg.workAliases.enable [
@@ -110,6 +102,7 @@ in {
           pkgs.awscli2
           pkgs.eks-node-viewer
           pkgs.go
+          helm4
           pkgs.krew
           pkgs.kubecolor
           pkgs.kubectl
@@ -119,7 +112,6 @@ in {
           pkgs.stern
           pkgs.wget
           # Scripts
-          helm4
           ssh-proxy
           tilt-connect
         ]);
