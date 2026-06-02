@@ -74,7 +74,7 @@
     darwinConfigurations = {
       "MBeasley-23MBPlocal" = mkDarwinHost {
         mainUser = "michaelbeasley";
-        hostDir = "MBeasley-23MBP.local";
+        hostDir = "MBeasley-23MBPlocal";
       };
       "mike-macbook-pro" = mkDarwinHost {
         mainUser = "mike";
