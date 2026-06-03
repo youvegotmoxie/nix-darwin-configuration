@@ -84,7 +84,6 @@ in {
           noto-fonts
           p7zip
           pam-reattach
-          passepartui
           pinentry-tty
           prek
           ripgrep

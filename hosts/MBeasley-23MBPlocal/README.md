@@ -52,7 +52,6 @@
 - p7zip
 - pam-reattach
 - password-store
-- passepartui
 - pinentry_mac
 - pinentry-tty
 - prek

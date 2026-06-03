@@ -5,7 +5,7 @@ set ttyfast
 set lazyredraw
 
 " Setup Vundle and other plugins
-set rtp+=/Users/michaelbeasley/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
