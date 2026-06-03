@@ -125,7 +125,7 @@
     onActivation = {
       upgrade = true;
       cleanup = "zap";
-      extraFlags = ["--force-cleanup"];
+      extraFlags = ["--force"];
       extraEnv = {
         # https://docs.brew.sh/Manpage#environment
         # https://docs.brew.sh/Tap-Trust
