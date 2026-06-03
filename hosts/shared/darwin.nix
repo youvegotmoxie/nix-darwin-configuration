@@ -118,10 +118,21 @@
   # Use Homebrew for things not working with nixpkgs on macOS
   homebrew = {
     enable = true;
-    onActivation = {
+    enableZshIntegration = true;
+    global = {
       autoUpdate = true;
+    };
+    onActivation = {
       upgrade = true;
       cleanup = "zap";
+      extraFlags = ["--force-cleanup"];
+      extraEnv = {
+        # https://docs.brew.sh/Manpage#environment
+        # https://docs.brew.sh/Tap-Trust
+        HOMEBREW_NO_ANALYTICS = "1";
+        HOMEBREW_NO_ENV_HINTS = "1";
+        HOMEBREW_NO_REQUIRE_TAP_TRUST = "1";
+      };
     };
     taps = [
       "tw93/tap"
