@@ -6,18 +6,6 @@
   system,
   ...
 }: {
-  nixpkgs.overlays = [
-    (final: prev: {
-      inherit
-        (prev.lixPackageSets.stable)
-        nixpkgs-review
-        nix-eval-jobs
-        nix-fast-build
-        colmena
-        ;
-    })
-  ];
-
   # Supplied by the mkDarwinHost factory
   nixpkgs.hostPlatform = lib.mkDefault system;
   system.stateVersion = 5;
