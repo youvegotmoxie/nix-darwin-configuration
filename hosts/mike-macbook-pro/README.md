@@ -35,7 +35,7 @@
 - nix-index
 - nix-output-monitor
 - nixd
-- nodejs_24
+- nodejs_26
 - noto-fonts
 - p7zip
 - pam-reattach
