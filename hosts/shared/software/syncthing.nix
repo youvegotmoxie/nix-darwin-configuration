@@ -29,7 +29,10 @@
           devices = ["rpi4-timemachine"];
           versioning = {
             type = "simple";
-            params.keep = "5";
+            params = {
+              keep = "5";
+              cleanoutDays = "30";
+            };
           };
         };
         "${config.home.homeDirectory}/.config/zed" = {
@@ -39,7 +42,10 @@
           devices = ["rpi4-timemachine"];
           versioning = {
             type = "simple";
-            params.keep = "5";
+            params = {
+              keep = "5";
+              cleanoutDays = "30";
+            };
           };
         };
       };
