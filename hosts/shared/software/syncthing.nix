@@ -10,6 +10,12 @@
         };
       };
       folders = {
+        "${config.home.homeDirectory}/repos/learn-rust" = {
+          id = "learn-rust";
+          path = "${config.home.homeDirectory}/repos/learn-rust";
+          label = "learn-rust";
+          devices = ["rpi4-timemachine"];
+        };
         "${config.home.homeDirectory}/Documents/Zed" = {
           id = "zed-journal";
           path = "${config.home.homeDirectory}/Documents/Zed";
