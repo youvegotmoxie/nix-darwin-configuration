@@ -27,12 +27,20 @@
           path = "${config.home.homeDirectory}/.agents/skills";
           label = "zed-skills-directory";
           devices = ["rpi4-timemachine"];
+          versioning = {
+            type = "simple";
+            params.keep = "5";
+          };
         };
         "${config.home.homeDirectory}/.config/zed" = {
           id = "zed-config";
           path = "${config.home.homeDirectory}/.config/zed";
           label = "zed-config-directory";
           devices = ["rpi4-timemachine"];
+          versioning = {
+            type = "simple";
+            params.keep = "5";
+          };
         };
       };
     };
