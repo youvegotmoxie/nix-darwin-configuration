@@ -30,7 +30,7 @@
           versioning = {
             type = "simple";
             params = {
-              keep = "5";
+              keep = "10";
               cleanoutDays = "30";
             };
           };
@@ -43,7 +43,7 @@
           versioning = {
             type = "simple";
             params = {
-              keep = "5";
+              keep = "10";
               cleanoutDays = "30";
             };
           };
