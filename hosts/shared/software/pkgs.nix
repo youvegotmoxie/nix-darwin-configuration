@@ -2,7 +2,6 @@
   pkgs,
   config,
   lib,
-  flake-inputs,
   ...
 }: let
   # Package shell scripts
@@ -84,7 +83,6 @@
     };
   });
 
-  rust-overlay-pkgs = pkgs.extend flake-inputs.rust-overlay.overlays.default;
   cfg = config.zshConfig;
 in {
   config = {
@@ -114,7 +112,7 @@ in {
           pinentry-tty
           prek
           ripgrep
-          rust-overlay-pkgs.rust-bin.stable."1.95.0".default
+          rustup
           shfmt
           sops
           tldr
