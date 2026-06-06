@@ -14,10 +14,6 @@
     nil = {
       url = "github:oxalica/nil";
     };
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     strace-macos = {
       url = "github:Mic92/strace-macos";
       inputs.nixpkgs.follows = "nixpkgs";
