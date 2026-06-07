@@ -40,7 +40,6 @@ in {
             "git"
             "git-auto-fetch"
             "git-extras"
-            "kubectl"
             "macos"
             "vi-mode"
           ]
@@ -49,6 +48,7 @@ in {
               "aws"
               "gcloud"
               "helm"
+              "kubectl"
               "terraform"
             ]);
       };
@@ -75,7 +75,7 @@ in {
           renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         });
       # initContent is injected before shellAliases
-      initContent = ''
+      initContent = lib.mkOrder 1000 ''
         source ${config.home.homeDirectory}/.zsh.d/func.sh
         # Do it this way because we can't guarantee sops-nix will have populated this
         # secret symlink since these are added during login
