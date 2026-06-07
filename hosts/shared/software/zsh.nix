@@ -55,12 +55,7 @@ in {
       shellAliases =
         {
           lg = "lazygit";
-          rm = "rm -v";
-          mv = "mv -v";
-          cp = "cp -v";
-          ln = "ln -v";
           history = "history -E";
-          mkdir = "mkdir -v";
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
           grep = "ugrep --color=auto";
