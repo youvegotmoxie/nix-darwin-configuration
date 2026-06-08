@@ -56,7 +56,7 @@
         Minute = 0;
       };
     };
-    package = pkgs.lixPackageSets.stable.lix;
+    package = pkgs.lixPackageSets.latest.lix;
     settings = {
       "extra-experimental-features" = [
         "nix-command"
