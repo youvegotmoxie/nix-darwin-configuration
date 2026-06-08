@@ -1,0 +1,5 @@
+# Mole Optimization Whitelist - These checks will be skipped during optimization
+
+check_touchid
+check_git_config
+firewall

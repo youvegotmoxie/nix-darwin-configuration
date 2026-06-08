@@ -3,18 +3,18 @@
     ./atuin.nix
     ./btop.nix
     ./fzf.nix
-    ./ghostty.nix
     ./git.nix
     ./gnupg.nix
+    ./misc-dots.nix
     ./pass.nix
     ./pkgs.nix
     ./sops.nix
     ./starship.nix
+    ./syncthing.nix
     ./tmux.nix
     ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
-    ./syncthing.nix
   ];
 
   programs.neovim = {
