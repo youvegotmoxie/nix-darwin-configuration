@@ -49,11 +49,11 @@
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 15d";
+      options = "--delete-older-than 10d";
       interval = {
-        Weekday = 0;
-        Hour = 8;
-        Minute = 0;
+        Weekday = 1;
+        Hour = 7;
+        Minute = 30;
       };
     };
     package = pkgs.lixPackageSets.latest.lix;
@@ -61,6 +61,11 @@
       "extra-experimental-features" = [
         "nix-command"
         "flakes"
+      ];
+      # Silence deprecated syntax warnings for Lix
+      "extra-deprecated-features" = [
+        # This is needed due to old syntax being used in Nixpkgs
+        "or-as-identifier"
       ];
     };
     extraOptions = ''

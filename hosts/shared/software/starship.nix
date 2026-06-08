@@ -29,7 +29,7 @@
         stashed = "≡";
       };
       git_state = {
-        format = "\([$state( $progress_current/$progress_total)]($style)\) ";
+        format = "([$state( $progress_current/$progress_total)]($style)) ";
         style = "bright-black";
       };
       cmd_duration = {
@@ -49,7 +49,7 @@
         format = "[$hostname]($style) ";
       };
       nix_shell = {
-        format = "[( \($name\))]($style) ";
+        format = "[( ($name))]($style) ";
       };
       terraform = {
         format = "[$workspace]($style)";

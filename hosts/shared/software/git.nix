@@ -62,13 +62,13 @@ in {
           ptags = "push --tags";
           com = "checkout master";
           pom = "pull origin master";
-          sendit = "!f() { git add . ; git commit -S ; git push -u \$(git remote\) \$(git branch --show-current\);};f";
+          sendit = "!f() { git add . ; git commit -S ; git push -u $(git remote) $(git branch --show-current);};f";
           fall = "fetch --all --verbose";
           pfall = "fetch --all --verbose --prune";
           logs = "log --stat --reverse";
           patchlog = "log --stat --patch --reverse";
           sts = "status --short --show-stash --branch --renames";
-          alist = "config --global --get-regexp ^alias\.";
+          alist = "config --global --get-regexp ^alias.";
           co = "checkout";
           cb = "checkout -b";
           db = "branch -D";
