@@ -4,8 +4,11 @@
   inputs,
   mainUser,
   system,
+  config,
   ...
-}: {
+}: let
+  lixReleaseBranch = "latest";
+in {
   # Supplied by the mkDarwinHost factory
   nixpkgs.hostPlatform = lib.mkDefault system;
   system.stateVersion = 5;
@@ -56,18 +59,21 @@
         Minute = 30;
       };
     };
-    package = pkgs.lixPackageSets.latest.lix;
-    settings = {
-      "extra-experimental-features" = [
-        "nix-command"
-        "flakes"
-      ];
-      # Silence deprecated syntax warnings for Lix
-      "extra-deprecated-features" = [
-        # This is needed due to old syntax being used in Nixpkgs
-        "or-as-identifier"
-      ];
-    };
+    package = pkgs.lixPackageSets.${lixReleaseBranch}.lix;
+    settings =
+      {
+        "extra-experimental-features" = [
+          "nix-command"
+          "flakes"
+        ];
+      }
+      // lib.optionalAttrs (config.nix.package == pkgs.lixPackageSets.${lixReleaseBranch}.lix) {
+        # Silence deprecated syntax warnings for Lix
+        "extra-deprecated-features" = [
+          # This is needed due to old syntax being used in Nixpkgs
+          "or-as-identifier"
+        ];
+      };
     extraOptions = ''
       extra-platforms = x86_64-darwin aarch64-darwin
       min-free = ${toString (100 * 1024 * 1024)}
