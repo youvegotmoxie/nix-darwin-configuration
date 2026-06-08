@@ -37,11 +37,5 @@
     sessionPath = [
       "$HOME/.krew"
     ];
-
-    file = {
-      ".vimrc".source = ../../../../shared/dots/dot_vimrc;
-      ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
-      ".rustup/settings.toml".source = ../../../../shared/dots/rustup_settings.toml;
-    };
   };
 }

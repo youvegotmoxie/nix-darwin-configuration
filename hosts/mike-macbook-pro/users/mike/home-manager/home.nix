@@ -44,9 +44,6 @@
     };
 
     file = {
-      ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
-      ".vimrc".source = ../../../../shared/dots/dot_vimrc;
-      ".rustup/settings.toml".source = ../../../../shared/dots/rustup_settings.toml;
       ".config/yt-dlp/config".text = ''
         --format best[height<=1080]
         --format-sort +size
