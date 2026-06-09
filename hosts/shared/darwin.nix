@@ -122,9 +122,8 @@ in {
     };
   };
 
-  # We already have NAT protecting us and no services should be listening on external facing network interfaces anyway
   networking = {
-    applicationFirewall.enable = false;
+    applicationFirewall.enable = true;
   };
 
   # Use Homebrew for things not working with nixpkgs on macOS
