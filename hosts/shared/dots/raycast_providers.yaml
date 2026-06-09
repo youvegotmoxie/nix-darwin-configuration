@@ -6,7 +6,20 @@ providers:
       openai: 1234
     models:
       - id: gemma-4-e2b-it-4bit
-        name: "Gemma4"
+        name: "Gemma4 E2B"
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: gemma-4-e4b-it-4bit
+        name: "Gemma4 E4B"
         context: 64000
         provider: openai
         abilities:
