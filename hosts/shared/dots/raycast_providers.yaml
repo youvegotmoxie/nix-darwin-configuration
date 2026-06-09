@@ -1,0 +1,20 @@
+providers:
+  - id: oMLX
+    name: oMLX
+    base_url: http://127.0.0.1:8000/v1
+    api_keys:
+      openai: 1234
+    models:
+      - id: gemma-4-e2b-it-4bit
+        name: "Gemma4"
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
