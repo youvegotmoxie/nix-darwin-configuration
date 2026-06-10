@@ -7,6 +7,7 @@ providers:
     models:
       - id: gemma-4-e2b-it-4bit
         name: "Gemma4 E2B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
         context: 64000
         provider: openai
         abilities:
@@ -17,9 +18,12 @@ providers:
           system_message:
             supported: true
           tools:
+            supported: true
+          reasoning_effort:
             supported: true
       - id: gemma-4-e4b-it-4bit
         name: "Gemma4 E4B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
         context: 64000
         provider: openai
         abilities:
@@ -30,4 +34,22 @@ providers:
           system_message:
             supported: true
           tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: gemma-4-12B-it-4bit
+        name: "Gemma4 12B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
             supported: true
