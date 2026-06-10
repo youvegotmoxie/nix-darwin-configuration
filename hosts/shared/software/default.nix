@@ -6,6 +6,7 @@
     ./git.nix
     ./gnupg.nix
     ./misc-dots.nix
+    ./mcp.nix
     ./pass.nix
     ./pkgs.nix
     ./sops.nix
