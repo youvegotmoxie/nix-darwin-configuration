@@ -8,7 +8,7 @@ providers:
       - id: gemma-4-e2b-it-4bit
         name: "Gemma4 E2B"
         description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 32000
+        context: 128000
         provider: openai
         abilities:
           temperature:
