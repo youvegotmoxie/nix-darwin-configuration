@@ -6,7 +6,7 @@
 ~/.ollama/models/*
 ~/Library/Caches/com.nssurge.surge-mac/*
 ~/Library/Application Support/com.nssurge.surge-mac/*
-~/Library/Logs/Zed/Zed.log
+~/Library/Logs/Zed/*
 FINDER_METADATA
 ~/.cache/huggingface*
 ~/Library/Caches/pypoetry/virtualenvs*
