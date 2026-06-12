@@ -11,8 +11,8 @@
         args = ["-y" "terraform-mcp-server"];
       };
       nixos = {
-        command = "uvx";
-        args = ["mcp-nixos"];
+        command = "mcp-nixos";
+        args = ["--"];
       };
     };
   };

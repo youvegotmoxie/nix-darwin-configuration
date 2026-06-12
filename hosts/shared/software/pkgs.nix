@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  flake-inputs,
   ...
 }: let
   # Package shell scripts
@@ -43,12 +44,12 @@
   # Helm v4 is not available in nixpkgs
   helm4 = pkgs.stdenv.mkDerivation (finalAttrs: {
     pname = "helm";
-    version = "4.2.0";
+    version = "4.2.1";
     sourceRoot = ".";
     src = pkgs.fetchzip {
       name = finalAttrs.pname;
       url = "https://get.${finalAttrs.pname}.sh/${finalAttrs.pname}-v${finalAttrs.version}-darwin-arm64.tar.gz";
-      hash = "sha256-sgU3NgZaeWjdZxxt8KpUBMg8RyQf1FzHT5Z0OmLgTfQ=";
+      hash = "sha256-rZFwaCQvECxqUhY0kY1DLv36IKnyHos2QVLeXWxT/bI=";
       stripRoot = false;
     };
     installPhase = ''
@@ -83,6 +84,7 @@
     };
   });
 
+  mcp-nixos-overlay = pkgs.extend flake-inputs.mcp-nixos.overlays.default;
   cfg = config.zshConfig;
 in {
   config = {
@@ -107,6 +109,7 @@ in {
           nix-output-monitor
           nodejs_26
           noto-fonts
+          mcp-nixos-overlay.mcp-nixos
           p7zip
           pam-reattach
           pinentry-tty
