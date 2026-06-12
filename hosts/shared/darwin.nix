@@ -147,14 +147,8 @@ in {
     };
     taps = [
       "tw93/tap"
-      "Arthur-Ficial/tap"
     ];
     brews = [
-      "Arthur-Ficial/tap/apfel"
-      "Arthur-Ficial/tap/apfel-mcp"
-      "Arthur-Ficial/tap/apfel-run"
-      "Arthur-Ficial/tap/auge"
-      "Arthur-Ficial/tap/ohr"
       "tw93/tap/mole"
     ];
     casks = [
