@@ -37,6 +37,7 @@
     meta = {
       description = "A sudoless performance monitoring CLI tool for Apple Silicon processors";
       homepage = "https://github.com/vladkens/macmon";
+      license = lib.licenses.mit;
       mainProgram = finalAttrs.pname;
     };
   });
@@ -60,6 +61,7 @@
     meta = {
       description = "Package management for Kubernetes";
       homepage = "https://helm.sh";
+      license = lib.licenses.apache2;
       mainProgram = finalAttrs.pname;
     };
   });
@@ -80,6 +82,7 @@
     meta = {
       description = "A TUI for AWS resource management";
       homepage = "https://github.com/clawscli/claws";
+      license = lib.licenses.mit;
       mainProgram = finalAttrs.pname;
     };
   });
