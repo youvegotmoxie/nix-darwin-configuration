@@ -53,3 +53,19 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: gpt-oss-20b-MXFP4-Q8
+        name: "GPT OSS 20B"
+        description: "Open-source GPT-4-like model with 20 billion parameters."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
