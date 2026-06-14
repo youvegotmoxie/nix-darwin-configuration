@@ -10,6 +10,12 @@
         };
       };
       folders = {
+        "${config.home.homeDirectory}/.omlx/models" = {
+          id = "omlx-models";
+          path = "${config.home.homeDirectory}/.omlx/models";
+          label = "omlx-models";
+          devices = ["rpi4-timemachine"];
+        };
         "${config.home.homeDirectory}/repos/projects" = {
           id = "projects";
           path = "${config.home.homeDirectory}/repos/projects";
