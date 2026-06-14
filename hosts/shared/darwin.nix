@@ -147,6 +147,7 @@ in {
     };
     taps = [
       "tw93/tap"
+      "youvegotmoxie/homebrew-tap"
     ];
     brews = [
       "tw93/tap/mole"
@@ -157,6 +158,7 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
+      "youvegotmoxie/homebrew-tap/omlx"
       "orbstack"
       "raycast"
       "thaw"
