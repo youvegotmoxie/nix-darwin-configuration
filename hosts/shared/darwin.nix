@@ -108,6 +108,7 @@ in {
   system.defaults = {
     screencapture.location = "/Users/${mainUser}/Desktop/screenshots";
     menuExtraClock.Show24Hour = true;
+    NSGlobalDomain.AppleShowScrollBars = "WhenScrolling";
     finder = {
       FXRemoveOldTrashItems = true;
       ShowStatusBar = true;
