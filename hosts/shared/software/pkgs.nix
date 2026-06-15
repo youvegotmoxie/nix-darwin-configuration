@@ -61,7 +61,6 @@
     meta = {
       description = "Package management for Kubernetes";
       homepage = "https://helm.sh";
-      license = lib.licenses.apache2;
       mainProgram = finalAttrs.pname;
     };
   });
