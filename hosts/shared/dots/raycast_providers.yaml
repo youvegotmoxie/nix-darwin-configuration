@@ -37,22 +37,6 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: gemma-4-12B-it-4bit
-        name: "Gemma4 12B"
-        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 256000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
       - id: gpt-oss-20b-MXFP4-Q8
         name: "GPT OSS 20B"
         description: "Open-source GPT-4-like model with 20 billion parameters."
