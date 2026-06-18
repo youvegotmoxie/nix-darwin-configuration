@@ -164,7 +164,6 @@ in {
       "thaw"
       "timemachinestatus"
       "youvegotmoxie/homebrew-tap/omlx"
-      "youvegotmoxie/homebrew-tap/zen-notes"
       "zed"
     ];
     masApps = {
