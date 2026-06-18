@@ -14,7 +14,6 @@
     ];
     casks = [
       "aptakube"
-      "youvegotmoxie/homebrew-tap/zen-notes"
     ];
     masApps = {
       "AWS Extend Switch Roles" = 1592710340;
