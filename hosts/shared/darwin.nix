@@ -159,11 +159,12 @@ in {
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
       "ghostty"
-      "youvegotmoxie/homebrew-tap/omlx"
       "orbstack"
       "raycast"
       "thaw"
       "timemachinestatus"
+      "youvegotmoxie/homebrew-tap/omlx"
+      "youvegotmoxie/homebrew-tap/zen-notes"
       "zed"
     ];
     masApps = {
