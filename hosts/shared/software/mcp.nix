@@ -1,6 +1,7 @@
 {
   flake-inputs,
   pkgs,
+  config,
   ...
 }: let
   mcp-nixos-overlay = pkgs.extend flake-inputs.mcp-nixos.overlays.default;
@@ -19,6 +20,10 @@ in {
       nixos = {
         command = "${mcp-nixos-overlay.mcp-nixos}/bin/mcp-nixos";
         args = ["--"];
+      };
+      zen-notes = {
+        command = "${config.home.homeDirectory}/.local/bin/zen";
+        args = ["mcp"];
       };
     };
   };
