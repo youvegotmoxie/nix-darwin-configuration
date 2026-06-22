@@ -87,8 +87,14 @@
   });
 
   mcp-nixos-overlay = pkgs.extend flake-inputs.mcp-nixos.overlays.default;
-  cfg = config.zshConfig;
+  cfg = config.extras.extraPackages;
 in {
+  options.extras.extraPackages.workOnly = {
+    enable = lib.mkEnableOption "extras.extraPackages.workOnly" // {default = false;};
+  };
+  options.extras.extraPackages.appleSiliconOnly = {
+    enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // {default = true;};
+  };
   config = {
     home = {
       packages = with pkgs;
@@ -105,13 +111,11 @@ in {
           jdk21_headless
           jq
           lazydocker
-          macmon
           nerd-fonts.monaspace
           nh
           nix-output-monitor
           nodejs_26
           noto-fonts
-          mcp-nixos-overlay.mcp-nixos
           p7zip
           pam-reattach
           pinentry-tty
@@ -121,7 +125,6 @@ in {
           shfmt
           sops
           tldr
-          tree-sitter
           ugrep
           viddy
           yq
@@ -131,7 +134,11 @@ in {
           git-hunk
           gpg-push-pull-keys
         ]
-        ++ (lib.optionals cfg.workAliases.enable [
+        ++ (lib.optionals cfg.appleSiliconOnly.enable [
+          macmon
+          mcp-nixos-overlay.mcp-nixos
+        ])
+        ++ (lib.optionals cfg.workOnly.enable [
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
           pkgs.act
           pkgs.ansible

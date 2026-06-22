@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -6,23 +10,32 @@
     ./software
   ];
 
-  # Configure SSH agent socket and add work shell aliases
+  # Configure gpg-agent
+  gpgConfig = {
+    pubKey = "26693209BA633C80";
+    sshKeys = ["FA2DB0DD531C864082BD10F5C936E7BFD93BA80A"];
+  };
+  # Configure git persona
+  gitConfig = {
+    person = {
+      name = "Michael Beasley";
+      email = "youvegotmoxie@gmail.com";
+      gpgKey = "A6B4C8E1BAEA348F";
+    };
+  };
+
+  # Configure SSH agent socket
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-    workAliases.enable = true;
   };
   extras.extraPackages = {
-    workOnly.enable = true;
+    appleSiliconOnly.enable = false;
   };
 
   # See shared/software/sops.nix for Launchd configuration
   # if secrets are needed outside of the shell environment
   sops = {
     defaultSopsFile = ./secrets/secrets.yaml;
-    secrets.bb_token = {
-      path = "${config.home.homeDirectory}/.creds.d/bb_token";
-      mode = "0600";
-    };
     secrets.gh_token = {
       path = "${config.home.homeDirectory}/.creds.d/gh_token";
       mode = "0600";
@@ -36,8 +49,9 @@
       "NO_PROXY" = "localhost,127.0.0.1";
       "no_proxy" = NO_PROXY;
     };
-    sessionPath = [
-      "$HOME/.krew"
-    ];
+    file = {
+      # Use the x86_64 Rust toolchain
+      ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
+    };
   };
 }

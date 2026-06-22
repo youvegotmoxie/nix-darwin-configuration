@@ -52,7 +52,7 @@ in {
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 10d";
+      options = "--delete-older-than 30d";
       interval = {
         Weekday = 1;
         Hour = 7;

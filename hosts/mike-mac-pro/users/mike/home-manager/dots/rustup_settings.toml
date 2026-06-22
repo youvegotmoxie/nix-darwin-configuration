@@ -1,0 +1,5 @@
+version = "12"
+default_toolchain = "stable-x86_64-apple-darwin"
+profile = "default"
+
+[overrides]

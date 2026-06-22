@@ -79,6 +79,11 @@
         mainUser = "mike";
         hostDir = "mike-macbook-pro";
       };
+      "mike-mac-pro" = mkDarwinHost {
+        mainUser = "mike";
+        hostDir = "mike-mac-pro";
+        system = "x86_64-darwin";
+      };
     };
   };
 }
