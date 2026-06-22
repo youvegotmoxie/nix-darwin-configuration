@@ -10,7 +10,6 @@
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
     workAliases.enable = true;
-    homeAliases.enable = false;
   };
   extras.extraPackages = {
     workOnly.enable = true;

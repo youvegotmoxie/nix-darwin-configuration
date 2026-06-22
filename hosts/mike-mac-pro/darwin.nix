@@ -16,10 +16,7 @@
   # Use Homebrew for these to avoid a bunch of compiling
   homebrew = {
     casks = lib.mkForce [
-      "ghostty"
       "orbstack"
-      "thaw"
-      "timemachinestatus"
     ];
     masApps = lib.mkForce {};
   };

@@ -14,12 +14,7 @@ in {
     };
   };
   options.zshConfig.workAliases = {
-    enable = lib.mkEnableOption "zshConfig.workAliases";
-    default = false;
-  };
-  options.zshConfig.homeAliases = {
-    enable = lib.mkEnableOption "zshConfig.homeAliases";
-    default = true;
+    enable = lib.mkEnableOption "zshConfig.workAliases" // {default = false;};
   };
   config = {
     programs.zsh = {
