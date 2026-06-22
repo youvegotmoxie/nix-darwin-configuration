@@ -39,6 +39,7 @@
 - lazygit
 - macmon
 - libfido2
+- mcp-nixos
 - neovim
 - nix-direnv
 - nerd-fonts.monaspace

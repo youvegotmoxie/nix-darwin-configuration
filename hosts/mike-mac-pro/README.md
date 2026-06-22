@@ -21,6 +21,7 @@
 - gnused
 - gnutar
 - home-manager
+- jdk21_headless
 - jq
 - lazydocker
 - lazygit
@@ -33,6 +34,7 @@
 - nix-index
 - nix-output-monitor
 - nixd
+- nodejs_26
 - noto-fonts
 - p7zip
 - pam-reattach
@@ -40,6 +42,8 @@
 - pinentry_mac
 - pinentry-tty
 - prek
+- python314
+- python314Packages.pip
 - reattach-to-user-namespace
 - ripgrep
 - rustc
@@ -51,14 +55,19 @@
 - strace-macos
 - tldr
 - tmux
-- tree-sitter
 - ugrep
 - uutils-coreutils-noprefix
 - uv
 - viddy
 - yq
+- yubikey-manager
 - zoxide
 - zsh
+
+### Scripts
+- blame-line-pretty
+- git-hunk
+- gpg-push-pull-keys
 
 ## Homebrew
 ### Formulae
