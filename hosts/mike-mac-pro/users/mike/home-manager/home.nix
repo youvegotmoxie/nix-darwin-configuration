@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -24,6 +28,9 @@
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
   };
+  extras.extraPackages = {
+    appleSiliconOnly.enable = false;
+  };
 
   # See shared/software/sops.nix for Launchd configuration
   # if secrets are needed outside of the shell environment
@@ -41,6 +48,10 @@
       # Needed for Zed to prevent routing loops
       "NO_PROXY" = "localhost,127.0.0.1";
       "no_proxy" = NO_PROXY;
+    };
+    file = {
+      # Use the x86_64 Rust toolchain
+      ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
     };
   };
 }

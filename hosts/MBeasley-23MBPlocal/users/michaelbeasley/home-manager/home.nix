@@ -12,6 +12,9 @@
     workAliases.enable = true;
     homeAliases.enable = false;
   };
+  extras.extraPackages = {
+    workOnly.enable = true;
+  };
 
   # See shared/software/sops.nix for Launchd configuration
   # if secrets are needed outside of the shell environment
