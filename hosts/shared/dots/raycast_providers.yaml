@@ -37,9 +37,9 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: gpt-oss-20b-MXFP4-Q8
-        name: "GPT OSS 20B"
-        description: "Open-source GPT-4-like model with 20 billion parameters."
+      - id: Llama-3.2-3B-Instruct-4bit
+        name: "Llama 3.2 3B"
+        description: "Fast, instruction-optimized open-source model from Meta"
         context: 128000
         provider: openai
         abilities:
