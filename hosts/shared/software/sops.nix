@@ -27,6 +27,7 @@
 
   launchd.agents.gh-token-env = {
     enable = true;
+    domain = "user";
     config = {
       ProgramArguments = [
         "/bin/sh"

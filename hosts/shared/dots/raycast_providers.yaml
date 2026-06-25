@@ -24,7 +24,7 @@ providers:
       - id: Qwen3-4B-Instruct-2507-4bit
         name: "Qwen3 4B"
         description: "Fast, instruction-optimized open-source model from Alibaba"
-        context: 128000
+        context: 128001
         provider: openai
         abilities:
           temperature:
