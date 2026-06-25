@@ -8,5 +8,6 @@
     ".rustup/settings.toml".source = ../dots/rustup_settings.toml;
     ".vimrc".source = ../dots/dot_vimrc;
     ".zsh.d/func.sh".source = ../dots/func.sh;
+    ".config/macmon.json".source = ../dots/macmon.json;
   };
 }
