@@ -37,3 +37,23 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+  # - id: llama-cpp
+  #   name: "llama.cpp"
+  #   base_url: http://192.168.148.125:8080/v1
+  #   models:
+  #     - id: gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL
+  #       name: "Gemma4 E2B (llama.cpp)"
+  #       description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+  #       context: 128000
+  #       provider: openai
+  #       abilities:
+  #         temperature:
+  #           supported: true
+  #         vision:
+  #           supported: true
+  #         system_message:
+  #           supported: true
+  #         tools:
+  #           supported: true
+  #         reasoning_effort:
+  #           supported: true
