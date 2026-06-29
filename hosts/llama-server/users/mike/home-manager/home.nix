@@ -34,10 +34,10 @@
       viddy
       yq
     ];
-  };
 
-  file = {
-    # Use the x86_64 Rust toolchain
-    ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
+    file = {
+      # Use the x86_64-linux Rust toolchain
+      ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
+    };
   };
 }
