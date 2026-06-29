@@ -13,13 +13,12 @@
       jq
       nh
       nix-output-monitor
-      nodejs_26
       p7zip
       prek
       ripgrep
       rustup
-      screen
       shfmt
+      tmux
       tldr
       ugrep
       viddy
