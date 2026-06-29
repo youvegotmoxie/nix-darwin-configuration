@@ -42,6 +42,7 @@
 
     packages = with pkgs; [
       alejandra
+      amdgpu_top
       bat
       bat-extras.batman
       delta
