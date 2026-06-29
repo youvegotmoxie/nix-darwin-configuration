@@ -8,6 +8,7 @@
     ../../../../shared/software/tmux.nix
     ../../../../shared/software/zsh.nix
     ../../../../shared/software/starship.nix
+    ../../../../shared/software/zoxide.nix
   ];
   # Configure SSH agent socket
   zshConfig = {
