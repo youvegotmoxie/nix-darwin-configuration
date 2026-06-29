@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   home = {
     stateVersion = "26.05";
     sessionVariables = rec {
@@ -36,8 +32,8 @@
     ];
 
     file = {
-      # Use the x86_64-linux Rust toolchain
-      ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
+      ".rustup/settings.toml".source = ./dots/rustup_settings.toml;
+      ".models.ini".source = ./dots/models.ini;
     };
   };
 }
