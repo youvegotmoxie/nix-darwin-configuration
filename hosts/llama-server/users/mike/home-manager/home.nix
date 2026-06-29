@@ -1,4 +1,21 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
+  imports = [
+    # shared modules in root of hosts dir
+    ../../../../shared/software/tmux.nix
+    ../../../../shared/software/zsh.nix
+    ../../../../shared/software/starship.nix
+  ];
+  # Configure SSH agent socket
+  zshConfig = {
+    ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
+  };
+  extras.extraPackages = {
+    serverOnly.enable = true;
+  };
   home = {
     stateVersion = "26.05";
     sessionVariables = rec {
@@ -17,6 +34,7 @@
       gawk
       gh
       jq
+      lazygit
       nh
       nix-output-monitor
       p7zip
@@ -24,8 +42,8 @@
       ripgrep
       rustup
       shfmt
-      tmux
       tldr
+      tmux
       ugrep
       viddy
       yq
@@ -34,6 +52,7 @@
     file = {
       ".rustup/settings.toml".source = ./dots/rustup_settings.toml;
       ".config/models.ini".source = ./dots/models.ini;
+      ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
     };
   };
 }
