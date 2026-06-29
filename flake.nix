@@ -71,7 +71,7 @@
         };
       };
     mkNixOSHost = {
-      # mainUser,
+      mainUser,
       hostDir,
       system ? "x86_64-linux",
     }:
