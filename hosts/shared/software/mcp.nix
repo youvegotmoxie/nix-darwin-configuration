@@ -1,12 +1,14 @@
 {
   flake-inputs,
   pkgs,
+  config,
   ...
 }: let
+  cfg = config.extras.extraPackages;
   mcp-nixos-overlay = pkgs.extend flake-inputs.mcp-nixos.overlays.default;
 in {
   programs.mcp = {
-    enable = false;
+    enable = cfg.serverOnly.enable;
     servers = {
       context7 = {
         command = "npx";
