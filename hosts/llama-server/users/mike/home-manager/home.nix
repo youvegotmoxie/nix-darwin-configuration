@@ -33,7 +33,7 @@
 
     file = {
       ".rustup/settings.toml".source = ./dots/rustup_settings.toml;
-      ".models.ini".source = ./dots/models.ini;
+      ".config/models.ini".source = ./dots/models.ini;
     };
   };
 }
