@@ -1,4 +1,88 @@
 providers:
+  - id: llama-cpp
+    name: "llama.cpp"
+    base_url: http://192.168.148.125:8080/v1
+    models:
+      - id: gemma-4-e2b
+        name: "Gemma4 E2B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: gemma-4-e4b
+        name: "Gemma4 E4B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: gemma-4-12B
+        name: "Gemma4 12B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: qwen3-4b-instruct
+        name: "Qwen3 4B Instruct"
+        description: "Fast, instruction-optimized open-source model from Alibaba"
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: qwen3.5-9B
+        name: "Qwen3 9B"
+        description: "Fast open-source model from Alibaba"
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
@@ -22,38 +106,18 @@ providers:
           reasoning_effort:
             supported: true
       - id: Qwen3-4B-Instruct-2507-4bit
-        name: "Qwen3 4B"
+        name: "Qwen3 4B Instruct"
         description: "Fast, instruction-optimized open-source model from Alibaba"
-        context: 128000
+        context: 64000
         provider: openai
         abilities:
           temperature:
             supported: true
           vision:
-            supported: false
+            supported: true
           system_message:
             supported: true
           tools:
             supported: true
           reasoning_effort:
             supported: true
-  # - id: llama-cpp
-  #   name: "llama.cpp"
-  #   base_url: http://192.168.148.125:8080/v1
-  #   models:
-  #     - id: gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL
-  #       name: "Gemma4 E2B (llama.cpp)"
-  #       description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-  #       context: 128000
-  #       provider: openai
-  #       abilities:
-  #         temperature:
-  #           supported: true
-  #         vision:
-  #           supported: true
-  #         system_message:
-  #           supported: true
-  #         tools:
-  #           supported: true
-  #         reasoning_effort:
-  #           supported: true

@@ -35,6 +35,7 @@
   outputs = inputs @ {
     nix-darwin,
     home-manager,
+    nixpkgs,
     sops-nix,
     nix-index-database,
     ...
@@ -69,6 +70,34 @@
           inherit inputs mainUser system;
         };
       };
+    mkNixOSHost = {
+      mainUser,
+      hostDir,
+      system ? "x86_64-linux",
+    }:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/${hostDir}/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              users.${mainUser} = {
+                imports = [
+                  ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
+                ];
+              };
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "hmback";
+              extraSpecialArgs.flake-inputs = inputs;
+            };
+          }
+        ];
+        specialArgs = {
+          inherit inputs mainUser system hostDir;
+        };
+      };
   in {
     darwinConfigurations = {
       "MBeasley-23MBPlocal" = mkDarwinHost {
@@ -83,6 +112,12 @@
         mainUser = "mike";
         hostDir = "mike-mac-pro";
         system = "x86_64-darwin";
+      };
+    };
+    nixosConfigurations = {
+      "llama-server" = mkNixOSHost {
+        mainUser = "mike";
+        hostDir = "llama-server";
       };
     };
   };
