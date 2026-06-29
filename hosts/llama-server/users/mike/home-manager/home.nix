@@ -51,6 +51,7 @@
       gh
       jq
       lazygit
+      nodejs_26
       nh
       nix-output-monitor
       p7zip
