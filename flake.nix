@@ -78,22 +78,25 @@
       nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./${hostDir}/configuration.nix
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          #     users.${mainUser} = {
-          #       imports = [
-          #         ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
-          #       ];
-          #     };
-          #     useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     backupFileExtension = "hmback";
-          #     extraSpecialArgs.flake-inputs = inputs;
-          #   };
-          # }
+          ./hosts/${hostDir}/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              users.${mainUser} = {
+                imports = [
+                  ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
+                ];
+              };
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "hmback";
+              extraSpecialArgs.flake-inputs = inputs;
+            };
+          }
         ];
+        specialArgs = {
+          inherit inputs mainUser system hostDir;
+        };
       };
   in {
     darwinConfigurations = {
