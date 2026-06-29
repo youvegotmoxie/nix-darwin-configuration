@@ -7,6 +7,7 @@
     # shared modules in root of hosts dir
     ../../../../shared/software/atuin.nix
     ../../../../shared/software/tmux.nix
+    ../../../../shared/software/fzf.nix
     ../../../../shared/software/zsh.nix
     ../../../../shared/software/starship.nix
     ../../../../shared/software/zoxide.nix
