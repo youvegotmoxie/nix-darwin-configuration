@@ -33,6 +33,11 @@
         User = "mike";
         Port = 22;
       };
+      "llama-server" = {
+        Hostname = "192.168.148.125";
+        User = "mike";
+        Port = 22;
+      };
     };
   };
 }
