@@ -6,4 +6,6 @@
 
 [personal laptop](./hosts/mike-macbook-pro/)
 
-[homelab server](./hosts/mike-mac-pro/)
+[mac homelab server](./hosts/mike-mac-pro/)
+
+[nixos homelab server](./hosts/llama-server/)
