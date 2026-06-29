@@ -78,7 +78,7 @@
       nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./${hostDir}/config.nix
+          ./${hostDir}/configuration.nix
           # home-manager.nixosModules.home-manager
           # {
           #   home-manager = {
