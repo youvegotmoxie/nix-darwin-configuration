@@ -84,6 +84,7 @@
             home-manager = {
               users.${mainUser} = {
                 imports = [
+                  nix-index-database.homeModules.default
                   ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
                 ];
               };
