@@ -1,6 +1,7 @@
 {
   mainUser,
   pkgs,
+  config,
   hostDir,
   inputs,
   system,
@@ -100,6 +101,21 @@ in {
   programs.zsh.enable = true;
   programs.bash.enable = true;
 
+  services.llama-cpp = {
+    enable = true;
+    package = llama-cpp;
+    host = "0.0.0.0";
+    settings = {
+      models-preset = "/home/${mainUser}/models.ini";
+      cache-ram = 32400;
+      cache-type-k = "q8_0";
+      cache-type-v = "q8_0";
+      threads = 16;
+      kv-unified = true;
+      jinja = true;
+      models-max = 2;
+    };
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
