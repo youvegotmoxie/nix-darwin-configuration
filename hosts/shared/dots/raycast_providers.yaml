@@ -108,7 +108,7 @@ providers:
           temperature:
             supported: true
           vision:
-            supported: true
+            supported: false
           system_message:
             supported: true
           tools:
