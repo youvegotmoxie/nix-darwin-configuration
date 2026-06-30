@@ -111,7 +111,8 @@ in {
       threads = 16;
       kv-unified = true;
       jinja = true;
-      no-mmap = true;
+      mlock = true;
+      prio = 2;
     };
   };
   # Some programs need SUID wrappers, can be configured further or are
