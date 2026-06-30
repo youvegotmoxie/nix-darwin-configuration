@@ -38,7 +38,7 @@ providers:
       - id: gemma-4-12B
         name: "Gemma4 12B"
         description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 64000
+        context: 128000
         provider: openai
         abilities:
           temperature:
@@ -54,7 +54,7 @@ providers:
       - id: qwen3-4b-instruct
         name: "Qwen3 4B Instruct"
         description: "Fast, instruction-optimized open-source model from Alibaba"
-        context: 64000
+        context: 128000
         provider: openai
         abilities:
           temperature:
@@ -70,7 +70,7 @@ providers:
       - id: qwen3.5-9B
         name: "Qwen3 9B"
         description: "Fast open-source model from Alibaba"
-        context: 64000
+        context: 128000
         provider: openai
         abilities:
           temperature:
@@ -108,7 +108,7 @@ providers:
       - id: Qwen3-4B-Instruct-2507-4bit
         name: "Qwen3 4B Instruct"
         description: "Fast, instruction-optimized open-source model from Alibaba"
-        context: 64000
+        context: 128000
         provider: openai
         abilities:
           temperature:
