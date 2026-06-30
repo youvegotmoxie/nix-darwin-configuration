@@ -1,7 +1,6 @@
 {
   mainUser,
   pkgs,
-  config,
   hostDir,
   inputs,
   system,
