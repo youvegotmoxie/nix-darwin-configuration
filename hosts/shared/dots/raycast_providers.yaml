@@ -99,6 +99,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: ministral-3-14B
+        name: "Ministral 3 14B"
+        description: "A powerful and efficient language model with vision capabilities."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
