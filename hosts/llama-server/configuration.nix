@@ -130,7 +130,6 @@ in {
         threads = 16;
         kv-unified = true;
         jinja = true;
-        mlock = true;
         prio = 2;
       };
     };
