@@ -9,13 +9,11 @@
 }: let
   llama-cpp =
     (pkgs.llama-cpp.override {
-      cudaSupport = false;
       rocmSupport = true;
-      metalSupport = false;
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: rec {
-      version = "9833";
+      version = "9843";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
