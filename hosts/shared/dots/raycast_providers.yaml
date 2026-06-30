@@ -115,22 +115,6 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: codestral-22B
-        name: "Codestral 22B"
-        description: "Programming focused model from Mistral AI."
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
