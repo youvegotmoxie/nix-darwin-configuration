@@ -111,7 +111,7 @@ in {
       threads = 16;
       kv-unified = true;
       jinja = true;
-      models-max = 2;
+      no-mmap = true;
     };
   };
   # Some programs need SUID wrappers, can be configured further or are
