@@ -104,7 +104,7 @@ in {
     enable = true;
     package = llama-cpp;
     settings = {
-      models-preset = "/tmp/models.ini";
+      models-preset = "/var/lib/llama-cpp/models.ini";
       host = "0.0.0.0";
       port = 8080;
       cache-ram = 32400;
