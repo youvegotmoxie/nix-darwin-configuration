@@ -83,6 +83,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: qwen3-14B
+        name: "Qwen3 14B"
+        description: "Fast open-source model from Alibaba"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
