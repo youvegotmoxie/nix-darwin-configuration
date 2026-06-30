@@ -41,21 +41,30 @@
       '';
     });
 in {
+  nixpkgs.hostPlatform = lib.mkDefault system;
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
-  nixpkgs.hostPlatform = lib.mkDefault system;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "${hostDir}";
-  networking.networkmanager.enable = true;
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking = {
+    hostName = "${hostDir}";
+    networkmanager.enable = true;
+    proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    firewall.enable = false;
+  };
 
   time.timeZone = "America/Anchorage";
 
@@ -68,9 +77,7 @@ in {
       "ecdsa-sha2-nistp384 AAAAE2VjZHNhLXNoYTItbmlzdHAzODQAAAAIbmlzdHAzODQAAABhBNKNWVZe8zRvZ8VNfsDr+KQfDYvi/+ssXo6hIHLFsxwVYya+BcyFZ6TBXARrLONhkKbq4nkEA2CRatJ5bL8WG2H8dnl/WbsV+LQ5NRZz20f0MIKhOkZa6uoZE6gGWEVIxA== cardno:35_285_426"
       "ecdsa-sha2-nistp384 AAAAE2VjZHNhLXNoYTItbmlzdHAzODQAAAAIbmlzdHAzODQAAABhBCC3+lHWSgBAOLx2HgQLDW81dCkgAj4Jvp5bRMOl3ZlHZXbmXZwA8JYPMWiZEzOZlNXkS8UlaiC6vaq8JtPeFNziuLgQ5Ntl2AX4fk+/VpnsouQ7tvPt5wwFdiTcT811Ng== cardno:31_399_365"
     ];
-    packages = with pkgs; [
-      neovim
-    ];
+    packages = with pkgs; [neovim];
   };
 
   environment = {
@@ -95,26 +102,11 @@ in {
     pathsToLink = ["/share/zsh"];
   };
 
-  programs.zsh.enable = true;
-  programs.bash.enable = true;
-
-  services.llama-cpp = {
-    enable = true;
-    package = llama-cpp;
-    settings = {
-      models-preset = "/var/lib/llama-cpp/models.ini";
-      host = "0.0.0.0";
-      port = 8080;
-      cache-ram = 32400;
-      cache-type-k = "q8_0";
-      cache-type-v = "q8_0";
-      threads = 16;
-      kv-unified = true;
-      jinja = true;
-      mlock = true;
-      prio = 2;
-    };
+  programs = {
+    zsh.enable = true;
+    bash.enable = true;
   };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -123,22 +115,32 @@ in {
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
+  services = {
+    openssh.enable = true;
+    llama-cpp = {
+      enable = true;
+      package = llama-cpp;
+      settings = {
+        models-preset = "/var/lib/llama-cpp/models.ini";
+        host = "0.0.0.0";
+        port = 8080;
+        cache-ram = 32400;
+        cache-type-k = "q8_0";
+        cache-type-v = "q8_0";
+        threads = 16;
+        kv-unified = true;
+        jinja = true;
+        mlock = true;
+        prio = 2;
+      };
+    };
+  };
 
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  system = {
+    copySystemConfiguration = false;
+    stateVersion = "26.05";
+  };
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  system.copySystemConfiguration = false;
-  system.stateVersion = "26.05";
   nix = {
     enable = true;
     optimise.automatic = true;
