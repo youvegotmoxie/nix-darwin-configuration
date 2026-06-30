@@ -115,6 +115,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: gpt-oss-20B
+        name: "GPT-OSS 20B"
+        description: "An open-source model from OpenAI"
+        context: 64000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
