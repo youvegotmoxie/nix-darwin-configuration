@@ -1,4 +1,4 @@
-{pkgs}: let
+{pkgs, ...}: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
