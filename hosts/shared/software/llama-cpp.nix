@@ -40,12 +40,11 @@ in {
     llama-swap = {
       enable = true;
       listenAddress = "0.0.0.0";
-      port = 8080;
       settings = {
         healthCheckTimeout = 60;
         models = {
           "gemma-4-e2b" = {
-            cmd = "${llama-cpp}/bin/llama-server --model /var/cache/llama-cpp/models--unsloth--gemma-4-E2B-it-qat-GGUF/gemma-4-E2B-it-qat-UD-Q4_K_XL.gguf";
+            cmd = "${llama-cpp}/bin/llama-server --port 8080 --model /var/cache/llama-cpp/models--unsloth--gemma-4-E2B-it-qat-GGUF/gemma-4-E2B-it-qat-UD-Q4_K_XL.gguf";
             concurrencyLimit = 4;
           };
         };
