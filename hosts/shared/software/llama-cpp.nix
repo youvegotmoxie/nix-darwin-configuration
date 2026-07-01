@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -36,26 +32,11 @@
         ${oldAttrs.preConfigure or ""}
       '';
     });
-  llama-server = lib.getExe llama-cpp "llama-server";
 in {
   environment = {
     systemPackages = [llama-cpp];
   };
   services = {
-    llama-swap = {
-      enable = true;
-      listenAddress = "0.0.0.0";
-      port = 8080;
-      settings = {
-        healthCheckTimeout = 60;
-        models = {
-          "gemma-4-e2b" = {
-            cmd = "${llama-server} --models-preset /var/lib/llama-cpp/models.ini --cache-ram 32400";
-            concurrencyLimit = 4;
-          };
-        };
-      };
-    };
     llama-cpp = {
       enable = false;
       package = llama-cpp;
