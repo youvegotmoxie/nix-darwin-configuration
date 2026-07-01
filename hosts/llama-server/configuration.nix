@@ -6,13 +6,12 @@
   system,
   lib,
   ...
-}: let
-  llama-cpp = import ../../software/llama-cpp.nix;
-in {
+}: {
   nixpkgs.hostPlatform = lib.mkDefault system;
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../../../llama-cpp.nix
   ];
 
   boot = {
@@ -55,7 +54,6 @@ in {
       git
       home-manager
       inputs.nil.packages.${system}.nil
-      llama-cpp
       nh
       nixd
       pciutils
@@ -82,25 +80,8 @@ in {
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
   services = {
     openssh.enable = true;
-    llama-cpp = {
-      enable = true;
-      package = llama-cpp;
-      settings = {
-        models-preset = "/var/lib/llama-cpp/models.ini";
-        host = "0.0.0.0";
-        port = 8080;
-        cache-ram = 32400;
-        cache-type-k = "q8_0";
-        cache-type-v = "q8_0";
-        threads = 16;
-        kv-unified = true;
-        jinja = true;
-        prio = 2;
-      };
-    };
   };
 
   system = {
