@@ -16,6 +16,7 @@
     ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
+    ./ssh.nix
   ];
 
   programs.neovim = {
