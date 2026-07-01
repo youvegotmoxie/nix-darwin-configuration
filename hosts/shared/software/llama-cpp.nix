@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -36,7 +32,6 @@
         ${oldAttrs.preConfigure or ""}
       '';
     });
-  llama-server = lib.getExe llama-cpp "llama-server";
 in {
   environment = {
     systemPackages = [llama-cpp];
@@ -50,7 +45,7 @@ in {
         healthCheckTimeout = 60;
         models = {
           "gemma-4-e2b" = {
-            cmd = "${llama-server} --models-preset /var/lib/llama-cpp/models.ini --cache-ram 32400";
+            cmd = "${llama-cpp}/bin/llama-server --models-preset /var/lib/llama-cpp/models.ini --cache-ram 32400";
             concurrencyLimit = 4;
           };
         };
