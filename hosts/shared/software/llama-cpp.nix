@@ -4,12 +4,12 @@
       rocmSupport = true;
       blasSupport = true;
     }).overrideAttrs
-    (oldAttrs: rec {
+    (oldAttrs: {
       version = "9852";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
-        tag = "b${version}";
+        tag = "b${oldAttrs.version}";
         hash = "sha256-QlhfzDvVA8qUfT73QujpqIuhNW8vOtc5xQ2FLN9ux7A=";
         leaveDotGit = true;
         postFetch = ''
