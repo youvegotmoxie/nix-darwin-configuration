@@ -67,6 +67,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: deepseek-R1-distill-qwen-14B
+        name: "Qwen 14B"
+        description: "DeepSeek R1 distilled Qwen 14B model"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
       - id: gpt-oss-20B
         name: "GPT-OSS 20B"
         description: "An open-source model from OpenAI"
