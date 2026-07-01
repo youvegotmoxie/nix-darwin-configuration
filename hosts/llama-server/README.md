@@ -39,6 +39,7 @@
 
 ### Services
 - openssh
+- llama.cpp
 
 ## Models
 
