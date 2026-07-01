@@ -38,7 +38,7 @@ in {
   };
   services = {
     llama-cpp = {
-      enable = false;
+      enable = true;
       package = llama-cpp;
       settings = {
         models-preset = "/var/lib/llama-cpp/models.ini";
