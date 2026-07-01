@@ -67,54 +67,6 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: qwen3.5-9B
-        name: "Qwen3 9B"
-        description: "Fast open-source model from Alibaba"
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      - id: qwen3-14B
-        name: "Qwen3 14B"
-        description: "Fast open-source model from Alibaba"
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      - id: ministral-3-14B
-        name: "Ministral 3 14B"
-        description: "A powerful and efficient language model with vision capabilities."
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
       - id: gpt-oss-20B
         name: "GPT-OSS 20B"
         description: "An open-source model from OpenAI"
