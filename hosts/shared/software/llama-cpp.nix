@@ -46,12 +46,13 @@ in {
       enable = true;
       listenAddress = "0.0.0.0";
       port = 8080;
-      healthCheckTimeout = 60;
-      models = {
-        "gemma-4-e2b" = {
-          cmd = "${llama-server} --models-preset /var/lib/llama-cpp/models.ini --cache-ram 32400";
-          aliases = ["gemma-4-e4b"];
-          concurrencyLimit = 4;
+      settings = {
+        healthCheckTimeout = 60;
+        models = {
+          "gemma-4-e2b" = {
+            cmd = "${llama-server} --models-preset /var/lib/llama-cpp/models.ini --cache-ram 32400";
+            concurrencyLimit = 4;
+          };
         };
       };
     };
