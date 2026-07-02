@@ -39,7 +39,7 @@ in {
   services = {
     llama-swap = {
       enable = true;
-      host = "0.0.0.0";
+      listenAddress = "0.0.0.0";
       settings = {
         healthCheckTimeout = 60;
         models = {
