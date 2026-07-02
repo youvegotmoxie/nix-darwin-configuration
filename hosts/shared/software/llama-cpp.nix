@@ -44,7 +44,7 @@ in {
         healthCheckTimeout = 60;
         models = {
           "gemma-4-e2b" = {
-            cmd = "${llama-cpp}/bin/llama-server --port \${PORT} -m /tmp/emma-4-E2B-it-qat-UD-Q4_K_XL.gguf -ngl 99";
+            cmd = "${llama-cpp}/bin/llama-server --port \${PORT} -m /var/lib/llama-cpp/emma-4-E2B-it-qat-UD-Q4_K_XL.gguf -ngl 99";
             concurrencyLimit = 2;
             aliases = [
               "gemma-4-e2b"
