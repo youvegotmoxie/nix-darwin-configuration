@@ -37,8 +37,24 @@ in {
     systemPackages = [llama-cpp];
   };
   services = {
-    llama-cpp = {
+    llama-swap = {
       enable = true;
+      host = "0.0.0.0";
+      settings = {
+        healthCheckTimeout = 60;
+        models = {
+          "gemma-4-e2b" = {
+            cmd = "${llama-cpp}/bin/llama-server --port \${PORT} -m /var/cache/llama-cpp/models--unsloth--gemma-4-E2B-it-qat-GGUF/snapshots/db01ae3ceeca98487bf3569814f832f5023cd48c/gemma-4-E2B-it-qat-UD-Q4_K_XL.gguf -ngl 99 --no-webui";
+            concurrencyLimit = 2;
+            aliases = [
+              "gemma-4-e2b"
+            ];
+          };
+        };
+      };
+    };
+    llama-cpp = {
+      enable = false;
       package = llama-cpp;
       settings = {
         models-preset = "/var/lib/llama-cpp/models.ini";
