@@ -13,6 +13,9 @@ in {
   nixpkgs.hostPlatform = lib.mkDefault system;
   system.stateVersion = 5;
   system.primaryUser = "${mainUser}";
+  # Workaround for https://github.com/nix-darwin/nix-darwin/issues/1817
+  documentation.enable = false;
+  system.tools.darwin-uninstaller.enable = false;
 
   users.users.${mainUser} = {
     home = "/Users/${mainUser}";
