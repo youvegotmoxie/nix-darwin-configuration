@@ -51,6 +51,7 @@ in {
       listenAddress = "0.0.0.0";
       settings = {
         healthCheckTimeout = 60;
+        sendLoadingState = true;
         models = {
           "gemma-4-e2b" = {
             cmd = ''
@@ -104,6 +105,8 @@ in {
       User = lib.mkForce "llama-swap";
       DynamicUser = lib.mkForce false;
       StateDirectory = "llama-swap";
+      ProtectHome = lib.mkForce false;
+      MemoryDenyWriteExecute = lib.mkForce false;
     };
   };
 }
