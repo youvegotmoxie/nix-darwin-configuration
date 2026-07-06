@@ -1,11 +1,5 @@
-{
-  flake-inputs,
-  pkgs,
-  config,
-  ...
-}: let
+{config, ...}: let
   cfg = config.extras.extraPackages;
-  mcp-nixos-overlay = pkgs.extend flake-inputs.mcp-nixos.overlays.default;
 in {
   programs.mcp = {
     enable = cfg.serverOnly.enable;
@@ -19,8 +13,8 @@ in {
         args = ["-y" "terraform-mcp-server"];
       };
       nixos = {
-        command = "${mcp-nixos-overlay.mcp-nixos}/bin/mcp-nixos";
-        args = ["--"];
+        command = "uvx";
+        args = ["mcp-nixos"];
       };
     };
   };

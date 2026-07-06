@@ -18,7 +18,7 @@
         '';
       };
       # Enable native CPU optimizations (AVX, AVX2, etc.)
-      npmDepsHash = "sha256-X1DZgmhS/zHTqDT5zq0kywwntthcJ9vRXeqyO3zz6UU=";
+      npmDepsHash = "sha256-wtaHsVOyCNCITABe1TvDo/MiWpNlH2YqZewBDxERtt4=";
       cmakeFlags =
         (oldAttrs.cmakeFlags or [])
         ++ [
