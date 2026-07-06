@@ -38,7 +38,7 @@
     });
 in {
   users.users.llama-swap = {
-    isSystemUser = true;
+    isNormalUser = true;
     group = "llama-swap";
   };
   users.groups.llama-swap = {};
