@@ -3,12 +3,12 @@
   lib,
   ...
 }: let
-  llama-swap = pkgs.llama-swap.override (oldAttrs: {
+  llama-swap = pkgs.llama-swap.overrideAttrs (oldAttrs: {
     version = "235";
     src = pkgs.fetchFromGitHub {
       owner = "mostlygeek";
       repo = "llama-swap";
-      tag = "v${oldAttrs.version}";
+      rev = "v${oldAttrs.version}";
       hash = "";
       leaveDotGit = true;
       postFetch = ''
