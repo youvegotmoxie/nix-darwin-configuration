@@ -49,7 +49,7 @@ in {
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL \
               --n-gpu-layers 99 \
-              -fa \
+              --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
               --ubatch-size 1024 \
