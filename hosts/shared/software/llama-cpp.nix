@@ -37,6 +37,11 @@
       '';
     });
 in {
+  users.users.llama-swap = {
+    isSystemUser = true;
+    group = "llama-swap";
+  };
+  users.groups.llama-swap = {};
   environment = {
     systemPackages = [llama-cpp];
   };
