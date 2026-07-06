@@ -50,11 +50,11 @@ in {
               --hf-repo unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL \
               --n-gpu-layers 99 \
               -fa \
-              -c 128000 \
+              --ctx-size 128000 \
               --batch-size 4096 \
               --ubatch-size 1024 \
               --cache-type-k q8_0 \
-              --cache-type-v q8_0
+              --cache-type-v q8_0 \
               --reasoning-budget 2048 \
               --temp 1.0 \
               --top-p 0.95 \
