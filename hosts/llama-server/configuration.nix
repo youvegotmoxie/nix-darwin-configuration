@@ -51,6 +51,7 @@
     systemPackages = with pkgs; [
       btop-rocm
       rocmPackages.rocm-smi
+      lact
       cmake
       git
       home-manager
