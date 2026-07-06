@@ -44,7 +44,27 @@ in {
         healthCheckTimeout = 60;
         models = {
           "gemma-4-e2b" = {
-            cmd = "${llama-cpp}/bin/llama-server --port \${PORT} -m /var/lib/llama-cpp/emma-4-E2B-it-qat-UD-Q4_K_XL.gguf -ngl 99";
+            cmd = ''
+              ${llama-cpp}/bin/llama-server \
+              --port ''${PORT} \
+              --hf-repo unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL \
+              --n-gpu-layers 99 \
+              -fa \
+              -c 128000 \
+              --batch-size 4096 \
+              --ubatch-size 1024 \
+              --cache-type-k q8_0 \
+              --cache-type-v q8_0
+              --reasoning-budget 2048 \
+              --temp 1.0 \
+              --top-p 0.95 \
+              --top-k 64 \
+              --jinja \
+              --cache-ram 32400 \
+              --threads 16 \
+              --kv-unified \
+              --prio 2
+            '';
             concurrencyLimit = 2;
             aliases = [
               "gemma-4-e2b"
