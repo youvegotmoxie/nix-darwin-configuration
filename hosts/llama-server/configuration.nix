@@ -50,6 +50,7 @@
   environment = {
     systemPackages = with pkgs; [
       btop-rocm
+      rocmPackages.rocm-smi
       cmake
       git
       home-manager
