@@ -37,7 +37,6 @@
           find "$out" -name .git -print0 | xargs -0 rm -rf
         '';
       };
-      # Enable native CPU optimizations (AVX, AVX2, etc.)
       npmDepsHash = "sha256-X1DZgmhS/zHTqDT5zq0kywwntthcJ9vRXeqyO3zz6UU=";
       cmakeFlags =
         (oldAttrs.cmakeFlags or [])
