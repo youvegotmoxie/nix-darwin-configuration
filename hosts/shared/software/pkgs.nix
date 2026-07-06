@@ -2,7 +2,6 @@
   pkgs,
   config,
   lib,
-  flake-inputs,
   ...
 }: let
   # Package shell scripts
@@ -86,7 +85,6 @@
     };
   });
 
-  mcp-nixos-overlay = pkgs.extend flake-inputs.mcp-nixos.overlays.default;
   cfg = config.extras.extraPackages;
 in {
   options.extras.extraPackages.workOnly = {
@@ -136,7 +134,6 @@ in {
         ]
         ++ (lib.optionals cfg.appleSiliconOnly.enable [
           macmon
-          mcp-nixos-overlay.mcp-nixos
         ])
         ++ (lib.optionals cfg.workOnly.enable [
           (pkgs.google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
