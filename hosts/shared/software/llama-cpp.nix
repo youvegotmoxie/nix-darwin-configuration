@@ -3,6 +3,22 @@
   lib,
   ...
 }: let
+  llama-swap = oldAttrs: {
+    version = "235";
+    src = pkgs.fetchFromGitHub {
+      owner = "mostlygeek";
+      repo = "llama-swap";
+      tag = "v${oldAttrs.version}";
+      hash = "";
+      leaveDotGit = true;
+      postFetch = ''
+        cd "$out"
+        git rev-parse HEAD > $out/COMMIT
+        date -u -d "@$(git log -1 --pretty=%ct)" "+'%Y-%m-%dT%H:%M:%SZ'" > $out/SOURCE_DATE_EPOCH
+        find "$out" -name .git -print0 | xargs -0 rm -rf
+      '';
+    };
+  };
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -48,6 +64,7 @@ in {
   services = {
     llama-swap = {
       enable = true;
+      package = llama-swap;
       listenAddress = "0.0.0.0";
       settings = {
         healthCheckTimeout = 60;
