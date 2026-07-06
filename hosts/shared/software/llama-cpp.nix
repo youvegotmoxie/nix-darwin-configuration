@@ -66,6 +66,8 @@ in {
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
+              --spec-type draft-mtp \
+              --spec-draft-n-max 3 \
               --temp 1.0 \
               --top-p 0.95 \
               --top-k 64 \
@@ -120,6 +122,8 @@ in {
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
+              --spec-type draft-mtp \
+              --spec-draft-n-max 3 \
               --temp 1.0 \
               --top-p 0.95 \
               --top-k 64 \
