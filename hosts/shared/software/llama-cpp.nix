@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -88,6 +92,13 @@ in {
         jinja = true;
         prio = 2;
       };
+    };
+  };
+  systemd.services.llama-swap = {
+    serviceConfig = {
+      User = lib.mkForce "llama-swap";
+      DynamicUser = lib.mkForce false;
+      StateDirectory = "llama-swap";
     };
   };
 }
