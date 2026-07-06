@@ -5,12 +5,12 @@
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "9852";
+      version = "9878";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
         tag = "b${oldAttrs.version}";
-        hash = "sha256-QlhfzDvVA8qUfT73QujpqIuhNW8vOtc5xQ2FLN9ux7A=";
+        hash = "sha256-wtaHsVOyCNCITABe1TvDo/MiWpNlH2YqZewBDxERtt4=";
         leaveDotGit = true;
         postFetch = ''
           git -C "$out" rev-parse --short HEAD > $out/COMMIT
@@ -18,7 +18,7 @@
         '';
       };
       # Enable native CPU optimizations (AVX, AVX2, etc.)
-      npmDepsHash = "sha256-wtaHsVOyCNCITABe1TvDo/MiWpNlH2YqZewBDxERtt4=";
+      npmDepsHash = "sha256-X1DZgmhS/zHTqDT5zq0kywwntthcJ9vRXeqyO3zz6UU=";
       cmakeFlags =
         (oldAttrs.cmakeFlags or [])
         ++ [
