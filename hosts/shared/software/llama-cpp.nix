@@ -77,7 +77,6 @@ in {
               --kv-unified \
               --prio 2
             '';
-            concurrencyLimit = 2;
             aliases = [
               "gemma-4-e2b"
             ];
@@ -104,7 +103,6 @@ in {
               --kv-unified \
               --prio 2
             '';
-            concurrencyLimit = 2;
             aliases = [
               "gemma-4-e4b"
             ];
@@ -133,7 +131,6 @@ in {
               --kv-unified \
               --prio 2
             '';
-            concurrencyLimit = 2;
             aliases = [
               "gemma-4-12B"
             ];
@@ -161,7 +158,6 @@ in {
               --kv-unified \
               --prio 2
             '';
-            concurrencyLimit = 2;
             aliases = [
               "qwen3-4b-instruct"
             ];
@@ -188,7 +184,6 @@ in {
               --kv-unified \
               --prio 2
             '';
-            concurrencyLimit = 2;
             aliases = [
               "gpt-oss-20B"
             ];
