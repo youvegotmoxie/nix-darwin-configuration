@@ -9,7 +9,7 @@
       owner = "mostlygeek";
       repo = "llama-swap";
       rev = "v${oldAttrs.version}";
-      hash = "";
+      hash = "sha256-IblAaM9FBdI2Y9rg36SWpclQ0jV6Y93RC+N+cXWEO94=";
       leaveDotGit = true;
       postFetch = ''
         cd "$out"
