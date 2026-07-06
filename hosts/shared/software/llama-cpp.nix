@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  llama-swap = oldAttrs: {
+  llama-swap = pkgs.llama-swap.override (oldAttrs: {
     version = "235";
     src = pkgs.fetchFromGitHub {
       owner = "mostlygeek";
@@ -18,7 +18,7 @@
         find "$out" -name .git -print0 | xargs -0 rm -rf
       '';
     };
-  };
+  });
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
