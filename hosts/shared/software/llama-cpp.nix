@@ -104,7 +104,6 @@ in {
     serviceConfig = {
       User = lib.mkForce "llama-swap";
       DynamicUser = lib.mkForce false;
-      StateDirectory = "llama-swap";
       ProtectHome = lib.mkForce false;
       MemoryDenyWriteExecute = lib.mkForce false;
     };
