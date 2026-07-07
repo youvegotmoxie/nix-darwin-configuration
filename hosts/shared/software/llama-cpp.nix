@@ -69,7 +69,7 @@ in {
         healthCheckTimeout = 60;
         sendLoadingState = true;
         models = {
-          "gemma-4-e2b" = {
+          "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
@@ -93,11 +93,9 @@ in {
               --kv-unified \
               --prio 2
             '';
-            aliases = [
-              "gemma-4-e2b"
-            ];
+            name = "gemma-4-e2b";
           };
-          "gemma-4-e4b" = {
+          "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
@@ -119,11 +117,10 @@ in {
               --kv-unified \
               --prio 2
             '';
-            aliases = [
-              "gemma-4-e4b"
-            ];
+            name = "gemma-4-e4b";
+            ttl = 60;
           };
-          "gemma-4-12B" = {
+          "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
@@ -147,11 +144,10 @@ in {
               --kv-unified \
               --prio 2
             '';
-            aliases = [
-              "gemma-4-12B"
-            ];
+            name = "gemma-4-12B";
+            ttl = 60;
           };
-          "qwen3-4b-instruct" = {
+          "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL" = {
             cmd = ''
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
@@ -174,11 +170,9 @@ in {
               --kv-unified \
               --prio 2
             '';
-            aliases = [
-              "qwen3-4b-instruct"
-            ];
+            name = "qwen3-4b-instruct";
           };
-          "gpt-oss-20B" = {
+          "gpt-oss-20b-GGUF:UD-Q4_K_XL" = {
             cmd = ''
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
@@ -200,9 +194,8 @@ in {
               --kv-unified \
               --prio 2
             '';
-            aliases = [
-              "gpt-oss-20B"
-            ];
+            name = "gpt-oss-20B";
+            ttl = 60;
           };
         };
       };
