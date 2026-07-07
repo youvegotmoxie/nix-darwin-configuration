@@ -93,7 +93,9 @@ in {
               --kv-unified \
               --prio 2
             '';
-            name = "gemma-4-e2b";
+            aliases = [
+              "gemma-4-e2b"
+            ];
           };
           "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
@@ -117,8 +119,10 @@ in {
               --kv-unified \
               --prio 2
             '';
-            name = "gemma-4-e4b";
             ttl = 60;
+            aliases = [
+              "gemma-4-e4b"
+            ];
           };
           "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
@@ -144,8 +148,10 @@ in {
               --kv-unified \
               --prio 2
             '';
-            name = "gemma-4-12B";
             ttl = 60;
+            aliases = [
+              "gemma-4-12B"
+            ];
           };
           "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL" = {
             cmd = ''
@@ -170,7 +176,9 @@ in {
               --kv-unified \
               --prio 2
             '';
-            name = "qwen3-4b-instruct";
+            aliases = [
+              "qwen3-4b-instruct"
+            ];
           };
           "gpt-oss-20b-GGUF:UD-Q4_K_XL" = {
             cmd = ''
@@ -194,8 +202,10 @@ in {
               --kv-unified \
               --prio 2
             '';
-            name = "gpt-oss-20B";
             ttl = 60;
+            aliases = [
+              "gpt-oss-20B"
+            ];
           };
         };
       };
