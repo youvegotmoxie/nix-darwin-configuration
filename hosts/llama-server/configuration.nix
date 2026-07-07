@@ -38,7 +38,7 @@
   security.sudo.wheelNeedsPassword = false;
   users.users.${mainUser} = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker"];
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
       "ecdsa-sha2-nistp384 AAAAE2VjZHNhLXNoYTItbmlzdHAzODQAAAAIbmlzdHAzODQAAABhBNKNWVZe8zRvZ8VNfsDr+KQfDYvi/+ssXo6hIHLFsxwVYya+BcyFZ6TBXARrLONhkKbq4nkEA2CRatJ5bL8WG2H8dnl/WbsV+LQ5NRZz20f0MIKhOkZa6uoZE6gGWEVIxA== cardno:35_285_426"
@@ -83,6 +83,11 @@
   # };
   services = {
     openssh.enable = true;
+  };
+
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
   };
 
   system = {

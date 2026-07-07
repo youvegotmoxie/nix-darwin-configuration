@@ -76,8 +76,8 @@ in {
             swap = false;
             exclusive = true;
             members = [
-              "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL"
-              "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"
+              "gemma-4-e2b"
+              "qwen3-4b-instruct"
             ];
           };
           "medium" = {
@@ -87,15 +87,15 @@ in {
             swap = true;
             exclusive = true;
             members = [
-              "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
-              "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
-              "gpt-oss-20b-GGUF:UD-Q4_K_XL"
+              "gemma-4-e4b"
+              "gemma-4-12B"
+              "gpt-oss-20B"
             ];
           };
         };
         hooks = {
           on_startup = {
-            preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
+            preload = ["gemma-4-e2b" "qwen3-4b-instruct"];
           };
         };
         healthCheckTimeout = 60;
@@ -110,7 +110,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size 1024 \
+              --ubatch-size 4096 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -138,7 +138,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size 1024 \
+              --ubatch-size 4096 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -165,7 +165,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size 1024 \
+              --ubatch-size 4096 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -194,7 +194,7 @@ in {
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
-              --ubatch-size 1024 \
+              --ubatch-size 4096 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 0 \
@@ -221,7 +221,7 @@ in {
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
-              --ubatch-size 1024 \
+              --ubatch-size 4096 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-format auto \
