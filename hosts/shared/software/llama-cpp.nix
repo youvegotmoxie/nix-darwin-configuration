@@ -72,7 +72,7 @@ in {
               "main-small" = {
                 swap = false;
                 exclusive = false;
-                members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
+                members = ["gemma-4-e2b" "qwen3-4b-instruct"];
               };
             };
           };
