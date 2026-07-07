@@ -68,6 +68,9 @@ in {
       settings = {
         groups = {
           "small" = {
+            # Swapping logic:
+            # Allow all models in the group to be loaded at once
+            # Loading from this group unloads loaded models from another group
             swap = false;
             exclusive = true;
             members = [
@@ -76,6 +79,9 @@ in {
             ];
           };
           "medium" = {
+            # Swapping logic:
+            # Allow 1 model in the group to be loaded at once
+            # Loading from this group unloads loaded models from another group
             swap = true;
             exclusive = true;
             members = [
