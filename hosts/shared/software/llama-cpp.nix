@@ -67,23 +67,23 @@ in {
       listenAddress = "0.0.0.0";
       settings = {
         groups = {
-          "main-small" = {
+          "small" = {
             swap = false;
-            exclusive = false;
+            exclusive = true;
             members = [
               "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL"
               "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"
             ];
           };
-          # "main-medium" = {
-          #   swap = true;
-          #   exclusive = false;
-          #   members = [
-          #     "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
-          #     "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
-          #     "gpt-oss-20b-GGUF:UD-Q4_K_XL"
-          #   ];
-          # };
+          "medium" = {
+            swap = true;
+            exclusive = true;
+            members = [
+              "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
+              "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
+              "gpt-oss-20b-GGUF:UD-Q4_K_XL"
+            ];
+          };
         };
         hooks = {
           on_startup = {
