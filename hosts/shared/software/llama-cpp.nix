@@ -165,7 +165,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size 4096 \
+              --ubatch-size 2048 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
