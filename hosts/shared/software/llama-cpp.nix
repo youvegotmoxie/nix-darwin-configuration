@@ -68,24 +68,14 @@ in {
       settings = {
         routing = {
           router = {
-            use = "matrix";
+            use = "group";
             settings = {
-              vars = {
-                g2 = "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL";
-                q4 = "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL";
-                g4 = "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL";
-                g12 = "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL";
-                gp = "gpt-oss-20b-GGUF:UD-Q4_K_XL";
-              };
-              evict_costs = {
-                g12 = 10;
-                gp = 20;
-              };
-              sets = {
-                small = "g2 & q4";
-                small_g4 = "+small & g4";
-                small_g12 = "+small & g12";
-                small_gp = "+small & gp";
+              groups = {
+                "main-small" = {
+                  swap = false;
+                  exclusive = false;
+                  members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
+                };
               };
             };
           };
