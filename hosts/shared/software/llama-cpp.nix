@@ -124,7 +124,7 @@ in {
               --kv-unified \
               --prio 2
             '';
-            ttl = 60;
+            ttl = 300;
             aliases = [
               "gemma-4-e4b"
             ];
@@ -153,7 +153,7 @@ in {
               --kv-unified \
               --prio 2
             '';
-            ttl = 60;
+            ttl = 300;
             aliases = [
               "gemma-4-12B"
             ];
@@ -207,7 +207,7 @@ in {
               --kv-unified \
               --prio 2
             '';
-            ttl = 60;
+            ttl = 300;
             aliases = [
               "gpt-oss-20B"
             ];
