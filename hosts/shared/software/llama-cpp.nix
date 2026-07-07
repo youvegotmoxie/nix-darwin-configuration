@@ -128,7 +128,6 @@ in {
             aliases = [
               "gemma-4-e2b"
             ];
-            ttl = 1800;
           };
           "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
@@ -212,7 +211,6 @@ in {
             aliases = [
               "qwen3-4b-instruct"
             ];
-            ttl = 1800;
           };
           "gpt-oss-20b-GGUF:UD-Q4_K_XL" = {
             cmd = ''
