@@ -73,8 +73,8 @@ in {
               groups = {
                 "main-small" = {
                   swap = false;
-                  exclusive = true;
-                  members = ["gemma-4-e2b" "qwen3-4b-instruct"];
+                  exclusive = false;
+                  members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
                 };
               };
             };
@@ -82,7 +82,7 @@ in {
         };
         hooks = {
           on_startup = {
-            preload = ["gemma-4-e2b" "qwen3-4b-instruct"];
+            preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
           };
         };
         healthCheckTimeout = 60;
