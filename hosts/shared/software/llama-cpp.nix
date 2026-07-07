@@ -70,8 +70,6 @@ in {
           settings = {
             groups = {
               "main-small" = {
-                swap = true;
-                exclusive = false;
                 members = ["gemma-4-e2b" "qwen3-4b-instruct"];
               };
             };
