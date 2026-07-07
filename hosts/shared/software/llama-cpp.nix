@@ -74,7 +74,7 @@ in {
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL \
-              --n-gpu-layers 99 \
+              --gpu-layers 99 \
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
@@ -102,7 +102,7 @@ in {
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL \
-              --n-gpu-layers 99 \
+              --gpu-layers 99 \
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
@@ -128,7 +128,7 @@ in {
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL \
-              --n-gpu-layers 99 \
+              --gpu-layers 99 \
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
@@ -156,7 +156,7 @@ in {
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL \
-              --n-gpu-layers 99 \
+              --gpu-layers 99 \
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
@@ -183,7 +183,7 @@ in {
               ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gpt-oss-20b-GGUF:UD-Q4_K_XL \
-              --n-gpu-layers 99 \
+              --gpu-layers 99 \
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
