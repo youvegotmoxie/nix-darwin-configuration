@@ -139,7 +139,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size ${default-ubatch-size} \
+              --ubatch-size ${toString default-ubatch-size} \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -166,7 +166,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size ${default-ubatch-size} \
+              --ubatch-size ${toString default-ubatch-size} \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -195,7 +195,7 @@ in {
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
-              --ubatch-size ${default-ubatch-size} \
+              --ubatch-size ${toString default-ubatch-size} \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 0 \
@@ -222,7 +222,7 @@ in {
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
-              --ubatch-size ${default-ubatch-size} \
+              --ubatch-size ${toString default-ubatch-size} \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-format auto \
