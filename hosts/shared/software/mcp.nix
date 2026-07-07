@@ -1,4 +1,8 @@
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   cfg = config.extras.extraPackages;
 in {
   programs.mcp = {
@@ -13,7 +17,7 @@ in {
         args = ["-y" "terraform-mcp-server"];
       };
       nixos = {
-        command = "uvx";
+        command = "${pkgs.uv}/bin/uvx";
         args = ["mcp-nixos"];
       };
     };
