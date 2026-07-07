@@ -82,7 +82,7 @@ in {
         };
         hooks = {
           on_startup = {
-            preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
+            preload = ["main-small"];
           };
         };
         healthCheckTimeout = 60;
