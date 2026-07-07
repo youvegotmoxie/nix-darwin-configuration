@@ -71,7 +71,7 @@ in {
             groups = {
               "main-small" = {
                 swap = false;
-                exclusive = true;
+                exclusive = false;
                 members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
               };
             };
