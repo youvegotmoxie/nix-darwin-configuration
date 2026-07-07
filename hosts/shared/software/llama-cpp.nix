@@ -4,7 +4,7 @@
   ...
 }: let
   llama-swap = pkgs.llama-swap.overrideAttrs (oldAttrs: {
-    version = "235";
+    version = "236";
     src = pkgs.fetchFromGitHub {
       owner = "mostlygeek";
       repo = "llama-swap";
