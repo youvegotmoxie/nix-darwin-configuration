@@ -207,9 +207,6 @@ in {
         };
       };
     };
-    lact = {
-      enable = true;
-    };
     llama-cpp = {
       enable = false;
       package = llama-cpp;
