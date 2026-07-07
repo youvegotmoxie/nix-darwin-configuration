@@ -67,10 +67,15 @@ in {
       listenAddress = "0.0.0.0";
       settings = {
         routing = {
-          settings = {
-            groups = {
-              "main-small" = {
-                members = ["gemma-4-e2b" "qwen3-4b-instruct"];
+          router = {
+            use = "group";
+            settings = {
+              groups = {
+                "main-small" = {
+                  swap = false;
+                  exclusive = true;
+                  members = ["gemma-4-e2b" "qwen3-4b-instruct"];
+                };
               };
             };
           };
