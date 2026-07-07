@@ -67,15 +67,12 @@ in {
       listenAddress = "0.0.0.0";
       settings = {
         routing = {
-          router = {
-            settings = {
-              groups = {
-                "main-small" = {
-                  swap = false;
-                  persistent = true;
-                  exclusive = true;
-                  members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
-                };
+          settings = {
+            groups = {
+              "main-small" = {
+                swap = false;
+                exclusive = true;
+                members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
               };
             };
           };
