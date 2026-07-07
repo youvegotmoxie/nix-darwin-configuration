@@ -76,8 +76,8 @@ in {
             swap = false;
             exclusive = true;
             members = [
-              "gemma-4-e2b"
-              "qwen3-4b-instruct"
+              "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL"
+              "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"
             ];
           };
           "medium" = {
@@ -87,15 +87,15 @@ in {
             swap = true;
             exclusive = true;
             members = [
-              "gemma-4-e4b"
-              "gemma-4-12B"
-              "gpt-oss-20B"
+              "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
+              "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
+              "gpt-oss-20b-GGUF:UD-Q4_K_XL"
             ];
           };
         };
         hooks = {
           on_startup = {
-            preload = ["gemma-4-e2b" "qwen3-4b-instruct"];
+            preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
           };
         };
         healthCheckTimeout = 60;
