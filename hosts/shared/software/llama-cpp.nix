@@ -98,7 +98,7 @@ in {
             preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
           };
         };
-        healthCheckTimeout = 60;
+        healthCheckTimeout = 120;
         sendLoadingState = true;
         models = {
           "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" = {
@@ -110,7 +110,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size 4096 \
+              --ubatch-size 2048 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -138,7 +138,7 @@ in {
               --flash-attn on \
               --ctx-size 128000 \
               --batch-size 4096 \
-              --ubatch-size 4096 \
+              --ubatch-size 2048 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
@@ -194,7 +194,7 @@ in {
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
-              --ubatch-size 4096 \
+              --ubatch-size 2048 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 0 \
@@ -221,7 +221,7 @@ in {
               --flash-attn on \
               --ctx-size 64000 \
               --batch-size 4096 \
-              --ubatch-size 4096 \
+              --ubatch-size 2048 \
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-format auto \
