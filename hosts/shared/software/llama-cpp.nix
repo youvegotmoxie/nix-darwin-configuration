@@ -79,7 +79,7 @@ in {
         };
         hooks = {
           on_startup = {
-            preload = ["gemma-4-e2b"];
+            preload = ["gemma-4-e2b" "qwen3-4b-instruct"];
           };
         };
         healthCheckTimeout = 60;
