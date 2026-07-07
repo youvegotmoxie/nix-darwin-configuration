@@ -52,6 +52,8 @@
       '';
     });
 in {
+  # Use a normal user to run llama-swap so a homedir gets created
+  # which makes managing things far easier, especially with the hf CLI tool
   users.users.llama-swap = {
     isNormalUser = true;
     group = "llama-swap";
