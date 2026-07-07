@@ -75,15 +75,15 @@ in {
               "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"
             ];
           };
-          "main-medium" = {
-            swap = true;
-            exclusive = false;
-            members = [
-              "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
-              "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
-              "gpt-oss-20b-GGUF:UD-Q4_K_XL"
-            ];
-          };
+          # "main-medium" = {
+          #   swap = true;
+          #   exclusive = false;
+          #   members = [
+          #     "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
+          #     "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
+          #     "gpt-oss-20b-GGUF:UD-Q4_K_XL"
+          #   ];
+          # };
         };
         hooks = {
           on_startup = {
