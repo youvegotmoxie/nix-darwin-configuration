@@ -192,7 +192,7 @@ in {
               --hf-repo unsloth/Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
               --flash-attn on \
-              --ctx-size 64000 \
+              --ctx-size 128000 \
               --batch-size 4096 \
               --ubatch-size 1024 \
               --cache-type-k q8_0 \
