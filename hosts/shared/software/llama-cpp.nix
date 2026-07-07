@@ -116,7 +116,7 @@ in {
               --reasoning-budget 2048 \
               --spec-type draft-mtp \
               --spec-draft-n-max 3 \
-              --temp 1.0 \
+              --temp 0.7 \
               --top-p 0.95 \
               --top-k 64 \
               --jinja \
@@ -142,7 +142,7 @@ in {
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 2048 \
-              --temp 1.0 \
+              --temp 0.7 \
               --top-p 0.95 \
               --top-k 64 \
               --jinja \
@@ -171,7 +171,7 @@ in {
               --reasoning-budget 2048 \
               --spec-type draft-mtp \
               --spec-draft-n-max 3 \
-              --temp 1.0 \
+              --temp 0.7 \
               --top-p 0.95 \
               --top-k 64 \
               --jinja \
@@ -198,7 +198,7 @@ in {
               --cache-type-k q8_0 \
               --cache-type-v q8_0 \
               --reasoning-budget 0 \
-              --temp 1.0 \
+              --temp 0.7 \
               --top-p 0.95 \
               --top-k 20 \
               --min-p 0.00 \
@@ -226,7 +226,7 @@ in {
               --cache-type-v q8_0 \
               --reasoning-format auto \
               --reasoning-budget 2048 \
-              --temp 1.0 \
+              --temp 0.7 \
               --top-p 1.0 \
               --jinja \
               --cache-ram 32400 \
