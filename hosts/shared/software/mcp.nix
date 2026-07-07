@@ -17,7 +17,7 @@ in {
         args = ["-y" "terraform-mcp-server"];
       };
       nixos = {
-        command = "${pkgs.uvx}/bin/uvx";
+        command = "${pkgs.uv}/bin/uvx";
         args = ["mcp-nixos"];
       };
     };
