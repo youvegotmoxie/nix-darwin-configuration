@@ -163,7 +163,7 @@ in {
               --hf-repo unsloth/gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
               --flash-attn on \
-              --ctx-size 128000 \
+              --ctx-size 64000 \
               --batch-size 4096 \
               --ubatch-size 1024 \
               --cache-type-k q8_0 \
