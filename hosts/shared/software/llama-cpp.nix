@@ -66,6 +66,19 @@ in {
       package = llama-swap;
       listenAddress = "0.0.0.0";
       settings = {
+        routing = {
+          router = {
+            settings = {
+              groups = {
+                "main" = {
+                  swap = true;
+                  exclusive = true;
+                  members = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL"];
+                };
+              };
+            };
+          };
+        };
         hooks = {
           on_startup = {
             preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL"];
