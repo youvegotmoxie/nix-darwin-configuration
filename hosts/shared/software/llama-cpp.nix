@@ -25,7 +25,7 @@
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "9878";
+      version = "9892";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
@@ -58,7 +58,7 @@ in {
   };
   users.groups.llama-swap = {};
   environment = {
-    systemPackages = [llama-cpp];
+    systemPackages = [llama-cpp llama-swap];
   };
   services = {
     llama-swap = {
@@ -66,6 +66,11 @@ in {
       package = llama-swap;
       listenAddress = "0.0.0.0";
       settings = {
+        hooks = {
+          on_startup = {
+            preload = ["gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL"];
+          };
+        };
         healthCheckTimeout = 60;
         sendLoadingState = true;
         models = {
