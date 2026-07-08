@@ -26,7 +26,7 @@
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "9892";
+      version = "9905";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
@@ -60,12 +60,9 @@ in {
     group = "llama-swap";
   };
   users.groups.llama-swap = {};
-  environment = {
-    systemPackages = [llama-cpp llama-swap];
-  };
   services = {
     llama-swap = {
-      enable = true;
+      enable = false;
       package = llama-swap;
       listenAddress = "0.0.0.0";
       settings = {
@@ -244,7 +241,7 @@ in {
       };
     };
     llama-cpp = {
-      enable = false;
+      enable = true;
       package = llama-cpp;
       settings = {
         models-preset = "/var/lib/llama-cpp/models.ini";
