@@ -264,4 +264,5 @@ in {
       ProtectHome = lib.mkForce false;
     };
   };
+  environment.systemPackages = [llama-cpp];
 }
