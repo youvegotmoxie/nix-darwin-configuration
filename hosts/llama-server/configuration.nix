@@ -7,7 +7,10 @@
   lib,
   ...
 }: {
-  nixpkgs.hostPlatform = lib.mkDefault system;
+  nixpkgs = {
+    hostPlatform = lib.mkDefault system;
+    config.allowUnFree = true;
+  };
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
