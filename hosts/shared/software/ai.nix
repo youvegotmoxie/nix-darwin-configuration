@@ -88,6 +88,7 @@ in {
               "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL"
               "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL"
               "gpt-oss-20b-GGUF:UD-Q4_K_XL"
+              "Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M"
             ];
           };
         };
@@ -208,6 +209,36 @@ in {
             '';
             aliases = [
               "qwen3-4b-instruct"
+            ];
+          };
+          "Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M" = {
+            cmd = ''
+              ${llama-cpp}/bin/llama-server \
+              --port ''${PORT} \
+              --hf-repo unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M \
+              --gpu-layers 99 \
+              --flash-attn on \
+              --ctx-size 128000 \
+              --batch-size 4096 \
+              --ubatch-size ${toString default-ubatch-size} \
+              --cache-type-k q8_0 \
+              --cache-type-v q8_0 \
+              --reasoning-budget 0 \
+              --temp 0.7 \
+              --top-p 0.8 \
+              --top-k 20 \
+              --min-p 0.00 \
+              --repeat-penalty 1.05 \
+              --cpu-moe on \
+              --jinja \
+              --cache-ram 32400 \
+              --threads 16 \
+              --kv-unified \
+              --prio 2
+            '';
+            ttl = 120;
+            aliases = [
+              "qwen-3-coder-30B"
             ];
           };
           "gpt-oss-20b-GGUF:UD-Q4_K_XL" = {
