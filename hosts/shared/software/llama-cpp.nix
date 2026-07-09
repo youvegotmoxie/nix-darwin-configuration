@@ -20,15 +20,6 @@
       '';
     };
   });
-  open-webui = pkgs.open-webui.overrideAttrs (oldAttrs: {
-    version = "0.10.2";
-    src = pkgs.fetchFromGitHub {
-      owner = "open-webui";
-      repo = "open-webui";
-      tag = "v${oldAttrs.version}";
-      hash = "sha256-tJ9b5up5FoX5TrmpwMWevyA/o3Ai/lKsHu+nahc2Ttc=";
-    };
-  });
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -72,7 +63,6 @@ in {
   services = {
     open-webui = {
       enable = true;
-      package = open-webui;
       port = 3000;
       host = "0.0.0.0";
     };
