@@ -61,11 +61,6 @@ in {
   };
   users.groups.llama-swap = {};
   services = {
-    open-webui = {
-      enable = true;
-      port = 3000;
-      host = "0.0.0.0";
-    };
     llama-swap = {
       enable = false;
       package = llama-swap;
