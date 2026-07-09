@@ -67,7 +67,7 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: qwen3-coder-30B
+      - id: qwen-3-coder-30B
         name: "Qwen3 Coder 30B Instruct"
         description: "Fast, instruction and coding-optimized open-source model from Alibaba"
         context: 128000
