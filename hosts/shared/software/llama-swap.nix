@@ -185,7 +185,7 @@ in {
               --hf-repo unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M \
               --gpu-layers 99 \
               --flash-attn on \
-              --ctx-size 128000 \
+              --ctx-size 64000 \
               --batch-size 4096 \
               --ubatch-size ${toString default-ubatch-size} \
               --cache-type-k q8_0 \
