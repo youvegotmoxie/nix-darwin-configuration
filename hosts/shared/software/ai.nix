@@ -230,6 +230,7 @@ in {
               --min-p 0.00 \
               --repeat-penalty 1.05 \
               --cpu-moe on \
+              --no-mmap \
               --jinja \
               --cache-ram 32400 \
               --threads 16 \
@@ -257,6 +258,7 @@ in {
               --reasoning-budget 2048 \
               --temp 0.7 \
               --top-p 1.0 \
+              --no-mmap \
               --jinja \
               --cache-ram 32400 \
               --threads 16 \
