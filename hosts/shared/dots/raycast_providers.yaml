@@ -51,6 +51,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: gemma-4-26B
+        name: "Gemma4 26B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
       - id: qwen3-4b-instruct
         name: "Qwen3 4B Instruct"
         description: "Fast, instruction-optimized open-source model from Alibaba"
