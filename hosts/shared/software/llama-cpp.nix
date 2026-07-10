@@ -41,6 +41,8 @@ in {
         host = "0.0.0.0";
         port = 8080;
         cache-ram = 32400;
+        cache-type-k = "q8_0";
+        cache-type-v = "q8_0";
         threads = 16;
         kv-unified = true;
         jinja = true;
