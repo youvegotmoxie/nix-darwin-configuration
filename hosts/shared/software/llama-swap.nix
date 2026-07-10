@@ -88,6 +88,7 @@ in {
               --kv-unified \
               --prio 2
             '';
+            ttl = 1800;
             aliases = [
               "gemma-4-e2b"
             ];
@@ -143,7 +144,7 @@ in {
               --kv-unified \
               --prio 2
             '';
-            ttl = 300;
+            ttl = 120;
             aliases = [
               "gemma-4-12B"
             ];
@@ -171,6 +172,7 @@ in {
               --kv-unified \
               --prio 2
             '';
+            ttl = 900;
             aliases = [
               "qwen3-4b-instruct"
             ];
@@ -229,7 +231,7 @@ in {
               --kv-unified \
               --prio 2
             '';
-            ttl = 300;
+            ttl = 120;
             aliases = [
               "gpt-oss-20B"
             ];
