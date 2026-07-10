@@ -1,4 +1,5 @@
-{ pkgs, ... }: let
+{ pkgs, lib, config, ... }: let
+  llama-cpp = config.services.llama-cpp.package;
   default-ubatch-size = 2048;
   llama-swap = pkgs.llama-swap.overrideAttrs (oldAttrs: {
     version = "236";
@@ -66,7 +67,7 @@ in {
         models = {
           "gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
-              ${pkgs.llama-cpp}/bin/llama-server \
+              ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
@@ -95,7 +96,7 @@ in {
           };
           "gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
-              ${pkgs.llama-cpp}/bin/llama-server \
+              ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-E4B-it-qat-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
@@ -122,7 +123,7 @@ in {
           };
           "gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL" = {
             cmd = ''
-              ${pkgs.llama-cpp}/bin/llama-server \
+              ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gemma-4-12B-it-qat-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
@@ -151,7 +152,7 @@ in {
           };
           "Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL" = {
             cmd = ''
-              ${pkgs.llama-cpp}/bin/llama-server \
+              ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/Qwen3-4B-Instruct-2507-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
@@ -179,7 +180,7 @@ in {
           };
           "Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M" = {
             cmd = ''
-              ${pkgs.llama-cpp}/bin/llama-server \
+              ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M \
               --gpu-layers 99 \
@@ -210,7 +211,7 @@ in {
           };
           "gpt-oss-20b-GGUF:UD-Q4_K_XL" = {
             cmd = ''
-              ${pkgs.llama-cpp}/bin/llama-server \
+              ${llama-cpp}/bin/llama-server \
               --port ''${PORT} \
               --hf-repo unsloth/gpt-oss-20b-GGUF:UD-Q4_K_XL \
               --gpu-layers 99 \
@@ -242,9 +243,10 @@ in {
   };
   systemd.services.llama-swap = {
     serviceConfig = {
-      User = "llama-swap";
-      DynamicUser = false;
-      ProtectHome = false;
+      User = lib.mkForce "llama-swap";
+      Group = lib.mkForce "llama-swap";
+      DynamicUser = lib.mkForce false;
+      ProtectHome = lib.mkForce false;
     };
   };
 }
