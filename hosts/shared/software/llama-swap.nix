@@ -2,7 +2,7 @@
   llama-cpp = config.services.llama-cpp.package;
   default-ubatch-size = 2048;
   llama-swap = pkgs.llama-swap.overrideAttrs (oldAttrs: {
-    version = "236";
+    version = "238";
     src = pkgs.fetchFromGitHub {
       owner = "mostlygeek";
       repo = "llama-swap";
