@@ -1,7 +1,11 @@
-{
+{flake-inputs, pkgs, ...}: let
+# Work around broken nixpkgs-unstable starship
+starship = flake-inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.starship;
+in {
   # Configure Starship prompt
   programs.starship = {
     enable = true;
+    package = starship;
     settings = {
       format = "$terraform$nix_shell$python$hostname$directory$git_branch$git_state$git_status$kubernetes$cmd_duration$line_break$character";
       command_timeout = 3600;
