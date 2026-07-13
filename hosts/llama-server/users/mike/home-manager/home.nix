@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   config,
   ...
 }: {
@@ -13,6 +14,7 @@
     ../../../../shared/software/starship.nix
     ../../../../shared/software/zoxide.nix
     ../../../../shared/software/git.nix
+    ../../../../shared/software/btop.nix
   ];
   # Configure SSH agent socket
   zshConfig = {
@@ -26,6 +28,13 @@
       email = "youvegotmoxie@gmail.com";
       gpgKey = "A6B4C8E1BAEA348F";
     };
+  };
+
+  programs.btop = {
+    package = lib.mkForce pkgs.btop-rocm;
+    settings = lib.mkMerge [{
+      net_iface = "enp35s0";
+    }];
   };
 
   extras.extraPackages = {
