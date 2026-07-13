@@ -33,7 +33,7 @@
   programs.btop = {
     package = lib.mkForce pkgs.btop-rocm;
     settings = lib.mkMerge [{
-      net_iface = "enp35s0";
+      net_iface = lib.mkForce "enp35s0";
     }];
   };
 
