@@ -7,14 +7,15 @@
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software/atuin.nix
-    ../../../../shared/software/tmux.nix
-    ../../../../shared/software/fzf.nix
-    ../../../../shared/software/zsh.nix
-    ../../../../shared/software/mcp.nix
-    ../../../../shared/software/starship.nix
-    ../../../../shared/software/zoxide.nix
-    ../../../../shared/software/git.nix
     ../../../../shared/software/btop.nix
+    ../../../../shared/software/fzf.nix
+    ../../../../shared/software/git.nix
+    ../../../../shared/software/mcp.nix
+    ../../../../shared/software/misc.nix
+    ../../../../shared/software/starship.nix
+    ../../../../shared/software/tmux.nix
+    ../../../../shared/software/zoxide.nix
+    ../../../../shared/software/zsh.nix
   ];
   # Configure SSH agent socket
   zshConfig = {
