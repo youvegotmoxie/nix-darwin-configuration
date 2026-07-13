@@ -1,7 +1,7 @@
 providers:
   - id: llama-cpp
     name: "llama.cpp"
-    base_url: http://192.168.148.125:8080/v1
+    base_url: http://192.168.148.125:9292/v1
     models:
       - id: gemma-4-e2b
         name: "Gemma4 E2B"
