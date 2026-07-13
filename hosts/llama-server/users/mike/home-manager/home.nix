@@ -30,6 +30,7 @@
     };
   };
 
+  # Override global btop configuration since that's based on macOS
   programs.btop = {
     package = lib.mkForce pkgs.btop-rocm;
     settings = lib.mkMerge [{
