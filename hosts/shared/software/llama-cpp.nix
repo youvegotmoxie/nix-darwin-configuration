@@ -1,8 +1,9 @@
 { pkgs, ... }: let
   llama-cpp =
     (pkgs.llama-cpp.override {
-      rocmSupport = true;
+      # rocmSupport = true;
       blasSupport = true;
+      vulkanSupport = true;
     }).overrideAttrs
     (oldAttrs: {
       version = "9964";
@@ -22,8 +23,8 @@
         (oldAttrs.cmakeFlags or [])
         ++ [
           "-DGGML_NATIVE=ON"
-          "-DGGML_HIP=ON"
-          "-DGPU_TARGETS=gfx1201"
+          # "-DGGML_HIP=ON"
+          "-DGPU_TARGETS=gfx1151"
           "-DCMAKE_BUILD_TYPE=Release"
         ];
       preConfigure = ''
@@ -34,7 +35,7 @@
 in {
   services = {
     llama-cpp = {
-      enable = false;
+      enable = true;
       package = llama-cpp;
       settings = {
         models-preset = "/var/lib/llama-cpp/models.ini";

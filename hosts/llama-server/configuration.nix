@@ -83,6 +83,7 @@
   # };
   services = {
     openssh.enable = true;
+    llama-cpp.enable = lib.mkForce false;
   };
 
   virtualisation.docker = {

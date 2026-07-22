@@ -91,9 +91,6 @@
   services = {
     openssh.enable = true;
     fwupd.enable = true;
-    llama-cpp = {
-      enable = lib.mkDefault true;
-    };
   };
 
   virtualisation.docker = {
