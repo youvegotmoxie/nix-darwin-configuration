@@ -52,7 +52,6 @@
     systemPackages = with pkgs; [
       rocmPackages.rocm-smi
       cmake
-      fwupd
       git
       home-manager
       inputs.nil.packages.${system}.nil
@@ -85,7 +84,6 @@
   services = {
     openssh.enable = true;
     llama-cpp.enable = lib.mkForce false;
-    fwupd.enable = true;
   };
 
   virtualisation.docker = {
