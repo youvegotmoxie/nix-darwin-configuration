@@ -51,6 +51,8 @@ in {
       };
     };
   };
+  # Workaround for high GPU usage while idle
+  # https://github.com/ggml-org/llama.cpp/issues/3929
   systemd.services.llama-cpp.serviceConfig = lib.mkMerge [{
     Environment = "GPU_MAX_HW_QUEUES=1";
   }];
