@@ -9,3 +9,5 @@
 [mac homelab server](./hosts/mike-mac-pro/)
 
 [nixos homelab server](./hosts/llama-server/)
+
+[framework desktop](./hosts/fw-desktop/)
