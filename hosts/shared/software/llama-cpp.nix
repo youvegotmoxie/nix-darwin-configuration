@@ -1,4 +1,4 @@
-{ pkgs, ... }: let
+{ pkgs, lib, ... }: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -51,5 +51,7 @@ in {
       };
     };
   };
-
+  systemd.services.llama-cpp.serviceConfig = lib.mkMerge [{
+    Environment = "GPU_MAX_HW_QUEUES=1";
+  }];
 }
