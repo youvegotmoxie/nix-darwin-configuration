@@ -15,6 +15,11 @@
   ];
 
   boot = {
+    kernelParams = [
+      "amdgpu.gttsize=126976"
+      "amd_iommu=off"
+      "ttm.pages_limit=32505856"
+    ];
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
