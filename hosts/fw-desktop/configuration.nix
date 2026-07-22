@@ -15,6 +15,7 @@
   ];
 
   boot = {
+    # Let the GPU use up to 126GiB of system memory
     kernelParams = [
       "amdgpu.gttsize=126976"
       "amd_iommu=off"
