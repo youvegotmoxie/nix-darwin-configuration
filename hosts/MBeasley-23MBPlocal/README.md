@@ -1,3 +1,11 @@
+# MBeasley-23MBPlocal
+
+Apple Silicon MacBook Pro (16", 2023)
+
+## Hardware
+- CPU: Apple M2 Pro
+- Memory: 32GiB unified memory
+
 ## Nix Packages
 - act
 - alejandra

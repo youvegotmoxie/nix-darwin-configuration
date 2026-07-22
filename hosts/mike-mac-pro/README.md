@@ -1,3 +1,11 @@
+# mike-mac-pro
+
+Intel Mac Pro (Late 2013, MacPro6,1)
+
+## Hardware
+- CPU: Intel Xeon E5 (6-core / 12-thread)
+- Memory: 16GiB DDR3 ECC RAM
+
 ## Nix Packages
 - alejandra
 - atuin

@@ -1,3 +1,11 @@
+# mike-macbook-pro
+
+Apple Silicon MacBook Pro (Late 2025)
+
+## Hardware
+- CPU: Apple M5 Pro
+- Memory: 24GiB unified memory
+
 ## Nix Packages
 - alejandra
 - atuin
