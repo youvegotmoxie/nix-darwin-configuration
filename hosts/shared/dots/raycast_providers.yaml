@@ -1,74 +1,6 @@
 providers:
   - id: llama-cpp
     name: "llama.cpp"
-    base_url: http://192.168.148.148:8080/v1
-    models:
-      - id: gemma-4-26B
-        name: "Gemma4 26B"
-        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 256000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      - id: qwen-3-coder-30B
-        name: "Qwen3 Coder 30B Instruct"
-        description: "Fast, instruction and coding-optimized open-source model from Alibaba"
-        context: 256000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      - id: gpt-oss-20B
-        name: "GPT-OSS 20B"
-        description: "An open-source model from OpenAI"
-        context: 131072
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      - id: qwen-3.5-122B-A10B
-        name: "Qwen3.5 122B"
-        description: "Highly capable open-source model from Alibaba"
-        context: 256000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-  - id: llama-swap
-    name: "llama-swap"
     base_url: http://192.168.148.125:9292/v1
     models:
       - id: gemma-4-e2b
@@ -145,6 +77,86 @@ providers:
             supported: true
           vision:
             supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: ornith-1.0-35B
+        name: "Ornith 1.0 35B"
+        description: "Fast, open-source model from DeepReinforce AI"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: gemma-4-26B
+        name: "Gemma4 26B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 256000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: qwen-3-coder-30B
+        name: "Qwen3 Coder 30B Instruct"
+        description: "Fast, instruction and coding-optimized open-source model from Alibaba"
+        context: 256000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: gpt-oss-20B
+        name: "GPT-OSS 20B"
+        description: "An open-source model from OpenAI"
+        context: 131072
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: qwen-3.5-122B-A10B
+        name: "Qwen3.5 122B"
+        description: "Highly capable open-source model from Alibaba"
+        context: 256000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
           system_message:
             supported: true
           tools:
