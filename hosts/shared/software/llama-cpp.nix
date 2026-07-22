@@ -1,9 +1,9 @@
 { pkgs, ... }: let
   llama-cpp =
     (pkgs.llama-cpp.override {
-      # rocmSupport = true;
+      rocmSupport = true;
       blasSupport = true;
-      vulkanSupport = true;
+      # vulkanSupport = true;
     }).overrideAttrs
     (oldAttrs: {
       version = "9964";
@@ -23,7 +23,7 @@
         (oldAttrs.cmakeFlags or [])
         ++ [
           "-DGGML_NATIVE=ON"
-          # "-DGGML_HIP=ON"
+          "-DGGML_HIP=ON"
           "-DGPU_TARGETS=gfx1151"
           "-DCMAKE_BUILD_TYPE=Release"
         ];
