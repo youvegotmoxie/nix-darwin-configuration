@@ -6,7 +6,7 @@
       # vulkanSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "9964";
+      version = "10081";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
