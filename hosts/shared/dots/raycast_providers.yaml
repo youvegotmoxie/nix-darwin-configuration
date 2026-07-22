@@ -51,6 +51,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: qwen-3.5-122B-A10B
+        name: "Qwen3.5 122B"
+        description: "Highly capable open-source model from Alibaba"
+        context: 256000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: llama-swap
     name: "llama-swap"
     base_url: http://192.168.148.125:9292/v1
