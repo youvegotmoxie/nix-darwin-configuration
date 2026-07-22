@@ -55,6 +55,14 @@
           ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
           ControlPersist = "2h";
         };
+        "fw-desktop" = {
+          Hostname = "192.168.148.148";
+          User = "mike";
+          Port = 22;
+          ControlMaster = "auto";
+          ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
+          ControlPersist = "2h";
+        };
       }
     ];
   };
