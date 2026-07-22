@@ -90,6 +90,7 @@
   # };
   services = {
     openssh.enable = true;
+    fwupd.enable = true;
   };
 
   virtualisation.docker = {
