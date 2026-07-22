@@ -113,6 +113,10 @@
       };
     };
     nixosConfigurations = {
+      "fw-desktop" = mkNixOSHost {
+        mainUser = "mike";
+        hostDir = "fw-desktop";
+      };
       "llama-server" = mkNixOSHost {
         mainUser = "mike";
         hostDir = "llama-server";
