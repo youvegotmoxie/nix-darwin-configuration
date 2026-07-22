@@ -1,7 +1,7 @@
 { mainUser, lib, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ../shared/configuration.nix
+    ../../hosts/shared/configuration.nix
   ];
 
   services.llama-cpp.enable = lib.mkForce false;
