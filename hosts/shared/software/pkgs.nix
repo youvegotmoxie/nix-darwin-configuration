@@ -44,12 +44,12 @@
   # Helm v4 is not available in nixpkgs
   helm4 = pkgs.stdenv.mkDerivation (finalAttrs: {
     pname = "helm";
-    version = "4.2.1";
+    version = "4.2.3";
     sourceRoot = ".";
     src = pkgs.fetchzip {
       name = finalAttrs.pname;
       url = "https://get.${finalAttrs.pname}.sh/${finalAttrs.pname}-v${finalAttrs.version}-darwin-arm64.tar.gz";
-      hash = "sha256-rZFwaCQvECxqUhY0kY1DLv36IKnyHos2QVLeXWxT/bI=";
+      hash = "sha256-zPD0mkwE2bV79mCVRGeSWr4Z2Iqup6Hg7tHSafy6vZA=";
       stripRoot = false;
     };
     installPhase = ''
