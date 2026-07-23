@@ -155,7 +155,7 @@ in {
       "youvegotmoxie/homebrew-tap"
     ];
     brews = [
-      "tw93/tap/mole"
+      "mole"
     ];
     casks = [
       "alcove"
@@ -167,7 +167,7 @@ in {
       "raycast"
       "thaw"
       "timemachinestatus"
-      "youvegotmoxie/homebrew-tap/omlx"
+      "omlx"
       "zed"
     ];
     masApps = {
