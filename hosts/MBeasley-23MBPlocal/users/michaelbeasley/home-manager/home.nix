@@ -9,10 +9,12 @@
   # Configure SSH agent socket and add work shell aliases
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-    workAliases.enable = true;
+    workAliases = {
+      enable = true;
+    };
   };
-  extras.extraPackages = {
-    workOnly.enable = true;
+  extras.extraPackages.workOnly = {
+    enable = true;
   };
 
   # See shared/software/sops.nix for Launchd configuration

@@ -6,16 +6,6 @@
 }: let
   cfg = config.zshConfig;
 in {
-  options.zshConfig.ssh = {
-    socketPath = lib.mkOption {
-      type = lib.types.str;
-      description = "Path to SSH agent socket";
-      default = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
-    };
-  };
-  options.zshConfig.workAliases = {
-    enable = lib.mkEnableOption "zshConfig.workAliases" // {default = false;};
-  };
   config = {
     programs.zsh = {
       enable = true;

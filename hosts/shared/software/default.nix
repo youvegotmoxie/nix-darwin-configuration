@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./options.nix
     ./atuin.nix
     ./btop.nix
     ./fzf.nix

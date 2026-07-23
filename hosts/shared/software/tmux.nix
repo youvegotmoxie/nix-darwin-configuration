@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }: let
   cfg = config.extras.extraPackages;
@@ -26,9 +25,6 @@
       '';
     };
 in {
-  options.extras.extraPackages.serverOnly = {
-    enable = lib.mkEnableOption "extras.extraPackages.serverOnly" // {default = false;};
-  };
   config = {
     programs.tmux = {
       enable = cfg.serverOnly.enable;

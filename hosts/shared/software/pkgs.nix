@@ -87,12 +87,6 @@
 
   cfg = config.extras.extraPackages;
 in {
-  options.extras.extraPackages.workOnly = {
-    enable = lib.mkEnableOption "extras.extraPackages.workOnly" // {default = false;};
-  };
-  options.extras.extraPackages.appleSiliconOnly = {
-    enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // {default = true;};
-  };
   config = {
     home = {
       packages = with pkgs;
