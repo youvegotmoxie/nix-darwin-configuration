@@ -8,6 +8,7 @@
     # shared modules in root of hosts dir
     ../../../../shared/software/atuin.nix
     ../../../../shared/software/btop.nix
+    ../../../../shared/software/options.nix
     ../../../../shared/software/fzf.nix
     ../../../../shared/software/git.nix
     ../../../../shared/software/mcp.nix
