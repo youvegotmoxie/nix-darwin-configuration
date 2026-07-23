@@ -155,6 +155,7 @@ in {
       "youvegotmoxie/homebrew-tap"
     ];
     brews = [
+      "anomalyco/tap/opencode"
       "tw93/tap/mole"
     ];
     casks = [
