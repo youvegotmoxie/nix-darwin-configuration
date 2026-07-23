@@ -9,11 +9,13 @@
   # Use Homebrew for things not working with nixpkgs on macOS
   homebrew = {
     brews = [
+      "anomalyco/tap/opencode"
       "argocd"
       "helm-ls"
     ];
     casks = [
       "aptakube"
+      "obsidian"
     ];
     masApps = {
       "AWS Extend Switch Roles" = 1592710340;
