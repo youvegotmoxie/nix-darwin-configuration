@@ -5,6 +5,8 @@
   ];
 
   services.llama-cpp.enable = lib.mkForce false;
+  # This is needed because llama-cpp.nix writes entries to the llama-cpp systemd unit file
+  # Otherwise we get a unit file containing only env vars
   systemd.services.llama-cpp.enable = lib.mkForce false;
 
   users.users.${mainUser}.openssh.authorizedKeys.keys = [
