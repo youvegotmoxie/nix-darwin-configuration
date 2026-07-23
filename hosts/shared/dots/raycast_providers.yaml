@@ -66,7 +66,7 @@ providers:
           tools:
             supported: true
           reasoning_effort:
-            supported: true
+            supported: false
       - id: ornith-1.0-9B
         name: "Ornith 1.0 9B"
         description: "Fast, instruction-optimized open-source model from DeepReinforce AI"
@@ -76,7 +76,7 @@ providers:
           temperature:
             supported: true
           vision:
-            supported: false
+            supported: true
           system_message:
             supported: true
           tools:
@@ -92,7 +92,7 @@ providers:
           temperature:
             supported: true
           vision:
-            supported: false
+            supported: true
           system_message:
             supported: true
           tools:
@@ -130,7 +130,7 @@ providers:
           tools:
             supported: true
           reasoning_effort:
-            supported: true
+            supported: false
       - id: gpt-oss-20B
         name: "GPT-OSS 20B"
         description: "An open-source model from OpenAI"
