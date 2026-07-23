@@ -3,7 +3,6 @@
     (pkgs.llama-cpp.override {
       rocmSupport = true;
       blasSupport = true;
-      # vulkanSupport = true;
     }).overrideAttrs
     (oldAttrs: {
       version = "10081";
