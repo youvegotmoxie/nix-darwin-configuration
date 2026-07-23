@@ -24,6 +24,12 @@
     };
   };
 
+  programs.btop = {
+    settings = lib.mkMerge [{
+      net_iface = lib.mkForce "en2";
+    }];
+  };
+
   # Configure SSH agent socket
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
