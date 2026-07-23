@@ -150,7 +150,7 @@ in {
       };
     };
     taps = [
-      "anomalyco/tap/opencode"
+      "anomalyco/tap"
       "tw93/tap"
       "youvegotmoxie/homebrew-tap"
     ];
