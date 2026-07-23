@@ -39,8 +39,8 @@
     }];
   };
 
-  extras.extraPackages = {
-    serverOnly.enable = true;
+  extras.extraPackages.serverOnly = {
+    enable = true;
   };
 
   home = {
