@@ -81,7 +81,6 @@
 
     file = {
       ".rustup/settings.toml".source = ./dots/rustup_settings.toml;
-      ".config/models.ini".source = ./dots/models.ini;
       ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
     };
   };
