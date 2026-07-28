@@ -67,12 +67,12 @@
   # Not available in nixpkgs
   claws = pkgs.buildGoLatestModule (finalAttrs: {
     pname = "claws";
-    version = "v0.17.0";
+    version = "v0.18.0";
     src = pkgs.fetchFromGitHub {
       owner = "clawscli";
       repo = finalAttrs.pname;
       tag = finalAttrs.version;
-      hash = "sha256-z5QzvmyUpswcUqlDm92WAnjTWWFSDHFWAl1bnFZmGq4=";
+      hash = "sha256-CnnU4OCO1Mslf7+fSu3scKHQ2LJWG+XxMtTyk9CIVYk=";
     };
     # This fails tests due to using `/homeless-shelter/.` Google buildroot nonsense
     doCheck = false;
