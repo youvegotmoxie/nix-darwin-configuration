@@ -140,23 +140,6 @@ providers:
           reasoning_effort:
             supported: true
       # fw-desktop
-      - id: minimax-m2.7
-        name: "MiniMax M2.7"
-        description: "MiniMax M2.7 is an open model for agentic coding and complex software engineering with 230B total parameters (10B active MoE)."
-        context: 256000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # fw-desktop
       - id: qwen-3.5-122B
         name: "Qwen3.5 122B"
         description: "Highly capable open-source model from Alibaba"
