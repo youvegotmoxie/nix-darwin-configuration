@@ -41,67 +41,12 @@
     };
 
     packages = with pkgs; [
-      alejandra
       amdgpu_top
-      bat
-      bat-extras.batman
-      delta
-      fd
-      findutils
-      gawk
-      gh
-      jq
       lazygit
-      nodejs_26
-      nh
-      nix-output-monitor
-      p7zip
-      prek
-      ripgrep
-      rustup
-      shfmt
-      tldr
-      tmux
-      ugrep
-      viddy
-      yq
     ];
 
     file = {
       ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
-      ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
     };
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-    # Disable the embedded ruby and python3 interpreters
-    withRuby = false;
-    withPython3 = false;
-    # Don't overwrite ~/.config/nvim/init.lua
-    sideloadInitLua = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    config = {
-      warn_timeout = "10m";
-    };
-    nix-direnv = {
-      enable = true;
-    };
-    enableZshIntegration = true;
-  };
-
-  programs.eza = {
-    enable = true;
-    enableZshIntegration = true;
-    git = true;
-    extraOptions = [
-      "-lahg"
-      "--git-repos-no-status"
-    ];
   };
 }

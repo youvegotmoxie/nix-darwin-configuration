@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }:
 {
@@ -18,6 +19,9 @@
       ".config/mole/whitelist_optimize".source = ../dots/mole_whitelist_optimize;
       ".config/raycast/ai/providers.yaml".source = ../dots/raycast_providers.yaml;
       "Library/Application Support/com.mitchellh.ghostty/config".source = ../dots/ghostty_config;
+    })
+    # Apple Silicon specific dotfiles
+    (lib.mkIf config.extras.extraPackages.appleSiliconOnly.enable {
       ".config/macmon.json".source = ../dots/macmon.json;
     })
   ];

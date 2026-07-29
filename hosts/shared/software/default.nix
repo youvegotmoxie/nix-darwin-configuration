@@ -11,8 +11,8 @@
     ./misc.nix
     ./pass.nix
     ./pkgs.nix
-    # TODO: Get this working on macOS and NixOS
-    # Currently only working on macOS
+    # sops.nix is Darwin-specific and is imported via mkDarwinHost in flake.nix
+    # Re-enable here once the Linux key path / launchd is figured out
     # ./sops.nix
     ./ssh.nix
     ./starship.nix

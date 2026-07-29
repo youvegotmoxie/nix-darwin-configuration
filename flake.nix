@@ -51,8 +51,9 @@
             home-manager = {
               users.${mainUser} = {
                 imports = [
-                  ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
                   sops-nix.homeManagerModules.sops
+                  ./hosts/shared/software/sops.nix
+                  ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
                   nix-index-database.homeModules.default
                 ];
               };

@@ -118,6 +118,7 @@ in {
           ugrep
           viddy
           yq
+          yubikey-manager
           # Scripts
           blame-line-pretty
           git-hunk
@@ -126,7 +127,6 @@ in {
         ++ (lib.optionals cfg.macOnly.enable [
           pam-reattach
           sops
-          yubikey-manager
         ])
         ++ (lib.optionals cfg.appleSiliconOnly.enable [
           macmon
