@@ -92,6 +92,7 @@ in {
       packages = with pkgs;
         [
           bat
+          bat-extras.batman
           delta
           fd
           findutils
@@ -116,7 +117,6 @@ in {
         ]
         ++ (lib.optionals (!cfg.minimal.enable) [
           alejandra
-          bat-extras.batman
           cmake
           jdk21_headless
           lazydocker
