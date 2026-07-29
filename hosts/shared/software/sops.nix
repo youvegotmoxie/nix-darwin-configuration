@@ -1,9 +1,10 @@
 {
   config,
-  pkgs,
   lib,
   ...
-}: {
+}:
+# Skip sops configuration on NixOS since it's not used and causes integration issues with sops-nix
+lib.mkIf (!config.systemd.user.enable) {
   # Setup done outside of Nix
   #
   #   ssh-keygen -f ~/.ssh/sops_ed25519 -N ''
@@ -26,15 +27,11 @@
   sops = {
     age = {
       sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
-      keyFile = if pkgs.stdenv.hostPlatform.isDarwin then
-        "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt"
-      else
-        "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+      keyFile = "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt";
     };
   };
 
-  # macOS-specific: launchd agent for GH_TOKEN
-  launchd.agents.gh-token-env = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
+  launchd.agents.gh-token-env = {
     enable = true;
     domain = "user";
     config = {
@@ -46,23 +43,6 @@
       RunAtLoad = true;
       WatchPaths = ["${config.home.homeDirectory}/.creds.d/gh_token"];
       ProcessType = "Background";
-    };
-  };
-
-  # NixOS-specific: systemd user service for GH_TOKEN
-  systemd.user.services.gh-token-env = lib.mkIf (!pkgs.stdenv.hostPlatform.isDarwin) {
-    enable = true;
-    serviceConfig = {
-      Type = "oneshot";
-      RemainAfterExit = true;
-      ExecStart = lib.escapeShellArgs [
-        "/bin/sh"
-        "-c"
-        "if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then /usr/bin/systemctl --user setenv GH_TOKEN \"$(cat ${config.home.homeDirectory}/.creds.d/gh_token)\"; fi"
-      ];
-    };
-    unitConfig = {
-      WatchPaths = ["${config.home.homeDirectory}/.creds.d"];
     };
   };
 }
