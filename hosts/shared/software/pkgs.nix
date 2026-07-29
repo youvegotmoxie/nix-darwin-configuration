@@ -109,7 +109,7 @@ in {
           nodejs_26
           noto-fonts
           p7zip
-          pam-reattach
+          (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin pam-reattach)
           pinentry-tty
           prek
           ripgrep

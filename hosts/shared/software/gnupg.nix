@@ -56,7 +56,7 @@ in {
       enable = true;
       enableExtraSocket = true;
       enableSshSupport = true;
-      pinentry.package = lib.mkIf (!pkgs.stdenv.hostPlatform.isDarwin) pkgs.pinentry-tty;
+      pinentry.package = if pkgs.stdenv.hostPlatform.isDarwin then pkgs.pinentry_mac else pkgs.pinentry_tty;
       defaultCacheTtl = 60;
       maxCacheTtl = 120;
       enableScDaemon = true;
