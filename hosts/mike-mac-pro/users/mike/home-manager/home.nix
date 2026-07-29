@@ -26,9 +26,7 @@
   };
 
   programs.btop = {
-    settings = lib.mkMerge [{
-      net_iface = lib.mkForce "en2";
-    }];
+    settings.net_iface = lib.mkForce "en2";
   };
 
   # Configure SSH agent socket
