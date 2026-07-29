@@ -1,4 +1,4 @@
-{ config, lib, ... }: {
+{ config, lib, pkgs, ... }: {
   options.extras = {
     extraPackages = {
       workOnly = {
@@ -8,10 +8,10 @@
         enable = lib.mkEnableOption "extras.extraPackages.serverOnly" // { default = false; };
       };
       appleSiliconOnly = {
-        enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // { default = true; };
+        enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // { default = pkgs.stdenv.hostPlatform.isDarwin && pkgs.stdenv.hostPlatform.isAarch64; };
       };
       macOnly = {
-        enable = lib.mkEnableOption "extras.extraPackages.macOnly" // { default = true; };
+        enable = lib.mkEnableOption "extras.extraPackages.macOnly" // { default = pkgs.stdenv.hostPlatform.isDarwin; };
       };
     };
   };

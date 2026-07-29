@@ -35,9 +35,6 @@
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
   };
-  extras.extraPackages.appleSiliconOnly = {
-    enable = false;
-  };
 
   # See shared/software/sops.nix for Launchd configuration
   # if secrets are needed outside of the shell environment
