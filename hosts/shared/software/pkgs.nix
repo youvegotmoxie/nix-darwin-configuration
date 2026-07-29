@@ -109,7 +109,6 @@ in {
           nodejs_26
           noto-fonts
           p7zip
-          (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin pam-reattach)
           pinentry-tty
           prek
           ripgrep
@@ -126,6 +125,9 @@ in {
           git-hunk
           gpg-push-pull-keys
         ]
+        ++ (lib.optionals cfg.macOnly.enable [
+          pam-reattach
+        ])
         ++ (lib.optionals cfg.appleSiliconOnly.enable [
           macmon
         ])

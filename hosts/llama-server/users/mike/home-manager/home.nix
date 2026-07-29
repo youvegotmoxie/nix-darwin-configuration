@@ -30,6 +30,7 @@
 
   extras.extraPackages = {
     serverOnly.enable = true;
+    appleSiliconOnly.enable = false;
     macOnly.enable = false;
   };
 
