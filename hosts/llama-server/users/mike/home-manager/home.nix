@@ -22,7 +22,7 @@
     };
   };
 
-  # Override global btop configuration for Linux (ROCm + correct network interface)
+  # Override global btop configuration
   programs.btop = {
     package = lib.mkForce pkgs.btop-rocm;
     settings.net_iface = lib.mkForce "enp35s0";

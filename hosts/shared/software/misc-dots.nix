@@ -5,13 +5,13 @@
 }:
 {
   home.file = lib.mkMerge [
-    # Common dotfiles for both platforms
+    # Common dotfiles
     {
       ".rustup/settings.toml".source = ../dots/rustup_settings.toml;
       ".vimrc".source = ../dots/dot_vimrc;
       ".zsh.d/func.sh".source = ../dots/func.sh;
     }
-    # macOS-specific dotfiles
+    # macOS specific dotfiles
     (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
       ".config/mole/whitelist".source = ../dots/mole_whitelist;
       ".config/mole/purge_paths".source = ../dots/mole_purge_paths;

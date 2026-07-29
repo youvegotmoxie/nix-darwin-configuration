@@ -22,14 +22,16 @@
     };
   };
 
-  # Override global btop configuration for Linux (ROCm + correct network interface)
+  # Override global btop configuration
   programs.btop = {
     package = lib.mkForce pkgs.btop-rocm;
     settings.net_iface = lib.mkForce "enp191s0";
   };
 
-  extras.extraPackages.serverOnly = {
-    enable = true;
+  extras.extraPackages = {
+    serverOnly.enable = true;
+    appleSiliconOnly.enable = false;
+    macOnly.enable = false;
   };
 
   home = {

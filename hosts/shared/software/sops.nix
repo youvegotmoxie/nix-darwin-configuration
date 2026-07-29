@@ -1,11 +1,20 @@
 {config, ...}: {
-  # macOS sops configuration for age-based encryption
-  # Setup done outside of Nix:
+  # Setup done outside of Nix
+  #
   #   ssh-keygen -f ~/.ssh/sops_ed25519 -N ''
+  #
   #   mkdir -p ~/Library/Application\ Support/sops/age
+  #
   #   nix run nixpkgs#ssh-to-age -- --private-key -i ~/.ssh/sops_ed25519 \
   #     > ~/Library/Application\ Support/sops/age/keys.txt
-  #   nix run nixpkgs#ssh-to-age < ~/.ssh/sops_ed25519.pub  # verify output matches keys.txt
+  #
+  # Make sure the output of this matches the keys.txt file
+  #
+  #   nix run nixpkgs#ssh-to-age < ~/.ssh/sops_ed25519.pub
+  #
+  # Create a secrets file
+  #
+  #   sops hosts/$HOST/users/$USER/home-manager/secrets/secrets.yaml
   #
   # A .sops.yaml in the repo root is needed for the initial bootstrapping
   # https://github.com/zendesk/helm-secrets/issues/121
@@ -16,7 +25,7 @@
     };
   };
 
-  # macOS launchd agent to set GH_TOKEN from encrypted secret
+  # Make this env var available outside of the terminal
   launchd.agents.gh-token-env = {
     enable = true;
     domain = "user";
