@@ -26,10 +26,10 @@
   sops = {
     age = {
       sshKeyPaths = ["${config.home.homeDirectory}/.ssh/sops_ed25519"];
-      keyFile = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin
+      keyFile = if pkgs.stdenv.hostPlatform.isDarwin then
         "${config.home.homeDirectory}/Library/Application Support/sops/age/keys.txt"
-        # Linux path (not currently used on NixOS)
-        ;
+      else
+        "${config.home.homeDirectory}/.config/sops/age/keys.txt";
     };
   };
 
