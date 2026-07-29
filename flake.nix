@@ -76,7 +76,6 @@
         inherit system;
         modules = [
           ./hosts/${hostDir}/configuration.nix
-          sops-nix.homeManagerModules.sops
           home-manager.nixosModules.home-manager
           {
             home-manager = {
