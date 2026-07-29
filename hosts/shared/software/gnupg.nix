@@ -56,7 +56,7 @@ in {
       enable = true;
       enableExtraSocket = true;
       enableSshSupport = true;
-      pinentry.package = lib.mkIf (!pkgs.stdenv.hostPlatform.isDarwin) pkgs.pinentry_tty;
+      pinentry.package = lib.mkIf (!pkgs.stdenv.hostPlatform.isDarwin) pkgs.pinentry-tty;
       defaultCacheTtl = 60;
       maxCacheTtl = 120;
       enableScDaemon = true;

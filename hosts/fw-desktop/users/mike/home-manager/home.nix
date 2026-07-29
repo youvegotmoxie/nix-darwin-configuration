@@ -6,17 +6,7 @@
 }: {
   imports = [
     # shared modules in root of hosts dir
-    ../../../../shared/software/atuin.nix
-    ../../../../shared/software/btop.nix
-    ../../../../shared/software/fzf.nix
-    ../../../../shared/software/git.nix
-    ../../../../shared/software/mcp.nix
-    ../../../../shared/software/misc.nix
-    ../../../../shared/software/options.nix
-    ../../../../shared/software/starship.nix
-    ../../../../shared/software/tmux.nix
-    ../../../../shared/software/zoxide.nix
-    ../../../../shared/software/zsh.nix
+    ../../../../shared/software
   ];
   # Configure SSH agent socket
   zshConfig = {
@@ -32,12 +22,10 @@
     };
   };
 
-  # Override global btop configuration since that's based on macOS
+  # Override global btop configuration for Linux (ROCm + correct network interface)
   programs.btop = {
     package = lib.mkForce pkgs.btop-rocm;
-    settings = lib.mkMerge [{
-      net_iface = lib.mkForce "enp191s0";
-    }];
+    settings.net_iface = lib.mkForce "enp191s0";
   };
 
   extras.extraPackages.serverOnly = {
@@ -80,7 +68,7 @@
     ];
 
     file = {
-      ".rustup/settings.toml".source = ./dots/rustup_settings.toml;
+      ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
       ".config/models.ini".source = ./dots/models.ini;
       ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
     };
