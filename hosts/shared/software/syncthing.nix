@@ -1,6 +1,6 @@
-{config, ...}: {
+{config, lib, ...}: {
   services.syncthing = {
-    enable = true;
+    enable = lib.mkIf config.extras.extraPackages.macOnly.enable true;
     overrideFolders = true;
     overrideDevices = true;
     settings = {
