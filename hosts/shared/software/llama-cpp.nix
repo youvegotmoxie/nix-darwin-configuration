@@ -5,7 +5,7 @@
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "10167";
+      version = "10182";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
