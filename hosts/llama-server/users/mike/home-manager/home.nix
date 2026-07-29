@@ -68,7 +68,7 @@
     ];
 
     file = {
-      ".rustup/settings.toml".source = ./dots/rustup_settings.toml;
+      ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
       ".zsh.d/func.sh".source = ../../../../shared/dots/func.sh;
     };
   };
