@@ -7,6 +7,11 @@
   cfg = config.gpgConfig;
 in {
   options.gpgConfig = {
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable GPG and gpg-agent";
+    };
     pubKey = lib.mkOption {
       type = lib.types.str;
       description = "Public GPG Key";
@@ -20,7 +25,7 @@ in {
       ];
     };
   };
-  config = {
+  config = lib.mkIf cfg.enable {
     programs.gpg = {
       enable = true;
       settings = {

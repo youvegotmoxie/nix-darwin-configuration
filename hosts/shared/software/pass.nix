@@ -1,8 +1,10 @@
 {
   pkgs,
   config,
+  lib,
   ...
-}: {
+}:
+lib.mkIf config.gpgConfig.enable {
   programs.password-store = {
     enable = true;
     package = pkgs.pass.withExtensions (extension: [extension.pass-checkup]);

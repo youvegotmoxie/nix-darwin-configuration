@@ -1,17 +1,13 @@
 {
   pkgs,
   lib,
-  config,
   ...
 }: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
   ];
-  # Configure SSH agent socket
-  zshConfig = {
-    ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-  };
+  gpgConfig.enable = false;
 
   # Configure git persona
   gitConfig = {
@@ -30,6 +26,7 @@
 
   extras.extraPackages = {
     serverOnly.enable = true;
+    minimal.enable = true;
   };
 
   home = {

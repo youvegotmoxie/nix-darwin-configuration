@@ -1,9 +1,9 @@
-{config, ...}: {
+{config, lib, ...}: {
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
     settings = {
-      "*" = {
+      "*" = lib.mkIf config.gpgConfig.enable {
         ForwardAgent = true;
         StreamLocalBindUnlink = "yes";
         IdentityAgent = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
