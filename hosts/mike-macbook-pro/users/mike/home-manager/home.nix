@@ -2,6 +2,8 @@
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
+    # macOS-specific: sops configuration (not available on NixOS)
+    ../../../../shared/software/sops.nix
     # Per host modules
     ./software
   ];

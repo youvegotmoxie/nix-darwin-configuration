@@ -11,7 +11,8 @@
     ./misc.nix
     ./pass.nix
     ./pkgs.nix
-    ./sops.nix
+    # sops.nix excluded - macOS-only, not used on NixOS
+    # Add to specific hosts that need it
     ./ssh.nix
     ./starship.nix
     ./syncthing.nix
