@@ -10,6 +10,9 @@
       appleSiliconOnly = {
         enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // { default = true; };
       };
+      macOnly = {
+        enable = lib.mkEnableOption "extras.extraPackages.macOnly" // { default = true; };
+      };
     };
   };
 

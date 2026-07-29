@@ -28,8 +28,9 @@
     settings.net_iface = lib.mkForce "enp35s0";
   };
 
-  extras.extraPackages.serverOnly = {
-    enable = true;
+  extras.extraPackages = {
+    serverOnly.enable = true;
+    macOnly.enable = false;
   };
 
   home = {
