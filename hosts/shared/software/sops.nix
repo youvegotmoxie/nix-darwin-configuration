@@ -25,6 +25,7 @@
     };
   };
 
+  # Make this env var available outside of the terminal
   launchd.agents.gh-token-env = {
     enable = true;
     domain = "user";

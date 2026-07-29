@@ -69,16 +69,21 @@ in {
           export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
         fi
       '';
-      sessionVariables = rec {
-        "GIT_AUTO_FETCH_INTERVAL" = 300;
-        "TERM" = "xterm-256color";
-        "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
-        # Needed for rustc
-        "RUST_SRC_PATH" = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
-        # Needed for Zed to prevent routing loops
-        "NO_PROXY" = "localhost,127.0.0.1,192.168.148.125";
-        "no_proxy" = NO_PROXY;
-      };
+      sessionVariables = let
+        proxy = "localhost,127.0.0.1,192.168.148.125";
+      in
+        {
+          "GIT_AUTO_FETCH_INTERVAL" = 300;
+          "TERM" = "xterm-256color";
+          # Needed for rustc
+          "RUST_SRC_PATH" = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+          # Needed for Zed to prevent routing loops
+          "NO_PROXY" = proxy;
+          "no_proxy" = proxy;
+        }
+        // lib.optionalAttrs cfg.ssh.enable {
+          "SSH_AUTH_SOCK" = "${cfg.ssh.socketPath}";
+        };
     };
     # Setup command-not-found shell integration with nix-locate
     programs.nix-index.enable = true;

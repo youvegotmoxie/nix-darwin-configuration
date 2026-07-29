@@ -47,7 +47,7 @@ in {
 
     programs.git = {
       enable = true;
-      signing.key = "${cfg.gpgKey}";
+      signing.key = lib.mkIf config.gpgConfig.enable "${cfg.gpgKey}";
       lfs.enable = true;
       ignores = import ../conf/gitignore.nix;
       settings = {
@@ -75,10 +75,10 @@ in {
           bv = "branch -v";
           dbp = "push origin -d";
         };
-        commit.gpgsign = true;
+        commit.gpgsign = lib.mkIf config.gpgConfig.enable true;
         tag = {
-          gpgSign = true;
-          forceSignAnnotated = true;
+          gpgSign = lib.mkIf config.gpgConfig.enable true;
+          forceSignAnnotated = lib.mkIf config.gpgConfig.enable true;
         };
         init = {
           defaultBranch = "master";

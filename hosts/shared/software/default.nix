@@ -11,7 +11,9 @@
     ./misc.nix
     ./pass.nix
     ./pkgs.nix
-    ./sops.nix
+    # sops.nix is Darwin-specific and is imported via mkDarwinHost in flake.nix
+    # Re-enable here once the Linux key path / launchd is figured out
+    # ./sops.nix
     ./ssh.nix
     ./starship.nix
     ./syncthing.nix

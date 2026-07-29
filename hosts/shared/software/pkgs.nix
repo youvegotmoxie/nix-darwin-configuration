@@ -91,41 +91,45 @@ in {
     home = {
       packages = with pkgs;
         [
-          alejandra
           bat
           bat-extras.batman
-          cmake
           delta
           fd
           findutils
           gawk
           gh
-          jdk21_headless
           jq
-          lazydocker
-          nerd-fonts.monaspace
           nh
           nix-output-monitor
-          nodejs_26
-          noto-fonts
           p7zip
-          pam-reattach
           pinentry-tty
           prek
           ripgrep
-          rustup
           shfmt
-          sops
           tldr
           ugrep
           viddy
           yq
-          yubikey-manager
           # Scripts
           blame-line-pretty
           git-hunk
           gpg-push-pull-keys
         ]
+        ++ (lib.optionals (!cfg.minimal.enable) [
+          alejandra
+          cmake
+          jdk21_headless
+          lazydocker
+          nerd-fonts.monaspace
+          nodejs_26
+          noto-fonts
+          rustup
+        ])
+        ++ (lib.optionals cfg.macOnly.enable [
+          pam-reattach
+          sops
+          yubikey-manager
+        ])
         ++ (lib.optionals cfg.appleSiliconOnly.enable [
           macmon
         ])
