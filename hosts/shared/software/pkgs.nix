@@ -25,14 +25,14 @@
   # no longer builds on a recent version of Rust
   macmon = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
     pname = "macmon";
-    version = "v0.7.2";
+    version = "v0.8.0";
     src = pkgs.fetchFromGitHub {
       owner = "vladkens";
       repo = finalAttrs.pname;
       tag = finalAttrs.version;
-      hash = "sha256-i6x4ZAh+gIG6aHEfoSifwFU/itOcPmBiQ0IrBkqz+L8=";
+      hash = "sha256-9UD/PXmMln5RiUQXjp2GV3m1R2IQ5ItvoOfpkqGNg/I=";
     };
-    cargoHash = "sha256-faEuoroZ/d8FntZaxkTbgVQ0nSwddxZR7KOfNPrU4Eg=";
+    cargoHash = "sha256-hgZiXMvQwXDyEh0yVAftJEDk9i2e+Drgq11q9ze/mUc=";
     meta = {
       description = "A sudoless performance monitoring CLI tool for Apple Silicon processors";
       homepage = "https://github.com/vladkens/macmon";
