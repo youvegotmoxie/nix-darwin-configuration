@@ -6,25 +6,6 @@
 }: let
   cfg = config.gpgConfig;
 in {
-  options.gpgConfig = {
-    enable = lib.mkOption {
-      type = lib.types.bool;
-      default = true;
-      description = "Whether to enable GPG and gpg-agent";
-    };
-    pubKey = lib.mkOption {
-      type = lib.types.str;
-      description = "Public GPG Key";
-      default = "18B0D3665C0599CF";
-    };
-    sshKeys = lib.mkOption {
-      type = lib.types.listOf lib.types.str;
-      description = "Authentication Keys as Keygrip";
-      default = [
-        "CCD38BCA13B9648549D6BE9AB189D1FC261433D2"
-      ];
-    };
-  };
   config = lib.mkIf cfg.enable {
     programs.gpg = {
       enable = true;
