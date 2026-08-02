@@ -6,12 +6,6 @@
     ./software
   ];
 
-  # Configure gpg-agent
-  gpgConfig = {
-    pubKey = "26693209BA633C80";
-    sshKeys = ["FA2DB0DD531C864082BD10F5C936E7BFD93BA80A"];
-  };
-
   # Configure SSH agent socket
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
