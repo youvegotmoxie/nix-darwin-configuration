@@ -54,7 +54,6 @@ in {
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           ytdl = "yt-dlp";
           nix = "nix --option access-tokens github.com=$(gh auth token)";
-          apfel = "apfel-run";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
