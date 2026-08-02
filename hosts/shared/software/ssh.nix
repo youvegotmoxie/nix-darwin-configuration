@@ -17,7 +17,7 @@
         ControlPersist = "2h";
       };
       "rpi4-standalone" = {
-        Hostname = "192.168.148.244";
+        Hostname = "192.168.148.157";
         User = "ubuntu";
         Port = 22;
         ControlMaster = "auto";

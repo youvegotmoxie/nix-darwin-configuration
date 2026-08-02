@@ -15,7 +15,7 @@
           IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519-lab_sk";
         };
         "rpi4-standalone" = {
-          Hostname = "192.168.148.244";
+          Hostname = "192.168.148.157";
           User = "ubuntu";
           Port = 22;
           PKCS11Provider = "${pkgs.yubico-piv-tool}/lib/libykcs11.dylib";
