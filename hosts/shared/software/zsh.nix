@@ -5,7 +5,7 @@
   ...
 }: let
   cfg = config.zshConfig;
-  extras = config.extras.extraPackages.macOnly;
+  extras = config.extras.extraPackages;
 in {
   config = {
     programs.zsh = {
@@ -27,7 +27,7 @@ in {
             "git-auto-fetch"
             "git-extras"
             "vi-mode"
-          ] ++ (lib.optionals extras.enable [
+          ] ++ (lib.optionals extras.macOnly.enable [
             "macos"
           ])
           ++ (lib.optionals cfg.workAliases.enable
