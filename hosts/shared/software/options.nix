@@ -28,14 +28,32 @@
     pubKey = lib.mkOption {
       type = lib.types.str;
       description = "Public GPG Key";
-      default = "18B0D3665C0599CF";
+      default = "26693209BA633C80";
     };
     sshKeys = lib.mkOption {
       type = lib.types.listOf lib.types.str;
       description = "Authentication Keys as Keygrip";
       default = [
-        "CCD38BCA13B9648549D6BE9AB189D1FC261433D2"
+        "FA2DB0DD531C864082BD10F5C936E7BFD93BA80A"
       ];
+    };
+  };
+
+  options.gitConfig.person = {
+    name = lib.mkOption {
+      type = lib.types.str;
+      description = "Git username";
+      default = "Michael Beasley";
+    };
+    email = lib.mkOption {
+      type = lib.types.str;
+      description = "Git email";
+      default = "youvegotmoxie@gmail.com";
+    };
+    gpgKey = lib.mkOption {
+      type = lib.types.str;
+      description = "GPG signing key";
+      default = "A6B4C8E1BAEA348F";
     };
   };
 

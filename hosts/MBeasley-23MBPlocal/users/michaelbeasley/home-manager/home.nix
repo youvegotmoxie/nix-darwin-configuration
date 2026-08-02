@@ -6,6 +6,21 @@
     ./software
   ];
 
+  # Configure git persona
+  gitConfig = {
+    person = {
+      name = "Michael Beasley";
+      email = "michael.beasley@alvaria.com";
+      gpgKey = "BB91DF43EC4CAE86";
+    };
+  };
+
+  # Configure gpg-agent
+  gpgConfig = {
+    pubKey = "18B0D3665C0599CF";
+    sshKeys = ["CCD38BCA13B9648549D6BE9AB189D1FC261433D2"];
+  };
+
   # Configure SSH agent socket and add work shell aliases
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";

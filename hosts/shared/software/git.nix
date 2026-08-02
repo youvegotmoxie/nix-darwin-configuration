@@ -5,23 +5,6 @@
 }: let
   cfg = config.gitConfig.person;
 in {
-  options.gitConfig.person = {
-    name = lib.mkOption {
-      type = lib.types.str;
-      description = "Git username";
-      default = "Michael Beasley";
-    };
-    email = lib.mkOption {
-      type = lib.types.str;
-      description = "Git email";
-      default = "michael.beasley@alvaria.com";
-    };
-    gpgKey = lib.mkOption {
-      type = lib.types.str;
-      description = "GPG signing key";
-      default = "BB91DF43EC4CAE86";
-    };
-  };
   # Configure Git for the user
   config = {
     programs.lazygit = {

@@ -9,15 +9,6 @@
   ];
   gpgConfig.enable = false;
 
-  # Configure git persona
-  gitConfig = {
-    person = {
-      name = "Michael Beasley";
-      email = "youvegotmoxie@gmail.com";
-      gpgKey = "A6B4C8E1BAEA348F";
-    };
-  };
-
   # Override global btop configuration
   programs.btop = {
     package = lib.mkForce pkgs.btop-rocm;
