@@ -48,7 +48,6 @@ in {
         kv-unified = true;
         jinja = true;
         prio = 2;
-        slot-save-path = "/tmp/slots";
       };
     };
   };
