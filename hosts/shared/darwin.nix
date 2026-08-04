@@ -150,6 +150,7 @@ in {
       };
     };
     taps = [
+      "anomalyco/tap"
       "tw93/tap"
       "youvegotmoxie/homebrew-tap"
     ];
@@ -158,6 +159,7 @@ in {
     ];
     casks = [
       "alcove"
+      "anomalyco/tap/opencode"
       "betterdisplay"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"

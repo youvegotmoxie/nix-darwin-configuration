@@ -8,11 +8,7 @@
 
   # Use Homebrew for things not working with nixpkgs on macOS
   homebrew = {
-    taps = [
-      "anomalyco/tap"
-    ];
     brews = [
-      "anomalyco/tap/opencode"
       "argocd"
       "helm-ls"
     ];
