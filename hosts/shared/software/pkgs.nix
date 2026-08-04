@@ -99,7 +99,6 @@ in {
           gawk
           gh
           jq
-          nh
           nix-output-monitor
           p7zip
           pinentry-tty

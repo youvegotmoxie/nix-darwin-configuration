@@ -9,6 +9,7 @@
     ./mcp.nix
     ./misc-dots.nix
     ./misc.nix
+    ./nh.nix
     ./pass.nix
     ./pkgs.nix
     # sops.nix is Darwin-specific and is imported via mkDarwinHost in flake.nix
