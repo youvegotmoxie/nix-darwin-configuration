@@ -155,11 +155,11 @@ in {
       "youvegotmoxie/homebrew-tap"
     ];
     brews = [
+      "anomalyco/tap/opencode"
       "tw93/tap/mole"
     ];
     casks = [
       "alcove"
-      "anomalyco/tap/opencode"
       "betterdisplay"
       "font-monaspice-nerd-font"
       "font-noto-sans-symbols-2"
