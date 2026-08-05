@@ -42,19 +42,6 @@ lib.mkIf config.extras.extraPackages.macOnly.enable {
             };
           };
         };
-        "${config.home.homeDirectory}/.config/opencode" = {
-          id = "opencode-config";
-          path = "${config.home.homeDirectory}/.config/opencode";
-          label = "opencode-config-directory";
-          devices = ["rpi4-timemachine"];
-          versioning = {
-            type = "simple";
-            params = {
-              keep = "10";
-              cleanoutDays = "30";
-            };
-          };
-        };
         "${config.home.homeDirectory}/.config/zed" = {
           id = "zed-config";
           path = "${config.home.homeDirectory}/.config/zed";
