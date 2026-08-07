@@ -1,4 +1,6 @@
 [
+  "AGENTS.md"
+  ".opencode/"
   "*$py.class"
   "*.py[cdo]"
   "*.py[co]"
