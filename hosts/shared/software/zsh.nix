@@ -76,6 +76,7 @@ in {
         {
           "GIT_AUTO_FETCH_INTERVAL" = 300;
           "TERM" = "xterm-256color";
+          "PATH" = "${config.home.homeDirectory}/.local/bin:$PATH";
           # Needed for rustc
           "RUST_SRC_PATH" = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
           # Needed for Zed to prevent routing loops
