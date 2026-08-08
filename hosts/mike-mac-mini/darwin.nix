@@ -1,5 +1,7 @@
-{mainUser, ...}: {
+{mainUser, pkgs, ...}: {
   imports = [../shared/darwin.nix];
+
+  environment.systemPackages = [pkgs.agent-browser];
 
   # Allow SSH from work and personal laptop
   users.users.${mainUser}.openssh.authorizedKeys.keys = [
