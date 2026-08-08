@@ -18,6 +18,14 @@
           User = "mike";
           Port = 22;
         };
+        "mike-mac-mini" = {
+          Hostname = "192.168.148.195";
+          User = "mike";
+          Port = 22;
+          ControlMaster = "auto";
+          ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
+          ControlPersist = "2h";
+        };
         "llama-server" = {
           Hostname = "192.168.148.125";
           User = "mike";

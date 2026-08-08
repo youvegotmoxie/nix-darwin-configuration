@@ -28,6 +28,14 @@
           ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
           ControlPersist = "2h";
         };
+        "mike-mac-mini" = {
+          Hostname = "192.168.148.195";
+          User = "mike";
+          Port = 22;
+          ControlMaster = "auto";
+          ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
+          ControlPersist = "2h";
+        };
         "iad-jump" = {
           Hostname = "jump1.dev2.iad1.sre.aspect-cloud.net";
           User = "mbeasley";

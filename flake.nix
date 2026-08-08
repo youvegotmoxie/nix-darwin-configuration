@@ -106,6 +106,10 @@
         mainUser = "mike";
         hostDir = "mike-macbook-pro";
       };
+      "mike-mac-mini" = mkDarwinHost {
+        mainUser = "mike";
+        hostDir = "mike-mac-mini";
+      };
       "mike-mac-pro" = mkDarwinHost {
         mainUser = "mike";
         hostDir = "mike-mac-pro";
