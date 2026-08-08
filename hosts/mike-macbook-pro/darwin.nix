@@ -1,5 +1,8 @@
-{mainUser, ...}: {
+{mainUser, pkgs, ...}: {
   imports = [../shared/darwin.nix];
+
+  # Only need uv on the work and personal laptops
+  environment.systemPackages = [pkgs.uv];
 
   # Allow SSH from work laptop
   users.users.${mainUser}.openssh.authorizedKeys.keys = [
