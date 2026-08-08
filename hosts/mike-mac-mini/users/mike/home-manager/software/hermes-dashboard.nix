@@ -1,5 +1,5 @@
 { config, ... }: {
-  launchd.agents.ai.hermes.dashboard = {
+  launchd.agents.hermes-dashboard = {
     enable = true;
     domain = "user";
     config = {
