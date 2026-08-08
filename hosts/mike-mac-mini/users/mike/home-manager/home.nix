@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, lib, ...}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -9,6 +9,11 @@
   # Configure SSH agent socket
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
+
+  };
+  # Override global btop configuration
+  programs.btop = {
+    settings.net_iface = lib.mkForce "en1";
   };
 
   # See shared/software/sops.nix for Launchd configuration
