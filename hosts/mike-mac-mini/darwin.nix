@@ -13,6 +13,7 @@
     ];
     brews = [
       "ffmpeg"
+      "steipete/tap/imsg"
       "steipete/tap/remindctl"
       "yt-dlp"
     ];
