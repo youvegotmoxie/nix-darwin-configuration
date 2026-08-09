@@ -5,7 +5,7 @@
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "10223";
+      version = "10333";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
@@ -43,7 +43,7 @@ in {
         cache-type-k = "q8_0";
         cache-type-v = "q8_0";
         threads = 32;
-        parallel = 10;
+        parallel = 8;
         cont-batching = true;
         kv-unified = true;
         jinja = true;
