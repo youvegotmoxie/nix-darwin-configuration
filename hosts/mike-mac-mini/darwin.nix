@@ -12,8 +12,10 @@
   homebrew = {
     taps = [
       "steipete/tap"
+      "antoniorodr/memo"
     ];
     brews = [
+      "antoniorodr/memo/memo"
       "ffmpeg"
       "steipete/tap/imsg"
       "steipete/tap/remindctl"
