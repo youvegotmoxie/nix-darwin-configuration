@@ -11,6 +11,7 @@
   nixpkgs.config.allowUnfree = true;
   imports = [
     ../../hosts/shared/software/ai.nix
+    ../../hosts/shared/software/options.nix
   ];
 
   boot = {

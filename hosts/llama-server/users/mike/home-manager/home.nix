@@ -35,6 +35,7 @@
 
     file = {
       ".rustup/settings.toml".source = lib.mkForce ./dots/rustup_settings.toml;
+      ".config/models.ini".source = ./dots/models.ini;
     };
   };
 }

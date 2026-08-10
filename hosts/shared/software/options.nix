@@ -57,6 +57,14 @@
     };
   };
 
+  options.rocmConfig = {
+    gpuTargets = lib.mkOption {
+      type = lib.types.str;
+      default = "gfx1151";
+      description = "ROCm GPU target passed to CMake as -DGPU_TARGETS (e.g. gfx1151, gfx1201)";
+    };
+  };
+
   options.zshConfig = {
     ssh = {
       enable = lib.mkOption {
