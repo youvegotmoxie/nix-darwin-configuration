@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: let
+{ pkgs, lib, config, ... }: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
@@ -23,7 +23,7 @@
         ++ [
           "-DGGML_NATIVE=ON"
           "-DGGML_HIP=ON"
-          "-DGPU_TARGETS=gfx1151"
+          "-DGPU_TARGETS=${config.rocmConfig.gpuTargets}"
           "-DCMAKE_BUILD_TYPE=Release"
         ];
       preConfigure = ''

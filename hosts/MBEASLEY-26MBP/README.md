@@ -1,0 +1,131 @@
+# MBEASLEY-26MBP
+
+Apple Silicon MacBook Pro (14", 2026)
+
+## Hardware
+- CPU: Apple M5 Pro
+- Memory: 48GiB unified memory
+
+## Nix Packages
+- act
+- alejandra
+- ansible
+- ansible-lint
+- atuin
+- awscli2
+- bat
+- bat-extras.batman
+- btop
+- cargo
+- cmake
+- delta
+- direnv
+- eks-node-viewer
+- eza
+- fd
+- findutils
+- fzf
+- gawk
+- gh
+- git
+- git-lfs
+- git-hunk
+- gnupg
+- gnused
+- gnutar
+- go
+- helm4
+- home-manager
+- jdk21_headless
+- jq
+- krew
+- kubecolor
+- kubectl
+- kubectx
+- kubent
+- lazydocker
+- lazygit
+- macmon
+- libfido2
+- mcp-nixos
+- neovim
+- nix-direnv
+- nerd-fonts.monaspace
+- nh
+- nil
+- nix-index
+- nix-output-monitor
+- nixd
+- nodejs_26
+- noto-fonts
+- p7zip
+- pam-reattach
+- password-store
+- pinentry_mac
+- pinentry-tty
+- prek
+- python314
+- python314Packages.pip
+- reattach-to-user-namespace
+- ripgrep
+- rustc
+- rustfmt
+- shellcheck
+- shfmt
+- sops
+- ssm-session-manager-plugin
+- starship
+- strace-macos
+- stern
+- tldr
+- tmux
+- tree-sitter
+- ugrep
+- google-cloud-sdk
+- uutils-coreutils-noprefix
+- uv
+- viddy
+- wget
+- yq
+- yubikey-manager
+- zoxide
+- zsh
+
+### Scripts
+- blame-line-pretty
+- gpg-push-pull-keys
+- git-hunk
+- ssh-proxy
+- tilt-connect
+
+## Homebrew
+### Formulae
+- argocd
+- helm-ls
+- mole
+
+### Casks
+- alcove
+- aptakube
+- betterdisplay
+- font-monaspice-nerd-font
+- font-noto-sans-symbols-2
+- ghostty
+- orbstack
+- raycast
+- thaw
+- timemachinestatus
+- zed
+
+### App Store
+- Amphetamine
+- AWS Extend Switch Roles
+- Dark Reader for Safari
+- Raycast Companion
+- Refined GitHub
+- SponsorBlock for Safari
+- StopTheMadness Pro
+- Strongbox Password Manager
+- Vimari
+- Wipr 2
+- Xcode
