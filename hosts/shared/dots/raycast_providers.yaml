@@ -4,129 +4,10 @@ providers:
     base_url: http://192.168.148.125:9292/v1
     models:
       # llama-server
-      - id: gemma-4-e2b
-        name: "Gemma4 E2B"
-        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # llama-server
-      - id: gemma-4-e4b
-        name: "Gemma4 E4B"
-        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # llama-server
-      - id: gemma-4-12B
-        name: "Gemma4 12B"
-        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # llama-server
-      - id: qwen3-4b-instruct
-        name: "Qwen3 4B Instruct"
-        description: "Fast, instruction-optimized open-source model from Alibaba"
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: false
-      # llama-server
-      - id: ornith-1.0-9B
-        name: "Ornith 1.0 9B"
-        description: "Fast, instruction-optimized open-source model from DeepReinforce AI"
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # fw-desktop
-      - id: gpt-oss-120B
-        name: "GPT OSS 120B"
-        description: "Open-weight model from OpenAI, designed for strong reasoning and agentic workflows."
-        context: 131072
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: false
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # fw-desktop
       - id: qwen3.6-35B
         name: "Qwen3.6 35B"
         description: "Fast open-source model from Alibaba"
         context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true
-      # fw-desktop
-      - id: gemma-4-26B
-        name: "Gemma4 26B"
-        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
-        context: 256000
         provider: openai
         abilities:
           temperature:
@@ -188,6 +69,22 @@ providers:
             supported: true
           vision:
             supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: ornith-1.0-9B
+        name: "Ornith 1.0 9B"
+        description: "Fast open-source model from DeepReinforce AI"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
           system_message:
             supported: true
           tools:
