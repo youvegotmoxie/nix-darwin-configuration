@@ -32,7 +32,7 @@
   },
   {
     "label": "Nix Clean Generations",
-    "command": "nh clean all -k 2",
+    "command": "nh clean all -k 2 --no-direnv",
     "allow_concurrent_runs": false,
     "shell": "system",
     "show_command": false,
