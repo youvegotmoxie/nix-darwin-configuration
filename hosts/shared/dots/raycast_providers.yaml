@@ -37,6 +37,55 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      # llama-server
+      - id: gemma-4-e2b
+        name: "Gemma4 E2B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: qwen3-4b-instruct
+        name: "Qwen3 4B Instruct"
+        description: "Fast, instruction-optimized open-source model from Alibaba"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: false
+      - id: ornith-1.0-9B
+        name: "Ornith 1.0 9B"
+        description: "Fast, instruction-optimized open-source model from DeepReinforce AI"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
