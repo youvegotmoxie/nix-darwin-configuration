@@ -21,7 +21,6 @@
       "omarshahine/tap/findmy-cli"
       "steipete/tap/imsg"
       "steipete/tap/remindctl"
-      "steipete/tap/peekaboo"
       "yt-dlp"
     ];
   };
