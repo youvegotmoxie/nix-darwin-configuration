@@ -12,7 +12,7 @@
   homebrew = {
     taps = [
       "antoniorodr/memo"
-      "omarshahine/tap/findmy-cli"
+      "omarshahine/tap"
       "steipete/tap"
     ];
     brews = [
