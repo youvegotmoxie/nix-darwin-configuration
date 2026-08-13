@@ -11,12 +11,14 @@
   # Use Homebrew for these to avoid a bunch of compiling
   homebrew = {
     taps = [
-      "steipete/tap"
       "antoniorodr/memo"
+      "omarshahine/tap/findmy-cli"
+      "steipete/tap"
     ];
     brews = [
       "antoniorodr/memo/memo"
       "ffmpeg"
+      "omarshahine/tap/findmy-cli"
       "steipete/tap/imsg"
       "steipete/tap/remindctl"
       "yt-dlp"
