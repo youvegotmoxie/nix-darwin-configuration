@@ -102,10 +102,6 @@
         mainUser = "mbeasley";
         hostDir = "MBEASLEY-26MBP";
       };
-      "MBeasley-23MBPlocal" = mkDarwinHost {
-        mainUser = "michaelbeasley";
-        hostDir = "MBeasley-23MBPlocal";
-      };
       "mike-macbook-pro" = mkDarwinHost {
         mainUser = "mike";
         hostDir = "mike-macbook-pro";
