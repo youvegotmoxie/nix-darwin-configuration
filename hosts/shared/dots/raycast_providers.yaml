@@ -4,6 +4,38 @@ providers:
     base_url: http://192.168.148.125:9292/v1
     models:
       # llama-server
+      - id: gemma-4-e2b
+        name: "Gemma4 E2B"
+        description: "Gemma 4 is a family of open models, purpose-built for advanced reasoning and agentic workflows."
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: qwen3-4b-instruct
+        name: "Qwen3 4B Instruct"
+        description: "Fast, instruction-optimized open-source model from Alibaba"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: false
       - id: qwen3.6-35B
         name: "Qwen3.6 35B"
         description: "Fast open-source model from Alibaba"
