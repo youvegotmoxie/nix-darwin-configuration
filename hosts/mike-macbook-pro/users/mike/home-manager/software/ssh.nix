@@ -19,7 +19,7 @@
           Port = 22;
         };
         "mike-mac-mini" = {
-          Hostname = "192.168.148.195";
+          Hostname = "192.168.148.156";
           User = "mike";
           Port = 22;
           ControlMaster = "auto";
