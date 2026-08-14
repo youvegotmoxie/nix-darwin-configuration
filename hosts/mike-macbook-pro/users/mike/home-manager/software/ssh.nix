@@ -8,8 +8,8 @@
     settings = lib.mkMerge [
       {
         "work-laptop" = {
-          Hostname = "192.168.148.132";
-          User = "michaelbeasley";
+          Hostname = "192.168.148.101";
+          User = "mbeasley";
           Port = 22;
           IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519_worklaptop_sk";
         };
