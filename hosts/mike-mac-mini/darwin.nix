@@ -23,5 +23,8 @@
       "steipete/tap/remindctl"
       "yt-dlp"
     ];
+    casks = [
+      "google-chrome"
+    ];
   };
 }
