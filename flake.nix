@@ -45,6 +45,7 @@
         inherit system;
         modules = [
           ./hosts/${hostDir}/darwin.nix
+          ./hosts/shared/software/options.nix
           home-manager.darwinModules.home-manager
           {
             home-manager = {
