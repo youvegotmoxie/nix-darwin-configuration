@@ -1,5 +1,10 @@
 { config, lib, pkgs, ... }: {
   options.extras = {
+    gpuMemory = lib.mkOption {
+      type = lib.types.str;
+      description = "Memory allocatable to the GPU (macOS)";
+      default = "12288";
+    };
     extraPackages = {
       workOnly = {
         enable = lib.mkEnableOption "extras.extraPackages.workOnly" // { default = false; };

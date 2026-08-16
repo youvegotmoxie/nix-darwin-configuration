@@ -8,6 +8,7 @@
   ...
 }: let
   lixReleaseBranch = "latest";
+  omlxMemory = config.extras.gpuMemory;
 in {
   # Supplied by the mkDarwinHost factory
   nixpkgs.hostPlatform = lib.mkDefault system;
@@ -127,6 +128,19 @@ in {
 
   networking = {
     applicationFirewall.enable = true;
+  };
+
+  # Set sysctl to increase addressable GPU memory for oMLX
+  launchd.agents.sysctl-omlx = {
+    serviceConfig = {
+      ProgramArguments = [
+        "/bin/sh"
+        "-c"
+        "sudo sysctl iogpu.wired_limit_mb=${omlxMemory}"
+      ];
+      RunAtLoad = true;
+      ProcessType = "Background";
+    };
   };
 
   # Use Homebrew for things not working with nixpkgs on macOS
