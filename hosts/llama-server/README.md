@@ -1,6 +1,8 @@
 # llama-server
 
-Custom built AMD machine with ROCm support. Runs llama.cpp model serving and llama-swap through Docker Compose for model routing
+Custom built AMD machine with ROCm support.
+
+Runs llama.cpp backend for llama-swap to handle local inference and model routing to fw-desktop.
 
 ## Packages
 - alejandra
