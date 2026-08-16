@@ -1,6 +1,6 @@
 # fw-desktop
 
-AMD workstation with ROCm support. Runs llama.cpp model serving
+Framework Desktop. Runs llama.cpp model serving
 
 ## Packages
 - alejandra
@@ -39,7 +39,7 @@ AMD workstation with ROCm support. Runs llama.cpp model serving
 - shellcheck
 - tmux
 - tldr
-- uugrep
+- ugrep
 - uv
 - viddy
 - vim
@@ -58,16 +58,12 @@ AMD workstation with ROCm support. Runs llama.cpp model serving
 ## Models
 Source: [models.ini](./users/mike/home-manager/dots/models.ini)
 
-| Model | Quantization | Context | HuggingFace | Idle Sleep |
-|-------|--------------|---------|-------------|------------|
-| gemma-4-26B | Q4_K_XL | 128K | [unsloth/gemma-4-26B-A4B-it-qat-GGUF](https://huggingface.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF) | 2 min |
-| gpt-oss-20B | Q4_K_XL | 64K | [unsloth/gpt-oss-20b-GGUF](https://huggingface.co/unsloth/gpt-oss-20b-GGUF) | 2 min |
-| qwen-3-coder-30B | Q4_K_M | 64K | [unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF](https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF) | 2 min |
-| qwen-3.5-122B | Q4_K_M | 256K | [unsloth/Qwen3.5-122B-A10B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-MTP-GGUF) | 2 min |
-| ornith-1.0-35B | Q4_K_M | 256K | [deepreinforce-ai/Ornith-1.0-35B-GGUF](https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B-GGUF) | 2 min |
+| Model | Quantization | Context | HuggingFace |
+|-------|--------------|---------|-------------|
+| qwen-3.5-122B | Q4_K_M | 128K | [unsloth/Qwen3.5-122B-A10B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-MTP-GGUF) |
 
 ## Hardware
 - CPU: AMD Ryzen AI MAX+ 395
-- GPU: AMD RX 7900 series (ROCm target: gfx1151)
-- Memory: 128GiB LPDDR5X
+- GPU: AMD Radeon 8060S (ROCm target: gfx1151)
+- Memory: 128GiB total
 - Network interface: enp191s0

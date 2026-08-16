@@ -1,6 +1,6 @@
 # llama-server
 
-AMD machine with ROCm support. Runs llama-swap through Docker for model serving
+Custom built AMD machine with ROCm support. Runs llama.cpp model serving and llama-swap through Docker Compose for model routing
 
 ## Packages
 - alejandra
@@ -39,7 +39,7 @@ AMD machine with ROCm support. Runs llama-swap through Docker for model serving
 - shellcheck
 - tmux
 - tldr
-- uugrep
+- ugrep
 - uv
 - viddy
 - vim
@@ -53,15 +53,14 @@ AMD machine with ROCm support. Runs llama-swap through Docker for model serving
 ## Models
 Source: [`models.ini`](./users/mike/home-manager/dots/models.ini)
 
-| Model | Quantization | Context | HuggingFace | Idle Sleep |
-|-------|--------------|---------|-------------|------------|
-| gemma-4-e2b | Q4_K_XL | 128K | [unsloth/gemma-4-E2B-it-qat-GGUF](https://huggingface.co/unsloth/gemma-4-E2B-it-qat-GGUF) | 30 min |
-| gemma-4-e4b | Q4_K_XL | 128K | [unsloth/gemma-4-E4B-it-qat-GGUF](https://huggingface.co/unsloth/gemma-4-E4B-it-qat-GGUF) | 5 min |
-| gemma-4-12B | Q4_K_XL | 128K | [unsloth/gemma-4-12B-it-qat-GGUF](https://huggingface.co/unsloth/gemma-4-12B-it-qat-GGUF) | 2 min |
-| qwen3-4b-instruct | Q4_K_XL | 64K | [unsloth/Qwen3-4B-Instruct-2507-GGUF](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF) | 15 min |
+| Model | Quantization | Context | HuggingFace |
+|-------|--------------|---------|-------------|
+| qwen3.6-35B | Q4_K_M | 128K | [unsloth/Qwen3.6-35B-A3B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF) |
+| muse-glimmer-30B | Q5_K_M | 128K | [unsloth/Muse-Glimmer-30B-GGUF](https://huggingface.co/unsloth/Muse-Glimmer-30B-GGUF) |
+| qwen3.8-27B | Q4_K_XL | 128K | [unsloth/Qwen3.8-27B-GGUF](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF) |
 
 ## Hardware
 - CPU: AMD Ryzen 7 3800X
-- GPU: AMD RX 9070 XT (ROCm target: gfx1201)
+- GPU: Dual AMD RX 9070 XT (ROCm target: gfx1201, 32GiB total)
 - Memory: 48GiB DDR4
 - Network interface: enp35s0
