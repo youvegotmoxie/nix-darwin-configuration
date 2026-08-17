@@ -7,6 +7,7 @@ Apple Silicon Mac Mini (Late 2024)
 - Memory: 16GiB unified memory
 
 ## Nix Packages
+- agent-browser
 - alejandra
 - atuin
 - bat
@@ -28,6 +29,7 @@ Apple Silicon Mac Mini (Late 2024)
 - gnupg
 - gnused
 - gnutar
+- himalaya
 - home-manager
 - jdk21_headless
 - jq
@@ -35,7 +37,6 @@ Apple Silicon Mac Mini (Late 2024)
 - lazygit
 - macmon
 - libfido2
-- mcp-nixos
 - neovim
 - nix-direnv
 - nerd-fonts.monaspace
@@ -64,11 +65,8 @@ Apple Silicon Mac Mini (Late 2024)
 - starship
 - strace-macos
 - tldr
-- tmux
-- tree-sitter
 - ugrep
 - uutils-coreutils-noprefix
-- uv
 - viddy
 - yq
 - yubikey-manager
@@ -83,7 +81,11 @@ Apple Silicon Mac Mini (Late 2024)
 ## Homebrew
 ### Formulae
 - ffmpeg
+- findmy-cli
+- imsg
+- memo
 - mole
+- remindctl
 - yt-dlp
 
 ### Casks
@@ -91,6 +93,7 @@ Apple Silicon Mac Mini (Late 2024)
 - betterdisplay
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
+- google-chrome
 - ghostty
 - orbstack
 - raycast

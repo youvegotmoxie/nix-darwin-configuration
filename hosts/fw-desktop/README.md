@@ -3,7 +3,6 @@
 Framework Desktop. Runs llama.cpp model serving
 
 ## Packages
-- alejandra
 - amdgpu_top
 - atuin
 - bat
@@ -21,7 +20,6 @@ Framework Desktop. Runs llama.cpp model serving
 - home-manager
 - jq
 - lazygit
-- lazydocker
 - neovim
 - nh
 - nil
@@ -34,12 +32,12 @@ Framework Desktop. Runs llama.cpp model serving
 - python314Packages.pip
 - ripgrep
 - rocm-smi
-- rustup
 - shfmt
 - shellcheck
 - tmux
 - tldr
 - ugrep
+- uutils-coreutils-noprefix
 - uv
 - viddy
 - vim
@@ -50,6 +48,7 @@ Framework Desktop. Runs llama.cpp model serving
 - openssh
 - docker
 - fwupd
+- vnstat
 - llama.cpp: enabled (0.0.0.0:8080)
   - ROCm support (gfx1151 target)
   - 32 threads, Q8_0 KV cache

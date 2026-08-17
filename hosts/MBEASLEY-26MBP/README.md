@@ -17,6 +17,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - bat-extras.batman
 - btop
 - cargo
+- claws
 - cmake
 - delta
 - direnv
@@ -34,6 +35,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - gnused
 - gnutar
 - go
+- google-cloud-sdk
 - helm4
 - home-manager
 - jdk21_headless
@@ -47,7 +49,6 @@ Apple Silicon MacBook Pro (14", 2026)
 - lazygit
 - macmon
 - libfido2
-- mcp-nixos
 - neovim
 - nix-direnv
 - nerd-fonts.monaspace
@@ -78,10 +79,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - strace-macos
 - stern
 - tldr
-- tmux
-- tree-sitter
 - ugrep
-- google-cloud-sdk
 - uutils-coreutils-noprefix
 - uv
 - viddy
@@ -103,6 +101,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - argocd
 - helm-ls
 - mole
+- opencode
 
 ### Casks
 - alcove
@@ -111,6 +110,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
+- obsidian
 - orbstack
 - raycast
 - thaw

@@ -35,7 +35,6 @@ Apple Silicon MacBook Pro (Late 2025)
 - lazygit
 - macmon
 - libfido2
-- mcp-nixos
 - neovim
 - nix-direnv
 - nerd-fonts.monaspace
@@ -64,8 +63,6 @@ Apple Silicon MacBook Pro (Late 2025)
 - starship
 - strace-macos
 - tldr
-- tmux
-- tree-sitter
 - ugrep
 - uutils-coreutils-noprefix
 - uv

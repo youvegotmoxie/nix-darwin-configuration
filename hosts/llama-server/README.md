@@ -5,7 +5,6 @@ Custom built AMD machine with ROCm support.
 Runs llama.cpp backend for llama-swap to handle local inference and model routing to fw-desktop.
 
 ## Packages
-- alejandra
 - amdgpu_top
 - atuin
 - bat
@@ -23,7 +22,6 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - home-manager
 - jq
 - lazygit
-- lazydocker
 - neovim
 - nh
 - nil
@@ -36,12 +34,12 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - python314Packages.pip
 - ripgrep
 - rocm-smi
-- rustup
 - shfmt
 - shellcheck
 - tmux
 - tldr
 - ugrep
+- uutils-coreutils-noprefix
 - uv
 - viddy
 - vim
@@ -51,6 +49,7 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 ## Services
 - openssh
 - docker
+- vnstat
 
 ## Models
 Source: [`models.ini`](./users/mike/home-manager/dots/models.ini)
