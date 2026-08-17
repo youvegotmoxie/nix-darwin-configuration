@@ -111,6 +111,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - font-noto-sans-symbols-2
 - ghostty
 - obsidian
+- omlx
 - orbstack
 - raycast
 - thaw

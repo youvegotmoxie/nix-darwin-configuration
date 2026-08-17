@@ -35,11 +35,11 @@ Apple Silicon Mac Mini (Late 2024)
 - jq
 - lazydocker
 - lazygit
-- macmon
 - libfido2
+- macmon
 - neovim
-- nix-direnv
 - nerd-fonts.monaspace
+- nix-direnv
 - nh
 - nil
 - nix-index
@@ -93,8 +93,9 @@ Apple Silicon Mac Mini (Late 2024)
 - betterdisplay
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
-- google-chrome
 - ghostty
+- google-chrome
+- omlx
 - orbstack
 - raycast
 - thaw

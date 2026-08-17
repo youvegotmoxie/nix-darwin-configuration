@@ -89,6 +89,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
+- omlx
 - orbstack
 - raycast
 - thaw
