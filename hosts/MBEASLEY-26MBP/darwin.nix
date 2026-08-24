@@ -28,6 +28,7 @@
     ];
     masApps = {
       "AWS Extend Switch Roles" = 1592710340;
+      "Silkwave Voice" = 6758550154;
     };
   };
 }
