@@ -111,11 +111,6 @@
         mainUser = "mike";
         hostDir = "mike-mac-mini";
       };
-      "mike-mac-pro" = mkDarwinHost {
-        mainUser = "mike";
-        hostDir = "mike-mac-pro";
-        system = "x86_64-darwin";
-      };
     };
     nixosConfigurations = {
       "fw-desktop" = mkNixOSHost {
