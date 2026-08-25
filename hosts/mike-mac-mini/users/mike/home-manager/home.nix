@@ -11,10 +11,14 @@
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
 
   };
+
   # Override global btop configuration
   programs.btop = {
     settings.net_iface = lib.mkForce "en1";
   };
+
+  # Syncthing hosts
+  extras.syncthingTarget = ["mike-macbook-pro"];
 
   # See shared/software/sops.nix for Launchd configuration
   # if secrets are needed outside of the shell environment

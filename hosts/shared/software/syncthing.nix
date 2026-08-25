@@ -5,35 +5,30 @@ lib.mkIf config.extras.extraPackages.macOnly.enable {
     overrideFolders = true;
     overrideDevices = true;
     settings = {
-      devices = {
-        "rpi4-timemachine" = {
-          id = "SB2LFPA-NH4T4U7-6MVKGR3-YC24CDS-ANNW2M7-XFJMBAH-6UVPZVC-RWIQKAT";
-        };
-      };
       folders = {
         "${config.home.homeDirectory}/.omlx/models" = {
           id = "omlx-models";
           path = "${config.home.homeDirectory}/.omlx/models";
           label = "omlx-models";
-          devices = ["rpi4-timemachine"];
+          devices = config.extras.syncthingTarget;
         };
         "${config.home.homeDirectory}/repos/projects" = {
           id = "projects";
           path = "${config.home.homeDirectory}/repos/projects";
           label = "projects";
-          devices = ["rpi4-timemachine"];
+          devices = config.extras.syncthingTarget;
         };
         "${config.home.homeDirectory}/Documents/Zed" = {
           id = "zed-journal";
           path = "${config.home.homeDirectory}/Documents/Zed";
           label = "zed-journal-directory";
-          devices = ["rpi4-timemachine"];
+          devices = config.extras.syncthingTarget;
         };
         "${config.home.homeDirectory}/.agents/skills" = {
           id = "zed-skills";
           path = "${config.home.homeDirectory}/.agents/skills";
           label = "zed-skills-directory";
-          devices = ["rpi4-timemachine"];
+          devices = config.extras.syncthingTarget;
           versioning = {
             type = "simple";
             params = {
@@ -46,7 +41,7 @@ lib.mkIf config.extras.extraPackages.macOnly.enable {
           id = "zed-config";
           path = "${config.home.homeDirectory}/.config/zed";
           label = "zed-config-directory";
-          devices = ["rpi4-timemachine"];
+          devices = config.extras.syncthingTarget;
           versioning = {
             type = "simple";
             params = {
