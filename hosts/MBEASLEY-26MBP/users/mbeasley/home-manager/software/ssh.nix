@@ -47,14 +47,6 @@
         "bitbucket.aws.alvaria.com" = {
           IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
         };
-        "mike-mac-pro" = {
-          Hostname = "192.168.148.232";
-          User = "mike";
-          Port = 22;
-          ControlMaster = "auto";
-          ControlPath = "${config.home.homeDirectory}/.ssh/S.%r@%h:%p";
-          ControlPersist = "2h";
-        };
         "llama-server" = {
           Hostname = "192.168.148.125";
           User = "mike";

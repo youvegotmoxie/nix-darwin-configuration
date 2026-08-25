@@ -1,4 +1,8 @@
-{config, lib, ...}:
+{
+  config,
+  lib,
+  ...
+}:
 lib.mkIf config.extras.extraPackages.macOnly.enable {
   services.syncthing = {
     enable = true;
@@ -41,6 +45,19 @@ lib.mkIf config.extras.extraPackages.macOnly.enable {
           id = "zed-config";
           path = "${config.home.homeDirectory}/.config/zed";
           label = "zed-config-directory";
+          devices = config.extras.syncthingTarget;
+          versioning = {
+            type = "simple";
+            params = {
+              keep = "10";
+              cleanoutDays = "30";
+            };
+          };
+        };
+        "${config.home.homeDirectory}/.config/opencode" = {
+          id = "opencode-config";
+          path = "${config.home.homeDirectory}/.config/opencode";
+          label = "opencode-config-directory";
           devices = config.extras.syncthingTarget;
           versioning = {
             type = "simple";

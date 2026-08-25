@@ -8,15 +8,10 @@
     settings = lib.mkMerge [
       {
         "work-laptop" = {
-          Hostname = "192.168.148.101";
+          Hostname = "192.168.1.155";
           User = "mbeasley";
           Port = 22;
           IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519_worklaptop_sk";
-        };
-        "mike-mac-pro" = {
-          Hostname = "192.168.148.232";
-          User = "mike";
-          Port = 22;
         };
         "mike-mac-mini" = {
           Hostname = "192.168.1.45";
