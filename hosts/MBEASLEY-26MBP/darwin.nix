@@ -1,4 +1,8 @@
-{mainUser, pkgs, ...}: {
+{
+  mainUser,
+  pkgs,
+  ...
+}: {
   imports = [../shared/darwin.nix];
 
   # Increase GPU memory for oMLX
@@ -28,7 +32,6 @@
     ];
     masApps = {
       "AWS Extend Switch Roles" = 1592710340;
-      "Silkwave Voice" = 6758550154;
     };
   };
 }
