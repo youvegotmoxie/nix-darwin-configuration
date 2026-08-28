@@ -1,4 +1,8 @@
-{config, lib, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -9,7 +13,6 @@
   # Configure SSH agent socket
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-
   };
 
   # Override global btop configuration
@@ -34,7 +37,7 @@
     stateVersion = "25.05";
     sessionVariables = rec {
       # Needed for Zed to prevent routing loops
-      "NO_PROXY" = "localhost,127.0.0.1,192.168.148.125";
+      "NO_PROXY" = "localhost,127.0.0.1,192.168.1.87";
       "no_proxy" = NO_PROXY;
     };
 

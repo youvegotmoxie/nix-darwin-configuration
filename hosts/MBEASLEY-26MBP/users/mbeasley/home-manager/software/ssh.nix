@@ -48,7 +48,7 @@
           IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
         };
         "llama-server" = {
-          Hostname = "192.168.148.125";
+          Hostname = "192.168.1.87";
           User = "mike";
           Port = 22;
           ControlMaster = "auto";

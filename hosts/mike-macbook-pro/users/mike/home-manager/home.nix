@@ -25,7 +25,7 @@
     stateVersion = "25.05";
     sessionVariables = rec {
       # Needed for Zed to prevent routing loops
-      "NO_PROXY" = "localhost,127.0.0.1,192.168.148.125";
+      "NO_PROXY" = "localhost,127.0.0.1,192.168.1.87";
       "no_proxy" = NO_PROXY;
     };
 

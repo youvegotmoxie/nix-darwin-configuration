@@ -27,7 +27,8 @@ in {
             "git-auto-fetch"
             "git-extras"
             "vi-mode"
-          ] ++ (lib.optionals extras.macOnly.enable [
+          ]
+          ++ (lib.optionals extras.macOnly.enable [
             "macos"
           ])
           ++ (lib.optionals cfg.workAliases.enable
@@ -71,7 +72,7 @@ in {
         fi
       '';
       sessionVariables = let
-        proxy = "localhost,127.0.0.1,192.168.148.125";
+        proxy = "localhost,127.0.0.1,192.168.1.87";
       in
         {
           "GIT_AUTO_FETCH_INTERVAL" = 300;
