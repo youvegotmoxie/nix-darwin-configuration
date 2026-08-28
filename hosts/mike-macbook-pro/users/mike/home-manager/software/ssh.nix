@@ -14,7 +14,7 @@
           IdentityFile = "${config.home.homeDirectory}/.ssh/id_ed25519_worklaptop_sk";
         };
         "mike-mac-mini" = {
-          Hostname = "192.168.1.45";
+          Hostname = "192.168.1.70";
           User = "mike";
           Port = 22;
           ControlMaster = "auto";

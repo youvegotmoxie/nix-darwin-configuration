@@ -29,7 +29,7 @@
           ControlPersist = "2h";
         };
         "mike-mac-mini" = {
-          Hostname = "192.168.1.45";
+          Hostname = "192.168.1.70";
           User = "mike";
           Port = 22;
           ControlMaster = "auto";
