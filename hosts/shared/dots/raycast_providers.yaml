@@ -36,8 +36,8 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: ornith-1.0-9B
-        name: "Ornith 1.0 9B"
+      - id: ornith-1.5-9B
+        name: "Ornith 1.5 9B"
         description: "Fast open-source model from DeepReinforce AI"
         context: 128000
         provider: openai
