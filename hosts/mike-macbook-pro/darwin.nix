@@ -1,4 +1,8 @@
-{mainUser, pkgs, ...}: {
+{
+  mainUser,
+  pkgs,
+  ...
+}: {
   imports = [../shared/darwin.nix];
 
   # Only need uv on the work and personal laptops
@@ -17,5 +21,8 @@
       "ffmpeg"
       "yt-dlp"
     ];
+    masApps = {
+      "Budget Flow Expense Tracker" = 1640091876;
+    };
   };
 }
