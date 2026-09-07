@@ -49,6 +49,7 @@ in {
         cache-type-v = "q8_0";
         threads = 16;
         parallel = 4;
+        models-max = 2;
         cont-batching = true;
         kv-unified = true;
         jinja = true;
