@@ -47,7 +47,7 @@ in {
         port = 8080;
         cache-type-k = "q8_0";
         cache-type-v = "q8_0";
-        threads = 32;
+        threads = 16;
         parallel = 4;
         cont-batching = true;
         kv-unified = true;
