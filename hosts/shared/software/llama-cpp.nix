@@ -1,15 +1,20 @@
-{ pkgs, lib, config, ... }: let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   llama-cpp =
     (pkgs.llama-cpp.override {
       rocmSupport = true;
       blasSupport = true;
     }).overrideAttrs
     (oldAttrs: {
-      version = "10423";
+      version = "0.4.0";
       src = pkgs.fetchFromGitHub {
         owner = "ggml-org";
         repo = "llama.cpp";
-        tag = "b${oldAttrs.version}";
+        tag = "v${oldAttrs.version}";
         hash = "sha256-wtaHsVOyCNCITABe1TvDo/MiWpNlH2YqZewBDxERtt4=";
         leaveDotGit = true;
         postFetch = ''
@@ -53,7 +58,9 @@ in {
   };
   # Workaround for high GPU usage while idle on RDNA 3.5
   # https://github.com/ggml-org/llama.cpp/issues/3929
-  systemd.services.llama-cpp.serviceConfig = lib.mkMerge [{
-    Environment = "GPU_MAX_HW_QUEUES=1";
-  }];
+  systemd.services.llama-cpp.serviceConfig = lib.mkMerge [
+    {
+      Environment = "GPU_MAX_HW_QUEUES=1";
+    }
+  ];
 }
