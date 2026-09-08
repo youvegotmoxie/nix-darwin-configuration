@@ -35,7 +35,23 @@ providers:
           tools:
             supported: true
           reasoning_effort:
+            supported: false
+      - id: qwen3.5-4B-MTP-GGUF
+        name: "Qwen3.5 4B MTP"
+        description: "Fast, open-source model from Alibaba with MTP heads"
+        context: 262144
+        provider: openai
+        abilities:
+          temperature:
             supported: true
+          vision:
+            supported: false
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: false
       - id: qwen3.8-27B-GGUF
         name: "Qwen3.8 27B"
         description: "Fast open-source model from Alibaba"
