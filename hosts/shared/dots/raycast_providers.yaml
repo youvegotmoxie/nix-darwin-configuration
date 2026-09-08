@@ -68,6 +68,22 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+      - id: ornith-1.5-9B-GGUF
+        name: "Ornith 1.5 9B"
+        description: "Fast open-source model from DeepReinforce AI"
+        context: 128000
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: oMLX
     name: oMLX
     base_url: http://127.0.0.1:8000/v1
