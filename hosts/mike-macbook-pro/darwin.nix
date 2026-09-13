@@ -17,9 +17,15 @@
   ];
   # Use Homebrew for these to avoid a bunch of compiling
   homebrew = {
+    taps = [
+      "sozercan/repo"
+    ];
     brews = [
       "ffmpeg"
       "yt-dlp"
+    ];
+    casks = [
+      "sozercan/repo/kaset"
     ];
     masApps = {
       "Budget Flow Expense Tracker" = 1640091876;
