@@ -19,6 +19,8 @@ shell-integration-features = no-cursor
 theme = tokyonight
 window-colorspace = display-p3
 window-save-state = always
+# Temp fix for macOS 27 tabs
+auto-update-channel = tip
 
 # Mimic Tmux keybinds for Ghostty's native multiplexing
 # https://ghostty.org/docs/config/keybind
