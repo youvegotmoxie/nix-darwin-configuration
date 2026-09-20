@@ -22,7 +22,7 @@
       "anomalyco/tap"
     ];
     brews = [
-      "anomalyco/tap/opencode-v2"
+      "anomalyco/tap/opencode"
       "argocd"
       "helm-ls"
     ];
