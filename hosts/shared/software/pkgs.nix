@@ -25,11 +25,11 @@
   # no longer builds on a recent version of Rust
   macmon = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
     pname = "macmon";
-    version = "v0.8.0";
+    version = "0.8.0";
     src = pkgs.fetchFromGitHub {
       owner = "vladkens";
       repo = finalAttrs.pname;
-      tag = finalAttrs.version;
+      tag = "v${finalAttrs.version}";
       hash = "sha256-9UD/PXmMln5RiUQXjp2GV3m1R2IQ5ItvoOfpkqGNg/I=";
     };
     cargoHash = "sha256-hgZiXMvQwXDyEh0yVAftJEDk9i2e+Drgq11q9ze/mUc=";
@@ -67,11 +67,11 @@
   # Not available in nixpkgs
   claws = pkgs.buildGoLatestModule (finalAttrs: {
     pname = "claws";
-    version = "v0.18.0";
+    version = "0.18.0";
     src = pkgs.fetchFromGitHub {
       owner = "clawscli";
       repo = finalAttrs.pname;
-      tag = finalAttrs.version;
+      tag = "v${finalAttrs.version}";
       hash = "sha256-CnnU4OCO1Mslf7+fSu3scKHQ2LJWG+XxMtTyk9CIVYk=";
     };
     # This fails tests due to using `/homeless-shelter/.` Google buildroot nonsense
