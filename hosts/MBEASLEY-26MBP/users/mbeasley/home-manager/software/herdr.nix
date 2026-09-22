@@ -4,7 +4,8 @@
   ...
 }: {
   programs.herdr = {
-    enable = true;
+    # Disable for now since there are many conflicting keybinds w/ Ghostty
+    enable = false;
     # Use the upstream Herdr flake since nixpkgs lags behind
     package = inputs.herdr.packages.${system}.herdr;
     settings = {
