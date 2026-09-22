@@ -2,11 +2,6 @@
   description = "Darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin = {
-      url = "github:nix-darwin/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,16 +9,22 @@
     nil = {
       url = "github:oxalica/nil";
     };
+    herdr.url = "github:herdrdev/herdr/v0.9.1";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     strace-macos = {
       url = "github:Mic92/strace-macos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -34,6 +35,7 @@
     nixpkgs,
     sops-nix,
     nix-index-database,
+    herdr,
     ...
   }: let
     mkDarwinHost = {
@@ -60,7 +62,10 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "hmback";
-              extraSpecialArgs.flake-inputs = inputs;
+              extraSpecialArgs = {
+                flake-inputs = inputs;
+                inherit inputs system;
+              };
             };
           }
         ];

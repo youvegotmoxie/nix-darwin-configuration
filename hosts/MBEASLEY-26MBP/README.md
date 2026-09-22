@@ -3,10 +3,12 @@
 Apple Silicon MacBook Pro (14", 2026)
 
 ## Hardware
+
 - CPU: Apple M5 Pro
 - Memory: 48GiB unified memory
 
 ## Nix Packages
+
 - act
 - alejandra
 - ansible
@@ -37,6 +39,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - go
 - google-cloud-sdk
 - helm4
+- herdr
 - home-manager
 - jdk21_headless
 - jq
@@ -90,6 +93,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - zsh
 
 ### Scripts
+
 - blame-line-pretty
 - gpg-push-pull-keys
 - git-hunk
@@ -97,13 +101,16 @@ Apple Silicon MacBook Pro (14", 2026)
 - tilt-connect
 
 ## Homebrew
+
 ### Formulae
+
 - argocd
 - helm-ls
 - mole
 - opencode
 
 ### Casks
+
 - alcove
 - aptakube
 - betterdisplay
@@ -119,6 +126,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - zed
 
 ### App Store
+
 - Amphetamine
 - AWS Extend Switch Roles
 - Dark Reader for Safari
