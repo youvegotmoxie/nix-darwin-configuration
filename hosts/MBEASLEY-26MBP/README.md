@@ -39,7 +39,6 @@ Apple Silicon MacBook Pro (14", 2026)
 - go
 - google-cloud-sdk
 - helm4
-- herdr
 - home-manager
 - jdk21_headless
 - jq

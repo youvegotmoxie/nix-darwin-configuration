@@ -3,10 +3,12 @@
 Apple Silicon MacBook Pro (Late 2025)
 
 ## Hardware
+
 - CPU: Apple M5 Pro
 - Memory: 24GiB unified memory
 
 ## Nix Packages
+
 - alejandra
 - atuin
 - bat
@@ -73,17 +75,21 @@ Apple Silicon MacBook Pro (Late 2025)
 - zsh
 
 ### Scripts
+
 - blame-line-pretty
 - git-hunk
 - gpg-push-pull-keys
 
 ## Homebrew
+
 ### Formulae
+
 - ffmpeg
 - mole
 - yt-dlp
 
 ### Casks
+
 - alcove
 - betterdisplay
 - font-monaspice-nerd-font
@@ -97,7 +103,9 @@ Apple Silicon MacBook Pro (Late 2025)
 - zed
 
 ### App Store
+
 - Amphetamine
+- Budget Flow Expense Tracker
 - Dark Reader for Safari
 - Raycast Companion
 - Refined GitHub
