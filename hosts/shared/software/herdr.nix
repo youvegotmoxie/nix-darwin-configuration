@@ -4,8 +4,7 @@
   ...
 }: {
   programs.herdr = {
-    # Disable for now since there are many conflicting keybinds w/ Ghostty
-    enable = false;
+    enable = true;
     # Use the upstream Herdr flake since nixpkgs lags behind
     package = inputs.herdr.packages.${system}.herdr;
     settings = {
@@ -18,6 +17,12 @@
         status_indicators = "symbols";
         sound.enabled = false;
         toast.delivery = "herdr";
+      };
+      keys = {
+        resize_pane_left = "prefix+shift+h";
+        resize_pane_down = "prefix+shift+j";
+        resize_pane_up = "prefix+shift+k";
+        resize_pane_right = "prefix+shift+l";
       };
     };
   };

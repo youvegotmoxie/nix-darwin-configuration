@@ -1,15 +1,16 @@
 {...}: {
   imports = [
-    ./options.nix
     ./atuin.nix
     ./btop.nix
     ./fzf.nix
     ./git.nix
     ./gnupg.nix
+    ./herdr.nix
     ./mcp.nix
     ./misc-dots.nix
     ./misc.nix
     ./nh.nix
+    ./options.nix
     ./pass.nix
     ./pkgs.nix
     # sops.nix is Darwin-specific and is imported via mkDarwinHost in flake.nix
