@@ -158,12 +158,10 @@ in {
       };
     };
     taps = [
-      "anomalyco/tap"
       "tw93/tap"
       "youvegotmoxie/homebrew-tap"
     ];
     brews = [
-      "anomalyco/tap/opencode"
       "tw93/tap/mole"
     ];
     casks = [
