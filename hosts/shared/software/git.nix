@@ -15,9 +15,9 @@ in {
           nerdFontsVersion = "3";
         };
         git = {
-          pagers = [
+          diffRenderers = [
             {
-              pager = "delta --dark --paging=never --max-line-length=0";
+              command = "delta --dark --paging=never --max-line-length=0";
               useConfig = false;
             }
           ];
@@ -37,7 +37,7 @@ in {
         user.name = "${cfg.name}";
         user.email = "${cfg.email}";
         core = {
-          pager = "delta --pager=never --max-line-length=0";
+          pager = "delta --pager=never";
           editor = "nvim";
         };
         alias = {
