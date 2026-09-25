@@ -1,7 +1,5 @@
-{mainUser, pkgs, ...}: {
+{mainUser, ...}: {
   imports = [../shared/darwin.nix];
-
-  environment.systemPackages = [pkgs.agent-browser pkgs.himalaya];
 
   # Allow SSH from work and personal laptop
   users.users.${mainUser}.openssh.authorizedKeys.keys = [
@@ -10,21 +8,9 @@
   ];
   # Use Homebrew for these to avoid a bunch of compiling
   homebrew = {
-    taps = [
-      "antoniorodr/memo"
-      "omarshahine/tap"
-      "steipete/tap"
-    ];
     brews = [
-      "antoniorodr/memo/memo"
       "ffmpeg"
-      "omarshahine/tap/findmy-cli"
-      "steipete/tap/imsg"
-      "steipete/tap/remindctl"
       "yt-dlp"
-    ];
-    casks = [
-      "google-chrome"
     ];
   };
 }
