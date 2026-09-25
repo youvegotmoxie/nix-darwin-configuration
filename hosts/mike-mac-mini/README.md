@@ -3,11 +3,12 @@
 Apple Silicon Mac Mini (Late 2024)
 
 ## Hardware
+
 - CPU: Apple M4
 - Memory: 16GiB unified memory
 
 ## Nix Packages
-- agent-browser
+
 - alejandra
 - atuin
 - bat
@@ -24,12 +25,10 @@ Apple Silicon Mac Mini (Late 2024)
 - gawk
 - gh
 - git
-- git-hunk
 - git-lfs
 - gnupg
 - gnused
 - gnutar
-- himalaya
 - home-manager
 - jdk21_headless
 - jq
@@ -74,27 +73,26 @@ Apple Silicon Mac Mini (Late 2024)
 - zsh
 
 ### Scripts
+
 - blame-line-pretty
 - git-hunk
 - gpg-push-pull-keys
 
 ## Homebrew
+
 ### Formulae
+
 - ffmpeg
-- findmy-cli
-- imsg
-- memo
 - mole
-- remindctl
 - yt-dlp
 
 ### Casks
+
 - alcove
 - betterdisplay
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
-- google-chrome
 - omlx
 - orbstack
 - raycast
@@ -103,6 +101,7 @@ Apple Silicon Mac Mini (Late 2024)
 - zed
 
 ### App Store
+
 - Amphetamine
 - Dark Reader for Safari
 - Raycast Companion
