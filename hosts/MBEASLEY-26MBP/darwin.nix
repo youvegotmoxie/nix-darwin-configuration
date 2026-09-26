@@ -29,6 +29,7 @@
     casks = [
       "aptakube"
       "obsidian"
+      "superwhisper"
     ];
     masApps = {
       "AWS Extend Switch Roles" = 1592710340;
