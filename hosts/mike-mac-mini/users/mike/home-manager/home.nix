@@ -1,4 +1,9 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -10,6 +15,9 @@
   zshConfig = {
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
   };
+
+  programs.tmux.enable = lib.mkForce true;
+  home.packages = lib.mkMerge [pkgs.weechat];
 
   # Syncthing hosts
   extras.syncthingTarget = ["mike-macbook-pro" "MBEASLEY-26MBP"];
