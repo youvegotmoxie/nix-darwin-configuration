@@ -17,7 +17,7 @@
   };
 
   programs.tmux.enable = lib.mkForce true;
-  home.packages = lib.mkMerge [pkgs.weechat];
+  home.packages = lib.mkMerge [[pkgs.weechat]];
 
   # Syncthing hosts
   extras.syncthingTarget = ["mike-macbook-pro" "MBEASLEY-26MBP"];
