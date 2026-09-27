@@ -36,7 +36,6 @@ in {
       pkgs.tmuxPlugins.better-mouse-mode
       pkgs.tmuxPlugins.tokyo-night-tmux
     ];
-    shortcut = "a";
     mouse = true;
     extraConfig = ''
       # Reload Tmux config
