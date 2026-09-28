@@ -1,4 +1,40 @@
 providers:
+  - id: fw-desktop
+    name: "lemonade.ai"
+    base_url: http://192.168.1.180:13305/v1
+    models:
+      - id: Qwen3.5-122B-A10B-MTP-GGUF
+        name: "Qwen3.5 122B"
+        description: "Fast open-source model from Alibaba"
+        context: 262144
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
+      - id: Qwen3.8-Flash-Next
+        name: "Qwen3.8-Flash"
+        description: "Fast open-source model from Alibaba"
+        context: 262144
+        provider: openai
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+          reasoning_effort:
+            supported: true
   - id: llama-cpp
     name: "llama.cpp"
     base_url: http://192.168.1.87:13305/v1
