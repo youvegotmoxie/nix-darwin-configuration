@@ -94,7 +94,10 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "hmback";
-              extraSpecialArgs.flake-inputs = inputs;
+              extraSpecialArgs = {
+                flake-inputs = inputs;
+                inherit inputs system;
+              };
             };
           }
         ];
