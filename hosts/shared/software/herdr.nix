@@ -16,13 +16,18 @@
       ui = {
         status_indicators = "symbols";
         sound.enabled = false;
-        toast.delivery = "herdr";
+        toast = {
+          delivery = "herdr";
+          clipboard.position = "bottom-right";
+        };
         tab_bar_right = [
           {type = "hostname";}
           {type = "datetime";}
         ];
         tab_bar_right_separator = " | ";
         sidebar_collapsed_mode = "hidden";
+        pane_scrollbars = false;
+        window_title = "{terminal_title}";
       };
       keys = {
         prefix = "ctrl+a";
@@ -30,6 +35,9 @@
         resize_pane_down = "ctrl+shift+j";
         resize_pane_up = "ctrl+shift+k";
         resize_pane_right = "ctrl+shift+l";
+        next_workspace = "prefix+space";
+        previous_workspace = "prefix+shift+space";
+        clear_pane = "cmd+k";
       };
     };
   };
