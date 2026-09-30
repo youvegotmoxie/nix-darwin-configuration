@@ -7,7 +7,6 @@
   config,
   ...
 }: let
-  lixReleaseBranch = "latest";
   omlxMemory = config.extras.gpuMemory;
 in {
   # Supplied by the mkDarwinHost factory
@@ -57,21 +56,12 @@ in {
         Minute = 30;
       };
     };
-    package = pkgs.lixPackageSets.${lixReleaseBranch}.lix;
-    settings =
-      {
-        "extra-experimental-features" = [
-          "nix-command"
-          "flakes"
-        ];
-      }
-      // lib.optionalAttrs (config.nix.package == pkgs.lixPackageSets.${lixReleaseBranch}.lix) {
-        # Silence deprecated syntax warnings for Lix
-        "extra-deprecated-features" = [
-          # This is needed due to old syntax being used in Nixpkgs
-          "or-as-identifier"
-        ];
-      };
+    settings = {
+      "extra-experimental-features" = [
+        "nix-command"
+        "flakes"
+      ];
+    };
     extraOptions = ''
       extra-platforms = x86_64-darwin aarch64-darwin
       min-free = ${toString (100 * 1024 * 1024)}

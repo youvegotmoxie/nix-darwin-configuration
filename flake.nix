@@ -9,6 +9,7 @@
     nil = {
       url = "github:oxalica/nil";
     };
+    herdr.url = "github:herdrdev/herdr/v0.9.3";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
@@ -34,6 +35,7 @@
     nixpkgs,
     sops-nix,
     nix-index-database,
+    herdr,
     ...
   }: let
     mkDarwinHost = {

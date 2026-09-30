@@ -5,6 +5,7 @@
     ./fzf.nix
     ./git.nix
     ./gnupg.nix
+    ./herdr.nix
     ./mcp.nix
     ./misc-dots.nix
     ./misc.nix
