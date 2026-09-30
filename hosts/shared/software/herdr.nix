@@ -17,6 +17,12 @@
         status_indicators = "symbols";
         sound.enabled = false;
         toast.delivery = "herdr";
+        tab_bar_right = [
+          {type = "hostname";}
+          {type = "datetime";}
+        ];
+        tab_bar_right_separator = " | ";
+        sidebar_collapsed_mode = "hidden";
       };
       keys = {
         prefix = "ctrl+a";
