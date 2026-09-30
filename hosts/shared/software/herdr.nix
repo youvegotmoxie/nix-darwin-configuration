@@ -37,6 +37,7 @@
         resize_pane_right = "ctrl+shift+l";
         next_workspace = "prefix+space";
         previous_workspace = "prefix+shift+space";
+        split_vertical = "prefix+|";
         clear_pane = "cmd+k";
       };
     };
