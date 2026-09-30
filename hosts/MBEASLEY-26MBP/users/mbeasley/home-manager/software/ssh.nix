@@ -56,7 +56,7 @@
           ControlPersist = "2h";
         };
         "fw-desktop" = {
-          Hostname = "192.168.148.148";
+          Hostname = "192.168.1.180";
           User = "mike";
           Port = 22;
           ControlMaster = "auto";
