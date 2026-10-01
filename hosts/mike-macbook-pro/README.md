@@ -14,7 +14,6 @@ Apple Silicon MacBook Pro (Late 2025)
 - bat
 - bat-extras.batman
 - btop
-- cargo
 - cmake
 - delta
 - direnv
@@ -25,11 +24,11 @@ Apple Silicon MacBook Pro (Late 2025)
 - gawk
 - gh
 - git
-- git-hunk
 - git-lfs
 - gnupg
 - gnused
 - gnutar
+- herdr
 - home-manager
 - jdk21_headless
 - jq
@@ -57,13 +56,13 @@ Apple Silicon MacBook Pro (Late 2025)
 - python314Packages.pip
 - reattach-to-user-namespace
 - ripgrep
-- rustc
-- rustfmt
+- rustup
 - shellcheck
 - shfmt
 - sops
 - starship
 - strace-macos
+- syncthing
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -104,6 +103,7 @@ Apple Silicon MacBook Pro (Late 2025)
 
 ### App Store
 
+- Adobe Lightroom Photo Editor
 - Amphetamine
 - Budget Flow Expense Tracker
 - Dark Reader for Safari

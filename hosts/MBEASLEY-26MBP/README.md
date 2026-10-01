@@ -18,7 +18,6 @@ Apple Silicon MacBook Pro (14", 2026)
 - bat
 - bat-extras.batman
 - btop
-- cargo
 - claws
 - cmake
 - delta
@@ -32,13 +31,13 @@ Apple Silicon MacBook Pro (14", 2026)
 - gh
 - git
 - git-lfs
-- git-hunk
 - gnupg
 - gnused
 - gnutar
 - go
 - google-cloud-sdk
 - helm4
+- herdr
 - home-manager
 - jdk21_headless
 - jq
@@ -71,8 +70,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - python314Packages.pip
 - reattach-to-user-namespace
 - ripgrep
-- rustc
-- rustfmt
+- rustup
 - shellcheck
 - shfmt
 - sops
@@ -80,6 +78,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - starship
 - strace-macos
 - stern
+- syncthing
 - tldr
 - ugrep
 - uutils-coreutils-noprefix

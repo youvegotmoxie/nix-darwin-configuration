@@ -15,19 +15,26 @@ Framework Desktop. Runs llama.cpp model serving
 - eza
 - fd
 - findutils
+- fzf
 - gawk
 - gh
 - git
+- git-lfs
+- herdr
 - home-manager
 - jq
 - lazygit
 - neovim
+- nix-direnv
 - nh
 - nil
+- nix-index
 - nix-output-monitor
 - nixd
 - nodejs_26
 - p7zip
+- pciutils
+- pinentry-tty
 - prek
 - python314
 - python314Packages.pip
@@ -35,7 +42,7 @@ Framework Desktop. Runs llama.cpp model serving
 - rocm-smi
 - shfmt
 - shellcheck
-- tmux
+- starship
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -44,6 +51,14 @@ Framework Desktop. Runs llama.cpp model serving
 - vim
 - wget
 - yq
+- zoxide
+- zsh
+
+### Scripts
+
+- blame-line-pretty
+- git-hunk
+- gpg-push-pull-keys
 
 ## Services
 
@@ -62,7 +77,7 @@ Source: [models.ini](./users/mike/home-manager/dots/models.ini)
 
 | Model         | Quantization | Context | HuggingFace                                                                                     |
 | ------------- | ------------ | ------- | ----------------------------------------------------------------------------------------------- |
-| qwen-3.5-122B | Q4_K_M       | 128K    | [unsloth/Qwen3.5-122B-A10B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-MTP-GGUF) |
+| qwen-3.5-122B | UD-Q4_K_M    | 128K    | [unsloth/Qwen3.5-122B-A10B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-MTP-GGUF) |
 
 ## Hardware
 

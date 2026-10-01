@@ -17,19 +17,26 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - eza
 - fd
 - findutils
+- fzf
 - gawk
 - gh
 - git
+- git-lfs
+- herdr
 - home-manager
 - jq
 - lazygit
 - neovim
+- nix-direnv
 - nh
 - nil
+- nix-index
 - nix-output-monitor
 - nixd
 - nodejs_26
 - p7zip
+- pciutils
+- pinentry-tty
 - prek
 - python314
 - python314Packages.pip
@@ -37,7 +44,7 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - rocm-smi
 - shfmt
 - shellcheck
-- tmux
+- starship
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -46,6 +53,14 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - vim
 - wget
 - yq
+- zoxide
+- zsh
+
+### Scripts
+
+- blame-line-pretty
+- git-hunk
+- gpg-push-pull-keys
 
 ## Services
 

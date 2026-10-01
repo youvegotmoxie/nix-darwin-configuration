@@ -14,7 +14,6 @@ Apple Silicon Mac Mini (Late 2024)
 - bat
 - bat-extras.batman
 - btop
-- cargo
 - cmake
 - delta
 - direnv
@@ -29,6 +28,7 @@ Apple Silicon Mac Mini (Late 2024)
 - gnupg
 - gnused
 - gnutar
+- herdr
 - home-manager
 - jdk21_headless
 - jq
@@ -56,13 +56,13 @@ Apple Silicon Mac Mini (Late 2024)
 - python314Packages.pip
 - reattach-to-user-namespace
 - ripgrep
-- rustc
-- rustfmt
+- rustup
 - shellcheck
 - shfmt
 - sops
 - starship
 - strace-macos
+- syncthing
 - tmux
 - tldr
 - ugrep
