@@ -42,19 +42,20 @@ in {
       };
       shellAliases =
         {
-          lg = "lazygit";
+          cat = "bat --paging=never --style=plain";
+          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
+          grep = "ugrep --color=auto";
+          hdmt = "herdr-machine-toggle";
           history = "history -E";
+          kubectl = "kubecolor";
+          lg = "lazygit";
+          man = "batman";
+          nix = "nix --option access-tokens github.com=$(gh auth token)";
+          nomsh = "nom-shell";
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
-          grep = "ugrep --color=auto";
-          cat = "bat --paging=never --style=plain";
           tree = "eza --icons --tree --group-directories-first";
-          man = "batman";
-          nomsh = "nom-shell";
-          kubectl = "kubecolor";
-          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           ytdl = "yt-dlp";
-          nix = "nix --option access-tokens github.com=$(gh auth token)";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
@@ -72,7 +73,7 @@ in {
         fi
       '';
       sessionVariables = let
-        proxy = "localhost,127.0.0.1,192.168.1.87";
+        proxy = "localhost,127.0.0.1,192.168.1.87,192.168.1.180";
       in
         {
           "GIT_AUTO_FETCH_INTERVAL" = 300;

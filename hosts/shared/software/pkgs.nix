@@ -5,6 +5,9 @@
   ...
 }: let
   # Package shell scripts
+  herdr-machine-toggle = pkgs.writeShellScriptBin "herdr-machine-toggle" (
+    builtins.readFile ../scripts/herdr-machine-toggle.sh
+  );
   ssh-proxy = pkgs.writeShellScriptBin "ssh-proxy" (
     builtins.readFile ../scripts/sshproxy.sh
   );
@@ -25,12 +28,12 @@
   # no longer builds on a recent version of Rust
   macmon = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
     pname = "macmon";
-    version = "0.8.0";
+    version = "0.8.2";
     src = pkgs.fetchFromGitHub {
       owner = "vladkens";
       repo = finalAttrs.pname;
       tag = "v${finalAttrs.version}";
-      hash = "sha256-9UD/PXmMln5RiUQXjp2GV3m1R2IQ5ItvoOfpkqGNg/I=";
+      hash = "";
     };
     cargoHash = "sha256-hgZiXMvQwXDyEh0yVAftJEDk9i2e+Drgq11q9ze/mUc=";
     meta = {
@@ -44,7 +47,7 @@
   # Helm v4 is not available in nixpkgs
   helm4 = pkgs.stdenv.mkDerivation (finalAttrs: {
     pname = "helm";
-    version = "4.2.3";
+    version = "4.3.0";
     sourceRoot = ".";
     src = pkgs.fetchzip {
       name = finalAttrs.pname;
@@ -113,6 +116,7 @@ in {
           blame-line-pretty
           git-hunk
           gpg-push-pull-keys
+          herdr-machine-toggle
         ]
         ++ (lib.optionals (!cfg.minimal.enable) [
           alejandra
