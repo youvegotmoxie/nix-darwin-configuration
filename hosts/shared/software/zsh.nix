@@ -45,7 +45,8 @@ in {
           cat = "bat --paging=never --style=plain";
           dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           grep = "ugrep --color=auto";
-          hdmt = "herdr-machine-toggle";
+          hml = "herdr machine list";
+          hmt = "herdr-machine-toggle";
           history = "history -E";
           kubectl = "kubecolor";
           lg = "lazygit";

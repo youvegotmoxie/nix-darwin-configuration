@@ -33,9 +33,9 @@
       owner = "vladkens";
       repo = finalAttrs.pname;
       tag = "v${finalAttrs.version}";
-      hash = "";
+      hash = "sha256-tdWuxpV+AAN189etks6LVo4OYDYQNd9dzfopECFgoR8=";
     };
-    cargoHash = "sha256-hgZiXMvQwXDyEh0yVAftJEDk9i2e+Drgq11q9ze/mUc=";
+    cargoHash = "sha256-U71Qrplz2CY5CiYpDjFrtWQOy1J4HE3tMhnRbLXUD7k=";
     meta = {
       description = "A sudoless performance monitoring CLI tool for Apple Silicon processors";
       homepage = "https://github.com/vladkens/macmon";
@@ -52,7 +52,7 @@
     src = pkgs.fetchzip {
       name = finalAttrs.pname;
       url = "https://get.${finalAttrs.pname}.sh/${finalAttrs.pname}-v${finalAttrs.version}-darwin-arm64.tar.gz";
-      hash = "sha256-zPD0mkwE2bV79mCVRGeSWr4Z2Iqup6Hg7tHSafy6vZA=";
+      hash = "sha256-0OBOd4kut5wBjSjSHg0JuDygTRwLe46df5Y52D0Zl4k=";
       stripRoot = false;
     };
     installPhase = ''
