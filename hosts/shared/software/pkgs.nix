@@ -110,6 +110,7 @@ in {
           prek
           ripgrep
           shfmt
+          smartmontools
           syswatch
           tldr
           ugrep
