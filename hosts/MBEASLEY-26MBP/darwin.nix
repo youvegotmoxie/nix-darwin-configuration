@@ -20,11 +20,13 @@
   homebrew = {
     taps = [
       "anomalyco/tap"
+      "skyhook-io/tap"
     ];
     brews = [
       "anomalyco/tap/opencode"
       "argocd"
       "helm-ls"
+      "skyhook-io/tap/radar"
     ];
     casks = [
       "aptakube"

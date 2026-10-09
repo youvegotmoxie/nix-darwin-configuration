@@ -97,17 +97,20 @@ in {
           bat
           bat-extras.batman
           delta
+          diskwatch
           fd
           findutils
           gawk
           gh
           jq
+          netwatch
           nix-output-monitor
           p7zip
           pinentry-tty
           prek
           ripgrep
           shfmt
+          syswatch
           tldr
           ugrep
           viddy
