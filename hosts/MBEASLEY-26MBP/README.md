@@ -22,6 +22,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - cmake
 - delta
 - direnv
+- diskwatch
 - eks-node-viewer
 - eza
 - fd
@@ -51,6 +52,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - macmon
 - libfido2
 - neovim
+- netwatch
 - nix-direnv
 - nerd-fonts.monaspace
 - nh
@@ -73,12 +75,14 @@ Apple Silicon MacBook Pro (14", 2026)
 - rustup
 - shellcheck
 - shfmt
+- smartmontools
 - sops
 - ssm-session-manager-plugin
 - starship
 - strace-macos
 - stern
 - syncthing
+- syswatch
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -95,6 +99,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - blame-line-pretty
 - gpg-push-pull-keys
 - git-hunk
+- herdr-machine-toggle
 - ssh-proxy
 - tilt-connect
 

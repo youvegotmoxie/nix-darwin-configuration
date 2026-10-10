@@ -12,6 +12,7 @@ Framework Desktop. Runs llama.cpp model serving
 - cmake
 - delta
 - direnv
+- diskwatch
 - eza
 - fd
 - findutils
@@ -25,6 +26,7 @@ Framework Desktop. Runs llama.cpp model serving
 - jq
 - lazygit
 - neovim
+- netwatch
 - nix-direnv
 - nh
 - nil
@@ -42,7 +44,9 @@ Framework Desktop. Runs llama.cpp model serving
 - rocm-smi
 - shfmt
 - shellcheck
+- smartmontools
 - starship
+- syswatch
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -59,6 +63,7 @@ Framework Desktop. Runs llama.cpp model serving
 - blame-line-pretty
 - git-hunk
 - gpg-push-pull-keys
+- herdr-machine-toggle
 
 ## Services
 

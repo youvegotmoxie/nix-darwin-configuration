@@ -17,6 +17,7 @@ Apple Silicon Mac Mini (Late 2024)
 - cmake
 - delta
 - direnv
+- diskwatch
 - eza
 - fd
 - findutils
@@ -37,6 +38,7 @@ Apple Silicon Mac Mini (Late 2024)
 - libfido2
 - macmon
 - neovim
+- netwatch
 - nerd-fonts.monaspace
 - nix-direnv
 - nh
@@ -59,10 +61,12 @@ Apple Silicon Mac Mini (Late 2024)
 - rustup
 - shellcheck
 - shfmt
+- smartmontools
 - sops
 - starship
 - strace-macos
 - syncthing
+- syswatch
 - tmux
 - tldr
 - ugrep
@@ -79,6 +83,7 @@ Apple Silicon Mac Mini (Late 2024)
 - blame-line-pretty
 - git-hunk
 - gpg-push-pull-keys
+- herdr-machine-toggle
 
 ## Homebrew
 

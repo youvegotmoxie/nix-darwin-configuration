@@ -17,6 +17,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - cmake
 - delta
 - direnv
+- diskwatch
 - eza
 - fd
 - findutils
@@ -37,6 +38,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - macmon
 - libfido2
 - neovim
+- netwatch
 - nix-direnv
 - nerd-fonts.monaspace
 - nh
@@ -59,10 +61,12 @@ Apple Silicon MacBook Pro (Late 2025)
 - rustup
 - shellcheck
 - shfmt
+- smartmontools
 - sops
 - starship
 - strace-macos
 - syncthing
+- syswatch
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -78,6 +82,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - blame-line-pretty
 - git-hunk
 - gpg-push-pull-keys
+- herdr-machine-toggle
 
 ## Homebrew
 

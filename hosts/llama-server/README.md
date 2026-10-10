@@ -14,6 +14,7 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - cmake
 - delta
 - direnv
+- diskwatch
 - eza
 - fd
 - findutils
@@ -27,6 +28,7 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - jq
 - lazygit
 - neovim
+- netwatch
 - nix-direnv
 - nh
 - nil
@@ -44,7 +46,9 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - rocm-smi
 - shfmt
 - shellcheck
+- smartmontools
 - starship
+- syswatch
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
@@ -61,6 +65,7 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - blame-line-pretty
 - git-hunk
 - gpg-push-pull-keys
+- herdr-machine-toggle
 
 ## Services
 
