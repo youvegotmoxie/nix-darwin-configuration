@@ -190,3 +190,8 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
+tools:
+  web_search: raycast
+  read_page: raycast
+  search_images: raycast
+  chart: raycast
