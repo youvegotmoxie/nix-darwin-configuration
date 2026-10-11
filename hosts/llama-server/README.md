@@ -66,6 +66,7 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - git-hunk
 - gpg-push-pull-keys
 - herdr-machine-toggle
+- herdr-pane-kill
 
 ## Services
 

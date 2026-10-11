@@ -100,6 +100,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - gpg-push-pull-keys
 - git-hunk
 - herdr-machine-toggle
+- herdr-pane-kill
 - ssh-proxy
 - tilt-connect
 

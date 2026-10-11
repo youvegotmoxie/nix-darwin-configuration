@@ -84,6 +84,7 @@ Apple Silicon Mac Mini (Late 2024)
 - git-hunk
 - gpg-push-pull-keys
 - herdr-machine-toggle
+- herdr-pane-kill
 
 ## Homebrew
 

@@ -64,6 +64,7 @@ Framework Desktop. Runs llama.cpp model serving
 - git-hunk
 - gpg-push-pull-keys
 - herdr-machine-toggle
+- herdr-pane-kill
 
 ## Services
 

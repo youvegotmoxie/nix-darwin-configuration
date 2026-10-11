@@ -8,6 +8,9 @@
   herdr-machine-toggle = pkgs.writeShellScriptBin "herdr-machine-toggle" (
     builtins.readFile ../scripts/herdr-machine-toggle.sh
   );
+  herdr-pane-kill = pkgs.writeShellScriptBin "herdr-pane-kill" (
+    builtins.readFile ../scripts/herdr-pane-kill.sh
+  );
   ssh-proxy = pkgs.writeShellScriptBin "ssh-proxy" (
     builtins.readFile ../scripts/sshproxy.sh
   );
@@ -121,6 +124,7 @@ in {
           git-hunk
           gpg-push-pull-keys
           herdr-machine-toggle
+          herdr-pane-kill
         ]
         ++ (lib.optionals (!cfg.minimal.enable) [
           alejandra

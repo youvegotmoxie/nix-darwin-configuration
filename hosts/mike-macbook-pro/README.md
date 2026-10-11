@@ -83,6 +83,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - git-hunk
 - gpg-push-pull-keys
 - herdr-machine-toggle
+- herdr-pane-kill
 
 ## Homebrew
 

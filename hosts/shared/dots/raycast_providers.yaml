@@ -190,19 +190,3 @@ providers:
             supported: true
           reasoning_effort:
             supported: true
-      - id: Ornith-1.5-9B-MLX-4bit
-        name: "Ornith 1.5 9B"
-        description: "Fast open-source model from DeepReinforce AI"
-        context: 128000
-        provider: openai
-        abilities:
-          temperature:
-            supported: true
-          vision:
-            supported: true
-          system_message:
-            supported: true
-          tools:
-            supported: true
-          reasoning_effort:
-            supported: true

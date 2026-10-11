@@ -47,6 +47,7 @@ in {
           grep = "ugrep --color=auto";
           hml = "herdr machine list";
           hmt = "herdr-machine-toggle";
+          hpk = "herdr-pane-kill";
           history = "history -E";
           kubectl = "kubecolor";
           lg = "lazygit";
