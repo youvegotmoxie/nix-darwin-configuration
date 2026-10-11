@@ -30,6 +30,7 @@
     ];
     casks = [
       "aptakube"
+      "codexbar"
       "obsidian"
     ];
     masApps = {

@@ -21,6 +21,9 @@
       "ffmpeg"
       "yt-dlp"
     ];
+    casks = [
+      "codexbar"
+    ];
     masApps = {
       "Budget Flow Expense Tracker" = 1640091876;
       "Adobe Lightroom Photo Editor" = 1451544217;
