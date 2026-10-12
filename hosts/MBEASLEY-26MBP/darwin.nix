@@ -32,6 +32,7 @@
       "aptakube"
       "codexbar"
       "obsidian"
+      "transcribex"
     ];
     masApps = {
       "AWS Extend Switch Roles" = 1592710340;
