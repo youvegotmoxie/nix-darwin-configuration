@@ -23,7 +23,7 @@
       "skyhook-io/tap"
     ];
     brews = [
-      "anomalyco/tap/opencode"
+      "anomalyco/tap/opencode-v2"
       "argocd"
       "helm-ls"
       "skyhook-io/tap/radar"
