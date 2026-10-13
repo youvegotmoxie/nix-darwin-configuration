@@ -1,25 +1,12 @@
-{
-  mainUser,
-  lib,
-  ...
-}: {
+{mainUser, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../hosts/shared/configuration.nix
   ];
 
-  # AMD RX 9070 XT uses the gfx1201 ROCm target
-  rocmConfig.gpuTargets = "gfx1201";
-
   boot.kernelParams = [
     "amd_iommu=off"
   ];
-
-  # Disable llama.cpp because this is using llama-swap
-  services.llama-cpp.enable = lib.mkForce false;
-  # This is needed because llama-cpp.nix writes entries to the llama-cpp systemd unit file
-  # Otherwise we get a unit file containing only env vars
-  systemd.services.llama-cpp.enable = lib.mkForce false;
 
   users.users.${mainUser}.openssh.authorizedKeys.keys = [
     "ecdsa-sha2-nistp384 AAAAE2VjZHNhLXNoYTItbmlzdHAzODQAAAAIbmlzdHAzODQAAABhBNKNWVZe8zRvZ8VNfsDr+KQfDYvi/+ssXo6hIHLFsxwVYya+BcyFZ6TBXARrLONhkKbq4nkEA2CRatJ5bL8WG2H8dnl/WbsV+LQ5NRZz20f0MIKhOkZa6uoZE6gGWEVIxA== cardno:35_285_426"

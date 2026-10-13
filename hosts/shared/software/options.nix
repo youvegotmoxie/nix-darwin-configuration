@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   options.extras = {
     gpuMemory = lib.mkOption {
       type = lib.types.str;
@@ -12,19 +17,19 @@
     };
     extraPackages = {
       workOnly = {
-        enable = lib.mkEnableOption "extras.extraPackages.workOnly" // { default = false; };
+        enable = lib.mkEnableOption "extras.extraPackages.workOnly" // {default = false;};
       };
       serverOnly = {
-        enable = lib.mkEnableOption "extras.extraPackages.serverOnly" // { default = false; };
+        enable = lib.mkEnableOption "extras.extraPackages.serverOnly" // {default = false;};
       };
       appleSiliconOnly = {
-        enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // { default = pkgs.stdenv.hostPlatform.isDarwin && pkgs.stdenv.hostPlatform.isAarch64; };
+        enable = lib.mkEnableOption "extras.extraPackages.appleSiliconOnly" // {default = pkgs.stdenv.hostPlatform.isDarwin && pkgs.stdenv.hostPlatform.isAarch64;};
       };
       macOnly = {
-        enable = lib.mkEnableOption "extras.extraPackages.macOnly" // { default = pkgs.stdenv.hostPlatform.isDarwin; };
+        enable = lib.mkEnableOption "extras.extraPackages.macOnly" // {default = pkgs.stdenv.hostPlatform.isDarwin;};
       };
       minimal = {
-        enable = lib.mkEnableOption "extras.extraPackages.minimal" // { default = false; };
+        enable = lib.mkEnableOption "extras.extraPackages.minimal" // {default = false;};
       };
     };
   };
@@ -67,14 +72,6 @@
     };
   };
 
-  options.rocmConfig = {
-    gpuTargets = lib.mkOption {
-      type = lib.types.str;
-      default = "gfx1151";
-      description = "ROCm GPU target passed to CMake as -DGPU_TARGETS (e.g. gfx1151, gfx1201)";
-    };
-  };
-
   options.zshConfig = {
     ssh = {
       enable = lib.mkOption {
@@ -88,7 +85,7 @@
       };
     };
     workAliases = {
-      enable = lib.mkEnableOption "zshConfig.workAliases" // { default = false; };
+      enable = lib.mkEnableOption "zshConfig.workAliases" // {default = false;};
     };
   };
 }

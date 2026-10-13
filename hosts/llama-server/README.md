@@ -2,7 +2,7 @@
 
 Custom built AMD machine with ROCm support.
 
-Runs llama.cpp backend for llama-swap to handle local inference and model routing to fw-desktop.
+Runs Lemonade.ai to handle local inference.
 
 ## Packages
 
@@ -73,19 +73,6 @@ Runs llama.cpp backend for llama-swap to handle local inference and model routin
 - openssh
 - docker
 - vnstat
-- llama-cpp: intentionally disabled (both `services.llama-cpp` and `systemd.services.llama-cpp`) — inference is served by llama-swap
-
-## Models
-
-Source: llama-swap `config.yaml` (not in this repo)
-
-| Model             | Quantization | Context | HuggingFace                                                                                       |
-| ----------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------- |
-| gemma-4-e2b       | Q4_K_XL      | 128K    | [unsloth/gemma-4-E2B-it-qat-GGUF](https://huggingface.co/unsloth/gemma-4-E2B-it-qat-GGUF)         |
-| qwen3-4b-instruct | Q4_K_XL      | 64K     | [unsloth/Qwen3-4B-Instruct-2507-GGUF](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF) |
-| ornith-1.0-9B     | Q4_K_M       | 128K    | [deepreinforce-ai/Ornith-1.0-9B-GGUF](https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B-GGUF) |
-| qwen3.6-35B       | Q4_K_M       | 128K    | [unsloth/Qwen3.6-35B-A3B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF)       |
-| qwen3.8-27B       | Q4_K_XL      | 128K    | [unsloth/Qwen3.8-27B-GGUF](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF)                       |
 
 ## Hardware
 
