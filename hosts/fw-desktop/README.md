@@ -1,6 +1,6 @@
 # fw-desktop
 
-Framework Desktop. Runs Lemonade.ai to handle local inference.
+Framework Desktop.
 
 ## Packages
 

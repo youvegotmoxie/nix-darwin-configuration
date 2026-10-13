@@ -2,8 +2,6 @@
 
 Custom built AMD machine with ROCm support.
 
-Runs Lemonade.ai to handle local inference.
-
 ## Packages
 
 - amdgpu_top
