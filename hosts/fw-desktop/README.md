@@ -1,6 +1,6 @@
 # fw-desktop
 
-Framework Desktop. Runs llama.cpp model serving
+Framework Desktop.
 
 ## Packages
 
@@ -72,18 +72,6 @@ Framework Desktop. Runs llama.cpp model serving
 - docker
 - fwupd
 - vnstat
-- llama-cpp: enabled (0.0.0.0:8080)
-  - ROCm support (gfx1151 target)
-  - 32 threads, Q8_0 KV cache
-  - Tools and jinja enabled
-
-## Models
-
-Source: [models.ini](./users/mike/home-manager/dots/models.ini)
-
-| Model         | Quantization | Context | HuggingFace                                                                                     |
-| ------------- | ------------ | ------- | ----------------------------------------------------------------------------------------------- |
-| qwen-3.5-122B | UD-Q4_K_M    | 128K    | [unsloth/Qwen3.5-122B-A10B-MTP-GGUF](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-MTP-GGUF) |
 
 ## Hardware
 

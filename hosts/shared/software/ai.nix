@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./llama-cpp.nix
-  ];
-}

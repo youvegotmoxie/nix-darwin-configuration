@@ -30,7 +30,6 @@
         ];
         ignored_commands = [
           "cd"
-          "hx"
           "ll"
           "ls"
           "nvim"
