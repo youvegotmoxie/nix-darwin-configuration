@@ -43,7 +43,6 @@ in {
       shellAliases =
         {
           cat = "bat --paging=never --style=plain";
-          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           grep = "ugrep --color=auto";
           hml = "herdr machine list";
           hmt = "herdr-machine-toggle";
@@ -61,7 +60,9 @@ in {
         }
         // (lib.optionalAttrs cfg.workAliases.enable {
           # Work only aliases
+          dive = "docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive";
           btcm = "better-commits";
+          oc = "opencode";
           properties-converter = "python ~/bitbucket/platops/platops-utils/bin/properties-converter.py";
           renovate = "docker run --rm -v $(pwd):/usr/src/app -e LOG_LEVEL=debug renovate/renovate --platform=local --dry-run=lookup --repository-cache=enabled";
         });
