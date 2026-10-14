@@ -28,6 +28,7 @@
         sidebar_collapsed_mode = "hidden";
         pane_scrollbars = false;
         window_title = "{terminal_title}";
+        prompt_new_tab_name = false;
       };
       keys = {
         prefix = "ctrl+a";
