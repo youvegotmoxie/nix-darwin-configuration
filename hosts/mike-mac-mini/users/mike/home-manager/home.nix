@@ -16,7 +16,6 @@
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
   };
 
-  programs.tmux.enable = lib.mkForce true;
   home.packages = lib.mkMerge [[pkgs.weechat]];
 
   # Syncthing hosts
