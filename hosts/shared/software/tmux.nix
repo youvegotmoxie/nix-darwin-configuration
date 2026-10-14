@@ -25,7 +25,7 @@
     };
 in {
   programs.tmux = {
-    enable = false;
+    enable = true;
     terminal = "xterm-256color";
     historyLimit = 50000;
     keyMode = "vi";
@@ -37,6 +37,7 @@ in {
       pkgs.tmuxPlugins.tokyo-night-tmux
     ];
     mouse = true;
+    shortcut = "a";
     extraConfig = ''
       # Reload Tmux config
       bind R \
