@@ -4,7 +4,7 @@
   ...
 }: {
   programs.herdr = {
-    enable = false;
+    enable = true;
     # Use the upstream Herdr flake since nixpkgs lags behind
     package = inputs.herdr.packages.${system}.herdr;
     settings = {

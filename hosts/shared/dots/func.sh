@@ -29,4 +29,4 @@ unsetopt beep
 unsetopt hist_beep
 
 export PATH="/Users/mike/.local/bin:$PATH"
-# eval "$(herdr completion zsh)"
+eval "$(herdr completion zsh)"

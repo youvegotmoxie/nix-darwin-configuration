@@ -25,7 +25,7 @@
     };
 in {
   programs.tmux = {
-    enable = true;
+    enable = false;
     terminal = "xterm-256color";
     historyLimit = 50000;
     keyMode = "vi";
