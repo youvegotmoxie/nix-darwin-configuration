@@ -32,6 +32,7 @@
       "aptakube"
       "codexbar"
       "obsidian"
+      "thaw"
       "transcribex"
     ];
     masApps = {

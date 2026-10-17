@@ -162,7 +162,6 @@ in {
       "ghostty"
       "orbstack"
       "raycast"
-      "thaw"
       "timemachinestatus"
       "youvegotmoxie/homebrew-tap/omlx"
       "zed"
