@@ -26,7 +26,7 @@
     ];
     masApps = {
       "Budget Flow Expense Tracker" = 1640091876;
-      "Adobe Lightroom Photo Editor" = 1451544217;
+      "Trovelo: Private Trip Planner" = 6760258252;
     };
   };
 }
