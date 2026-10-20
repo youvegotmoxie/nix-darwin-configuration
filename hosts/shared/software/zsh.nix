@@ -47,6 +47,7 @@ in {
           hml = "herdr machine list";
           hmt = "herdr-machine-toggle";
           hpk = "herdr-pane-kill";
+          hdr = "herdr";
           history = "history -E";
           kubectl = "kubecolor";
           lg = "lazygit";
