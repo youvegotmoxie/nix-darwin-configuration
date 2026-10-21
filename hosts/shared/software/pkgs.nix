@@ -70,26 +70,6 @@
     };
   });
 
-  k0sctl = pkgs.buildGoLatestModule (finalAttrs: {
-    pname = "k0sctl";
-    version = "0.33.1";
-    src = pkgs.fetchFromGitHub {
-      owner = "k0sproject";
-      repo = finalAttrs.pname;
-      tag = "v${finalAttrs.version}";
-      hash = "sha256-g/8rN0UWbUjiIuWKcBb9sr8PjMx+rcq3Hce64cGziU0=";
-    };
-    # # This fails tests due to using `/homeless-shelter/.` Google buildroot nonsense
-    # doCheck = false;
-    vendorHash = "sha256-3TIQ1VY+52DFCVWiJs5U+5A+mVSU3QPyr5Vzrzs7zF8=";
-    meta = {
-      description = "A command-line bootstrapping and management tool for k0s zero friction kubernetes clusters";
-      homepage = "https://github.com/k0sproject/k0sctl";
-      license = lib.licenses.afl20;
-      mainProgram = finalAttrs.pname;
-    };
-  });
-
   # Not available in nixpkgs
   claws = pkgs.buildGoLatestModule (finalAttrs: {
     pname = "claws";
@@ -145,7 +125,6 @@ in {
           gpg-push-pull-keys
           herdr-machine-toggle
           herdr-pane-kill
-          k0sctl
         ]
         ++ (lib.optionals (!cfg.minimal.enable) [
           alejandra

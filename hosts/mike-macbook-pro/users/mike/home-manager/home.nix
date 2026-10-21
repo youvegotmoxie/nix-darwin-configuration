@@ -1,4 +1,27 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  k0sctl = pkgs.buildGoLatestModule (finalAttrs: {
+    pname = "k0sctl";
+    version = "0.33.1";
+    src = pkgs.fetchFromGitHub {
+      owner = "k0sproject";
+      repo = finalAttrs.pname;
+      tag = "v${finalAttrs.version}";
+      hash = "sha256-g/8rN0UWbUjiIuWKcBb9sr8PjMx+rcq3Hce64cGziU0=";
+    };
+    vendorHash = "sha256-3TIQ1VY+52DFCVWiJs5U+5A+mVSU3QPyr5Vzrzs7zF8=";
+    meta = {
+      description = "A command-line bootstrapping and management tool for k0s zero friction kubernetes clusters";
+      homepage = "https://github.com/k0sproject/k0sctl";
+      license = lib.licenses.afl20;
+      mainProgram = finalAttrs.pname;
+    };
+  });
+in {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
@@ -29,6 +52,7 @@
       "no_proxy" = NO_PROXY;
     };
 
+    packages = lib.mkMerge [[k0sctl]];
     file = {
       ".config/yt-dlp/config".text = ''
         --format best[height<=1080]
