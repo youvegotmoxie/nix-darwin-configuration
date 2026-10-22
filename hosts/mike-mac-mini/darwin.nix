@@ -12,8 +12,5 @@
       "ffmpeg"
       "yt-dlp"
     ];
-    casks = [
-      "discord"
-    ];
   };
 }
