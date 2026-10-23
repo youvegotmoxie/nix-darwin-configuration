@@ -23,6 +23,8 @@
     ];
     casks = [
       "codexbar"
+      "lightcraft"
+      "photocraft"
     ];
     masApps = {
       "Budget Flow Expense Tracker" = 1640091876;
