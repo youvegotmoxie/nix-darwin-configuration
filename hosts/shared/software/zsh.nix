@@ -43,6 +43,7 @@ in {
       shellAliases =
         {
           cat = "bat --paging=never --style=plain";
+          cp = "cp -v";
           grep = "ugrep --color=auto";
           hml = "herdr machine list";
           hmt = "herdr-machine-toggle";
@@ -51,12 +52,17 @@ in {
           history = "history -E";
           kubectl = "kubecolor";
           lg = "lazygit";
+          ln = "ln -v";
           man = "batman";
+          mkdir = "mkdir -v";
+          mv = "mv -v";
           nix = "nix --option access-tokens github.com=$(gh auth token)";
           nomsh = "nom-shell";
+          rm = "rm -v";
           sudo = "nocorrect sudo";
           tldr = "nocorrect tldr";
           tree = "eza --icons --tree --group-directories-first";
+          watch = "viddy";
           ytdl = "yt-dlp";
         }
         // (lib.optionalAttrs cfg.workAliases.enable {

@@ -86,10 +86,9 @@ in {
   # The override for pam_reattach is to support Tmux sessions with TouchID over SSH
   security.pam.services.sudo_local = {
     enable = true;
-    text = lib.mkForce ''
-      auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
-      auth       sufficient     pam_tid.so
-    '';
+    touchIdAuth = true;
+    watchIdAuth = true;
+    reattach = true;
   };
 
   # Configure the dock and Finder
