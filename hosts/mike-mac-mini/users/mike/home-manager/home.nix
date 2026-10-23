@@ -16,8 +16,6 @@
     ssh.socketPath = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
   };
 
-  home.packages = lib.mkMerge [[pkgs.weechat]];
-
   # Syncthing hosts
   extras.syncthingTarget = ["mike-macbook-pro" "MBEASLEY-26MBP"];
 

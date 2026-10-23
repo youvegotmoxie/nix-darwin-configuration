@@ -23,6 +23,7 @@
     ];
     casks = [
       "codexbar"
+      "halloy"
       "lightcraft"
       "photocraft"
     ];
