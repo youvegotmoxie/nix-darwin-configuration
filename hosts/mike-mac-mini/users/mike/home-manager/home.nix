@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   imports = [
     # shared modules in root of hosts dir
     ../../../../shared/software
