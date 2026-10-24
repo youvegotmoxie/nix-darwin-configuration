@@ -111,13 +111,15 @@ Apple Silicon MacBook Pro (14", 2026)
 - argocd
 - helm-ls
 - mole
-- opencode
+- opencode-v2
+- radar
 
 ### Casks
 
 - alcove
 - aptakube
 - betterdisplay
+- codexbar
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
@@ -127,6 +129,7 @@ Apple Silicon MacBook Pro (14", 2026)
 - raycast
 - thaw
 - timemachinestatus
+- transcribex
 - zed
 
 ### App Store

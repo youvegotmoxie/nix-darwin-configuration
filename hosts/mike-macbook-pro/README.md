@@ -33,6 +33,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - home-manager
 - jdk21_headless
 - jq
+- k0sctl
 - lazydocker
 - lazygit
 - macmon
@@ -97,19 +98,21 @@ Apple Silicon MacBook Pro (Late 2025)
 
 - alcove
 - betterdisplay
+- codexbar
 - font-monaspice-nerd-font
 - font-noto-sans-symbols-2
 - ghostty
+- halloy
+- lightcraft
 - omlx
 - orbstack
+- photocraft
 - raycast
-- thaw
 - timemachinestatus
 - zed
 
 ### App Store
 
-- Adobe Lightroom Photo Editor
 - Amphetamine
 - Budget Flow Expense Tracker
 - Dark Reader for Safari
@@ -118,6 +121,7 @@ Apple Silicon MacBook Pro (Late 2025)
 - SponsorBlock for Safari
 - StopTheMadness Pro
 - Strongbox Password Manager
+- Trovelo: Private Trip Planner
 - Vimari
 - Wipr 2
 - Xcode

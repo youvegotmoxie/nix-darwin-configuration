@@ -67,11 +67,9 @@ Apple Silicon Mac Mini (Late 2024)
 - strace-macos
 - syncthing
 - syswatch
-- tmux
 - tldr
 - ugrep
 - uutils-coreutils-noprefix
-- weechat
 - viddy
 - yq
 - yubikey-manager
@@ -104,7 +102,6 @@ Apple Silicon Mac Mini (Late 2024)
 - omlx
 - orbstack
 - raycast
-- thaw
 - timemachinestatus
 - zed
 
