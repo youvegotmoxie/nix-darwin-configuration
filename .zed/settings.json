@@ -1,8 +1,0 @@
-{
-  "context_servers": {
-    "mcp-nixos": {
-      "command": "uvx",
-      "args": ["mcp-nixos"]
-    }
-  }
-}

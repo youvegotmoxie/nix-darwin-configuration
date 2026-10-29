@@ -3,8 +3,7 @@
   lib,
   config,
   ...
-}:
-{
+}: {
   home.file = lib.mkMerge [
     # Common dotfiles
     {
@@ -19,6 +18,7 @@
       ".config/mole/whitelist_optimize".source = ../dots/mole_whitelist_optimize;
       ".config/raycast/ai/providers.yaml".source = ../dots/raycast_providers.yaml;
       "Library/Application Support/com.mitchellh.ghostty/config".source = ../dots/ghostty_config;
+      ".config/rex/init.lua".source = ../dots/rex_init.lua;
     })
     # Apple Silicon specific dotfiles
     (lib.mkIf config.extras.extraPackages.appleSiliconOnly.enable {
