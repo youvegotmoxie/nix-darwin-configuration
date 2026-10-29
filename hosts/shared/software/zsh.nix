@@ -81,6 +81,9 @@ in {
         if [ -f ${config.home.homeDirectory}/.creds.d/gh_token ]; then
           export GH_TOKEN="$(cat ${config.home.homeDirectory}/.creds.d/gh_token)"
         fi
+        if [ -n "$REX_BIN_DIR" ]; then
+          export PATH="$REX_BIN_DIR:$PATH"
+        fi
       '';
       sessionVariables = let
         proxy = "localhost,127.0.0.1,192.168.1.87,192.168.1.180";
