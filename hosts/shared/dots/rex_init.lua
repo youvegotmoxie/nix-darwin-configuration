@@ -35,5 +35,4 @@ rex.bind("tmux/ctrl+a", "pane.send_key", { key = "ctrl+a" })
 
 
 -- Shortcuts recorded in Rex
-rex.unbind("shift+cmd+p", "client.palette.toggle")
 rex.bind("cmd+p", "client.palette.toggle")
