@@ -30,9 +30,12 @@ rex.bind("tmux/p", "client.tab.previous")
 rex.bind("tmux/x", "client.tab.close")
 rex.bind("tmux/c", "client.tab.new")
 
+-- Sessions
+rex.bind("tmux/shift+c", "session.new")
+rex.bind("tmux/shift+x", "session.close")
+
 -- Send a literal ctrl+a
 rex.bind("tmux/ctrl+a", "pane.send_key", { key = "ctrl+a" })
-
 
 -- Shortcuts recorded in Rex
 rex.bind("cmd+p", "client.palette.toggle")
