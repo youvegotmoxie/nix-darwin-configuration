@@ -91,6 +91,7 @@ Apple Silicon MacBook Pro (Late 2025)
 
 - ffmpeg
 - mole
+- opencode-v2
 - yt-dlp
 
 ### Casks

@@ -17,7 +17,11 @@
   ];
   # Use Homebrew for these to avoid a bunch of compiling
   homebrew = {
+    taps = [
+      "anomalyco/tap"
+    ];
     brews = [
+      "anomalyco/tap/opencode-v2"
       "ffmpeg"
       "yt-dlp"
     ];
