@@ -29,7 +29,6 @@ Apple Silicon MacBook Pro (Late 2025)
 - gnupg
 - gnused
 - gnutar
-- herdr
 - home-manager
 - jdk21_headless
 - jq

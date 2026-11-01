@@ -21,7 +21,6 @@ Custom built AMD machine with ROCm support.
 - gh
 - git
 - git-lfs
-- herdr
 - home-manager
 - jq
 - lazygit

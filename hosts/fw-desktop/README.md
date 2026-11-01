@@ -17,11 +17,11 @@ Framework Desktop.
 - fd
 - findutils
 - fzf
+- fwupd
 - gawk
 - gh
 - git
 - git-lfs
-- herdr
 - home-manager
 - jq
 - lazygit

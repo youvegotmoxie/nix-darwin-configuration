@@ -29,7 +29,6 @@ Apple Silicon Mac Mini (Late 2024)
 - gnupg
 - gnused
 - gnutar
-- herdr
 - home-manager
 - jdk21_headless
 - jq
