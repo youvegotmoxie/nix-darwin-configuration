@@ -10,7 +10,7 @@
       url = "github:oxalica/nil";
     };
     herdr.url = "github:herdrdev/herdr/v0.9.5";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
