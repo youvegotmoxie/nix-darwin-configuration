@@ -27,26 +27,6 @@
     builtins.readFile ../scripts/gpg-push-pull-keys.sh
   );
 
-  # Build this from source since nixpkgs is lagging and this software
-  # no longer builds on a recent version of Rust
-  macmon = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
-    pname = "macmon";
-    version = "0.8.2";
-    src = pkgs.fetchFromGitHub {
-      owner = "vladkens";
-      repo = finalAttrs.pname;
-      tag = "v${finalAttrs.version}";
-      hash = "sha256-tdWuxpV+AAN189etks6LVo4OYDYQNd9dzfopECFgoR8=";
-    };
-    cargoHash = "sha256-U71Qrplz2CY5CiYpDjFrtWQOy1J4HE3tMhnRbLXUD7k=";
-    meta = {
-      description = "A sudoless performance monitoring CLI tool for Apple Silicon processors";
-      homepage = "https://github.com/vladkens/macmon";
-      license = lib.licenses.mit;
-      mainProgram = finalAttrs.pname;
-    };
-  });
-
   # Helm v4 is not available in nixpkgs
   helm4 = pkgs.stdenv.mkDerivation (finalAttrs: {
     pname = "helm";
@@ -73,12 +53,12 @@
   # Not available in nixpkgs
   claws = pkgs.buildGoLatestModule (finalAttrs: {
     pname = "claws";
-    version = "0.18.0";
+    version = "0.18.1";
     src = pkgs.fetchFromGitHub {
       owner = "clawscli";
       repo = finalAttrs.pname;
       tag = "v${finalAttrs.version}";
-      hash = "sha256-CnnU4OCO1Mslf7+fSu3scKHQ2LJWG+XxMtTyk9CIVYk=";
+      hash = "sha256-MLue+r2zv8c20ihZ0sshvFv78kqNXlyS/d69lRNfsdQ=";
     };
     # This fails tests due to using `/homeless-shelter/.` Google buildroot nonsense
     doCheck = false;
