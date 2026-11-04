@@ -10,12 +10,6 @@ lib.mkIf config.extras.extraPackages.macOnly.enable {
     overrideDevices = true;
     settings = {
       folders = {
-        "${config.home.homeDirectory}/.omlx/models" = {
-          id = "omlx-models";
-          path = "${config.home.homeDirectory}/.omlx/models";
-          label = "omlx-models";
-          devices = config.extras.syncthingTarget;
-        };
         "${config.home.homeDirectory}/repos/projects" = {
           id = "projects";
           path = "${config.home.homeDirectory}/repos/projects";
