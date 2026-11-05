@@ -2,7 +2,7 @@
 -- https://www.superlogical.com/rex/docs/customize/keyboard-shortcuts
 -- Tmux-style binds, ctrl+a leader (re-implements Ghostty keybinds from ghostty_config)
 rex.mode("tmux", { exclusive = true })
-rex.bind("ctrl+a", "client.mode.enter", { name = "tmux" })
+rex.bind("ctrl+a", "client.mode.enter", { name = "tmux", once = true })
 
 -- Focus panes
 rex.bind("tmux/h", "pane.focus", { direction = "left" })
