@@ -45,10 +45,6 @@ in {
           cat = "bat --paging=never --style=plain";
           cp = "cp -v";
           grep = "ugrep --color=auto";
-          hml = "herdr machine list";
-          hmt = "herdr-machine-toggle";
-          hpk = "herdr-pane-kill";
-          hdr = "herdr";
           history = "history -E";
           kubectl = "kubecolor";
           lg = "lazygit";
