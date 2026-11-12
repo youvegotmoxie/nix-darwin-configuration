@@ -88,7 +88,6 @@ in {
           ripgrep
           shfmt
           smartmontools
-          syswatch
           tldr
           ugrep
           viddy
