@@ -80,7 +80,6 @@ in {
           gawk
           gh
           jq
-          netwatch
           nix-output-monitor
           p7zip
           pinentry-tty
