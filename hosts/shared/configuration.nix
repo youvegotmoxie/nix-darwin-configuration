@@ -72,6 +72,7 @@
   services = {
     openssh.enable = true;
     vnstat.enable = true;
+    tailscale.enable = true;
   };
 
   virtualisation.docker = {
