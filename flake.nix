@@ -6,6 +6,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rex.url = "https://pkgs.superlogical.com/rex/nix/snapshot.tar.gz";
     nil = {
       url = "github:oxalica/nil";
     };
@@ -34,6 +35,7 @@
     nixpkgs,
     sops-nix,
     nix-index-database,
+    rex,
     ...
   }: let
     mkDarwinHost = {
@@ -80,6 +82,7 @@
         inherit system;
         modules = [
           ./hosts/${hostDir}/configuration.nix
+          rex.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {

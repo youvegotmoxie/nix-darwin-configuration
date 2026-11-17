@@ -37,7 +37,7 @@
   security.sudo.wheelNeedsPassword = false;
   users.users.${mainUser} = {
     isNormalUser = true;
-    extraGroups = ["wheel" "docker"];
+    extraGroups = ["wheel" "docker" "rex"];
     shell = pkgs.zsh;
     # SSH authorizedKeys.keys are defined per-host
     packages = with pkgs; [neovim];
@@ -73,6 +73,7 @@
     openssh.enable = true;
     vnstat.enable = true;
     tailscale.enable = true;
+    rex.enable = true;
   };
 
   virtualisation.docker = {
