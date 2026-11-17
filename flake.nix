@@ -82,12 +82,12 @@
         inherit system;
         modules = [
           ./hosts/${hostDir}/configuration.nix
-          rex.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               users.${mainUser} = {
                 imports = [
+                  rex.homeManagerModules.default
                   nix-index-database.homeModules.default
                   ./hosts/${hostDir}/users/${mainUser}/home-manager/home.nix
                 ];

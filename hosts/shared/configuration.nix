@@ -73,7 +73,6 @@
     openssh.enable = true;
     vnstat.enable = true;
     tailscale.enable = true;
-    rex.enable = true;
   };
 
   virtualisation.docker = {

@@ -15,6 +15,9 @@
     settings.net_iface = lib.mkForce "enp35s0";
   };
 
+  programs.rex.enable = true;
+  services.rex.enable = true;
+
   extras.extraPackages = {
     serverOnly.enable = true;
     minimal.enable = true;
