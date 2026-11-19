@@ -74,7 +74,6 @@ in {
           bat
           bat-extras.batman
           delta
-          diskwatch
           fd
           findutils
           gawk
