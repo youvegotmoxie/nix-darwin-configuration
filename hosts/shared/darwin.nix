@@ -147,11 +147,10 @@ in {
       };
     };
     taps = [
-      "tw93/tap"
       "youvegotmoxie/homebrew-tap"
     ];
     brews = [
-      "tw93/tap/mole"
+      "mole"
     ];
     casks = [
       "alcove"
