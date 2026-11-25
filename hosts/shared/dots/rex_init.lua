@@ -10,9 +10,16 @@ rex.bind("tmux/j", "pane.focus", { direction = "down" })
 rex.bind("tmux/k", "pane.focus", { direction = "up" })
 rex.bind("tmux/l", "pane.focus", { direction = "right" })
 
+-- Move panes
+rex.bind("tmux/ctrl+l", "pane.move", { direction = "right" })
+rex.bind("tmux/ctrl+h", "pane.move", { direction = "left" })
+rex.bind("tmux/ctrl+j", "pane.move", { direction = "down" })
+rex.bind("tmux/ctrl+k", "pane.move", { direction = "up" })
+
 -- Splits
 rex.bind("tmux/-", "pane.split", { direction = "down" })
 rex.bind("tmux/shift+\\", "pane.split", { direction = "right" })
+rex.bind("tmux/x", "pane.close")
 
 -- Zoom and equalize
 rex.bind("tmux/z", "pane.zoom")
@@ -27,12 +34,11 @@ rex.bind("tmux/shift+l", "pane.resize", { direction = "right", amount = 10 })
 -- Tabs
 rex.bind("tmux/n", "client.tab.next")
 rex.bind("tmux/p", "client.tab.previous")
-rex.bind("tmux/x", "client.tab.close")
 rex.bind("tmux/c", "client.tab.new")
+rex.bind("tmux/shift+x", "client.tab.close")
 
 -- Sessions
 rex.bind("tmux/shift+c", "session.new")
-rex.bind("tmux/shift+x", "session.close")
 
 -- Send a literal ctrl+a
 rex.bind("tmux/ctrl+a", "pane.send_key", { key = "ctrl+a" })
