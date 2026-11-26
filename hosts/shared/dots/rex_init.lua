@@ -39,6 +39,8 @@ rex.bind("tmux/shift+x", "client.tab.close")
 
 -- Sessions
 rex.bind("tmux/shift+c", "session.new")
+rex.bind("tmux/space", "session.next")
+rex.bind("tmux/shift+space", "session.previous")
 
 -- Send a literal ctrl+a
 rex.bind("tmux/ctrl+a", "pane.send_key", { key = "ctrl+a" })
